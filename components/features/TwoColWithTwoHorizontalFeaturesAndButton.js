@@ -10,8 +10,10 @@ import {
 import { PrimaryButton as PrimaryButtonBase } from "../../components/misc/Buttons.js";
 import TeamIllustrationSrc from "../../assets/images/team-illustration-2.svg";
 import SvgDotPattern from "../../assets/images/dot-pattern.svg";
-import BriefcaseIcon from "feather-icons/dist/icons/briefcase.svg";
-import MoneyIcon from "feather-icons/dist/icons/dollar-sign.svg";
+// import BriefcaseIcon from "feather-icons/dist/icons/briefcase.svg";
+// import MoneyIcon from "feather-icons/dist/icons/dollar-sign.svg";
+import BriefcaseIcon from "../../assets/icons/brief-case.svg";
+import MoneyIcon from "../../assets/icons/dollar.svg";
 import Principles from "../../assets/images/Principles.png";
 
 // const Container = tw.div`relative`;
@@ -97,18 +99,18 @@ export default ({
    */
   const defaultFeatures = [
     {
-      Icon: BriefcaseIcon,
-      title: "Professionalism",
-      description:
-        "We have the best professional marketing people across the globe just to work with you.",
-      iconContainerCss: tw`bg-teal-300 text-teal-800`,
-    },
-    {
       Icon: MoneyIcon,
       title: "Affordable",
       description:
         "We promise to offer you the best rate we can - at par with the industry standard.",
       iconContainerCss: tw`bg-red-300 text-red-800`,
+    },
+    {
+      Icon: BriefcaseIcon,
+      title: "Professionalism",
+      description:
+        "We have the best professional marketing people across the globe just to work with you.",
+      iconContainerCss: tw`bg-teal-300 text-teal-800`,
     },
   ];
 
@@ -144,22 +146,22 @@ export default ({
               {description}
             </p>
             <div className="mx-auto md:mx-0 flex flex-col lg:flex-row max-w-xs lg:max-w-none">
-              {features.map((feature, index) => {
+              {defaultFeatures.map((feature, index) => {
+                const FeatureIcon = feature.Icon;
                 return (
                   <div
                     className="mt-10 lg:mt-8 flex items-center md:items-start flex-col md:mr-8 last:mr-0"
                     key={index}
                   >
                     <div className="flex items-center">
-                      <div
+                      {/* <div
                         className="mx-auto inline-block border border-primary-500 text-primary-500 text-center rounded p-2 flex-shrink-0"
                         iconFilled={iconFilled}
                         iconRoundedFull={iconRoundedFull}
                         css={feature.iconContainerCss || iconContainerCss}
-                      >
-                        {/* <FeatureIcon className="w-5 h-5" /> */}
-                        {/* {<feature.Icon />} */}
-                      </div>
+                      > */}
+                      <FeatureIcon />
+                      {/* </div> */}
                       <div className="ml-3 font-bold text-xl">
                         {feature.title}
                       </div>

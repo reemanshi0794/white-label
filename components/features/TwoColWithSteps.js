@@ -9,6 +9,7 @@ import {
 } from "../../components/misc/Headings.js";
 import TeamIllustrationSrc from "../../assets/images/team-illustration-2.svg";
 import SvgDotPattern from "../../assets/images/dot-pattern.svg";
+import LaptopImage from "../../assets/images/LaptopImage.png";
 
 // const Container = tw.div`relative`;
 // const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
@@ -87,8 +88,8 @@ export default ({
     <div className="relative">
       <div className="flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center">
         <div className="w-full max-w-md mx-auto md:max-w-none md:mx-0 md:w-6/12 flex-shrink-0 relative">
-          <Image
-            src={imageSrc.src}
+          <img
+            src={LaptopImage.src}
             imageBorder={imageBorder}
             imageShadow={imageShadow}
             imageRounded={imageRounded}
