@@ -192,7 +192,8 @@ export default ({
             >
               {!plan.featured && (
                 <div
-                  className="rounded-t-lg absolute top-0 inset-x-0 h-2"
+                  className={`rounded-t-lg absolute top-0 inset-x-0 h-2`}
+
                   // css={
                   //   highlightGradientsCss[index % highlightGradientsCss.length]
                   // }

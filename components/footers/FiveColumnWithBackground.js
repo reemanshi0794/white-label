@@ -238,7 +238,7 @@ export default () => {
             </ul>
           </div>
         </div>
-        <div className="my-16 border-b-2 border-primary-400 w-full" />
+        <div className="my-16 border-b-2 border-white w-full" />
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center justify-center md:justify-start">
             <LogoImage />

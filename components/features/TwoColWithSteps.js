@@ -49,7 +49,8 @@ export default ({
   subheading = "Our Expertise",
   heading = (
     <>
-      Designed & Developed by <span tw="text-primary-500">Professionals.</span>
+      Designed & Developed by{" "}
+      <span className="text-primary-500">Professionals.</span>
     </>
   ),
   imageSrc = TeamIllustrationSrc,

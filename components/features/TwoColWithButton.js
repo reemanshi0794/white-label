@@ -10,6 +10,7 @@ import {
 import { PrimaryButton as PrimaryButtonBase } from "../../components/misc/Buttons.js";
 import TeamIllustrationSrc from "../../assets/images/team-illustration-2.svg";
 import SvgDotPattern from "../../assets/images/dot-pattern.svg";
+import QualityWork from "../../assets/images/QualityWork.png";
 
 // const Container = tw.div`relative`;
 // const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
@@ -49,7 +50,8 @@ export default ({
   subheading = "Our Expertise",
   heading = (
     <>
-      Designed & Developed by <span tw="text-primary-500">Professionals.</span>
+      Designed & Developed by{" "}
+      <span className="text-primary-500">Professionals.</span>
     </>
   ),
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -73,7 +75,7 @@ export default ({
         <div className="md:w-6/12 flex-shrink-0 relative w-full max-w-md mx-auto md:max-w-none">
           <img
             css={imageCss}
-            src={imageSrc.src}
+            src={QualityWork.src}
             imageBorder={imageBorder}
             imageShadow={imageShadow}
             imageRounded={imageRounded}

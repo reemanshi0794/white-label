@@ -132,9 +132,9 @@ export default ({
           className={showNavLinks ? "open" : "closed"}
         >
           {showNavLinks ? (
-            <CloseIcon tw="w-6 h-6" />
+            <CloseIcon className="w-6 h-6" />
           ) : (
-            <MenuIcon tw="w-6 h-6" />
+            <MenuIcon className="w-6 h-6" />
           )}
         </NavToggle>
       </MobileNavLinksContainer>

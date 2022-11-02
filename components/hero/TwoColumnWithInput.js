@@ -53,7 +53,7 @@ export default ({ roundedHeaderButton }) => {
           <div className="relative lg:w-5/12 text-center max-w-lg mx-auto lg:max-w-none lg:text-left">
             <h1 className="font-bold text-3xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-900 leading-tight">
               Beautiful React Templates{" "}
-              <span tw="text-primary-500">for you.</span>
+              <span className="text-primary-500">for you.</span>
             </h1>
             <p className="my-5 lg:my-8 text-base xl:text-lg">
               Our templates are easy to setup, understand and customize. Fully

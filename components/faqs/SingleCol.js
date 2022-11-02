@@ -129,8 +129,8 @@ export default ({
                     <ChevronDownIcon />
                   </QuestionToggleIcon>
                 </dt>
-                <dd
-                  className="pointer-events-none text-sm sm:text-base leading-relaxed"
+                <Answer
+                  // className="pointer-events-none text-sm sm:text-base leading-relaxed"
                   variants={{
                     open: { opacity: 1, height: "auto", marginTop: "16px" },
                     collapsed: { opacity: 0, height: 0, marginTop: "0px" },
@@ -140,7 +140,7 @@ export default ({
                   transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
                 >
                   {faq.answer}
-                </dd>
+                </Answer>
               </div>
             ))}
           </dl>

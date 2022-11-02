@@ -70,7 +70,8 @@ export default ({
   subheading = "Our Expertise",
   heading = (
     <>
-      Designed & Developed by <span tw="text-primary-500">Professionals.</span>
+      Designed & Developed by
+      <span className="text-primary-500">Professionals.</span>
     </>
   ),
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -113,8 +114,6 @@ export default ({
 
   if (!features) features = defaultFeatures;
 
-  const ImageDemo = imageSrc;
-
   return (
     <div className="relative">
       <div className="flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center">
@@ -145,30 +144,32 @@ export default ({
               {description}
             </p>
             <div className="mx-auto md:mx-0 flex flex-col lg:flex-row max-w-xs lg:max-w-none">
-              {features.map((feature, index) => (
-                <div
-                  className="mt-10 lg:mt-8 flex items-center md:items-start flex-col md:mr-8 last:mr-0"
-                  key={index}
-                >
-                  <div className="flex items-center">
-                    <div
-                      className="mx-auto inline-block border border-primary-500 text-primary-500 text-center rounded p-2 flex-shrink-0"
-                      iconFilled={iconFilled}
-                      iconRoundedFull={iconRoundedFull}
-                      css={feature.iconContainerCss || iconContainerCss}
-                    >
-                      <feature className="w-5 h-5" />
-                      {/* {<feature.Icon />} */}
+              {features.map((feature, index) => {
+                return (
+                  <div
+                    className="mt-10 lg:mt-8 flex items-center md:items-start flex-col md:mr-8 last:mr-0"
+                    key={index}
+                  >
+                    <div className="flex items-center">
+                      <div
+                        className="mx-auto inline-block border border-primary-500 text-primary-500 text-center rounded p-2 flex-shrink-0"
+                        iconFilled={iconFilled}
+                        iconRoundedFull={iconRoundedFull}
+                        css={feature.iconContainerCss || iconContainerCss}
+                      >
+                        {/* <FeatureIcon className="w-5 h-5" /> */}
+                        {/* {<feature.Icon />} */}
+                      </div>
+                      <div className="ml-3 font-bold text-xl">
+                        {feature.title}
+                      </div>
                     </div>
-                    <div className="ml-3 font-bold text-xl">
-                      {feature.title}
+                    <div className="mt-4 text-center md:text-left text-gray-600 leading-relaxed">
+                      {feature.description}
                     </div>
                   </div>
-                  <div className="mt-4 text-center md:text-left text-gray-600 leading-relaxed">
-                    {feature.description}
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             <button

@@ -15,7 +15,7 @@ import defaultCardImage from "../../assets/images/shield-icon.svg";
 import SvgDecoratorBlob3 from "../../assets/images/svg-decorator-blob-3.svg";
 
 import SupportIconImage from "../../assets/images/support-icon.svg";
-import ShieldIconImage from "../../assets/icons/shield-icon.svg";
+import ShieldIconImage from "../../assets/images/shield-icon.svg";
 import CustomizeIconImage from "../../assets/images/customize-icon.svg";
 import FastIconImage from "../../assets/images/fast-icon.svg";
 import ReliableIconImage from "../../assets/images/reliable-icon.svg";
@@ -94,7 +94,7 @@ export default ({
 
   return (
     <div className="relative">
-      <div className="flex-col items-center md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-lg mx-auto py-20 md:py-24">
+      <div className="items-stretch flex-row flex-wrap justify-center max-w-screen xl:max-w-5xl mx-auto py-20 md:py-24 flex">
         {subheading && (
           <h5 className="mb-4 font-bold text-primary-500">{subheading}</h5>
         )}
@@ -107,24 +107,29 @@ export default ({
           </p>
         )}
         <div className="mt-10 w-full" />
-        {cards.map((card, i) => (
-          <div className="md:w-1/2 lg:w-1/3 max-w-sm" key={i}>
-            <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left h-full mx-4 px-2 py-8">
-              <span className="border text-center rounded-full p-5 flex-shrink-0">
-                <img className="w-6 h-6" src={ShieldIconImage.src} alt="" />
-              </span>
-              <span className="sm:ml-4 mt-4 sm:mt-2">
-                <span className="mt-4 tracking-wide font-bold text-2xl leading-none">
-                  {card.title || "Fully Secure"}
+        {cards.map((card, i) => {
+          console.log("card", card);
+          const IconImage = card.imageSrc;
+          return (
+            <div className="md:w-1/2 lg:w-1/3 max-w-sm" key={i}>
+              <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left h-full mx-4 px-2 py-8">
+                <span className="border text-center rounded-full p-5 flex-shrink-0">
+                  {/* <img className="w-6 h-6" src={ShieldIconImage.src} alt="" /> */}
+                  <IconImage />
                 </span>
-                <p className="mt-1 sm:mt-4 font-medium text-secondary-100 leading-loose">
-                  {card.description ||
-                    "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud."}
-                </p>
-              </span>
+                <span className="sm:ml-4 mt-4 sm:mt-2">
+                  <span className="mt-4 tracking-wide font-bold text-2xl leading-none">
+                    {card.title || "Fully Secure"}
+                  </span>
+                  <p className="mt-1 sm:mt-4 font-medium text-secondary-100 leading-loose">
+                    {card.description ||
+                      "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud."}
+                  </p>
+                </span>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
       <SvgDecoratorBlob3 className="pointer-events-none absolute right-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-48" />
     </div>
