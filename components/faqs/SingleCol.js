@@ -1,21 +1,10 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import styled from "styled-components";
-import tw from "twin.macro";
-// import { css } from "styled-components/macro"; //eslint-disable-line
-
-import {
-  SectionHeading,
-  Subheading as SubheadingBase,
-} from "../../components/misc/Headings.js";
-import { SectionDescription } from "../../components/misc/Typography.js";
-import {
-  Container,
-  ContentWithPaddingXl,
-} from "../../components/misc/Layouts.js";
-import ChevronDownIcon from "feather-icons/dist/icons/chevron-down.svg";
-import SvgDecoratorBlob1 from "../../assets/images/svg-decorator-blob-7.svg";
-import SvgDecoratorBlob2 from "../../assets/images/svg-decorator-blob-8.svg";
+import ChevronDownIcon from 'feather-icons/dist/icons/chevron-down.svg';
+import {motion} from 'framer-motion';
+import React, {useState} from 'react';
+import styled from 'styled-components';
+import tw from 'twin.macro';
+import SvgDecoratorBlob1 from '../../assets/images/svg-decorator-blob-7.svg';
+import SvgDecoratorBlob2 from '../../assets/images/svg-decorator-blob-8.svg';
 
 // const Subheading = tw(SubheadingBase)`mb-4 text-center`;
 // const Heading = tw(SectionHeading)`w-full`;
@@ -34,9 +23,7 @@ const QuestionToggleIcon = motion(styled.span`
     ${tw`w-6 h-6`}
   }
 `);
-const Answer = motion(
-  tw.dd`pointer-events-none text-sm sm:text-base leading-relaxed`
-);
+const Answer = motion(tw.dd`pointer-events-none text-sm sm:text-base leading-relaxed`);
 
 // const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
 //   ${tw`pointer-events-none -z-20 absolute right-0 top-0 h-56 w-56 opacity-15 transform translate-x-2/3 -translate-y-12 text-teal-400`}
@@ -46,29 +33,25 @@ const Answer = motion(
 // `;
 
 export default ({
-  subheading = "FAQS",
-  heading = "You have Questions ?",
-  description = "And we have got answers to all of them. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  subheading = 'FAQS',
+  heading = 'You have Questions ?',
+  description = 'Here are some common questions that our clients come up with before signing up with us.',
   faqs = [
     {
-      question: "Is lunch provided free of cost ?",
-      answer:
-        "Yes, it is, if you have a membership with us. Otherwise it is charged as per the menu. Some limits do apply as to how much items can be included in your lunch. This limit is enough for any one person and merely exists to discourage abusal of the system.",
+      question: 'Is lunch provided free of cost ?',
+      answer: 'Yes, it is, if you have a membership with us. Otherwise it is charged as per the menu. Some limits do apply as to how much items can be included in your lunch. This limit is enough for any one person and merely exists to discourage abusal of the system.',
     },
     {
-      question: "Do you have 2 Bedroom suites ?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      question: 'Do you have 2 Bedroom suites ?',
+      answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     },
     {
-      question: "Are Wi-Fi costs included in the price ?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      question: 'Are Wi-Fi costs included in the price ?',
+      answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     },
     {
-      question: "Where can I reach you for support ?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      question: 'Where can I reach you for support ?',
+      answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     },
   ],
 }) => {
@@ -84,19 +67,9 @@ export default ({
       <div className="max-w-screen-xl mx-auto py-20 lg:py-24">
         <div className="flex flex-col items-center">
           <div>
-            {subheading && (
-              <h5 className="font-bold text-primary-500 mb-4 text-center">
-                {subheading}
-              </h5>
-            )}
-            <h2 className="text-4xl sm:text-5xl font-black tracking-wide text-center w-full">
-              {heading}
-            </h2>
-            {description && (
-              <p className="mt-4 text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100 max-w-xl w-full text-center">
-                {description}
-              </p>
-            )}
+            {subheading && <h5 className="font-bold text-primary-500 mb-4 text-center">{subheading}</h5>}
+            <h2 className="text-4xl sm:text-5xl font-black tracking-wide text-center w-full">{heading}</h2>
+            {description && <p className="mt-4 text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100 max-w-xl w-full text-center">{description}</p>}
           </div>
           <dl className="mt-12 max-w-4xl relative">
             {faqs.map((faq, index) => (
@@ -109,18 +82,14 @@ export default ({
                 // className="group"
               >
                 <dt className="flex justify-between items-center">
-                  <span className="text-lg lg:text-xl font-semibold">
-                    {faq.question}
-                  </span>
+                  <span className="text-lg lg:text-xl font-semibold">{faq.question}</span>
                   <QuestionToggleIcon
                     variants={{
-                      collapsed: { rotate: 0 },
-                      open: { rotate: -180 },
+                      collapsed: {rotate: 0},
+                      open: {rotate: -180},
                     }}
                     initial="collapsed"
-                    animate={
-                      activeQuestionIndex === index ? "open" : "collapsed"
-                    }
+                    animate={activeQuestionIndex === index ? 'open' : 'collapsed'}
                     transition={{
                       duration: 0.02,
                       ease: [0.04, 0.62, 0.23, 0.98],
@@ -132,12 +101,12 @@ export default ({
                 <Answer
                   // className="pointer-events-none text-sm sm:text-base leading-relaxed"
                   variants={{
-                    open: { opacity: 1, height: "auto", marginTop: "16px" },
-                    collapsed: { opacity: 0, height: 0, marginTop: "0px" },
+                    open: {opacity: 1, height: 'auto', marginTop: '16px'},
+                    collapsed: {opacity: 0, height: 0, marginTop: '0px'},
                   }}
                   initial="collapsed"
-                  animate={activeQuestionIndex === index ? "open" : "collapsed"}
-                  transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
+                  animate={activeQuestionIndex === index ? 'open' : 'collapsed'}
+                  transition={{duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98]}}
                 >
                   {faq.answer}
                 </Answer>

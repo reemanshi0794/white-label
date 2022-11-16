@@ -1,7 +1,5 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import SaaSProductLandingPage from "./SaaSProductLandingPage";
+import styles from '../styles/Home.module.css';
+import SaaSProductLandingPage from './SaaSProductLandingPage';
 
 export default function Home() {
   return (

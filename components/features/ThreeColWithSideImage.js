@@ -1,25 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import tw from "twin.macro";
-//eslint-disable-next-line
-// import { css } from "styled-components/macro";
-
-import {
-  SectionHeading,
-  Subheading as SubheadingBase,
-} from "../../components/misc/Headings.js";
-import { SectionDescription } from "../../components/misc/Typography.js";
-
-import defaultCardImage from "../../assets/images/shield-icon.svg";
-
-import SvgDecoratorBlob3 from "../../assets/images/svg-decorator-blob-3.svg";
-
-import SupportIconImage from "../../assets/images/support-icon.svg";
-import ShieldIconImage from "../../assets/images/shield-icon.svg";
-import CustomizeIconImage from "../../assets/images/customize-icon.svg";
-import FastIconImage from "../../assets/images/fast-icon.svg";
-import ReliableIconImage from "../../assets/images/reliable-icon.svg";
-import SimpleIconImage from "../../assets/images/simple-icon.svg";
+import React from 'react';
+import CustomizeIconImage from '../../assets/images/customize-icon.svg';
+import FastIconImage from '../../assets/images/fast-icon.svg';
+import ReliableIconImage from '../../assets/images/reliable-icon.svg';
+import ShieldIconImage from '../../assets/images/shield-icon.svg';
+import SimpleIconImage from '../../assets/images/simple-icon.svg';
+import SupportIconImage from '../../assets/images/support-icon.svg';
+import SvgDecoratorBlob3 from '../../assets/images/svg-decorator-blob-3.svg';
 
 // const Container = tw.div`relative`;
 
@@ -62,12 +48,7 @@ import SimpleIconImage from "../../assets/images/simple-icon.svg";
 //   ${tw`pointer-events-none absolute right-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-48 `}
 // `;
 
-export default ({
-  cards = null,
-  heading = "Amazing Features",
-  subheading = "Features",
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-}) => {
+export default ({cards = null, heading = 'Amazing Features', subheading = 'fcsdf', description = 'White Label Technologies present you with the most exquisite digital services that let you stand out from the crowd.'}) => {
   /*
    * This componets has an array of object denoting the cards defined below. Each object in the cards array can have the key (Change it according to your need, you can also add more objects to have more cards in this feature component) or you can directly pass this using the cards prop:
    *  1) imageSrc - the image shown at the top of the card
@@ -79,15 +60,14 @@ export default ({
   const defaultCards = [
     {
       imageSrc: ShieldIconImage,
-      title: "Secure",
-      description:
-        "We strictly only deal with vendors that provide top notch security.",
+      title: 'App Development',
+      description: 'With thorough learning of your business, we create apps from scratch that are designed to retain your customers and increase sales 4X times.',
     },
-    { imageSrc: SupportIconImage, title: "24/7 Support" },
-    { imageSrc: CustomizeIconImage, title: "Customizable" },
-    { imageSrc: ReliableIconImage, title: "Reliable" },
-    { imageSrc: FastIconImage, title: "Fast" },
-    { imageSrc: SimpleIconImage, title: "Easy" },
+    {imageSrc: SupportIconImage, title: 'Enterprise Softwares', description: 'Leverage our years of experience in building and scaling software that uplifts your business infrastructure to meet the dynamic market demands.'},
+    {imageSrc: CustomizeIconImage, title: 'Blockchain Development', description: 'With thorough learning of your business, we create apps from scratch that are designed to retain your customers and increase sales 4X times.'},
+    {imageSrc: ReliableIconImage, title: 'eCommerce Development', description: 'Launch your Online stores in global markets with our most reliable eCommerce apps and websites. From design to migration of eCommerce platforms with seamless integration and Zero Downtime.'},
+    {imageSrc: FastIconImage, title: 'Web Development', description: 'Our unparalleled Web development services bring you the Top performing websites to companies of any size, suiting your organization’s needs.'},
+    {imageSrc: SimpleIconImage, title: 'Metaverse Development', description: 'The potential use cases of Metaverse are designed and developed at White Label to help our clients tap into endless opportunities of the new era internet with Blockchain, AI and AR/VR.'},
   ];
 
   if (!cards) cards = defaultCards;
@@ -95,20 +75,12 @@ export default ({
   return (
     <div className="relative">
       <div className="items-stretch flex-row flex-wrap justify-center max-w-screen xl:max-w-5xl mx-auto py-20 md:py-24 flex">
-        {subheading && (
-          <h5 className="mb-4 font-bold text-primary-500">{subheading}</h5>
-        )}
-        <h2 className="w-full text-4xl sm:text-5xl font-black tracking-wide text-center">
-          {heading}
-        </h2>
-        {description && (
-          <p className="w-full text-center mt-4 text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100 max-w-xl">
-            {description}
-          </p>
-        )}
+        {subheading && <h5 className="mb-4 font-bold text-primary-500">{subheading}</h5>}
+        <h2 className="w-full text-4xl sm:text-5xl font-black tracking-wide text-center">{heading}</h2>
+        {description && <p className="w-full text-center mt-4 text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100 max-w-xl">{description}</p>}
         <div className="mt-10 w-full" />
         {cards.map((card, i) => {
-          console.log("card", card);
+          console.log('card', card);
           const IconImage = card.imageSrc;
           return (
             <div className="md:w-1/2 lg:w-1/3 max-w-sm" key={i}>
@@ -118,13 +90,8 @@ export default ({
                   <IconImage />
                 </span>
                 <span className="sm:ml-4 mt-4 sm:mt-2">
-                  <span className="mt-4 tracking-wide font-bold text-2xl leading-none">
-                    {card.title || "Fully Secure"}
-                  </span>
-                  <p className="mt-1 sm:mt-4 font-medium text-secondary-100 leading-loose">
-                    {card.description ||
-                      "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud."}
-                  </p>
+                  <span className="mt-4 tracking-wide font-bold text-2xl leading-none">{card.title || 'Fully Secure'}</span>
+                  <p className="mt-1 sm:mt-4 font-medium text-secondary-100 leading-loose">{card.description || 'Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.'}</p>
                 </span>
               </div>
             </div>

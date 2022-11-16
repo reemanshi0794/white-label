@@ -1,20 +1,13 @@
-import React from "react";
-import tw from "twin.macro";
-import styled from "styled-components";
-// import { css } from "styled-components/macro"; //eslint-disable-line
-
-import {
-  SectionHeading,
-  Subheading as SubheadingBase,
-} from "../../components/misc/Headings.js";
-import { PrimaryButton as PrimaryButtonBase } from "../../components/misc/Buttons.js";
-import TeamIllustrationSrc from "../../assets/images/team-illustration-2.svg";
-import SvgDotPattern from "../../assets/images/dot-pattern.svg";
+import React from 'react';
+import styled from 'styled-components';
+import tw from 'twin.macro';
 // import BriefcaseIcon from "feather-icons/dist/icons/briefcase.svg";
 // import MoneyIcon from "feather-icons/dist/icons/dollar-sign.svg";
-import BriefcaseIcon from "../../assets/icons/brief-case.svg";
-import MoneyIcon from "../../assets/icons/dollar.svg";
-import Principles from "../../assets/images/Principles.png";
+import BriefcaseIcon from '../../assets/icons/brief-case.svg';
+import MoneyIcon from '../../assets/icons/dollar.svg';
+import SvgDotPattern from '../../assets/images/dot-pattern.svg';
+import Principles from '../../assets/images/Principles.png';
+import TeamIllustrationSrc from '../../assets/images/team-illustration-2.svg';
 
 // const Container = tw.div`relative`;
 // const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
@@ -27,11 +20,7 @@ import Principles from "../../assets/images/Principles.png";
 //     : tw`md:ml-12 lg:ml-16 md:order-last`,
 // ]);
 
-const Image = styled.img((props) => [
-  props.imageRounded && tw`rounded`,
-  props.imageBorder && tw`border`,
-  props.imageShadow && tw`shadow`,
-]);
+const Image = styled.img((props) => [props.imageRounded && tw`rounded`, props.imageBorder && tw`border`, props.imageShadow && tw`shadow`]);
 
 // const DecoratorBlob = tw(
 //   SvgDotPattern
@@ -69,16 +58,18 @@ const Image = styled.img((props) => [
 // ]);
 
 export default ({
-  subheading = "Our Expertise",
+  subheading = 'Our Expertise',
   heading = (
     <>
-      Designed & Developed by
-      <span className="text-primary-500">Professionals.</span>
+      {' '}
+      4 C's
+      {/* Designed & Developed by
+      <span className="text-primary-500">Professionals.</span> */}
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  primaryButtonText = "Learn More",
-  primaryButtonUrl = "https://timerse.com",
+  description = 'We are Committed, Creative and Classy Coders empowering our clients businesses with custom Technology solutions. We pride ourselves on building holistic digital solutions with edge-cutting technology and tools that are future-proof. ',
+  primaryButtonText = 'Learn More',
+  primaryButtonUrl = 'https://timerse.com',
   imageSrc = TeamIllustrationSrc,
   buttonRounded = true,
   imageRounded = true,
@@ -100,16 +91,14 @@ export default ({
   const defaultFeatures = [
     {
       Icon: MoneyIcon,
-      title: "Affordable",
-      description:
-        "We promise to offer you the best rate we can - at par with the industry standard.",
+      title: 'Affordable',
+      description: 'Our clients enjoy reasonable pricing for all our solutions and one will see it as the best rates in the industry.',
       iconContainerCss: tw`bg-red-300 text-red-800`,
     },
     {
       Icon: BriefcaseIcon,
-      title: "Professionalism",
-      description:
-        "We have the best professional marketing people across the globe just to work with you.",
+      title: 'Seasoned',
+      description: 'Our Team is well-seasoned and skilled people who hear out your idea and make the right move to bring it into reality within a short time.',
       iconContainerCss: tw`bg-teal-300 text-teal-800`,
     },
   ];
@@ -120,39 +109,20 @@ export default ({
     <div className="relative">
       <div className="flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center">
         <div className="md:w-6/12 flex-shrink-0 relative w-full max-w-md mx-auto md:max-w-none md:mx-0">
-          <img
-            src={Principles.src}
-            imageBorder={imageBorder}
-            imageShadow={imageShadow}
-            imageRounded={imageRounded}
-          />
+          <img src={Principles.src} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded} />
 
-          {showDecoratorBlob && (
-            <SvgDotPattern className="w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-primary-500 -z-10" />
-          )}
+          {showDecoratorBlob && <SvgDotPattern className="w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-primary-500 -z-10" />}
         </div>
-        <div
-          className="md:w-6/12 flex-shrink-0 relative mt-16 md:mt-0 order-first mr-16"
-          textOnLeft={textOnLeft}
-        >
+        <div className="md:w-6/12 flex-shrink-0 relative mt-16 md:mt-0 order-first mr-16" textOnLeft={textOnLeft}>
           <div className="lg:py-8 text-center md:text-left">
-            <h5 className="font-bold text-primary-500 text-center md:text-left">
-              {subheading}
-            </h5>
-            <h2 className="text-4xl sm:text-5xl tracking-wide mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight">
-              {heading}
-            </h2>
-            <p className="mt-8 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100">
-              {description}
-            </p>
+            <h5 className="font-bold text-primary-500 text-center md:text-left">{subheading}</h5>
+            <h2 className="text-4xl sm:text-5xl tracking-wide mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight">{heading}</h2>
+            <p className="mt-8 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100">{description}</p>
             <div className="mx-auto md:mx-0 flex flex-col lg:flex-row max-w-xs lg:max-w-none">
               {defaultFeatures.map((feature, index) => {
                 const FeatureIcon = feature.Icon;
                 return (
-                  <div
-                    className="mt-10 lg:mt-8 flex items-center md:items-start flex-col md:mr-8 last:mr-0"
-                    key={index}
-                  >
+                  <div className="mt-10 lg:mt-8 flex items-center md:items-start flex-col md:mr-8 last:mr-0" key={index}>
                     <div className="flex items-center">
                       {/* <div
                         className="mx-auto inline-block border border-primary-500 text-primary-500 text-center rounded p-2 flex-shrink-0"
@@ -162,24 +132,15 @@ export default ({
                       > */}
                       <FeatureIcon />
                       {/* </div> */}
-                      <div className="ml-3 font-bold text-xl">
-                        {feature.title}
-                      </div>
+                      <div className="ml-3 font-bold text-xl">{feature.title}</div>
                     </div>
-                    <div className="mt-4 text-center md:text-left text-gray-600 leading-relaxed">
-                      {feature.description}
-                    </div>
+                    <div className="mt-4 text-center md:text-left text-gray-600 leading-relaxed">{feature.description}</div>
                   </div>
                 );
               })}
             </div>
 
-            <button
-              className="px-8 py-3 font-bold rounded bg-primary-500 text-gray-100 hocus:bg-primary-700 hocus:text-gray-200 focus:outline-none transition duration-300 mt-12 text-sm inline-block mx-auto md:mx-0"
-              buttonRounded={buttonRounded}
-              as="a"
-              href={primaryButtonUrl}
-            >
+            <button className="px-8 py-3 font-bold rounded bg-primary-500 text-gray-100 hocus:bg-primary-700 hocus:text-gray-200 focus:outline-none transition duration-300 mt-12 text-sm inline-block mx-auto md:mx-0" buttonRounded={buttonRounded} as="a" href={primaryButtonUrl}>
               {primaryButtonText}
             </button>
           </div>
