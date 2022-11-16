@@ -1,13 +1,9 @@
-import React from "react";
-import tw from "twin.macro";
-import styled from "styled-components";
-// import { css } from "styled-components/macro"; //eslint-disable-line
-
-import LogoImage from "../../assets/images/logo-light.svg";
-import FacebookIcon from "../../assets/images/facebook-icon.svg";
-import TwitterIcon from "../../assets/images/twitter-icon.svg";
-import YoutubeIcon from "../../assets/images/youtube-icon.svg";
-import SvgDecoratorBlob1 from "../../assets/images/svg-decorator-blob-9.svg";
+import React from 'react';
+import FacebookIcon from '../../assets/images/facebook-icon.svg';
+import Logo2 from '../../assets/images/logo2.svg';
+import SvgDecoratorBlob1 from '../../assets/images/svg-decorator-blob-9.svg';
+import TwitterIcon from '../../assets/images/twitter-icon.svg';
+import YoutubeIcon from '../../assets/images/youtube-icon.svg';
 
 // const Container = tw.div`relative bg-primary-500 text-gray-100 -mb-8 -mx-8 px-8 py-20 lg:py-24`;
 // const Content = tw.div`max-w-screen-xl mx-auto relative z-10`;
@@ -56,34 +52,22 @@ export default () => {
             <h5 className="uppercase font-bold">Main</h5>
             <ul className="mt-6 text-sm font-medium">
               <li className="mt-3">
-                <a
-                  className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300"
-                  href="#"
-                >
+                <a className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300" href="#">
                   Blog
                 </a>
               </li>
               <li className="mt-3">
-                <a
-                  className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300"
-                  href="#"
-                >
+                <a className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300" href="#">
                   FAQs
                 </a>
               </li>
               <li className="mt-3">
-                <a
-                  className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300"
-                  href="#"
-                >
+                <a className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300" href="#">
                   Support
                 </a>
               </li>
               <li className="mt-3">
-                <a
-                  className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300"
-                  href="#"
-                >
+                <a className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300" href="#">
                   About Us
                 </a>
               </li>
@@ -93,34 +77,22 @@ export default () => {
             <h5 className="uppercase font-bold">Product</h5>
             <ul className="mt-6 text-sm font-medium">
               <li className="mt-3">
-                <a
-                  className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300"
-                  href="#"
-                >
+                <a className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300" href="#">
                   Log In
                 </a>
               </li>
               <li className="mt-3">
-                <a
-                  className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300"
-                  href="#"
-                >
+                <a className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300" href="#">
                   Personal
                 </a>
               </li>
               <li className="mt-3">
-                <a
-                  className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300"
-                  href="#"
-                >
+                <a className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300" href="#">
                   Business
                 </a>
               </li>
               <li className="mt-3">
-                <a
-                  className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300"
-                  href="#"
-                >
+                <a className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300" href="#">
                   Team
                 </a>
               </li>
@@ -130,34 +102,22 @@ export default () => {
             <h5 className="uppercase font-bold">Press</h5>
             <ul className="mt-6 text-sm font-medium">
               <li className="mt-3">
-                <a
-                  className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300"
-                  href="#"
-                >
+                <a className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300" href="#">
                   Logos
                 </a>
               </li>
               <li className="mt-3">
-                <a
-                  className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300"
-                  href="#"
-                >
+                <a className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300" href="#">
                   Events
                 </a>
               </li>
               <li className="mt-3">
-                <a
-                  className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300"
-                  href="#"
-                >
+                <a className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300" href="#">
                   Stories
                 </a>
               </li>
               <li className="mt-3">
-                <a
-                  className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300"
-                  href="#"
-                >
+                <a className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300" href="#">
                   Office
                 </a>
               </li>
@@ -167,34 +127,22 @@ export default () => {
             <h5 className="uppercase font-bold">Team</h5>
             <ul className="mt-6 text-sm font-medium">
               <li className="mt-3">
-                <a
-                  className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300"
-                  href="#"
-                >
+                <a className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300" href="#">
                   Career
                 </a>
               </li>
               <li className="mt-3">
-                <a
-                  className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300"
-                  href="#"
-                >
+                <a className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300" href="#">
                   Founders
                 </a>
               </li>
               <li className="mt-3">
-                <a
-                  className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300"
-                  href="#"
-                >
+                <a className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300" href="#">
                   Culture
                 </a>
               </li>
               <li className="mt-3">
-                <a
-                  className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300"
-                  href="#"
-                >
+                <a className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300" href="#">
                   Onboarding
                 </a>
               </li>
@@ -204,34 +152,22 @@ export default () => {
             <h5 className="uppercase font-bold">Legal</h5>
             <ul className="mt-6 text-sm font-medium">
               <li className="mt-3">
-                <a
-                  className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300"
-                  href="#"
-                >
+                <a className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300" href="#">
                   GDPR
                 </a>
               </li>
               <li className="mt-3">
-                <a
-                  className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300"
-                  href="#"
-                >
+                <a className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300" href="#">
                   Privacy Policy
                 </a>
               </li>
               <li className="mt-3">
-                <a
-                  className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300"
-                  href="#"
-                >
+                <a className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300" href="#">
                   Terms of Service
                 </a>
               </li>
               <li className="mt-3">
-                <a
-                  className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300"
-                  href="#"
-                >
+                <a className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300" href="#">
                   Disclaimer
                 </a>
               </li>
@@ -241,31 +177,18 @@ export default () => {
         <div className="my-16 border-b-2 border-white w-full" />
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center justify-center md:justify-start">
-            <LogoImage />
-            <h5 className="ml-2 text-xl font-black tracking-wider text-gray-100">
-              Treact Inc.
-            </h5>
+            <Logo2 alt="logo" className="mr-3" />
+            {/* <h5 className="ml-2 text-xl font-black tracking-wider text-gray-100">Treact Inc.</h5> */}
           </div>
-          <p className="text-center text-sm sm:text-base mt-8 md:mt-0 font-medium text-gray-400">
-            &copy; 2018 Treact Inc. All Rights Reserved.
-          </p>
+          <p className="text-center text-sm sm:text-base mt-8 md:mt-0 font-medium text-gray-400">&copy; 2021 White Label Technologies</p>
           <div className="mt-8 md:mt-0 flex">
-            <a
-              className="cursor-pointer p-2 rounded-full bg-gray-100 text-gray-900 hover:bg-gray-400 transition duration-300 mr-4 last:mr-0"
-              href="https://facebook.com"
-            >
+            <a className="cursor-pointer p-2 rounded-full bg-gray-100 text-gray-900 hover:bg-gray-400 transition duration-300 mr-4 last:mr-0" href="https://facebook.com">
               <FacebookIcon className="w-4 h-4" />
             </a>
-            <a
-              className="cursor-pointer p-2 rounded-full bg-gray-100 text-gray-900 hover:bg-gray-400 transition duration-300 mr-4 last:mr-0"
-              href="https://twitter.com"
-            >
+            <a className="cursor-pointer p-2 rounded-full bg-gray-100 text-gray-900 hover:bg-gray-400 transition duration-300 mr-4 last:mr-0" href="https://twitter.com">
               <TwitterIcon className="w-4 h-4" />
             </a>
-            <a
-              className="cursor-pointer p-2 rounded-full bg-gray-100 text-gray-900 hover:bg-gray-400 transition duration-300 mr-4 last:mr-0"
-              href="https://youtube.com"
-            >
+            <a className="cursor-pointer p-2 rounded-full bg-gray-100 text-gray-900 hover:bg-gray-400 transition duration-300 mr-4 last:mr-0" href="https://youtube.com">
               <YoutubeIcon className="w-4 h-4" />
             </a>
           </div>
