@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
+import {ReactComponent as FacebookIcon} from '../../assets/images/facebook-icon.svg';
 import Logo from '../../assets/images/logo.svg';
-import {ReactComponent as FacebookIcon} from '../../images/facebook-icon.svg';
-import {ReactComponent as TwitterIcon} from '../../images/twitter-icon.svg';
-import {ReactComponent as YoutubeIcon} from '../../images/youtube-icon.svg';
+import {ReactComponent as TwitterIcon} from '../../assets/images/twitter-icon.svg';
+import {ReactComponent as YoutubeIcon} from '../../assets/images/youtube-icon.svg';
 
 const Container = tw.div`relative bg-gray-200 -mx-8 -mb-8 px-8`;
 const FiveColumns = tw.div`max-w-screen-xl mx-auto py-16 lg:py-20 flex flex-wrap justify-between`;
@@ -38,9 +38,10 @@ export default () => {
       <FiveColumns>
         <WideColumn>
           <LogoContainer>
+            {/* <img src={logo.src} className="mr-3" /> */}
+
             {/* <LogoImg src={LogoImage} /> */}
             <Logo alt="logo" className="mr-3" />
-
             <LogoText>Treact Inc.</LogoText>
           </LogoContainer>
           <CompanyDescription>Treact is an Internet Technology company providing design resources such as website templates and themes.</CompanyDescription>
