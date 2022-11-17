@@ -111,7 +111,7 @@ export default ({
             <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left h-full mx-4 px-2 py-8">
               <span className="sm:ml-4 mt-4 sm:mt-2">
                 <span className="mt-4 tracking-wide font-bold text-2xl leading-none">
-                  {card.title || "Fully Secure"}
+                  {card.title}
                 </span>
                 <p className="mt-1 sm:mt-4 font-medium text-secondary-100 leading-loose">
                   {card.description ||

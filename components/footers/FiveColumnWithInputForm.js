@@ -1,8 +1,8 @@
-import React from 'react';
-import FacebookIcon from '../../assets/images/facebook-icon.svg';
-import TwitterIcon from '../../assets/images/twitter-icon.svg';
-import YoutubeIcon from '../../assets/images/youtube-icon.svg';
-import LogoImage from '../../assets/images/logo.svg';
+import React from "react";
+import FacebookIcon from "../../assets/images/facebook-icon.svg";
+import TwitterIcon from "../../assets/images/twitter-icon.svg";
+import YoutubeIcon from "../../assets/images/youtube-icon.svg";
+import LogoImage from "../../assets/images/logo.svg";
 
 export default () => {
   return (
@@ -191,11 +191,11 @@ export default () => {
           <div className="flex items-center justify-center md:justify-start">
             <img className="w-8" src={LogoImage.src} />
             <h5 className="ml-2 text-xl font-black tracking-wider text-gray-800">
-              Treact Inc.
+              Whiten App Solutions Inc.
             </h5>
           </div>
           <p className="text-center text-sm sm:text-base mt-8 md:mt-0 font-medium text-gray-500">
-            &copy; 2018 Treact Inc. All Rights Reserved.
+            &copy; 2018 Whiten App Solutions Inc. All Rights Reserved.
           </p>
           <div className="mt-8 md:mt-0 flex">
             <a
