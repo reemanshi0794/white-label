@@ -1,6 +1,9 @@
-import React from 'react';
-import {SectionHeading, Subheading as SubheadingBase} from '../../components/misc/Headings.js';
-import {SectionDescription} from '../../components/misc/Typography.js';
+import React from "react";
+import {
+  SectionHeading,
+  Subheading as SubheadingBase,
+} from "../../components/misc/Headings.js";
+import { SectionDescription } from "../../components/misc/Typography.js";
 // const Container = tw.div`relative`;
 
 // const ThreeColumnContainer = styled.div`
@@ -42,7 +45,12 @@ import {SectionDescription} from '../../components/misc/Typography.js';
 //   ${tw`pointer-events-none absolute right-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-48 `}
 // `;
 
-export default ({cards = null, heading = 'Our Offices', subheading = 'Locations', description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}) => {
+export default ({
+  cards = null,
+  heading = "Our Offices",
+  subheading = "Locations",
+  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+}) => {
   /*
    * This componets has an array of object denoting the cards defined below. Each object in the cards array can have the key (Change it according to your need, you can also add more objects to have more cards in this feature component) or you can directly pass this using the cards prop:
    *  1) title - the title of the card
@@ -52,28 +60,34 @@ export default ({cards = null, heading = 'Our Offices', subheading = 'Locations'
 
   const defaultCards = [
     {
-      title: 'Secure',
-      description: 'We strictly only deal with vendors that provide top notch security.',
+      title: "Secure",
+      description:
+        "We strictly only deal with vendors that provide top notch security.",
     },
     {
-      title: '24/7 Support',
-      description: 'Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.',
+      title: "24/7 Support",
+      description:
+        "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.",
     },
     {
-      title: 'Reliable',
-      description: 'Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.',
+      title: "Reliable",
+      description:
+        "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.",
     },
     {
-      title: 'Easy',
-      description: 'Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.',
+      title: "Easy",
+      description:
+        "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.",
     },
     {
-      title: 'Customizable',
-      description: 'Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.',
+      title: "Customizable",
+      description:
+        "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.",
     },
     {
-      title: 'Fast',
-      description: 'Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.',
+      title: "Fast",
+      description:
+        "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.",
     },
   ];
 
@@ -82,16 +96,27 @@ export default ({cards = null, heading = 'Our Offices', subheading = 'Locations'
   return (
     <div className="relative">
       <div className="flex flex-col items-center md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-lg mx-auto py-20 md:py-24">
-        {subheading && <SubheadingBase className="mb-4">{subheading}</SubheadingBase>}
+        {subheading && (
+          <SubheadingBase className="mb-4">{subheading}</SubheadingBase>
+        )}
         <SectionHeading className="w-full">{heading}</SectionHeading>
-        {description && <SectionDescription className="w-full text-center">{description}</SectionDescription>}
+        {description && (
+          <SectionDescription className="w-full text-center">
+            {description}
+          </SectionDescription>
+        )}
         <div className="mt-10 w-full" />
         {cards.map((card, i) => (
           <div className="md:w-1/2 lg:w-1/3 max-w-sm" key={i}>
             <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left h-full mx-4 px-2 py-8">
               <span className="sm:ml-4 mt-4 sm:mt-2">
-                <span className="mt-4 tracking-wide font-bold text-2xl leading-none">{card.title || 'Fully Secure'}</span>
-                <p className="mt-1 sm:mt-4 font-medium text-secondary-100 leading-loose">{card.description || 'Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.'}</p>
+                <span className="mt-4 tracking-wide font-bold text-2xl leading-none">
+                  {card.title || "Fully Secure"}
+                </span>
+                <p className="mt-1 sm:mt-4 font-medium text-secondary-100 leading-loose">
+                  {card.description ||
+                    "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud."}
+                </p>
               </span>
             </div>
           </div>
