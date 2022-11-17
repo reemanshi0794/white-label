@@ -7,6 +7,7 @@ import CustomerLoveIconImage from '../assets/images/simple-icon.svg';
 import SupportIconImage from '../assets/images/support-icon.svg';
 import Features from '../components/features/ThreeColSimple.js';
 import MainFeature1 from '../components/features/TwoColWithButton.js';
+import Footer from '../components/footers/FiveColumnWithInputForm.js';
 import Header from '../components/headers/light.js';
 // const Subheading = tw.span`uppercase tracking-wider text-sm`;
 export default () => {
@@ -40,7 +41,7 @@ export default () => {
         linkText=""
       />
       {/* <TeamCardGrid subheading={<Subheading>Our Team</Subheading>} /> */}
-      {/* <Footer /> */}
+      <Footer />
       {/* </AnimationRevealPage> */}
     </div>
   );
