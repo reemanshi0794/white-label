@@ -73,7 +73,7 @@ export default ({roundedHeaderButton = false, logoLink, links, className, collap
       <NavLink href="/AboutUs">About</NavLink>
       <NavLink href="/#">Blog</NavLink>
       <NavLink href="/#">Pricing</NavLink>
-      <NavLink href="/#">Contact Us</NavLink>
+      <NavLink href="/ContactUs">Contact Us</NavLink>
       <NavLink href="/#" tw="lg:ml-12!">
         Login
       </NavLink>
@@ -87,7 +87,7 @@ export default ({roundedHeaderButton = false, logoLink, links, className, collap
   const collapseBreakpointCss = collapseBreakPointCssMap[collapseBreakpointClass];
 
   const defaultLogoLink = (
-    <a className="my-2 lg:text-sm lg:mx-6 lg:my-0 tracking-wide transition duration-300 pb-1 border-transparent hover:border-primary-500 hocus:text-primary-500 flex items-center font-black border-b-0 xl:text-2xl ml-0!" href="/">
+    <a className="my-2 lg:text-sm lg:my-0 tracking-wide transition duration-300 pb-1 border-transparent hover:border-primary-500 hocus:text-primary-500 flex items-center font-black border-b-0 xl:text-2xl ml-0!" href="/">
       {/* <Logo alt="logo" className="mr-3" /> */}
       {/* <img src={logo.src} /> */}
       <Logo alt="logo" className="mr-3" />

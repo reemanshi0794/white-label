@@ -11,7 +11,7 @@ import Header from '../components/headers/light.js';
 // const Subheading = tw.span`uppercase tracking-wider text-sm`;
 export default () => {
   return (
-    <div>
+    <div className="min-h-screen text-secondary-500 p-8 overflow-hidden">
       {/* <AnimationRevealPage> */}
       <Header />
       <MainFeature1 subheading={<span className="uppercase tracking-wider text-sm">About Treact</span>} heading="We are a modern design agency." buttonRounded={false} primaryButtonText="See Portfolio" imageSrc="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80" />
