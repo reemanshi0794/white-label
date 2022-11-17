@@ -5,6 +5,7 @@ import React from 'react';
 import ShieldIconImage from '../assets/images/shield-icon.svg';
 import CustomerLoveIconImage from '../assets/images/simple-icon.svg';
 import SupportIconImage from '../assets/images/support-icon.svg';
+import TeamCardGrid from '../components/cards/ProfileThreeColGrid.js';
 import Features from '../components/features/ThreeColSimple.js';
 import MainFeature1 from '../components/features/TwoColWithButton.js';
 import Footer from '../components/footers/FiveColumnWithInputForm.js';
@@ -40,7 +41,7 @@ export default () => {
         ]}
         linkText=""
       />
-      {/* <TeamCardGrid subheading={<Subheading>Our Team</Subheading>} /> */}
+      <TeamCardGrid subheading={<span className="uppercase tracking-wider text-sm">Our Team</span>} />
       <Footer />
       {/* </AnimationRevealPage> */}
     </div>

@@ -1,47 +1,40 @@
-import React from 'react';
-import styled from 'styled-components';
-import {css} from 'styled-components/macro';
-import tw from 'twin.macro';
 import {ReactComponent as GithubIcon} from '../../assets/images/github-icon.svg';
 import {ReactComponent as LinkedinIcon} from '../../assets/images/linkedin-icon.svg';
 import {ReactComponent as TwitterIcon} from '../../assets/images/twitter-icon.svg';
-import {SectionHeading, Subheading as SubheadingBase} from '../../components/misc/Headings';
 import {Container, ContentWithPaddingXl} from '../../components/misc/Layouts.js';
-import {SectionDescription} from '../../components/misc/Typography';
+// const HeadingContainer = tw.div``;
+// const Heading = tw(SectionHeading)``;
+// const Subheading = tw(SubheadingBase)`text-center mb-3`;
+// const Description = tw(SectionDescription)`mx-auto text-center`;
 
-const HeadingContainer = tw.div``;
-const Heading = tw(SectionHeading)``;
-const Subheading = tw(SubheadingBase)`text-center mb-3`;
-const Description = tw(SectionDescription)`mx-auto text-center`;
+// const Cards = tw.div`flex flex-wrap flex-row justify-center sm:max-w-2xl lg:max-w-5xl mx-auto`;
+// const Card = tw.div`mt-24 w-full sm:w-1/2 lg:w-1/3 flex flex-col items-center`;
+// const CardImage = styled.div`
+//   ${(props) =>
+//     css`
+//       background-image: url('${props.imageSrc}');
+//     `}
+//   ${tw`w-64 h-64 bg-contain bg-center rounded`}
+// `;
+// const CardContent = styled.div`
+//   ${tw`flex flex-col items-center mt-6`}
+//   .position {
+//     ${tw`uppercase font-bold tracking-widest text-xs text-primary-500`}
+//   }
+//   .name {
+//     ${tw`mt-1 text-xl font-medium text-gray-900`}
+//   9
+// `;
 
-const Cards = tw.div`flex flex-wrap flex-row justify-center sm:max-w-2xl lg:max-w-5xl mx-auto`;
-const Card = tw.div`mt-24 w-full sm:w-1/2 lg:w-1/3 flex flex-col items-center`;
-const CardImage = styled.div`
-  ${(props) =>
-    css`
-      background-image: url('${props.imageSrc}');
-    `}
-  ${tw`w-64 h-64 bg-contain bg-center rounded`}
-`;
-const CardContent = styled.div`
-  ${tw`flex flex-col items-center mt-6`}
-  .position {
-    ${tw`uppercase font-bold tracking-widest text-xs text-primary-500`}
-  }
-  .name {
-    ${tw`mt-1 text-xl font-medium text-gray-900`}
-  9
-`;
-
-const CardLinks = styled.div`
-  ${tw`mt-6 flex`}
-  .link {
-    ${tw`mr-8 last:mr-0 text-gray-400 hocus:text-primary-500 transition duration-300`}
-    .icon {
-      ${tw`fill-current w-6 h-6`}
-    }
-  }
-`;
+// const CardLinks = styled.div`
+//   ${tw`mt-6 flex`}
+//   .link {
+//     ${tw`mr-8 last:mr-0 text-gray-400 hocus:text-primary-500 transition duration-300`}
+//     .icon {
+//       ${tw`fill-current w-6 h-6`}
+//     }
+//   }
+// `;
 
 export default ({
   heading = 'Meet These Fine Folks.',
@@ -167,29 +160,29 @@ export default ({
   return (
     <Container>
       <ContentWithPaddingXl>
-        <HeadingContainer>
-          {subheading && <Subheading>{subheading}</Subheading>}
-          {heading && <Heading>{heading}</Heading>}
-          {description && <Description>{description}</Description>}
-        </HeadingContainer>
-        <Cards>
+        <div>
+          {subheading && <h5 className="font-bold text-primary-500 text-center mb-3">{subheading}</h5>}
+          {heading && <h2 className="text-4xl sm:text-5xl font-black tracking-wide text-center">{heading}</h2>}
+          {description && <p className="mt-4 text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100 max-w-xl mx-auto text-center">{description}</p>}
+        </div>
+        <div className="flex flex-wrap flex-row justify-center sm:max-w-2xl lg:max-w-5xl mx-auto">
           {cards.map((card, index) => (
-            <Card key={index}>
-              <CardImage imageSrc={card.imageSrc} />
-              <CardContent>
-                <span className="position">{card.position}</span>
-                <span className="name">{card.name}</span>
-                <CardLinks>
+            <div className="mt-24 w-full sm:w-1/2 lg:w-1/3 flex flex-col items-center" key={index}>
+              <div className={`background-image: url('${card.imageSrc}') w-64 h-64 bg-contain bg-center rounded`} imageSrc={card.imageSrc} />
+              <div className="flex flex-col items-center mt-6">
+                <span className="uppercase font-bold tracking-widest text-xs text-primary-500">{card.position}</span>
+                <span className="mt-1 text-xl font-medium text-gray-900">{card.name}</span>
+                <div className="mt-6 flex">
                   {card.links.map((link, linkIndex) => (
-                    <a key={linkIndex} className="link" href={link.url}>
-                      <link.icon className="icon" />
+                    <a key={linkIndex} className="mr-8 last:mr-0 text-gray-400 hocus:text-primary-500 transition duration-300" href={link.url}>
+                      {/* <link.icon className="fill-current w-6 h-6" /> */}
                     </a>
                   ))}
-                </CardLinks>
-              </CardContent>
-            </Card>
+                </div>
+              </div>
+            </div>
           ))}
-        </Cards>
+        </div>
       </ContentWithPaddingXl>
     </Container>
   );
