@@ -1,8 +1,8 @@
-import React from "react";
-import FacebookIcon from "../../assets/images/facebook-icon.svg";
-import TwitterIcon from "../../assets/images/twitter-icon.svg";
-import YoutubeIcon from "../../assets/images/youtube-icon.svg";
-import LogoImage from "../../assets/images/logo.svg";
+import React from 'react';
+import FacebookIcon from '../../assets/images/facebook-icon.svg';
+import TwitterIcon from '../../assets/images/twitter-icon.svg';
+import YoutubeIcon from '../../assets/images/youtube-icon.svg';
+import LogoImage from '../../assets/images/logo.svg';
 
 export default () => {
   return (

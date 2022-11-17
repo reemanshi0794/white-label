@@ -1,7 +1,7 @@
-import React from "react";
-import EmailIllustrationSrc from "../../assets/images/email-illustration.svg";
-import { PrimaryButton as PrimaryButtonBase } from "../../components/misc/Buttons.js";
-import ContactUsSrc from "../../assets/images/contact-us.png";
+import React from 'react';
+import EmailIllustrationSrc from '../../assets/images/email-illustration.svg';
+import { PrimaryButton as PrimaryButtonBase } from '../../components/misc/Buttons.js';
+import ContactUsSrc from '../../assets/images/contact-us.png';
 // const Container = tw.div`relative`;
 // const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
 // const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
@@ -24,17 +24,17 @@ import ContactUsSrc from "../../assets/images/contact-us.png";
 // const SubmitButton = tw(PrimaryButtonBase)`inline-block mt-8`;
 
 export default ({
-  subheading = "Contact Us",
+  subheading = 'Contact Us',
   heading = (
     <>
       Feel free to <span tw="text-primary-500">get in touch</span>
       <wbr /> with us.
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  submitButtonText = "Send",
-  formAction = "#",
-  formMethod = "get",
+  description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  submitButtonText = 'Send',
+  formAction = '#',
+  formMethod = 'get',
   textOnLeft = true,
 }) => {
   // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
@@ -48,7 +48,6 @@ export default ({
         </div>
         <div
           className={`w-full max-w-md mx-auto md:max-w-none md:mx-0 md:w-7/12  mt-16 md:mt-0 lg:mr-16 md:order-first`}
-          textOnLeft={textOnLeft}
         >
           <div className="lg:py-8 text-center md:text-left">
             {subheading && (
