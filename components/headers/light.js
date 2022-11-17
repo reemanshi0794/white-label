@@ -1,12 +1,11 @@
-import MenuIcon from 'feather-icons/dist/icons/menu.svg';
-import CloseIcon from 'feather-icons/dist/icons/x.svg';
-import {motion} from 'framer-motion';
-import React from 'react';
-import styled from 'styled-components';
-import tw from 'twin.macro';
-import Logo from '../../assets/images/logo.svg';
-// import { css } from "styled-components/macro"; //eslint-disable-line
-import useAnimatedNavToggler from '../../helpers/useAnimatedNavToggler.js';
+import MenuIcon from "feather-icons/dist/icons/menu.svg";
+import CloseIcon from "feather-icons/dist/icons/x.svg";
+import { motion } from "framer-motion";
+import React from "react";
+import styled from "styled-components";
+import tw from "twin.macro";
+import Logo from "../../assets/images/logo.svg";
+import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 
 const Header = tw.header`
   flex justify-between items-center
@@ -54,7 +53,13 @@ export const DesktopNavLinks = tw.nav`
   hidden lg:flex flex-1 justify-between items-center
 `;
 
-export default ({roundedHeaderButton = false, logoLink, links, className, collapseBreakpointClass = 'lg'}) => {
+export default ({
+  roundedHeaderButton = false,
+  logoLink,
+  links,
+  className,
+  collapseBreakpointClass = "lg",
+}) => {
   /*
    * This header component accepts an optionals "links" prop that specifies the links to render in the navbar.
    * This links props should be an array of "NavLinks" components which is exported from this file.
@@ -71,7 +76,7 @@ export default ({roundedHeaderButton = false, logoLink, links, className, collap
   const defaultLinks = [
     <NavLinks key={1}>
       <NavLink href="/AboutUs">About</NavLink>
-      <NavLink href="/#">Blog</NavLink>
+      <NavLink href="/Blog">Blog</NavLink>
       <NavLink href="/#">Pricing</NavLink>
       <NavLink href="/#">Contact Us</NavLink>
       <NavLink href="/#" tw="lg:ml-12!">
@@ -83,11 +88,15 @@ export default ({roundedHeaderButton = false, logoLink, links, className, collap
     </NavLinks>,
   ];
 
-  const {showNavLinks, animation, toggleNavbar} = useAnimatedNavToggler();
-  const collapseBreakpointCss = collapseBreakPointCssMap[collapseBreakpointClass];
+  const { showNavLinks, animation, toggleNavbar } = useAnimatedNavToggler();
+  const collapseBreakpointCss =
+    collapseBreakPointCssMap[collapseBreakpointClass];
 
   const defaultLogoLink = (
-    <a className="my-2 lg:text-sm lg:mx-6 lg:my-0 tracking-wide transition duration-300 pb-1 border-transparent hover:border-primary-500 hocus:text-primary-500 flex items-center font-black border-b-0 xl:text-2xl ml-0!" href="/">
+    <a
+      className="my-2 lg:text-sm lg:mx-6 lg:my-0 tracking-wide transition duration-300 pb-1 border-transparent hover:border-primary-500 hocus:text-primary-500 flex items-center font-black border-b-0 xl:text-2xl ml-0!"
+      href="/"
+    >
       {/* <Logo alt="logo" className="mr-3" /> */}
       {/* <img src={logo.src} /> */}
       <Logo alt="logo" className="mr-3" />
@@ -100,19 +109,32 @@ export default ({roundedHeaderButton = false, logoLink, links, className, collap
   links = links || defaultLinks;
 
   return (
-    <Header className={className || 'header-light'}>
+    <Header className={className || "header-light"}>
       <DesktopNavLinks css={collapseBreakpointCss.desktopNavLinks}>
         {logoLink}
         {links}
       </DesktopNavLinks>
 
-      <MobileNavLinksContainer css={collapseBreakpointCss.mobileNavLinksContainer}>
+      <MobileNavLinksContainer
+        css={collapseBreakpointCss.mobileNavLinksContainer}
+      >
         {logoLink}
-        <MobileNavLinks initial={{x: '150%', display: 'none'}} animate={animation} css={collapseBreakpointCss.mobileNavLinks}>
+        <MobileNavLinks
+          initial={{ x: "150%", display: "none" }}
+          animate={animation}
+          css={collapseBreakpointCss.mobileNavLinks}
+        >
           {links}
         </MobileNavLinks>
-        <NavToggle onClick={toggleNavbar} className={showNavLinks ? 'open' : 'closed'}>
-          {showNavLinks ? <CloseIcon className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
+        <NavToggle
+          onClick={toggleNavbar}
+          className={showNavLinks ? "open" : "closed"}
+        >
+          {showNavLinks ? (
+            <CloseIcon className="w-6 h-6" />
+          ) : (
+            <MenuIcon className="w-6 h-6" />
+          )}
         </NavToggle>
       </MobileNavLinksContainer>
     </Header>

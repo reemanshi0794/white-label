@@ -105,7 +105,7 @@ export default () => {
     },
   ];
   return (
-    <Container>
+    <div className="relative">
       <Content>
         <HeadingInfoContainer>
           <HeadingTitle>Our Awesome Customers</HeadingTitle>
@@ -142,6 +142,6 @@ export default () => {
       </Content>
       <DecoratorBlob1 />
       <DecoratorBlob2 />
-    </Container>
+    </div>
   );
 };
