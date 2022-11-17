@@ -5,7 +5,6 @@ import React from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 import Logo from '../../assets/images/logo.svg';
-// import { css } from "styled-components/macro"; //eslint-disable-line
 import useAnimatedNavToggler from '../../helpers/useAnimatedNavToggler.js';
 
 const Header = tw.header`
@@ -71,7 +70,7 @@ export default ({roundedHeaderButton = false, logoLink, links, className, collap
   const defaultLinks = [
     <NavLinks key={1}>
       <NavLink href="/AboutUs">About</NavLink>
-      <NavLink href="/#">Blog</NavLink>
+      <NavLink href="/Blog">Blog</NavLink>
       <NavLink href="/#">Pricing</NavLink>
       <NavLink href="/ContactUs">Contact Us</NavLink>
       <NavLink href="/#" tw="lg:ml-12!">
