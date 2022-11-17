@@ -1,31 +1,6 @@
 import React, { useState } from "react";
-
-import tw from "twin.macro";
-import styled from "styled-components";
-import { css } from "styled-components/macro";
 import Header from "../components/headers/light.js";
 import Footer from "../components/footers/FiveColumnWithInputForm.js";
-
-// const PostContainer = styled.div`
-//   ${tw`mt-10 w-full sm:w-1/2 lg:w-1/3 sm:pr-8`}
-//   ${(props) =>
-//     props.featured &&
-//     css`
-//       ${tw`w-full!`}
-//       ${Post} {
-//         ${tw`sm:flex-row! h-full sm:pr-4`}
-//       }
-//       ${Image} {
-//         ${tw`sm:h-96 sm:min-h-full sm:w-1/2 lg:w-2/3 sm:rounded-t-none sm:rounded-l-lg`}
-//       }
-//       ${Info} {
-//         ${tw`sm:-mr-4 sm:pl-8 sm:flex-1 sm:rounded-none sm:rounded-r-lg sm:border-t-2 sm:border-l-0`}
-//       }
-//       ${Description} {
-//         ${tw``}
-//       }
-//     `}
-// `;
 
 export default ({
   headingText = "Blog Posts",
@@ -65,6 +40,7 @@ export default ({
   const onLoadMoreClick = () => {
     setVisible((v) => v + 6);
   };
+
   return (
     <div>
       <Header />
@@ -76,41 +52,75 @@ export default ({
             </h2>
           </div>
           <div className="mt-6 sm:-mr-8 flex flex-wrap">
-            {posts.slice(0, visible).map((post, index) => (
-              <div
-                className="mt-10 w-full sm:w-1/2 lg:w-1/3 sm:pr-8"
-                key={index}
-                featured={post.featured}
-              >
+            {posts.slice(0, visible).map((post, index) => {
+              const PostImg = post;
+
+              console.log("PostImg", PostImg);
+              return (
                 <div
-                  className="group cursor-pointer flex flex-col bg-gray-100 rounded-lg"
-                  as="a"
-                  href={post.url}
+                  className={
+                    post.featured
+                      ? "w-full!"
+                      : "mt-10 w-full sm:w-1/2 lg:w-1/3 sm:pr-8"
+                  }
+                  key={index}
+                  featured={post.featured}
                 >
-                  <div
-                    // style={{background-image: url("${props.imageSrc}")}}
-                    className="h-64 w-full bg-cover bg-center rounded-t-lg"
-                    imageSrc={post.imageSrc}
-                  />
-                  <div className="p-8 border-2 border-t-0 rounded-lg rounded-t-none">
-                    <div className="uppercase text-primary-500 text-xs font-bold tracking-widest leading-loose after:content after:block after:border-b-2 after:border-primary-500 after:w-8">
-                      {post.category}
+                  <a
+                    className={
+                      post.featured
+                        ? "sm:flex-row! h-full sm:pr-4 group flex bg-gray-100 rounded-lg"
+                        : "group cursor-pointer flex flex-col bg-gray-100 rounded-lg"
+                    }
+                    as="a"
+                    href={post.url}
+                  >
+                    <div
+                      className={
+                        post.featured
+                          ? "sm:h-96 sm:min-h-full sm:w-1/2 lg:w-2/3 sm:rounded-t-none sm:rounded-l-lg xl:w-8/12 h-64 w-full bg-cover bg-center rounded-t-lg"
+                          : "h-64 w-full bg-cover bg-center rounded-t-lg"
+                      }
+                    >
+                      <img
+                        src={post.imageSrc}
+                        className={
+                          post.featured ? "w-full object-cover h-96" : ""
+                        }
+                      />
                     </div>
-                    <div className="mt-4 uppercase text-gray-600 italic font-semibold text-xs">
-                      {post.date}
-                    </div>
-                    <div className="mt-1 font-black text-2xl text-gray-900 group-hover:text-primary-500 transition duration-300">
-                      {post.title}
-                    </div>
-                    {post.featured && post.description && (
-                      <div className="text-sm mt-3 leading-loose text-gray-600 font-medium">
-                        {post.description}
+                    <div
+                      className={
+                        post.featured
+                          ? "sm:-mr-4 sm:pl-8 sm:flex-1 sm:rounded-none sm:rounded-r-lg sm:border-t-2 sm:border-l-0 p-8 border-2 border-t-0 rounded-lg rounded-t-none"
+                          : "p-8 border-2 border-t-0 rounded-lg rounded-t-none"
+                      }
+                    >
+                      <div className="uppercase text-primary-500 text-xs font-bold tracking-widest leading-loose after:content after:block after:border-b-2 after:border-primary-500 after:w-8">
+                        {post.category}
                       </div>
-                    )}
-                  </div>
+                      <div className="mt-4 uppercase text-gray-600 italic font-semibold text-xs">
+                        {post.date}
+                      </div>
+                      <div className="mt-1 font-black text-2xl text-gray-900 group-hover:text-primary-500 transition duration-300">
+                        {post.title}
+                      </div>
+                      {post.featured && post.description && (
+                        <div
+                          className={
+                            post.featured
+                              ? "text-sm mt-3 leading-loose text-gray-600 font-medium "
+                              : ""
+                          }
+                        >
+                          {post.description}
+                        </div>
+                      )}
+                    </div>
+                  </a>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
           {visible < posts.length && (
             <div className="flex justify-center">
