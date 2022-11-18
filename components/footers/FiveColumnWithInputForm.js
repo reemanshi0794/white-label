@@ -1,10 +1,88 @@
-import React from "react";
+import React, { useState } from "react";
 import FacebookIcon from "../../assets/images/facebook-icon.svg";
 import TwitterIcon from "../../assets/images/twitter-icon.svg";
 import YoutubeIcon from "../../assets/images/youtube-icon.svg";
 import LogoImage from "../../assets/images/logo.svg";
 
 export default () => {
+  const [showLoader, setShowLoader] = useState(false);
+  // This message will be displayed if form is submitted successfully or if an error occurrs.
+  const [displayMessage, setDisplayMessage] = useState({
+    message: "",
+    type: "",
+  });
+
+  const sendMail = () => {
+    return new Promise((resolve, reject) => {
+      try {
+        if (!contactInfo) return;
+        fetch("https://email-innow8.herokuapp.com/email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(
+            {
+              to: ["kapilbindal1@gmail.com"],
+              from: "contact@innow8apps.com",
+              subject: "contact form White Label",
+              text: JSON.stringify(contactInfo),
+              htmlText: JSON.stringify(contactInfo),
+            } || ""
+          ),
+        })
+          .then((res) => {
+            console.log("result: ", res);
+            resolve();
+          })
+          .catch((error) => {
+            console.log("send mail api error", error);
+            reject();
+          });
+      } catch (error) {
+        console.log("send mail try catch error", error);
+        reject();
+      }
+    });
+  };
+
+  //API to save enterred client data
+  const addContactInfo = async () => {
+    return sendMail();
+    // const response = await fetch(
+    //   "https://afternoon-sierra-04103.herokuapp.com/email",
+    //   {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify(contactInfo),
+    //   }
+    // );
+    // return response.json();
+  };
+
+  const handleSubmit = (event) => {
+    setShowLoader(true);
+    addContactInfo()
+      .then((res) => {
+        setDisplayMessage({
+          message: "** Submitted successfully **",
+          type: "success",
+        });
+        setShowLoader(false);
+        setTimeout(() => setDisplayMessage({ message: "", type: "" }), 2000);
+      })
+      .catch((err) => {
+        setDisplayMessage({
+          message: "** An error occurred **",
+          type: "error",
+        });
+        setShowLoader(false);
+        setTimeout(() => setDisplayMessage({ message: "", type: "" }), 2000);
+      });
+    event.preventDefault();
+  };
   return (
     <div className="relative bg-gray-200 text-gray-700 -mb-8 -mx-8 px-8 py-20 lg:py-24">
       <div className="max-w-screen-xl mx-auto relative z-10 pl-12">
@@ -176,9 +254,24 @@ export default () => {
                   type="email"
                   placeholder="Your Email Address"
                 />
+                {showLoader ? (
+                  <div className="text-center loader py-2">
+                    <div
+                      className="spinner-border text-secondary"
+                      role="status"
+                    >
+                      <span className="visually-hidden">Loading...</span>
+                    </div>
+                  </div>
+                ) : (
+                  <div className={`message-${displayMessage.type}`}>
+                    <span>{displayMessage.message}</span>
+                  </div>
+                )}
                 <button
                   className="mt-4 sm:mt-0 w-full sm:w-auto rounded sm:rounded-l-none px-8 py-3 font-bold bg-primary-500 text-gray-100 hocus:bg-primary-700 hocus:text-gray-200   focus:outline-none transition duration-300"
                   type="submit"
+                  onClick={handleSubmit}
                 >
                   Subscribe
                 </button>
