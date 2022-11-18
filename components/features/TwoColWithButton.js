@@ -60,23 +60,41 @@ export default ({
   return (
     <div className="relative">
       <div className="flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center">
-        <div className="md:w-6/12 flex-shrink-0 relative w-full max-w-md mx-auto md:max-w-none">
-          <img
-            css={imageCss}
-            src={QualityWork.src}
-            imageBorder={imageBorder}
-            imageShadow={imageShadow}
-            imageRounded={imageRounded}
-          />
-          {imageDecoratorBlob && (
-            <SvgDotPattern
-              className="w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-primary-500 -z-10"
-              css={imageDecoratorBlobCss}
-            />
-          )}
-        </div>
         {textOnLeft === true ? (
-          <div className="md:w-6/12 mt-16 md:mt-0 w-full max-w-md mx-auto md:max-w-none order-first mr-16">
+          <div className="md:w-6/12 flex-shrink-0 relative w-full max-w-md mx-auto md:max-w-none ml-16 border border-[#f2f2f2] p-1">
+            <img
+              css={imageCss}
+              src={QualityWork.src}
+              imageBorder={imageBorder}
+              imageShadow={imageShadow}
+              imageRounded={imageRounded}
+            />
+            {imageDecoratorBlob && (
+              <SvgDotPattern
+                className="w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-primary-500 -z-10"
+                css={imageDecoratorBlobCss}
+              />
+            )}
+          </div>
+        ) : (
+          <div className="md:w-6/12 flex-shrink-0 relative w-full max-w-md mx-auto md:max-w-none mr-16 border border-[#f2f2f2] p-1">
+            <img
+              css={imageCss}
+              src={QualityWork.src}
+              imageBorder={imageBorder}
+              imageShadow={imageShadow}
+              imageRounded={imageRounded}
+            />
+            {imageDecoratorBlob && (
+              <SvgDotPattern
+                className="w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-primary-500 -z-10"
+                css={imageDecoratorBlobCss}
+              />
+            )}
+          </div>
+        )}
+        {textOnLeft === true ? (
+          <div className="md:w-6/12 mt-16 md:mt-0 w-full max-w-md mx-auto md:max-w-none order-first ">
             <div className="lg:py-8 text-center md:text-left">
               <h5 className="text-center md:text-left font-bold text-primary-500">
                 {subheading}
