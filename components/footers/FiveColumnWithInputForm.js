@@ -117,7 +117,7 @@ export default () => {
               <li className="mt-3">
                 <a
                   className="border-b-2 border-transparent hocus:border-gray-700 pb-1 transition duration-300"
-                  href="/AboutUs"
+                  href="/about-us"
                 >
                   About Us
                 </a>

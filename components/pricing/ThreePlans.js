@@ -234,7 +234,7 @@ export default ({
                   <li className="mb-8">
                     <a
                       className="border border-primary-500 pt-[6px] pb-[7px] px-[42px] font-semibold text-lg text-primary-500 hover:bg-primary-500 rounded-full hover:text-white"
-                      href="/ContactUs"
+                      href="/contact-us"
                     >
                       Hire now
                     </a>
