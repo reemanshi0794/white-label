@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import tw from 'twin.macro';
-import SvgDotPattern from '../../assets/images/dot-pattern.svg';
-import LaptopImage from '../../assets/images/LaptopImage.png';
-import TeamIllustrationSrc from '../../assets/images/team-illustration-2.svg';
+import React from "react";
+import styled from "styled-components";
+import tw from "twin.macro";
+import SvgDotPattern from "../../assets/images/dot-pattern.svg";
+import Laptop from "../../assets/images/laptop.png";
+import TeamIllustrationSrc from "../../assets/images/team-illustration-2.svg";
 
 // const Container = tw.div`relative`;
 // const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
@@ -16,7 +16,11 @@ import TeamIllustrationSrc from '../../assets/images/team-illustration-2.svg';
 //     : tw`md:ml-12 lg:ml-16 md:order-last`,
 // ]);
 
-const Image = styled.img((props) => [props.imageRounded && tw`rounded`, props.imageBorder && tw`border`, props.imageShadow && tw`shadow`]);
+const Image = styled.img((props) => [
+  props.imageRounded && tw`rounded`,
+  props.imageBorder && tw`border`,
+  props.imageShadow && tw`shadow`,
+]);
 
 // const DecoratorBlob = styled(SvgDotPattern)(() => [
 //   tw`w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-primary-500 -z-10`,
@@ -37,10 +41,11 @@ const Image = styled.img((props) => [props.imageRounded && tw`rounded`, props.im
 // const StepDescription = tw.p`mt-3 max-w-xs leading-loose text-sm text-gray-600 font-medium`;
 
 export default ({
-  subheading = 'Our Expertise',
+  subheading = "Our Expertise",
   heading = (
     <>
-      Designed & Developed by <span className="text-primary-500">Professionals.</span>
+      Designed & Developed by{" "}
+      <span className="text-primary-500">Professionals.</span>
     </>
   ),
   imageSrc = TeamIllustrationSrc,
@@ -56,16 +61,19 @@ export default ({
 
   const defaultSteps = [
     {
-      heading: 'Register',
-      description: 'Let us more about your expectations, resources and time. Our Customer success will connect you with respective tech leads and will sit together with you for evaluation before prototyping.',
+      heading: "Register",
+      description:
+        "Let us more about your expectations, resources and time. Our Customer success will connect you with respective tech leads and will sit together with you for evaluation before prototyping.",
     },
     {
-      heading: 'Development',
-      description: 'Once we are on the same page, a dedicated team of managers, developers, testers and support is assigned to your project to ensure transparency in each step of development from design to deployment.',
+      heading: "Development",
+      description:
+        "Once we are on the same page, a dedicated team of managers, developers, testers and support is assigned to your project to ensure transparency in each step of development from design to deployment.",
     },
     {
-      heading: 'Support and Scale',
-      description: 'A business needs updating. We assist with free-of-cost post-delivery support and product scaling with the growth of your business.',
+      heading: "Support and Scale",
+      description:
+        "A business needs updating. We assist with free-of-cost post-delivery support and product scaling with the growth of your business.",
     },
   ];
 
@@ -75,20 +83,46 @@ export default ({
     <div className="relative">
       <div className="flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center">
         <div className="w-full max-w-md mx-auto md:max-w-none md:mx-0 md:w-6/12 flex-shrink-0 relative">
-          <img src={LaptopImage.src} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded} />
-          {imageDecoratorBlob && <SvgDotPattern className="w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-primary-500 -z-10" css={decoratorBlobCss} />}
+          <img
+            src={Laptop.src}
+            imageBorder={imageBorder}
+            imageShadow={imageShadow}
+            imageRounded={imageRounded}
+          />
+          {imageDecoratorBlob && (
+            <SvgDotPattern
+              className="w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-primary-500 -z-10"
+              css={decoratorBlobCss}
+            />
+          )}
         </div>
-        <div className="md:w-6/12 mt-16 md:mt-0 w-full max-w-md mx-auto md:max-w-none ml-16" textOnLeft={textOnLeft}>
+        <div
+          className="md:w-6/12 mt-16 md:mt-0 w-full max-w-md mx-auto md:max-w-none ml-16"
+          textOnLeft={textOnLeft}
+        >
           <div className="lg:py-8 text-center md:text-left">
-            <h5 className="text-center md:text-left font-bold text-primary-500">{subheading}</h5>
-            <h2 className="text-4xl sm:text-5xl tracking-wide text-center mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight">{heading}</h2>
+            <h5 className="text-center md:text-left font-bold text-primary-500">
+              {subheading}
+            </h5>
+            <h2 className="text-4xl sm:text-5xl tracking-wide text-center mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight">
+              {heading}
+            </h2>
             <ul className="mt-12">
               {steps.map((step, index) => (
-                <li className="mt-8 flex flex-col md:flex-row items-center md:items-start" key={index}>
-                  <div className="font-semibold text-4xl leading-none text-gray-400">{(index + 1).toString().padStart(2, '0')}</div>
+                <li
+                  className="mt-8 flex flex-col md:flex-row items-center md:items-start"
+                  key={index}
+                >
+                  <div className="font-semibold text-4xl leading-none text-gray-400">
+                    {(index + 1).toString().padStart(2, "0")}
+                  </div>
                   <div className="mt-3 md:mt-0 md:ml-6">
-                    <h6 className="leading-none text-xl font-semibold">{step.heading}</h6>
-                    <p className="mt-3 max-w-xs leading-loose text-sm text-gray-600 font-medium">{step.description}</p>
+                    <h6 className="leading-none text-xl font-semibold">
+                      {step.heading}
+                    </h6>
+                    <p className="mt-3 max-w-xs leading-loose text-sm text-gray-600 font-medium">
+                      {step.description}
+                    </p>
                   </div>
                 </li>
               ))}
