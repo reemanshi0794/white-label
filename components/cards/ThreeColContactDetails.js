@@ -100,11 +100,11 @@ export default ({
           <SubheadingBase className="mb-4">{subheading}</SubheadingBase>
         )}
         <SectionHeading className="w-full">{heading}</SectionHeading>
-        {description && (
+        {/* {description && (
           <SectionDescription className="w-full text-center">
             {description}
           </SectionDescription>
-        )}
+        )} */}
         <div className="mt-10 w-full" />
         {cards.map((card, i) => (
           <div className="md:w-1/2 lg:w-1/3 max-w-sm" key={i}>
