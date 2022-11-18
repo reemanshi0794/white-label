@@ -1,9 +1,9 @@
-import React from 'react';
-import FacebookIcon from '../../assets/images/facebook-icon.svg';
-import Logo from '../../assets/images/logo.png';
-import SvgDecoratorBlob1 from '../../assets/images/svg-decorator-blob-9.svg';
-import TwitterIcon from '../../assets/images/twitter-icon.svg';
-import YoutubeIcon from '../../assets/images/youtube-icon.svg';
+import React from "react";
+import FacebookIcon from "../../assets/images/facebook-icon.svg";
+import Logo from "../../assets/images/logo.png";
+import SvgDecoratorBlob1 from "../../assets/images/svg-decorator-blob-9.svg";
+import TwitterIcon from "../../assets/images/twitter-icon.svg";
+import YoutubeIcon from "../../assets/images/youtube-icon.svg";
 
 // const Container = tw.div`relative bg-primary-500 text-gray-100 -mb-8 -mx-8 px-8 py-20 lg:py-24`;
 // const Content = tw.div`max-w-screen-xl mx-auto relative z-10`;

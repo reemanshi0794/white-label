@@ -1,5 +1,5 @@
-import React from 'react';
-import SvgDecoratorBlob from '../../assets/images/svg-decorator-blob-6.svg';
+import React from "react";
+import SvgDecoratorBlob from "../../assets/images/svg-decorator-blob-6.svg";
 
 // const HeaderContainer = tw.div`mt-10 w-full flex flex-col items-center`;
 // const Subheading = tw(SubheadingBase)`mb-4`;
@@ -74,29 +74,50 @@ import SvgDecoratorBlob from '../../assets/images/svg-decorator-blob-6.svg';
 //   ${tw`pointer-events-none -z-20 absolute left-0 bottom-0 h-64 w-64 opacity-25 transform -translate-x-1/2 translate-y-1/2`}
 // `;
 
-export default ({subheading = 'Pricing', heading = 'Flexible Plans.', description = 'Get the best developers to work for you on a contract basis with no strings attached ', plans = null, primaryButtonText = 'Buy Now'}) => {
+export default ({
+  subheading = "Pricing",
+  heading = "Flexible Plans.",
+  description = "Get the best developers to work for you on a contract basis with no strings attached ",
+  plans = null,
+  primaryButtonText = "Buy Now",
+}) => {
   const defaultPlans = [
     {
-      name: 'Personal',
-      price: '$17.99',
-      duration: 'Monthly',
-      mainFeature: 'Suited for Personal Blogs',
-      features: ['30 Templates', '7 Landing Pages', '12 Internal Pages', 'Basic Assistance'],
+      name: "Personal",
+      price: "$17.99",
+      duration: "Monthly",
+      mainFeature: "Suited for Personal Blogs",
+      features: [
+        "30 Templates",
+        "7 Landing Pages",
+        "12 Internal Pages",
+        "Basic Assistance",
+      ],
     },
     {
-      name: 'Business',
-      price: '$37.99',
-      duration: 'Monthly',
-      mainFeature: 'Suited for Production Websites',
-      features: ['60 Templates', '8 Landing Pages', '22 Internal Pages', 'Priority Assistance'],
+      name: "Business",
+      price: "$37.99",
+      duration: "Monthly",
+      mainFeature: "Suited for Production Websites",
+      features: [
+        "60 Templates",
+        "8 Landing Pages",
+        "22 Internal Pages",
+        "Priority Assistance",
+      ],
       featured: true,
     },
     {
-      name: 'Enterprise',
-      price: '$57.99',
-      duration: 'Monthly',
-      mainFeature: 'Suited for Big Companies',
-      features: ['90 Templates', '9 Landing Pages', '37 Internal Pages', 'Personal Assistance'],
+      name: "Enterprise",
+      price: "$57.99",
+      duration: "Monthly",
+      mainFeature: "Suited for Big Companies",
+      features: [
+        "90 Templates",
+        "9 Landing Pages",
+        "37 Internal Pages",
+        "Personal Assistance",
+      ],
     },
   ];
 
@@ -134,15 +155,27 @@ export default ({subheading = 'Pricing', heading = 'Flexible Plans.', descriptio
 
   return (
     <div className="relative">
-      <div className="max-w-screen-xl mx-auto py-20 lg:py-24">
+      <div className="max-w-screen-xl mx-auto py-20 md:py-12">
         <div className="mt-10 w-full flex flex-col items-center">
-          {subheading && <h5 className="font-bold text-primary-500 mb-4">{subheading}</h5>}
-          <h2 className="text-4xl sm:text-5xl font-black tracking-wide text-center w-full">{heading}</h2>
-          {description && <p className="mt-4 text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100 max-w-xl w-full text-center">{description}</p>}
+          {subheading && (
+            <h5 className="font-bold text-primary-500 mb-4">{subheading}</h5>
+          )}
+          <h2 className="text-4xl sm:text-5xl font-black tracking-wide text-center w-full">
+            {heading}
+          </h2>
+          {description && (
+            <p className="mt-4 text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100 max-w-xl w-full text-center">
+              {description}
+            </p>
+          )}
         </div>
         <div className="flex justify-between flex-col lg:flex-row items-center lg:items-stretch relative">
           {plans.map((plan, index) => (
-            <div className="w-full max-w-sm mt-16 lg:mr-8 lg:last:mr-0 text-center px-8 rounded-lg shadow relative pt-2 text-gray-900 bg-white flex flex-col" key={index} featured={plan.featured}>
+            <div
+              className="w-full max-w-sm mt-16 lg:mr-8 lg:last:mr-0 text-center px-8 rounded-lg shadow relative pt-2 text-gray-900 bg-white flex flex-col"
+              key={index}
+              featured={plan.featured}
+            >
               {!plan.featured && (
                 <div
                   className={`rounded-t-lg absolute top-0 inset-x-0 h-2`}
@@ -154,11 +187,17 @@ export default ({subheading = 'Pricing', heading = 'Flexible Plans.', descriptio
               )}
               <div className="flex flex-col uppercase leading-relaxed py-8">
                 <span className="font-bold text-xl">{plan.name}</span>
-                <span className="font-bold text-4xl sm:text-5xl my-1">{plan.price}</span>
-                <span className="text-gray-500 font-bold tracking-widest">{plan.duration}</span>
+                <span className="font-bold text-4xl sm:text-5xl my-1">
+                  {plan.price}
+                </span>
+                <span className="text-gray-500 font-bold tracking-widest">
+                  {plan.duration}
+                </span>
               </div>
               <div className="flex flex-col -mx-8 px-8 py-8 border-t-2 border-b-2 flex-1">
-                <span className="mt-5 first:mt-0 font-medium text-xl font-bold tracking-wide">{plan.mainFeature}</span>
+                <span className="mt-5 first:mt-0 font-medium text-xl font-bold tracking-wide">
+                  {plan.mainFeature}
+                </span>
                 {plan.features.map((feature, index) => (
                   <span key={index} className="mt-5 first:mt-0 font-medium">
                     {feature}

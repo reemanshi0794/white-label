@@ -52,7 +52,7 @@ export default ({
 
   return (
     <div className="relative">
-      <div className="max-w-screen-xl mx-auto py-20 lg:py-24">
+      <div className="max-w-screen-xl mx-auto py-20 md:py-12">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="w-full max-w-md mx-auto md:max-w-none md:mx-0 md:w-5/12 xl:w-6/12 flex-shrink-0 relative">
             <img

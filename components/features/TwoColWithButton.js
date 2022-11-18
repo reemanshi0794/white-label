@@ -1,7 +1,7 @@
 import React from "react";
 // import tw from 'twin.macro';
 import SvgDotPattern from "../../assets/images/dot-pattern.svg";
-import QualityWork from "../../assets/images/QualityWork3.png";
+import QualityWork from "../../assets/images/QualityWork.png";
 import TeamIllustrationSrc from "../../assets/images/team-illustration-2.svg";
 
 // const Container = tw.div`relative`;
@@ -59,7 +59,7 @@ export default ({
 
   return (
     <div className="relative">
-      <div className="flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center">
+      <div className="flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-12 items-center">
         {textOnLeft === true ? (
           <div className="md:w-6/12 flex-shrink-0 relative w-full max-w-md mx-auto md:max-w-none ml-16 border border-[#f2f2f2] p-1">
             <img

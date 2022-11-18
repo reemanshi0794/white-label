@@ -1,11 +1,11 @@
-import React from 'react';
-import CustomizeIconImage from '../../assets/images/customize-icon.svg';
-import FastIconImage from '../../assets/images/fast-icon.svg';
-import ReliableIconImage from '../../assets/images/reliable-icon.svg';
-import ShieldIconImage from '../../assets/images/shield-icon.svg';
-import SimpleIconImage from '../../assets/images/simple-icon.svg';
-import SupportIconImage from '../../assets/images/support-icon.svg';
-import SvgDecoratorBlob3 from '../../assets/images/svg-decorator-blob-3.svg';
+import React from "react";
+import CustomizeIconImage from "../../assets/images/customize-icon.svg";
+import FastIconImage from "../../assets/images/fast-icon.svg";
+import ReliableIconImage from "../../assets/images/reliable-icon.svg";
+import ShieldIconImage from "../../assets/images/shield-icon.svg";
+import SimpleIconImage from "../../assets/images/simple-icon.svg";
+import SupportIconImage from "../../assets/images/support-icon.svg";
+import SvgDecoratorBlob3 from "../../assets/images/svg-decorator-blob-3.svg";
 
 // const Container = tw.div`relative`;
 
@@ -50,9 +50,9 @@ import SvgDecoratorBlob3 from '../../assets/images/svg-decorator-blob-3.svg';
 
 export default ({
   cards = null,
-  heading = 'Amazing Features',
-  subheading = 'fcsdf',
-  description = 'Laying Strong software foundations that yield growth',
+  heading = "Amazing Features",
+  subheading = "fcsdf",
+  description = "Laying Strong software foundations that yield growth",
 }) => {
   /*
    * This componets has an array of object denoting the cards defined below. Each object in the cards array can have the key (Change it according to your need, you can also add more objects to have more cards in this feature component) or you can directly pass this using the cards prop:
@@ -65,39 +65,39 @@ export default ({
   const defaultCards = [
     {
       imageSrc: ShieldIconImage,
-      title: 'App Development',
+      title: "App Development",
       description:
-        'An app for your Brand. We fix your business challenges by creating premium mobile apps for Android and iOS customers. ',
+        "An app for your Brand. We fix your business challenges by creating premium mobile apps for Android and iOS customers. ",
     },
     {
       imageSrc: SupportIconImage,
-      title: 'Enterprise Softwares',
+      title: "Enterprise Softwares",
       description:
-        'We develop solutions that solve real problems that are beyond the capabilities of traditional ERP systems. Build feature rich CMS, CRM, POS, ERP, CDP with us.',
+        "We develop solutions that solve real problems that are beyond the capabilities of traditional ERP systems. Build feature rich CMS, CRM, POS, ERP, CDP with us.",
     },
     {
       imageSrc: CustomizeIconImage,
-      title: 'Blockchain Development',
+      title: "Blockchain Development",
       description:
-        'World-class companies enjoy the benefits of blockchain technology with us through Cryptocurrency, Smart-Contracts, crypto wallets, DeFi and enterprise Blockchain app development and more with the most efficient internal process.',
+        "World-class companies enjoy the benefits of blockchain technology with us through Cryptocurrency, Smart-Contracts, crypto wallets, DeFi and enterprise Blockchain app development and more with the most efficient internal process.",
     },
     {
       imageSrc: ReliableIconImage,
-      title: 'eCommerce Development',
+      title: "eCommerce Development",
       description:
-        'We back startups and young entrepreneurs with exclusive stores by increasing their brand loyalty and authenticity with custom build eCommerce Stores.',
+        "We back startups and young entrepreneurs with exclusive stores by increasing their brand loyalty and authenticity with custom build eCommerce Stores.",
     },
     {
       imageSrc: FastIconImage,
-      title: 'Web Development',
+      title: "Web Development",
       description:
-        'We build and shape beautiful websites for individuals and businesses to meet all their online business demands.',
+        "We build and shape beautiful websites for individuals and businesses to meet all their online business demands.",
     },
     {
       imageSrc: SimpleIconImage,
-      title: 'Metaverse Development',
+      title: "Metaverse Development",
       description:
-        'The potential use cases of Metaverse are designed and developed at White Label to help our clients tap into endless opportunities of the new era internet with Blockchain, AI and AR/VR.',
+        "The potential use cases of Metaverse are designed and developed at White Label to help our clients tap into endless opportunities of the new era internet with Blockchain, AI and AR/VR.",
     },
   ];
 
@@ -105,7 +105,7 @@ export default ({
 
   return (
     <div className="relative">
-      <div className="items-stretch flex-row flex-wrap justify-center max-w-screen xl:max-w-5xl mx-auto py-20 md:py-24 flex">
+      <div className="items-stretch flex-row flex-wrap justify-center max-w-screen xl:max-w-5xl mx-auto py-20 md:py-12 flex">
         {subheading && (
           <h5 className="mb-4 font-bold text-primary-500">{subheading}</h5>
         )}
@@ -119,7 +119,7 @@ export default ({
         )}
         <div className="mt-10 w-full" />
         {cards.map((card, i) => {
-          console.log('card', card);
+          console.log("card", card);
           const IconImage = card.imageSrc;
           return (
             <div className="md:w-1/2 lg:w-1/3 max-w-sm" key={i}>
@@ -130,11 +130,11 @@ export default ({
                 </span>
                 <span className="sm:ml-4 mt-4 sm:mt-2">
                   <span className="mt-4 tracking-wide font-bold text-2xl leading-none">
-                    {card.title || 'Fully Secure'}
+                    {card.title || "Fully Secure"}
                   </span>
                   <p className="mt-1 sm:mt-4 font-medium text-secondary-100 leading-loose">
                     {card.description ||
-                      'Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.'}
+                      "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud."}
                   </p>
                 </span>
               </div>

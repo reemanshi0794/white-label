@@ -10,72 +10,74 @@ import Header from "../components/headers/light.js";
 
 export default () => {
   return (
-    <div className="min-h-screen text-secondary-500 p-8 overflow-hidden">
-      <Header />
-      <ContactUsForm />
-      <ContactDetails
-        cards={[
-          {
-            title: "Canada Office",
-            description: (
-              <>
-                <span className="leading-relaxed">
-                  <span className="block">Whiten App Solutins Inc.</span>
-                  <span className="block">
-                    1603-2545 Erin Centre BLVD Mississauga, ON, L5M 6Z9 Canada
+    <>
+      <div className="min-h-screen text-secondary-500 p-8 px-24 2xl:p-8 overflow-hidden">
+        <Header />
+        <ContactUsForm />
+        <ContactDetails
+          cards={[
+            {
+              title: "Canada Office",
+              description: (
+                <>
+                  <span className="leading-relaxed">
+                    <span className="block">Whiten App Solutins Inc.</span>
+                    <span className="block">
+                      1603-2545 Erin Centre BLVD Mississauga, ON, L5M 6Z9 Canada
+                    </span>
                   </span>
-                </span>
-                <span className="text-sm mt-6 block text-gray-500">
-                  contact@white-label.io
-                </span>
-                <span className="text-sm mt-0 block text-gray-500">
-                  +1 (416) 948-7063
-                </span>
-              </>
-            ),
-          },
-          {
-            title: "India Office",
-            description: (
-              <>
-                <span className="leading-relaxed">
-                  <span className="block">Innow8 Apps</span>
-                  <span className="block">
-                    910-B, Bestech Business Tower, Sector 66, Sahibzada Ajit
-                    Singh Nagar, Punjab 160055
+                  <span className="text-sm mt-6 block text-gray-500">
+                    contact@white-label.io
                   </span>
-                </span>
-                <span className="text-sm mt-6 block text-gray-500">
-                  contact@white-label.io
-                </span>
-                <span className="text-sm mt-0 block text-gray-500">
-                  +91 99153-76280
-                </span>
-              </>
-            ),
-          },
-          {
-            title: "India Office",
-            description: (
-              <>
-                <span className="leading-relaxed">
-                  <span className="block">Whiten App Solutins Inc.</span>
-                  <span className="block">
-                    1494, Sector 4, Panchkula, Haryana, India, 134112
+                  <span className="text-sm mt-0 block text-gray-500">
+                    +1 (416) 948-7063
                   </span>
-                </span>
-                <span className="text-sm mt-6 block text-gray-500">
-                  contact@white-label.io
-                </span>
-                <span className="text-sm mt-0 block text-gray-500">
-                  +91 99153-76280
-                </span>
-              </>
-            ),
-          },
-        ]}
-      />
+                </>
+              ),
+            },
+            {
+              title: "India Office",
+              description: (
+                <>
+                  <span className="leading-relaxed">
+                    <span className="block">Innow8 Apps</span>
+                    <span className="block">
+                      910-B, Bestech Business Tower, Sector 66, Sahibzada Ajit
+                      Singh Nagar, Punjab 160055
+                    </span>
+                  </span>
+                  <span className="text-sm mt-6 block text-gray-500">
+                    contact@white-label.io
+                  </span>
+                  <span className="text-sm mt-0 block text-gray-500">
+                    +91 99153-76280
+                  </span>
+                </>
+              ),
+            },
+            {
+              title: "India Office",
+              description: (
+                <>
+                  <span className="leading-relaxed">
+                    <span className="block">Whiten App Solutins Inc.</span>
+                    <span className="block">
+                      1494, Sector 4, Panchkula, Haryana, India, 134112
+                    </span>
+                  </span>
+                  <span className="text-sm mt-6 block text-gray-500">
+                    contact@white-label.io
+                  </span>
+                  <span className="text-sm mt-0 block text-gray-500">
+                    +91 99153-76280
+                  </span>
+                </>
+              ),
+            },
+          ]}
+        />
+      </div>
       <Footer />
-    </div>
+    </>
   );
 };

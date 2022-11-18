@@ -110,8 +110,8 @@ export default ({
 
   return (
     <div className="relative">
-      <div className="flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24">
-        <div className="w-full max-w-md mx-auto md:max-w-none md:mx-0 md:w-5/12 flex-shrink-0 h-80 md:h-auto">
+      <div className="flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-10 items-center">
+        <div className="w-full max-w-md mx-auto md:max-w-none md:mx-0 md:w-2/5 2xl:w-5/12 flex-shrink-0 h-80 md:h-auto">
           <img src={ContactUsSrc.src} alt="contact-us" />
         </div>
         <div
@@ -177,7 +177,7 @@ export default ({
                 }
                 autoComplete="off"
               />
-              <select
+              {/* <select
                 className="mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
                 aria-label="Default select example"
                 value={contactInfo.service || ""}
@@ -195,7 +195,7 @@ export default ({
                 <option value={enterpriseSoftwares}>
                   Enterprise Softwares
                 </option>
-              </select>
+              </select> */}
               <textarea
                 className="mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
                 name="message"

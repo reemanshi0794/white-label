@@ -1,13 +1,13 @@
-import React from 'react';
-import FacebookIcon from '../../assets/images/facebook-icon.svg';
-import TwitterIcon from '../../assets/images/twitter-icon.svg';
-import YoutubeIcon from '../../assets/images/youtube-icon.svg';
-import LogoImage from '../../assets/images/logo.svg';
+import React from "react";
+import FacebookIcon from "../../assets/images/facebook-icon.svg";
+import TwitterIcon from "../../assets/images/twitter-icon.svg";
+import YoutubeIcon from "../../assets/images/youtube-icon.svg";
+import LogoImage from "../../assets/images/logo.svg";
 
 export default () => {
   return (
     <div className="relative bg-gray-200 text-gray-700 -mb-8 -mx-8 px-8 py-20 lg:py-24">
-      <div className="max-w-screen-xl mx-auto relative z-10">
+      <div className="max-w-screen-xl mx-auto relative z-10 pl-12">
         <div className="flex flex-wrap text-center sm:text-left justify-center sm:justify-start md:justify-between -mt-12">
           <div className="px-4 sm:px-0 sm:w-1/4 md:w-auto mt-12">
             <h5 className="uppercase font-bold">Main</h5>
@@ -195,7 +195,7 @@ export default () => {
             </h5>
           </div>
           <p className="text-center text-sm sm:text-base mt-8 md:mt-0 font-medium text-gray-500">
-            &copy; 2018 Whiten App Solutions Inc. All Rights Reserved.
+            &copy; 2022 Whiten App Solutions Inc. All Rights Reserved.
           </p>
           <div className="mt-8 md:mt-0 flex">
             <a
