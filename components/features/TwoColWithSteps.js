@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 import SvgDotPattern from "../../assets/images/dot-pattern.svg";
-import Laptop from "../../assets/images/laptop.png";
+import Laptop from "../../assets/images/laptop1.png";
 import TeamIllustrationSrc from "../../assets/images/team-illustration-2.svg";
 
 // const Container = tw.div`relative`;
