@@ -1,28 +1,28 @@
-import { ReactComponent as BriefcaseIcon } from 'feather-icons/dist/icons/briefcase.svg';
-import { ReactComponent as MoneyIcon } from 'feather-icons/dist/icons/dollar-sign.svg';
-import React from 'react';
-import tw from 'twin.macro';
-import heroScreenshotImageSrc from '../assets/images/hero-screenshot-1.png';
-import macHeroScreenshotImageSrc from '../assets/images/hero-screenshot-2.png';
-import prototypeIllustrationImageSrc from '../assets/images/prototype-illustration.svg';
-import GetStarted from '../components/cta/GetStarted';
-import FAQ from '../components/faqs/SingleCol.js';
-import Features from '../components/features/ThreeColWithSideImage.js';
-import MainFeature from '../components/features/TwoColWithButton.js';
-import FeatureWithSteps from '../components/features/TwoColWithSteps.js';
-import MainFeature2 from '../components/features/TwoColWithTwoHorizontalFeaturesAndButton.js';
-import Footer from '../components/footers/FiveColumnWithBackground.js';
+import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg";
+import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg";
+import React from "react";
+import tw from "twin.macro";
+import heroScreenshotImageSrc from "../assets/images/hero-screenshot-1.png";
+import macHeroScreenshotImageSrc from "../assets/images/hero-screenshot-2.png";
+import prototypeIllustrationImageSrc from "../assets/images/prototype-illustration.svg";
+import GetStarted from "../components/cta/GetStarted";
+import FAQ from "../components/faqs/SingleCol.js";
+import Features from "../components/features/ThreeColWithSideImage.js";
+import MainFeature from "../components/features/TwoColWithButton.js";
+import FeatureWithSteps from "../components/features/TwoColWithSteps.js";
+import MainFeature2 from "../components/features/TwoColWithTwoHorizontalFeaturesAndButton.js";
+import Footer from "../components/footers/FiveColumnWithBackground.js";
 // import { css } from "styled-components/macro"; //eslint-disable-line
-import Hero from '../components/hero/TwoColumnWithInput.js';
-import Pricing from '../components/pricing/ThreePlans.js';
-import Testimonial from '../components/testimonials/TwoColumnWithImageAndRating.js';
+import Hero from "../components/hero/TwoColumnWithInput.js";
+import Pricing from "../components/pricing/ThreePlans.js";
+import Testimonial from "../components/testimonials/TwoColumnWithImageAndRating.js";
 
 const SaaSProductLandingPage = () => {
   // const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
   // const HighlightedText = tw.span`text-primary-500`;
 
   return (
-    <div className="min-h-screen text-secondary-500 p-8 overflow-hidden">
+    <div className="min-h-screen text-secondary-500 p-8 px-24 2xl:p-8 overflow-hidden">
       <Hero roundedHeaderButton={true} />
       <Features
         subheading={
@@ -49,7 +49,7 @@ const SaaSProductLandingPage = () => {
       <FeatureWithSteps
         subheading={
           <span className="uppercase tracking-widest font-bold text-primary-500">
-            {' '}
+            {" "}
             <>
               Take the easy <span className="text-primary-500">way out</span>
             </>
@@ -73,16 +73,16 @@ const SaaSProductLandingPage = () => {
         features={[
           {
             Icon: MoneyIcon,
-            title: 'Affordable',
+            title: "Affordable",
             description:
-              'We promise to offer you the best rate we can - at par with the industry standard.',
+              "We promise to offer you the best rate we can - at par with the industry standard.",
             iconContainerCss: tw`bg-green-300 text-green-800`,
           },
           {
             Icon: BriefcaseIcon,
-            title: 'Professionalism',
+            title: "Professionalism",
             description:
-              'We assure you that our templates are designed and created by professional designers.',
+              "We assure you that our templates are designed and created by professional designers.",
             iconContainerCss: tw`bg-red-300 text-red-800`,
           },
         ]}
@@ -95,46 +95,46 @@ const SaaSProductLandingPage = () => {
         }
         heading={
           <>
-            Find the best Developers{' '}
+            Find the best Developers{" "}
             <span className="text-primary-500">here.</span>
           </>
         }
         plans={[
           {
-            name: 'Technology',
-            price: '$17.99',
-            duration: 'Monthly',
-            mainFeature: 'Individuals',
+            name: "Technology",
+            price: "$17.99",
+            duration: "Monthly",
+            mainFeature: "Individuals",
             features: [
-              '30 Templates',
-              '7 Landing Pages',
-              '12 Internal Pages',
-              'Basic Assistance',
+              "30 Templates",
+              "7 Landing Pages",
+              "12 Internal Pages",
+              "Basic Assistance",
             ],
           },
           {
-            name: 'Total Developers',
-            price: '$37.99',
-            duration: 'Monthly',
-            mainFeature: 'Startups',
+            name: "Total Developers",
+            price: "$37.99",
+            duration: "Monthly",
+            mainFeature: "Startups",
             features: [
-              '60 Templates',
-              '15 Landing Pages',
-              '22 Internal Pages',
-              'Priority Assistance',
+              "60 Templates",
+              "15 Landing Pages",
+              "22 Internal Pages",
+              "Priority Assistance",
             ],
             featured: true,
           },
           {
-            name: 'To be allocated',
-            price: '$57.99',
-            duration: 'Monthly',
-            mainFeature: 'Enterprises',
+            name: "To be allocated",
+            price: "$57.99",
+            duration: "Monthly",
+            mainFeature: "Enterprises",
             features: [
-              '90 Templates',
-              '27 Landing Pages',
-              '37 Internal Pages',
-              'Personal Assistance',
+              "90 Templates",
+              "27 Landing Pages",
+              "37 Internal Pages",
+              "Personal Assistance",
             ],
           },
         ]}
@@ -186,24 +186,24 @@ const SaaSProductLandingPage = () => {
         }
         faqs={[
           {
-            question: 'What are the technologies that you use ?',
+            question: "What are the technologies that you use ?",
             answer:
-              'At Whiten App Solutions we continuously update our tech stack to meet the demand of our clients. Presently we work with technologies including.',
+              "At Whiten App Solutions we continuously update our tech stack to meet the demand of our clients. Presently we work with technologies including.",
           },
           {
-            question: 'How Does your Pricing work?',
+            question: "How Does your Pricing work?",
             answer:
-              'All our solutions and services are 100% custom and are built according to the need of our clients. The pricing of each solution varies as its purely dependent on the demands and feature requirements.',
+              "All our solutions and services are 100% custom and are built according to the need of our clients. The pricing of each solution varies as its purely dependent on the demands and feature requirements.",
           },
           {
-            question: 'Can I hire only one developer?',
+            question: "Can I hire only one developer?",
             answer:
-              'Yes, If you already have a team and are behind a developer, you can hire our top developers to work with your team. We provide contract hiring services to help clients finish their projects quickly by not making commitments and avoiding permanent hires for temporary needs.',
+              "Yes, If you already have a team and are behind a developer, you can hire our top developers to work with your team. We provide contract hiring services to help clients finish their projects quickly by not making commitments and avoiding permanent hires for temporary needs.",
           },
           {
-            question: 'What time zone do we follow?',
+            question: "What time zone do we follow?",
             answer:
-              'Our clients are all around the globe and thereby each project is handled carefully by assigning a team who works on our clients timeline to avoid communication gaps and to be well synchronized with your team.',
+              "Our clients are all around the globe and thereby each project is handled carefully by assigning a team who works on our clients timeline to avoid communication gaps and to be well synchronized with your team.",
           },
         ]}
       />

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
-import LogoSVG from "../../assets/images/LogoSVG.svg";
+import LogoSVG from "../../assets/images/logo.svg";
 import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 
 const Header = tw.header`
@@ -78,7 +78,13 @@ export default ({
       <NavLink href="/AboutUs">About</NavLink>
       <NavLink href="/Blog">Blog</NavLink>
       {/* <NavLink href="/#">Pricing</NavLink> */}
-      <NavLink href="/ContactUs">Contact Us</NavLink>
+      {/* <NavLink href="/ContactUs">Contact Us</NavLink> */}
+      <PrimaryLink
+        css={roundedHeaderButton && tw`rounded-full`}
+        href="/ContactUs"
+      >
+        Contact Us
+      </PrimaryLink>
       {/* <NavLink href="/#" tw="lg:ml-12!">
         Login
       </NavLink>

@@ -1,12 +1,12 @@
-import React from 'react';
-import SvgDecoratorBlob from '../../assets/images/svg-decorator-blob-6.svg';
-import androidImg from '../../assets/images/demo/androidImg.png';
-import reactImg from '../../assets/images/demo/reactImg.png';
-import nodeImg from '../../assets/images/demo/nodeImg.png';
-import goLangImg from '../../assets/images/demo/goLangImg.png';
-import pythonImg from '../../assets/images/demo/pythonImg.png';
-import swiftImg from '../../assets/images/demo/swiftImg.png';
-import javaImg from '../../assets/images/demo/javaImg.png';
+import React from "react";
+import SvgDecoratorBlob from "../../assets/images/svg-decorator-blob-6.svg";
+import androidImg from "../../assets/images/demo/androidImg.png";
+import reactImg from "../../assets/images/demo/reactImg.png";
+import nodeImg from "../../assets/images/demo/nodeImg.png";
+import goLangImg from "../../assets/images/demo/goLangImg.png";
+import pythonImg from "../../assets/images/demo/pythonImg.png";
+import swiftImg from "../../assets/images/demo/swiftImg.png";
+import javaImg from "../../assets/images/demo/javaImg.png";
 
 // const HeaderContainer = tw.div`mt-10 w-full flex flex-col items-center`;
 // const Subheading = tw(SubheadingBase)`mb-4`;
@@ -82,48 +82,48 @@ import javaImg from '../../assets/images/demo/javaImg.png';
 // `;
 
 export default ({
-  subheading = 'Pricing',
-  heading = 'Flexible Plans.',
-  description = 'Get the best developers to work for you on a contract basis with no strings attached ',
+  subheading = "Pricing",
+  heading = "Flexible Plans.",
+  description = "Get the best developers to work for you on a contract basis with no strings attached ",
   plans = null,
-  primaryButtonText = 'Buy Now',
+  primaryButtonText = "Buy Now",
 }) => {
   const defaultPlans = [
     {
-      name: 'Personal',
-      price: '$17.99',
-      duration: 'Monthly',
-      mainFeature: 'Suited for Personal Blogs',
+      name: "Personal",
+      price: "$17.99",
+      duration: "Monthly",
+      mainFeature: "Suited for Personal Blogs",
       features: [
-        '30 Templates',
-        '7 Landing Pages',
-        '12 Internal Pages',
-        'Basic Assistance',
+        "30 Templates",
+        "7 Landing Pages",
+        "12 Internal Pages",
+        "Basic Assistance",
       ],
     },
     {
-      name: 'Business',
-      price: '$37.99',
-      duration: 'Monthly',
-      mainFeature: 'Suited for Production Websites',
+      name: "Business",
+      price: "$37.99",
+      duration: "Monthly",
+      mainFeature: "Suited for Production Websites",
       features: [
-        '60 Templates',
-        '8 Landing Pages',
-        '22 Internal Pages',
-        'Priority Assistance',
+        "60 Templates",
+        "8 Landing Pages",
+        "22 Internal Pages",
+        "Priority Assistance",
       ],
       featured: true,
     },
     {
-      name: 'Enterprise',
-      price: '$57.99',
-      duration: 'Monthly',
-      mainFeature: 'Suited for Big Companies',
+      name: "Enterprise",
+      price: "$57.99",
+      duration: "Monthly",
+      mainFeature: "Suited for Big Companies",
       features: [
-        '90 Templates',
-        '9 Landing Pages',
-        '37 Internal Pages',
-        'Personal Assistance',
+        "90 Templates",
+        "9 Landing Pages",
+        "37 Internal Pages",
+        "Personal Assistance",
       ],
     },
   ];
@@ -132,7 +132,7 @@ export default ({
 
   return (
     <div className="relative">
-      <div className="max-w-screen-xl mx-auto py-20 md:py-12">
+      <div className="max-w-screen-xl mx-auto pt-20 md:pt-4">
         <div className="mt-10 w-full flex flex-col items-center">
           {subheading && (
             <h5 className="font-bold text-primary-500 mb-4">{subheading}</h5>
@@ -208,7 +208,7 @@ export default ({
             <div className="py-10 px-5 border-r-[3px] text-center border-[#eaeaea]">
               <h3 className="font-bold text-2xl mb-6 text-black">Developers</h3>
               <ul>
-                {['40', '20', '15', '12', '12', '10', '07'].map((nmbr) => (
+                {["40", "20", "15", "12", "12", "10", "07"].map((nmbr) => (
                   <li className="text-2xl mb-6 opacity-50 text-black list-none font-bold">
                     {nmbr}
                   </li>
@@ -218,7 +218,7 @@ export default ({
             <div className=" py-10 px-5 border-r-[3px] text-center border-[#eaeaea]">
               <h3 className="font-bold text-2xl mb-6 text-black">Available</h3>
               <ul>
-                {['16', '08', '06', '04', '04', '07', '03'].map((nmbr) => (
+                {["16", "08", "06", "04", "04", "07", "03"].map((nmbr) => (
                   <li className="text-2xl mb-6 opacity-50 text-black list-none font-bold">
                     {nmbr}
                   </li>

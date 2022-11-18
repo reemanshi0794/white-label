@@ -1,10 +1,10 @@
-import React from 'react';
-import BannerImage from '../../assets/images/BannerImage.png';
-import CustomersLogoStripImage from '../../assets/images/customers-logo-strip.png';
-import SvgDecoratorBlob1 from '../../assets/images/svg-decorator-blob-1.svg';
+import React from "react";
+import BannerImage from "../../assets/images/BannerImage.png";
+import CustomersLogoStripImage from "../../assets/images/Partnerslogo.svg";
+import SvgDecoratorBlob1 from "../../assets/images/svg-decorator-blob-1.svg";
 //eslint-disable-next-line
 // import { css } from "styled-components/macro";
-import Header from '../headers/light.js';
+import Header from "../headers/light.js";
 
 // const Container = tw.div`relative`;
 // const TwoColumn = tw.div`flex flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -68,10 +68,14 @@ export default ({ roundedHeaderButton }) => {
               <p className="uppercase text-sm lg:text-xs tracking-wider font-bold text-gray-500">
                 Our TRUSTED Customers
               </p>
-              <img
+              {/* <img
                 className="mt-4 w-full lg:pr-16 xl:pr-32 opacity-50"
                 src={CustomersLogoStripImage.src}
                 alt="Our Customers"
+              /> */}
+              <CustomersLogoStripImage
+                alt="partners-logo"
+                className="mr-3 mt-2"
               />
             </div>
           </div>

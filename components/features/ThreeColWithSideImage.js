@@ -105,7 +105,7 @@ export default ({
 
   return (
     <div className="relative">
-      <div className="items-stretch flex-row flex-wrap justify-center max-w-screen xl:max-w-5xl mx-auto py-20 md:py-12 flex">
+      <div className="items-stretch flex-row flex-wrap justify-center max-w-screen xl:max-w-5xl mx-auto pt-20 md:pt-4 flex">
         {subheading && (
           <h5 className="mb-4 font-bold text-primary-500">{subheading}</h5>
         )}

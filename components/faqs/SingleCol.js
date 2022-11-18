@@ -70,7 +70,7 @@ export default ({
 
   return (
     <div className="relative" id="faq">
-      <div className="max-w-screen-xl mx-auto py-20 md:py-1">
+      <div className="max-w-screen-xl mx-auto pt-20 md:pt-12">
         <div className="flex flex-col items-center">
           <div>
             {subheading && (
