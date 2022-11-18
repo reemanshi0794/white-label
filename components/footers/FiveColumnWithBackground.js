@@ -1,6 +1,6 @@
 import React from 'react';
 import FacebookIcon from '../../assets/images/facebook-icon.svg';
-import Logo2 from '../../assets/images/logo2.svg';
+import Logo from '../../assets/images/logo.png';
 import SvgDecoratorBlob1 from '../../assets/images/svg-decorator-blob-9.svg';
 import TwitterIcon from '../../assets/images/twitter-icon.svg';
 import YoutubeIcon from '../../assets/images/youtube-icon.svg';
@@ -237,7 +237,8 @@ export default () => {
         <div className="my-16 border-b-2 border-white w-full" />
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center justify-center md:justify-start">
-            <Logo2 alt="logo" className="mr-3" />
+            {/* <Logo2 alt="logo" className="mr-3" /> */}
+            <img src={Logo.src} alt="logo" />
             {/* <h5 className="ml-2 text-xl font-black tracking-wider text-gray-100">Whiten App Solutins Inc.</h5> */}
           </div>
           <p className="text-center text-sm sm:text-base mt-8 md:mt-0 font-medium text-gray-400">
