@@ -242,7 +242,7 @@ export default () => {
             {/* <h5 className="ml-2 text-xl font-black tracking-wider text-gray-100">Whiten App Solutins Inc.</h5> */}
           </div>
           <p className="text-center text-sm sm:text-base mt-8 md:mt-0 font-medium text-gray-400">
-            &copy; 2021 Whiten App Solutions
+            &copy; 2022 Whiten App Solutions
           </p>
           <div className="mt-8 md:mt-0 flex">
             <a
