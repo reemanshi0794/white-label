@@ -1,7 +1,7 @@
 import React from "react";
 // import tw from 'twin.macro';
 import SvgDotPattern from "../../assets/images/dot-pattern.svg";
-import QualityWork from "../../assets/images/QualityWork2.png";
+import QualityWork from "../../assets/images/QualityWork3.png";
 import TeamIllustrationSrc from "../../assets/images/team-illustration-2.svg";
 
 // const Container = tw.div`relative`;
