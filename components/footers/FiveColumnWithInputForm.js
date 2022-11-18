@@ -1,8 +1,8 @@
-import React from "react";
-import FacebookIcon from "../../assets/images/facebook-icon.svg";
-import TwitterIcon from "../../assets/images/twitter-icon.svg";
-import YoutubeIcon from "../../assets/images/youtube-icon.svg";
-import LogoImage from "../../assets/images/logo.svg";
+import React from 'react';
+import FacebookIcon from '../../assets/images/facebook-icon.svg';
+import TwitterIcon from '../../assets/images/twitter-icon.svg';
+import YoutubeIcon from '../../assets/images/youtube-icon.svg';
+import LogoImage from '../../assets/images/logo.svg';
 
 export default () => {
   return (
@@ -15,7 +15,7 @@ export default () => {
               <li className="mt-3">
                 <a
                   className="border-b-2 border-transparent hocus:border-gray-700 pb-1 transition duration-300"
-                  href="#"
+                  href="/Blog"
                 >
                   Blog
                 </a>
@@ -39,7 +39,7 @@ export default () => {
               <li className="mt-3">
                 <a
                   className="border-b-2 border-transparent hocus:border-gray-700 pb-1 transition duration-300"
-                  href="#"
+                  href="/AboutUs"
                 >
                   About Us
                 </a>

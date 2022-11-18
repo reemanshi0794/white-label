@@ -1,15 +1,15 @@
 // import Features from "components/features/ThreeColWithSideImage.js";
 // import MainFeature2 from "components/features/TwoColSingleFeatureWithStats.js";
 // import MainFeature3 from "components/features/TwoColSingleFeatureWithStats2.js";
-import React from "react";
-import ShieldIconImage from "../assets/images/shield-icon.svg";
-import CustomerLoveIconImage from "../assets/images/simple-icon.svg";
-import SupportIconImage from "../assets/images/support-icon.svg";
-import TeamCardGrid from "../components/cards/ProfileThreeColGrid.js";
-import Features from "../components/features/ThreeColSimple.js";
-import MainFeature1 from "../components/features/TwoColWithButton.js";
-import Footer from "../components/footers/FiveColumnWithInputForm.js";
-import Header from "../components/headers/light.js";
+import React from 'react';
+import ShieldIconImage from '../assets/images/shield-icon.svg';
+import CustomerLoveIconImage from '../assets/images/simple-icon.svg';
+import SupportIconImage from '../assets/images/support-icon.svg';
+import TeamCardGrid from '../components/cards/ProfileThreeColGrid.js';
+import Features from '../components/features/ThreeColSimple.js';
+import MainFeature1 from '../components/features/TwoColWithButton.js';
+import Footer from '../components/footers/FiveColumnWithInputForm.js';
+import Header from '../components/headers/light.js';
 // const Subheading = tw.span`uppercase tracking-wider text-sm`;
 export default () => {
   return (
@@ -46,21 +46,21 @@ export default () => {
         cards={[
           {
             imageSrc: SupportIconImage,
-            title: "24/7 Support",
+            title: '24/7 Support',
             description:
-              "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport",
+              'Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport',
           },
           {
             imageSrc: ShieldIconImage,
-            title: "Strong Teams",
+            title: 'Strong Teams',
             description:
-              "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport",
+              'Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport',
           },
           {
             imageSrc: CustomerLoveIconImage,
-            title: "Customer Satisfaction",
+            title: 'Customer Satisfaction',
             description:
-              "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport",
+              'Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport',
           },
         ]}
         linkText=""

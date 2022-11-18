@@ -1,12 +1,12 @@
-import React from "react";
-import tw from "twin.macro";
-import styled from "styled-components";
-import { css } from "styled-components/macro"; //eslint-disable-line
+import React from 'react';
+import tw from 'twin.macro';
+import styled from 'styled-components';
+import { css } from 'styled-components/macro'; //eslint-disable-line
 
-import LogoImage from "images/logo-light.svg";
-import { ReactComponent as FacebookIcon } from "images/facebook-icon.svg";
-import { ReactComponent as TwitterIcon } from "images/twitter-icon.svg";
-import { ReactComponent as YoutubeIcon } from "images/youtube-icon.svg";
+import LogoImage from 'images/logo-light.svg';
+import { ReactComponent as FacebookIcon } from 'images/facebook-icon.svg';
+import { ReactComponent as TwitterIcon } from 'images/twitter-icon.svg';
+import { ReactComponent as YoutubeIcon } from 'images/youtube-icon.svg';
 
 const Container = tw.div`relative bg-gray-900 text-gray-100 -mx-8 -mb-8 px-8`;
 const Content = tw.div`max-w-screen-xl mx-auto pt-16 pb-8`;
@@ -70,7 +70,7 @@ export default () => {
             <ColumnHeading>Quick Links</ColumnHeading>
             <LinkList>
               <LinkListItem>
-                <Link href="#">Blog</Link>
+                <Link href="/Blog">Blog</Link>
               </LinkListItem>
               <LinkListItem>
                 <Link href="#">FAQs</Link>
@@ -79,7 +79,7 @@ export default () => {
                 <Link href="#">Support</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="#">About Us</Link>
+                <Link href="/AboutUs">About Us</Link>
               </LinkListItem>
             </LinkList>
           </Column>

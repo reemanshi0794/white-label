@@ -1,10 +1,10 @@
-import { Container as ContainerBase } from "components/misc/Layouts.js";
-import React from "react";
-import styled from "styled-components";
-import tw from "twin.macro";
-import { ReactComponent as FacebookIcon } from "../../images/facebook-icon.svg";
-import { ReactComponent as TwitterIcon } from "../../images/twitter-icon.svg";
-import { ReactComponent as YoutubeIcon } from "../../images/youtube-icon.svg";
+import { Container as ContainerBase } from 'components/misc/Layouts.js';
+import React from 'react';
+import styled from 'styled-components';
+import tw from 'twin.macro';
+import { ReactComponent as FacebookIcon } from '../../images/facebook-icon.svg';
+import { ReactComponent as TwitterIcon } from '../../images/twitter-icon.svg';
+import { ReactComponent as YoutubeIcon } from '../../images/youtube-icon.svg';
 
 const Container = tw(ContainerBase)`bg-gray-900 text-gray-100 -mx-8 -mb-8`;
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;

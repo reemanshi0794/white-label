@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import tw from "twin.macro";
-import { ReactComponent as FacebookIcon } from "../../assets/images/facebook-icon.svg";
-import Logo from "../../assets/images/logo.svg";
-import { ReactComponent as TwitterIcon } from "../../assets/images/twitter-icon.svg";
-import { ReactComponent as YoutubeIcon } from "../../assets/images/youtube-icon.svg";
+import React from 'react';
+import styled from 'styled-components';
+import tw from 'twin.macro';
+import { ReactComponent as FacebookIcon } from '../../assets/images/facebook-icon.svg';
+import Logo from '../../assets/images/logo.svg';
+import { ReactComponent as TwitterIcon } from '../../assets/images/twitter-icon.svg';
+import { ReactComponent as YoutubeIcon } from '../../assets/images/youtube-icon.svg';
 
 const Container = tw.div`relative bg-gray-200 -mx-8 -mb-8 px-8`;
 const FiveColumns = tw.div`max-w-screen-xl mx-auto py-16 lg:py-20 flex flex-wrap justify-between`;
@@ -66,7 +66,7 @@ export default () => {
           <ColumnHeading>Quick Links</ColumnHeading>
           <LinkList>
             <LinkListItem>
-              <Link href="#">Blog</Link>
+              <Link href="/Blog">Blog</Link>
             </LinkListItem>
             <LinkListItem>
               <Link href="#">FAQs</Link>
@@ -75,7 +75,7 @@ export default () => {
               <Link href="#">Support</Link>
             </LinkListItem>
             <LinkListItem>
-              <Link href="#">About Us</Link>
+              <Link href="/AboutUs">About Us</Link>
             </LinkListItem>
           </LinkList>
         </Column>
