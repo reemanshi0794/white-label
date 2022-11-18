@@ -90,7 +90,7 @@ const SaaSProductLandingPage = () => {
       <Pricing
         subheading={
           <span className="uppercase tracking-widest font-bold text-primary-500">
-            Pricing
+            A developer would do?
           </span>
         }
         heading={

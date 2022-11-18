@@ -2,9 +2,15 @@ import React from 'react';
 import CustomizeIconImage from '../../assets/images/customize-icon.svg';
 import ShieldIconImage from '../../assets/images/shield-icon.svg';
 import SupportIconImage from '../../assets/images/support-icon.svg';
-import {SectionHeading, Subheading as SubheadingBase} from '../../components/misc/Headings.js';
-import {Container, ContentWithPaddingXl} from '../../components/misc/Layouts.js';
-import {SectionDescription} from '../../components/misc/Typography.js';
+import {
+  SectionHeading,
+  Subheading as SubheadingBase,
+} from '../../components/misc/Headings.js';
+import {
+  Container,
+  ContentWithPaddingXl,
+} from '../../components/misc/Layouts.js';
+import { SectionDescription } from '../../components/misc/Typography.js';
 // const Heading = tw(SectionHeading)``;
 // const Subheading = tw(SubheadingBase)`text-center mb-3`;
 // const Description = tw(SectionDescription)`text-center mx-auto`;
@@ -49,7 +55,8 @@ export default ({
     {
       imageSrc: ShieldIconImage,
       title: 'Secure',
-      description: 'We strictly only deal with vendors that provide top notch security.',
+      description:
+        'We strictly only deal with vendors that provide top notch security.',
       url: 'https://timerse.com',
     },
     {
@@ -82,18 +89,41 @@ export default ({
   return (
     <Container>
       <ContentWithPaddingXl>
-        {subheading && <SubheadingBase className="text-center mb-3">{subheading}</SubheadingBase>}
+        {subheading && (
+          <SubheadingBase className="text-center mb-3">
+            {subheading}
+          </SubheadingBase>
+        )}
         {heading && <SectionHeading>{heading}</SectionHeading>}
-        {description && <SectionDescription className="text-center mx-auto">{description}</SectionDescription>}
+        {description && (
+          <SectionDescription className="text-center mx-auto">
+            {description}
+          </SectionDescription>
+        )}
         <div className="mt-10 flex flex-col items-center lg:items-stretch lg:flex-row flex-wrap lg:justify-center max-w-screen-lg mx-auto">
           {cards.map((card, i) => (
             <div className="lg:w-1/3 max-w-xs" key={i}>
-              <a className="flex flex-col items-center text-center h-full mx-4 px-4 py-8 rounded transition-transform duration-300 hover:cursor-pointer transform hover:scale-105" href={card.url}>
-                <span className="text-center rounded-full p-4 bg-gray-100" css={imageContainerCss}>
-                  <img className="`w-8 h-8" src={card.imageSrc.src} alt="" css={imageCss} />
+              <a
+                className="flex flex-col items-center text-center h-full mx-4 px-4 py-8 rounded transition-transform duration-300 hover:cursor-pointer transform hover:scale-105"
+                href={card.url}
+              >
+                <span
+                  className="text-center rounded-full p-4 bg-gray-100"
+                  css={imageContainerCss}
+                >
+                  <img
+                    className="`w-8 h-8"
+                    src={card.imageSrc.src}
+                    alt=""
+                    css={imageCss}
+                  />
                 </span>
-                <span className="mt-4 font-bold text-xl leading-none">{card.title}</span>
-                <p className="mt-4 text-sm font-medium text-secondary-300">{card.description}</p>
+                <span className="mt-4 font-bold text-xl leading-none">
+                  {card.title}
+                </span>
+                <p className="mt-4 text-sm font-medium text-secondary-300">
+                  {card.description}
+                </p>
                 {linkText && (
                   <span className="mt-auto inline-flex items-center pt-5 text-sm font-bold text-primary-300 leading-none hocus:text-primary-900 transition duration-300">
                     <span>{linkText}</span>

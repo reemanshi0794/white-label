@@ -1,5 +1,12 @@
-import React from "react";
-import SvgDecoratorBlob from "../../assets/images/svg-decorator-blob-6.svg";
+import React from 'react';
+import SvgDecoratorBlob from '../../assets/images/svg-decorator-blob-6.svg';
+import androidImg from '../../assets/images/demo/androidImg.png';
+import reactImg from '../../assets/images/demo/reactImg.png';
+import nodeImg from '../../assets/images/demo/nodeImg.png';
+import goLangImg from '../../assets/images/demo/goLangImg.png';
+import pythonImg from '../../assets/images/demo/pythonImg.png';
+import swiftImg from '../../assets/images/demo/swiftImg.png';
+import javaImg from '../../assets/images/demo/javaImg.png';
 
 // const HeaderContainer = tw.div`mt-10 w-full flex flex-col items-center`;
 // const Subheading = tw(SubheadingBase)`mb-4`;
@@ -75,83 +82,53 @@ import SvgDecoratorBlob from "../../assets/images/svg-decorator-blob-6.svg";
 // `;
 
 export default ({
-  subheading = "Pricing",
-  heading = "Flexible Plans.",
-  description = "Get the best developers to work for you on a contract basis with no strings attached ",
+  subheading = 'Pricing',
+  heading = 'Flexible Plans.',
+  description = 'Get the best developers to work for you on a contract basis with no strings attached ',
   plans = null,
-  primaryButtonText = "Buy Now",
+  primaryButtonText = 'Buy Now',
 }) => {
   const defaultPlans = [
     {
-      name: "Personal",
-      price: "$17.99",
-      duration: "Monthly",
-      mainFeature: "Suited for Personal Blogs",
+      name: 'Personal',
+      price: '$17.99',
+      duration: 'Monthly',
+      mainFeature: 'Suited for Personal Blogs',
       features: [
-        "30 Templates",
-        "7 Landing Pages",
-        "12 Internal Pages",
-        "Basic Assistance",
+        '30 Templates',
+        '7 Landing Pages',
+        '12 Internal Pages',
+        'Basic Assistance',
       ],
     },
     {
-      name: "Business",
-      price: "$37.99",
-      duration: "Monthly",
-      mainFeature: "Suited for Production Websites",
+      name: 'Business',
+      price: '$37.99',
+      duration: 'Monthly',
+      mainFeature: 'Suited for Production Websites',
       features: [
-        "60 Templates",
-        "8 Landing Pages",
-        "22 Internal Pages",
-        "Priority Assistance",
+        '60 Templates',
+        '8 Landing Pages',
+        '22 Internal Pages',
+        'Priority Assistance',
       ],
       featured: true,
     },
     {
-      name: "Enterprise",
-      price: "$57.99",
-      duration: "Monthly",
-      mainFeature: "Suited for Big Companies",
+      name: 'Enterprise',
+      price: '$57.99',
+      duration: 'Monthly',
+      mainFeature: 'Suited for Big Companies',
       features: [
-        "90 Templates",
-        "9 Landing Pages",
-        "37 Internal Pages",
-        "Personal Assistance",
+        '90 Templates',
+        '9 Landing Pages',
+        '37 Internal Pages',
+        'Personal Assistance',
       ],
     },
   ];
 
   if (!plans) plans = defaultPlans;
-
-  // const highlightGradientsCss = [
-  //   css`
-  //     background: rgb(56, 178, 172);
-  //     background: linear-gradient(
-  //       115deg,
-  //       rgba(56, 178, 172, 1) 0%,
-  //       rgba(129, 230, 217, 1) 100%
-  //     );
-  //   `,
-  //   css`
-  //     background: rgb(56, 178, 172);
-  //     background-image: linear-gradient(
-  //       115deg,
-  //       #6415ff,
-  //       #7431ff,
-  //       #8244ff,
-  //       #8e56ff,
-  //       #9a66ff
-  //     );
-  //   `,
-  //   css`
-  //     background: rgb(245, 101, 101);
-  //     background: linear-gradient(
-  //       115deg,
-  //       rgba(245, 101, 101, 1) 0%,
-  //       rgba(254, 178, 178, 1) 100%
-  //     );
-  //   `,
-  // ];
 
   return (
     <div className="relative">
@@ -169,52 +146,103 @@ export default ({
             </p>
           )}
         </div>
-        <div className="flex justify-between flex-col lg:flex-row items-center lg:items-stretch relative">
-          {plans.map((plan, index) => (
-            <div
-              className="w-full max-w-sm mt-16 lg:mr-8 lg:last:mr-0 text-center px-8 rounded-lg shadow relative pt-2 text-gray-900 bg-white flex flex-col"
-              key={index}
-              featured={plan.featured}
-            >
-              {!plan.featured && (
-                <div
-                  className={`rounded-t-lg absolute top-0 inset-x-0 h-2`}
 
-                  // css={
-                  //   highlightGradientsCss[index % highlightGradientsCss.length]
-                  // }
-                />
-              )}
-              <div className="flex flex-col uppercase leading-relaxed py-8">
-                <span className="font-bold text-xl">{plan.name}</span>
-                <span className="font-bold text-4xl sm:text-5xl my-1">
-                  {plan.price}
-                </span>
-                <span className="text-gray-500 font-bold tracking-widest">
-                  {plan.duration}
-                </span>
-              </div>
-              <div className="flex flex-col -mx-8 px-8 py-8 border-t-2 border-b-2 flex-1">
-                <span className="mt-5 first:mt-0 font-medium text-xl font-bold tracking-wide">
-                  {plan.mainFeature}
-                </span>
-                {plan.features.map((feature, index) => (
-                  <span key={index} className="mt-5 first:mt-0 font-medium">
-                    {feature}
-                  </span>
-                ))}
-              </div>
-              <div className="px-4 sm:px-8 xl:px-16 py-8">
-                <button
-                  className="px-8 py-3 font-bold rounded bg-primary-500 text-gray-100 hocus:bg-primary-700 hocus:text-gray-200 focus:outline-none transition duration-300 rounded-full uppercase tracking-wider py-4 w-full text-sm hover:shadow-xl transform hocus:translate-x-px hocus:-translate-y-px focus:shadow-outline"
-                  // css={!plan.featured && highlightGradientsCss[index]}
-                >
-                  {primaryButtonText}
-                </button>
-              </div>
+        <div className=" bg-white rounded-3xl overflow-x-scroll shadow-[0_0_50px_-15px_rgba(0,0,0,21%)] mt-16">
+          <div className="grid grid-cols-4 gap-4">
+            <div className=" py-10 px-5 border-r-[3px] text-center border-[#eaeaea]">
+              <h3 className="font-bold text-2xl mb-6 text-black">
+                Technologies
+              </h3>
+              <ul className="flex items-center flex-col">
+                <li className="mb-3">
+                  <img
+                    src={reactImg.src}
+                    className="w-[104px] object-cover"
+                    alt=""
+                  />
+                </li>
+                <li className="mb-3">
+                  <img
+                    src={nodeImg.src}
+                    className="w-[104px] object-cover"
+                    alt=""
+                  />
+                </li>
+                <li className="mb-3">
+                  <img
+                    src={pythonImg.src}
+                    className="w-[104px] object-cover"
+                    alt=""
+                  />
+                </li>
+                <li className="mb-3">
+                  <img
+                    src={javaImg.src}
+                    className="w-[104px] object-cover"
+                    alt=""
+                  />
+                </li>
+                <li className="mb-3">
+                  <img
+                    src={androidImg.src}
+                    className="w-[104px] object-cover"
+                    alt=""
+                  />
+                </li>
+                <li className="mb-3">
+                  <img
+                    src={swiftImg.src}
+                    className="w-[104px] object-cover"
+                    alt=""
+                  />
+                </li>
+                <li className="mb-3">
+                  <img
+                    src={goLangImg.src}
+                    className="w-[104px] object-cover"
+                    alt=""
+                  />
+                </li>
+              </ul>
             </div>
-          ))}
-          <SvgDecoratorBlob className="pointer-events-none -z-20 absolute left-0 bottom-0 h-64 w-64 opacity-25 transform -translate-x-1/2 translate-y-1/2" />
+            <div className="py-10 px-5 border-r-[3px] text-center border-[#eaeaea]">
+              <h3 className="font-bold text-2xl mb-6 text-black">Developers</h3>
+              <ul>
+                {['40', '20', '15', '12', '12', '10', '07'].map((nmbr) => (
+                  <li className="text-2xl mb-6 opacity-50 text-black list-none font-bold">
+                    {nmbr}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className=" py-10 px-5 border-r-[3px] text-center border-[#eaeaea]">
+              <h3 className="font-bold text-2xl mb-6 text-black">Available</h3>
+              <ul>
+                {['16', '08', '06', '04', '04', '07', '03'].map((nmbr) => (
+                  <li className="text-2xl mb-6 opacity-50 text-black list-none font-bold">
+                    {nmbr}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className=" py-10 px-5 text-center">
+              <h3 className="font-bold text-2xl mb-6 text-black invisible">
+                Hire Us
+              </h3>
+              <ul>
+                {[1, 2, 3, 4, 5, 6, 7].map((text) => (
+                  <li className="mb-8">
+                    <a
+                      className="border border-primary-500 pt-[6px] pb-[7px] px-[42px] font-semibold text-lg text-primary-500 hover:bg-primary-500 rounded-full hover:text-white"
+                      href="/ContactUs"
+                    >
+                      Hire now
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
