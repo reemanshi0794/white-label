@@ -4,7 +4,7 @@ import Logo from "../../assets/images/logo.png";
 import SvgDecoratorBlob1 from "../../assets/images/svg-decorator-blob-9.svg";
 import TwitterIcon from "../../assets/images/twitter-icon.svg";
 import YoutubeIcon from "../../assets/images/youtube-icon.svg";
-
+import FooterSVG from "../../assets/images/FooterSVG.svg";
 // const Container = tw.div`relative bg-primary-500 text-gray-100 -mb-8 -mx-8 px-8 py-20 lg:py-24`;
 // const Content = tw.div`max-w-screen-xl mx-auto relative z-10`;
 // const FiveColumns = tw.div`flex flex-wrap text-center sm:text-left justify-center sm:justify-start md:justify-between -mt-12`;
@@ -44,6 +44,13 @@ import YoutubeIcon from "../../assets/images/youtube-icon.svg";
 // )`absolute bottom-0 right-0 w-80 h-80 transform  translate-x-32 translate-y-48 text-primary-700 opacity-50`;
 
 export default () => {
+  const handleFaq = (id) => {
+    const violation = document.getElementById(id);
+    window.scrollTo({
+      top: violation.offsetTop,
+      behavior: "smooth",
+    });
+  };
   return (
     <div className="relative bg-primary-500 text-gray-100 -mb-8 -mx-8 px-8 py-20 lg:py-24">
       <div className="max-w-screen-xl mx-auto relative z-10">
@@ -61,8 +68,8 @@ export default () => {
               </li>
               <li className="mt-3">
                 <a
-                  className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300"
-                  href="#"
+                  className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300 cursor-pointer"
+                  onClick={() => handleFaq("faq")}
                 >
                   FAQs
                 </a>
@@ -237,9 +244,7 @@ export default () => {
         <div className="my-16 border-b-2 border-white w-full" />
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center justify-center md:justify-start">
-            {/* <Logo2 alt="logo" className="mr-3" /> */}
-            <img src={Logo.src} alt="logo" />
-            {/* <h5 className="ml-2 text-xl font-black tracking-wider text-gray-100">Whiten App Solutins Inc.</h5> */}
+            <FooterSVG alt="footer-svg" />
           </div>
           <p className="text-center text-sm sm:text-base mt-8 md:mt-0 font-medium text-gray-400">
             &copy; 2022 Whiten App Solutions
