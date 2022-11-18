@@ -1,10 +1,10 @@
-import React from "react";
-import BannerImage from "../../assets/images/BannerImage.png";
-import CustomersLogoStripImage from "../../assets/images/customers-logo-strip.png";
-import SvgDecoratorBlob1 from "../../assets/images/svg-decorator-blob-1.svg";
+import React from 'react';
+import BannerImage from '../../assets/images/BannerImage.png';
+import CustomersLogoStripImage from '../../assets/images/customers-logo-strip.png';
+import SvgDecoratorBlob1 from '../../assets/images/svg-decorator-blob-1.svg';
 //eslint-disable-next-line
 // import { css } from "styled-components/macro";
-import Header from "../headers/light.js";
+import Header from '../headers/light.js';
 
 // const Container = tw.div`relative`;
 // const TwoColumn = tw.div`flex flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -47,12 +47,12 @@ export default ({ roundedHeaderButton }) => {
         <div className="flex flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto py-20 md:py-24">
           <div className="relative lg:w-5/12 text-center max-w-lg mx-auto lg:max-w-none lg:text-left">
             <h1 className="font-bold text-3xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-900 leading-tight">
-              Empowering Businesses Through Digitization
+              Bridging business into Digital Sphere
               {/* <span className="text-primary-500">for you.</span> */}
             </h1>
             <p className="my-5 lg:my-8 text-base xl:text-lg">
-              Witness Great Apps and software elevating businesses by bracing
-              user experience with design excellence.
+              A one-stop development Studio to gear up your business demands for
+              today and tomorrow.
             </p>
             <div className="relative max-w-md text-center mx-auto lg:mx-0">
               <input

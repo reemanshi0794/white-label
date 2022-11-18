@@ -1,10 +1,10 @@
-import React from "react";
-import FacebookIcon from "../../assets/images/facebook-icon.svg";
-import Logo from "../../assets/images/logo.png";
-import SvgDecoratorBlob1 from "../../assets/images/svg-decorator-blob-9.svg";
-import TwitterIcon from "../../assets/images/twitter-icon.svg";
-import YoutubeIcon from "../../assets/images/youtube-icon.svg";
-import FooterSVG from "../../assets/images/FooterSVG.svg";
+import React from 'react';
+import FacebookIcon from '../../assets/images/facebook-icon.svg';
+import Logo from '../../assets/images/logo.png';
+import SvgDecoratorBlob1 from '../../assets/images/svg-decorator-blob-9.svg';
+import TwitterIcon from '../../assets/images/twitter-icon.svg';
+import YoutubeIcon from '../../assets/images/youtube-icon.svg';
+import FooterSVG from '../../assets/images/FooterSVG.svg';
 // const Container = tw.div`relative bg-primary-500 text-gray-100 -mb-8 -mx-8 px-8 py-20 lg:py-24`;
 // const Content = tw.div`max-w-screen-xl mx-auto relative z-10`;
 // const FiveColumns = tw.div`flex flex-wrap text-center sm:text-left justify-center sm:justify-start md:justify-between -mt-12`;
@@ -48,13 +48,13 @@ export default () => {
     const violation = document.getElementById(id);
     window.scrollTo({
       top: violation.offsetTop,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
   return (
     <div className="relative bg-primary-500 text-gray-100 -mb-8 -mx-8 px-8 py-20 lg:py-24">
       <div className="max-w-screen-xl mx-auto relative z-10">
-        <div className="flex flex-wrap text-center sm:text-left justify-center sm:justify-start md:justify-between -mt-12">
+        {/* <div className="flex flex-wrap text-center sm:text-left justify-center sm:justify-start md:justify-between -mt-12">
           <div className="px-4 sm:px-0 sm:w-1/3 md:w-auto mt-12">
             <h5 className="uppercase font-bold">Main</h5>
             <ul className="mt-6 text-sm font-medium">
@@ -69,7 +69,7 @@ export default () => {
               <li className="mt-3">
                 <a
                   className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300 cursor-pointer"
-                  onClick={() => handleFaq("faq")}
+                  onClick={() => handleFaq('faq')}
                 >
                   FAQs
                 </a>
@@ -241,12 +241,12 @@ export default () => {
             </ul>
           </div>
         </div>
-        <div className="my-16 border-b-2 border-white w-full" />
+        <div className="my-16 border-b-2 w-full" /> */}
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center justify-center md:justify-start">
             <FooterSVG alt="footer-svg" />
           </div>
-          <p className="text-center text-sm sm:text-base mt-8 md:mt-0 font-medium text-gray-400">
+          <p className="text-center text-sm sm:text-base mt-8 md:mt-0 font-medium ">
             &copy; 2022 Whiten App Solutions
           </p>
           <div className="mt-8 md:mt-0 flex">
