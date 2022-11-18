@@ -44,6 +44,13 @@ import FooterSVG from "../../assets/images/FooterSVG.svg";
 // )`absolute bottom-0 right-0 w-80 h-80 transform  translate-x-32 translate-y-48 text-primary-700 opacity-50`;
 
 export default () => {
+  const handleFaq = (id) => {
+    const violation = document.getElementById(id);
+    window.scrollTo({
+      top: violation.offsetTop,
+      behavior: "smooth",
+    });
+  };
   return (
     <div className="relative bg-primary-500 text-gray-100 -mb-8 -mx-8 px-8 py-20 lg:py-24">
       <div className="max-w-screen-xl mx-auto relative z-10">
@@ -61,8 +68,8 @@ export default () => {
               </li>
               <li className="mt-3">
                 <a
-                  className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300"
-                  href="#"
+                  className="border-b-2 border-transparent hocus:border-gray-100 pb-1 transition duration-300 cursor-pointer"
+                  onClick={() => handleFaq("faq")}
                 >
                   FAQs
                 </a>
