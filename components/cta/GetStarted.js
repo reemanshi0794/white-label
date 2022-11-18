@@ -38,7 +38,7 @@ export default ({
   primaryLinkText = "Get Started",
   primaryLinkUrl = "http://timerse.com",
   secondaryLinkText = "Contact Us",
-  secondaryLinkUrl = "http://google.com",
+  secondaryLinkUrl = "/ContactUs",
   pushDownFooter = true,
 }) => {
   return (
