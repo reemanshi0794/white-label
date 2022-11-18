@@ -16,15 +16,13 @@ import Footer from "../components/footers/FiveColumnWithBackground.js";
 import Hero from "../components/hero/TwoColumnWithInput.js";
 import Pricing from "../components/pricing/ThreePlans.js";
 import Testimonial from "../components/testimonials/TwoColumnWithImageAndRating.js";
-import { Helmet } from "react-helmet";
+
+import Head from "next/head";
 
 const SaaSProductLandingPage = () => {
-  // const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
-  // const HighlightedText = tw.span`text-primary-500`;
-
   return (
     <div className="min-h-screen text-secondary-500 p-8 px-24 2xl:p-8 overflow-hidden">
-      <Helmet>
+      <Head>
         <title>
           Software Development Company | Custom App Developer | White Label
           Technologies
@@ -37,7 +35,7 @@ const SaaSProductLandingPage = () => {
           name="keyword"
           content="custom mobile app development company, software development company,custom software development,software app developer"
         />
-      </Helmet>
+      </Head>
       <Hero roundedHeaderButton={true} />
       <Features
         subheading={
