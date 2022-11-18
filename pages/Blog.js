@@ -53,14 +53,11 @@ export default ({
           </div>
           <div className="mt-6 sm:-mr-8 flex flex-wrap">
             {posts.slice(0, visible).map((post, index) => {
-              const PostImg = post;
-
-              console.log("PostImg", PostImg);
               return (
                 <div
                   className={
                     post.featured
-                      ? "w-full!"
+                      ? "w-full! sm:pr-8"
                       : "mt-10 w-full sm:w-1/2 lg:w-1/3 sm:pr-8"
                   }
                   key={index}
