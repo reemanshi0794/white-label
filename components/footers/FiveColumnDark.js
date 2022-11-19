@@ -1,12 +1,11 @@
-import React from "react";
-import tw from "twin.macro";
-import styled from "styled-components";
-import { css } from "styled-components/macro"; //eslint-disable-line
-
-import LogoImage from "images/logo-light.svg";
 import { ReactComponent as FacebookIcon } from "images/facebook-icon.svg";
+import LogoImage from "images/logo-light.svg";
+import React from "react";
 import { ReactComponent as TwitterIcon } from "images/twitter-icon.svg";
 import { ReactComponent as YoutubeIcon } from "images/youtube-icon.svg";
+import { css } from "styled-components/macro"; //eslint-disable-line
+import styled from "styled-components";
+import tw from "twin.macro";
 
 const Container = tw.div`relative bg-gray-900 text-gray-100 -mx-8 -mb-8 px-8`;
 const Content = tw.div`max-w-screen-xl mx-auto pt-16 pb-8`;
@@ -48,7 +47,7 @@ export default () => {
           <CompanyColumn>
             <LogoContainer>
               <LogoImg src={LogoImage} />
-              <LogoText>Whiten App Solutins Inc.</LogoText>
+              <LogoText>Whiten App Solutions Inc.</LogoText>
             </LogoContainer>
             <CompanyAddress>
               123 Road, New Startup Building Carter Road, San Francisco
@@ -138,7 +137,7 @@ export default () => {
         <Divider />
         <CopyrightAndCompanyInfoRow>
           <CopyrightNotice>
-            &copy; Copyright 2020, Whiten App Solutins Inc.
+            &copy; Copyright 2020, Whiten App Solutions Inc.
           </CopyrightNotice>
           <CompanyInfo>An Internet Company.</CompanyInfo>
         </CopyrightAndCompanyInfoRow>

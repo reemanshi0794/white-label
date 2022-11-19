@@ -1,19 +1,20 @@
-import React from "react";
-import styled from "styled-components";
-import tw from "twin.macro";
-import { css } from "styled-components/macro"; //eslint-disable-line
-import mockupImageSrc from "images/app-mockup.png";
-import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-9.svg";
 import {
-  ContentWithPaddingXl,
   Container as ContainerBase,
+  ContentWithPaddingXl,
 } from "components/misc/Layouts";
 import {
   SectionHeading,
   Subheading as SubheadingBase,
 } from "components/misc/Headings.js";
+
+import React from "react";
+import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-9.svg";
 import appleIconImageSrc from "images/apple-icon.png";
+import { css } from "styled-components/macro"; //eslint-disable-line
 import googlePlayIconImageSrc from "images/google-play-icon.png";
+import mockupImageSrc from "images/app-mockup.png";
+import styled from "styled-components";
+import tw from "twin.macro";
 
 const Container = tw(ContainerBase)`bg-gray-900 -mx-8`;
 const Content = tw(ContentWithPaddingXl)``;
@@ -50,7 +51,7 @@ const DecoratorBlob2 = tw(
 )`absolute top-0 right-0 w-80 h-80 transform  translate-x-20 -translate-y-64 text-gray-800 opacity-50`;
 export default ({
   subheading = "Download App",
-  text = "Developers all over the world are happily using Whiten App Solutins.",
+  text = "Developers all over the world are happily using Whiten App Solutions.",
   link1Text = "App Store",
   link1Url = "http://apple.com",
   link1IconSrc = appleIconImageSrc,
