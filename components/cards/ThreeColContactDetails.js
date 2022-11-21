@@ -1,9 +1,9 @@
-import React from "react";
+import React from "react"
 import {
   SectionHeading,
   Subheading as SubheadingBase,
-} from "../../components/misc/Headings.js";
-import { SectionDescription } from "../../components/misc/Typography.js";
+} from "../../components/misc/Headings.js"
+import { SectionDescription } from "../../components/misc/Typography.js"
 // const Container = tw.div`relative`;
 
 // const ThreeColumnContainer = styled.div`
@@ -89,9 +89,9 @@ export default ({
       description:
         "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.",
     },
-  ];
+  ]
 
-  if (!cards) cards = defaultCards;
+  if (!cards) cards = defaultCards
 
   return (
     <div className="relative">
@@ -124,5 +124,5 @@ export default ({
       </div>
       {/* <SvgDecoratorBlob3 className="pointer-events-none absolute right-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-48" /> */}
     </div>
-  );
-};
+  )
+}

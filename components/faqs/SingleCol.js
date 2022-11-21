@@ -1,10 +1,10 @@
-import ChevronDownIcon from "feather-icons/dist/icons/chevron-down.svg";
-import { motion } from "framer-motion";
-import React, { useState } from "react";
-import styled from "styled-components";
-import tw from "twin.macro";
-import SvgDecoratorBlob1 from "../../assets/images/svg-decorator-blob-7.svg";
-import SvgDecoratorBlob2 from "../../assets/images/svg-decorator-blob-8.svg";
+import ChevronDownIcon from "feather-icons/dist/icons/chevron-down.svg"
+import { motion } from "framer-motion"
+import React, { useState } from "react"
+import styled from "styled-components"
+import tw from "twin.macro"
+import SvgDecoratorBlob1 from "../../assets/images/svg-decorator-blob-7.svg"
+import SvgDecoratorBlob2 from "../../assets/images/svg-decorator-blob-8.svg"
 
 // const Subheading = tw(SubheadingBase)`mb-4 text-center`;
 // const Heading = tw(SectionHeading)`w-full`;
@@ -22,10 +22,10 @@ const QuestionToggleIcon = motion(styled.span`
   svg {
     ${tw`w-6 h-6`}
   }
-`);
+`)
 const Answer = motion(
   tw.dd`pointer-events-none text-sm sm:text-base leading-relaxed`
-);
+)
 
 // const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
 //   ${tw`pointer-events-none -z-20 absolute right-0 top-0 h-56 w-56 opacity-15 transform translate-x-2/3 -translate-y-12 text-teal-400`}
@@ -61,16 +61,16 @@ export default ({
     },
   ],
 }) => {
-  const [activeQuestionIndex, setActiveQuestionIndex] = useState(null);
+  const [activeQuestionIndex, setActiveQuestionIndex] = useState(null)
 
   const toggleQuestion = (questionIndex) => {
-    if (activeQuestionIndex === questionIndex) setActiveQuestionIndex(null);
-    else setActiveQuestionIndex(questionIndex);
-  };
+    if (activeQuestionIndex === questionIndex) setActiveQuestionIndex(null)
+    else setActiveQuestionIndex(questionIndex)
+  }
 
   return (
     <div className="relative" id="faq">
-      <div className="max-w-screen-xl mx-auto pt-20 md:pt-12">
+      <div className="max-w-screen-xl mx-auto pt-12">
         <div className="flex flex-col items-center">
           <div>
             {subheading && (
@@ -87,13 +87,13 @@ export default ({
               </p>
             )}
           </div>
-          <dl className="mt-12 max-w-4xl relative">
+          <dl className=" mt-4 md:mt-12 max-w-4xl relative">
             {faqs.map((faq, index) => (
               <div
                 className="cursor-pointer select-none mt-5 px-8 sm:px-10 py-5 sm:py-4 rounded-lg text-gray-800 hover:text-gray-900 bg-gray-200 hover:bg-gray-300 transition duration-300"
                 key={index}
                 onClick={() => {
-                  toggleQuestion(index);
+                  toggleQuestion(index)
                 }}
                 // className="group"
               >
@@ -138,5 +138,5 @@ export default ({
       <SvgDecoratorBlob1 className="pointer-events-none -z-20 absolute right-0 top-0 h-56 w-56 opacity-15 transform translate-x-2/3 -translate-y-12 text-teal-400" />
       <SvgDecoratorBlob2 className="pointer-events-none -z-20 absolute left-0 bottom-0 h-64 w-64 opacity-15 transform -translate-x-2/3 text-primary-500" />
     </div>
-  );
-};
+  )
+}

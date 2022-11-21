@@ -1,11 +1,10 @@
-import { Container, ContentWithPaddingXl } from "../../components/misc/Layouts";
+import { Container, ContentWithPaddingXl } from "../../components/misc/Layouts"
 
-import React from "react";
-import SvgDecoratorBlob1 from "../../assets/images/svg-decorator-blob-9.svg";
-import styled from "styled-components"; //eslint-disable-line
-import tw from "twin.macro";
+import React from "react"
+import SvgDecoratorBlob1 from "../../assets/images/svg-decorator-blob-9.svg"
+import styled from "styled-components" //eslint-disable-line
+import tw from "twin.macro"
 // import { css } from "styled-components/macro"; //eslint-disable-line
-
 
 // const PrimaryBackgroundContainer = tw.div`py-20 lg:py-24 bg-primary-500 rounded-lg relative`;
 // const Row = tw.div`px-8 max-w-screen-lg mx-auto flex items-center relative z-10 flex-col lg:flex-row text-center lg:text-left`;
@@ -43,7 +42,7 @@ export default ({
   pushDownFooter = true,
 }) => {
   return (
-    <div className="relative" css={pushDownFooter && tw`mb-20 lg:mb-12`}>
+    <div className="relative" css={pushDownFooter && tw`mb-0`}>
       <div className="max-w-screen-xl mx-auto py-20 lg:py-24">
         <div className="py-20 lg:py-24 bg-primary-500 rounded-lg relative">
           <div className="px-8 max-w-screen-lg mx-auto flex items-center relative z-10 flex-col lg:flex-row text-center lg:text-left">
@@ -74,5 +73,5 @@ export default ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

@@ -1,12 +1,12 @@
-import React from "react";
-import SvgDecoratorBlob from "../../assets/images/svg-decorator-blob-6.svg";
-import androidImg from "../../assets/images/demo/androidImg.png";
-import reactImg from "../../assets/images/demo/reactImg.png";
-import nodeImg from "../../assets/images/demo/nodeImg.png";
-import goLangImg from "../../assets/images/demo/goLangImg.png";
-import pythonImg from "../../assets/images/demo/pythonImg.png";
-import swiftImg from "../../assets/images/demo/swiftImg.png";
-import javaImg from "../../assets/images/demo/javaImg.png";
+import React from "react"
+import SvgDecoratorBlob from "../../assets/images/svg-decorator-blob-6.svg"
+import androidImg from "../../assets/images/demo/androidImg.png"
+import reactImg from "../../assets/images/demo/reactImg.png"
+import nodeImg from "../../assets/images/demo/nodeImg.png"
+import goLangImg from "../../assets/images/demo/goLangImg.png"
+import pythonImg from "../../assets/images/demo/pythonImg.png"
+import swiftImg from "../../assets/images/demo/swiftImg.png"
+import javaImg from "../../assets/images/demo/javaImg.png"
 
 // const HeaderContainer = tw.div`mt-10 w-full flex flex-col items-center`;
 // const Subheading = tw(SubheadingBase)`mb-4`;
@@ -126,13 +126,13 @@ export default ({
         "Personal Assistance",
       ],
     },
-  ];
+  ]
 
-  if (!plans) plans = defaultPlans;
+  if (!plans) plans = defaultPlans
 
   return (
     <div className="relative">
-      <div className="max-w-screen-xl mx-auto pt-20 md:pt-4">
+      <div className="max-w-screen-xl mx-auto pt-0 md:pt-4">
         <div className="mt-10 w-full flex flex-col items-center">
           {subheading && (
             <h5 className="font-bold text-primary-500 mb-4">{subheading}</h5>
@@ -147,8 +147,8 @@ export default ({
           )}
         </div>
 
-        <div className=" bg-white rounded-3xl overflow-x-scroll shadow-[0_0_50px_-15px_rgba(0,0,0,21%)] mt-16">
-          <div className="grid grid-cols-4 gap-4">
+        <div className=" bg-white rounded-3xl overflow-x-auto shadow-[0_0_50px_-15px_rgba(0,0,0,21%)] mt-16">
+          <div className="grid grid-cols-4 gap-4 w-[910px] lg:w-auto">
             <div className=" py-10 px-5 border-r-[3px] text-center border-[#eaeaea]">
               <h3 className="font-bold text-2xl mb-6 text-black">
                 Technologies
@@ -246,5 +246,5 @@ export default ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

@@ -1,7 +1,7 @@
-import React from 'react';
-import BannerImage from '../../assets/images/BannerImage.png';
-import CustomersLogoStripImage from '../../assets/images/Partnerslogo.svg';
-import SvgDecoratorBlob1 from '../../assets/images/svg-decorator-blob-1.svg';
+import React from "react"
+import BannerImage from "../../assets/images/BannerImage.png"
+import CustomersLogoStripImage from "../../assets/images/Partnerslogo.svg"
+import SvgDecoratorBlob1 from "../../assets/images/svg-decorator-blob-1.svg"
 //eslint-disable-next-line
 // import { css } from "styled-components/macro";
 
@@ -43,32 +43,28 @@ export default () => {
     <>
       <div className="relative">
         <div className="flex flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto pb-20 pt-32 md:pb-24 md:pt-32">
-          <div className="relative lg:w-5/12 text-center max-w-lg mx-auto lg:max-w-none lg:text-left">
+          <div className="relative lg:w-5/12 text-center max-w-xs md:max-w-lg  mx-auto lg:max-w-none lg:text-left">
             <h1 className="font-bold text-3xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-900 leading-tight">
-              Bridging business into Digital Sphere
+              Bridging business into
+              <br /> Digital Sphere
               {/* <span className="text-primary-500">for you.</span> */}
             </h1>
-            <p className="my-5 lg:my-8 text-base xl:text-lg">
+            <p className="my-4 text-base xl:text-lg">
               A one-stop development Studio to gear up your business demands for
               today and tomorrow.
             </p>
-            <div className="relative max-w-md text-center mx-auto lg:mx-0">
+            <div className="max-w-md text-center mx-auto lg:mx-0 flex justify-center lg:justify-start">
               <a
-                className="w-full sm:absolute right-0 top-0 bottom-0 bg-primary-500 text-gray-100 font-bold mr-2 my-4 sm:my-2 rounded-full py-4 flex items-center justify-center sm:w-40 sm:leading-none focus:outline-none  transition duration-300"
+                className="w-full bg-primary-500 text-gray-100 font-bold rounded-full p-4 flex items-center justify-center sm:w-40 sm:leading-none focus:outline-none  transition duration-300"
                 href="/contact-us"
               >
                 Get Started
               </a>
             </div>
-            <div className="mt-12 lg:mt-20">
+            <div className=" mt-4 xl:mt-8 flex flex-col items-center lg:items-start">
               <p className="uppercase text-sm lg:text-xs tracking-wider font-bold text-gray-500">
                 Our TRUSTED Customers
               </p>
-              {/* <img
-                className="mt-4 w-full lg:pr-16 xl:pr-32 opacity-50"
-                src={CustomersLogoStripImage.src}
-                alt="Our Customers"
-              /> */}
               <CustomersLogoStripImage
                 alt="partners-logo"
                 className="mr-3 mt-2"
@@ -82,12 +78,11 @@ export default () => {
                 src={BannerImage.src}
                 alt="Design Illustration"
               />
-              {/* <DesignIllustration className="min-w-0 w-full max-w-lg xl:max-w-3xl" /> */}
             </div>
           </div>
         </div>
         <SvgDecoratorBlob1 className="pointer-events-none opacity-5 absolute left-0 bottom-0 h-64 w-64 transform -translate-x-2/3" />
       </div>
     </>
-  );
-};
+  )
+}
