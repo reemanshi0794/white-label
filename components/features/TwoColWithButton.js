@@ -2,6 +2,8 @@ import React from 'react';
 // import tw from 'twin.macro';
 import SvgDotPattern from '../../assets/images/dot-pattern.svg';
 import ModernDesign from '../../assets/images/ModernDesign.svg';
+import YourPrudentialImage from '../../assets/images/YourPrudentialImage.svg';
+
 import Aim from '../../assets/images/Aim.svg';
 import TeamIllustrationSrc from '../../assets/images/team-illustration-2.svg';
 
@@ -55,6 +57,7 @@ export default ({
   imageDecoratorBlob = false,
   imageDecoratorBlobCss = null,
   textOnLeft = true,
+  isModernDesignImage,
 }) => {
   // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
 
@@ -63,7 +66,11 @@ export default ({
       <div className="flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto  pt-32 items-center">
         {textOnLeft === true ? (
           <div className="md:w-6/12 flex-shrink-0 relative w-full max-w-md mx-auto md:max-w-none ml-16 border border-[#f2f2f2] p-1">
-            <ModernDesign alt="process-svg" />
+            {isModernDesignImage ? (
+              <YourPrudentialImage alt="YourPrudentialImage-svg" />
+            ) : (
+              <ModernDesign alt="modern-svg" />
+            )}
 
             {imageDecoratorBlob && (
               <SvgDotPattern

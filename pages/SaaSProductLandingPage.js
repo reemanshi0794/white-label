@@ -62,6 +62,7 @@ const SaaSProductLandingPage = () => {
           imageSrc={heroScreenshotImageSrc}
           imageBorder={true}
           imageDecoratorBlob={true}
+          isModernDesignImage={true}
         />
         <FeatureWithSteps
           subheading={
