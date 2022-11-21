@@ -108,7 +108,7 @@ export default ({
 
         {cards.map((card, i) => (
           <div className="md:w-1/2 lg:w-1/3 max-w-sm" key={i}>
-            <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left h-full mx-4 px-2 py-8">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left h-full mx-4 px-2 py-8 pt-0">
               <span className="sm:ml-4 mt-4 sm:mt-2">
                 <span className="mt-4 tracking-wide font-bold text-2xl leading-none">
                   {card.title}
