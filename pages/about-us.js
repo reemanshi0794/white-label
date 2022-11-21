@@ -60,25 +60,25 @@ export default () => {
             <span className="uppercase tracking-wider text-sm">Our Values</span>
           }
           heading="We follow these."
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          description="We are Studius developers and Tech Explorers. We create IT solutions of global stands for businesses and individuals."
           cards={[
             {
               imageSrc: <Support />,
-              title: '24/7 Support',
+              title: 'Advancing technology',
               description:
-                'Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport',
+                'We refresh our tech stack and services to ensure all solutions that leave our doors are built future-proof. ',
             },
             {
               imageSrc: <StrongTeams />,
-              title: 'Strong Teams',
+              title: 'Dream Teams',
               description:
-                'Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport',
+                'We achieve strong skillset development and growth for our team with flexible work hours and space that benefits both the work-life balance and productivity.',
             },
             {
               imageSrc: <CustomerSatisfaction />,
-              title: 'Customer Satisfaction',
+              title: 'Customer Success',
               description:
-                'Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport',
+                'By building impactful digital solutions we thrive to deliver a 100% success rate for our clients.',
             },
           ]}
           linkText=""
