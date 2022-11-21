@@ -63,9 +63,9 @@ export default ({
 
   return (
     <div className="relative">
-      <div className="flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto pt-0 md:pt-32 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 justify-between max-w-screen-xl mx-auto pt-0 lg:pt-32 items-center">
         {textOnLeft === true ? (
-          <div className="md:w-6/12 flex-shrink-0 relative w-full max-w-md mx-auto md:max-w-none ml-16 border border-[#f2f2f2] p-1">
+          <div className=" flex-shrink-0 relative   ml-16 border border-[#f2f2f2] p-1">
             {isModernDesignImage ? (
               <YourPrudentialImage alt="YourPrudentialImage-svg" />
             ) : (
@@ -80,7 +80,7 @@ export default ({
             )}
           </div>
         ) : (
-          <div className="md:w-6/12 flex-shrink-0 relative w-full max-w-md mx-auto md:max-w-none mr-16 border border-[#f2f2f2] p-1">
+          <div className=" flex-shrink-0 relative  mr-16 border border-[#f2f2f2] p-1">
             <Aim alt="Aim-image" />
             {imageDecoratorBlob && (
               <SvgDotPattern
@@ -91,7 +91,7 @@ export default ({
           </div>
         )}
         {textOnLeft === true ? (
-          <div className="md:w-6/12 mt-0 md:mt-16 md:mt-0 w-full max-w-md mx-auto md:max-w-none order-first ">
+          <div className="mt-0 order-first ">
             <div className="lg:py-8 text-center md:text-left">
               <h5 className="text-center md:text-left font-bold text-primary-500">
                 {subheading}
