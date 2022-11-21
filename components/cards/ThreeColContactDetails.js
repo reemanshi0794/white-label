@@ -105,7 +105,7 @@ export default ({
             {description}
           </SectionDescription>
         )} */}
-        <div className="mt-10 w-full" />
+
         {cards.map((card, i) => (
           <div className="md:w-1/2 lg:w-1/3 max-w-sm" key={i}>
             <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left h-full mx-4 px-2 py-8">
