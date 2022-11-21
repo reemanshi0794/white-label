@@ -1,11 +1,11 @@
-import React from "react"
+import React from 'react';
 // import tw from 'twin.macro';
-import SvgDotPattern from "../../assets/images/dot-pattern.svg"
-import ModernDesign from "../../assets/images/ModernDesign.svg"
-import YourPrudentialImage from "../../assets/images/YourPrudentialImage.svg"
+import SvgDotPattern from '../../assets/images/dot-pattern.svg';
+import ModernDesign from '../../assets/images/ModernDesign.svg';
+import YourPrudentialImage from '../../assets/images/YourPrudentialImage.svg';
 
-import Aim from "../../assets/images/Aim.svg"
-import TeamIllustrationSrc from "../../assets/images/team-illustration-2.svg"
+import Aim from '../../assets/images/Aim.svg';
+import TeamIllustrationSrc from '../../assets/images/team-illustration-2.svg';
 
 // const Container = tw.div`relative`;
 // const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
@@ -38,16 +38,17 @@ import TeamIllustrationSrc from "../../assets/images/team-illustration-2.svg"
 // ]);
 
 export default ({
-  subheading = "Our Expertise",
+  subheading = 'Our Expertise',
   heading = (
     <>
       Your Prudential Tech partners for today and hereafter
       {/* <span className="text-primary-500">Professionals.</span> */}
     </>
   ),
-  description = "Know how it is to be developed by experts in the industry. We give a seamless experience for our clients with exceptional design, development and process that is best suited to their needs and requirements.",
-  primaryButtonText = "Learn More",
-  primaryButtonUrl = "https://timerse.com",
+
+  description = 'Know how it is to be developed by experts in the industry. We give a seamless experience for our clients with exceptional design, development and process that is best suited to their needs and requirements.',
+  primaryButtonText = 'Learn More',
+  primaryButtonUrl = 'https://timerse.com',
   imageSrc = TeamIllustrationSrc,
   buttonRounded = true,
   imageRounded = true,
@@ -137,5 +138,5 @@ export default ({
         )}
       </div>
     </div>
-  )
-}
+  );
+};

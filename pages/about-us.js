@@ -39,32 +39,38 @@ export default () => {
               About Whiten App Solutions
             </span>
           }
-          heading="We are a modern design agency."
+          heading="Ideas take the best form of Innovation here"
           buttonRounded={false}
           primaryButtonText="See Portfolio"
           imageSrc="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
           isModernDesignImage={false}
+          description="We are the Software development Studio where you get to witness great ideas churned into the best business solutions."
         />
         <MainFeature1
           subheading={
-            <span className="uppercase tracking-wider text-sm">Our Vision</span>
+            <span className="uppercase tracking-wider text-sm">
+              Our Mission
+            </span>
           }
           heading="We aim to disrupt the design space."
           buttonRounded={false}
           primaryButtonText="Contact Us"
           imageSrc="https://images.unsplash.com/3/doctype-hi-res.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=768&q=80"
           textOnLeft={false}
+          description="We focus on the detailed development of software solutions that help individuals and business uplift their purpose. This begins by listening to our clients, and members and being reliable. We take responsibility for building the best portals for our client's customers so that they have a business built on strong relationships."
         />
         <Features
           subheading={
-            <span className="uppercase tracking-wider text-sm">Our Values</span>
+            <span className="uppercase tracking-wider text-sm">
+              Our Strengths
+            </span>
           }
           heading="We follow these."
           description="We are Studius developers and Tech Explorers. We create IT solutions of global stands for businesses and individuals."
           cards={[
             {
               imageSrc: <Support />,
-              title: 'Advancing technology',
+              title: '24/7 Support',
               description:
                 'We refresh our tech stack and services to ensure all solutions that leave our doors are built future-proof. ',
             },
