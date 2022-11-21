@@ -1,10 +1,10 @@
 import React from "react"
 // import tw from 'twin.macro';
 import SvgDotPattern from "../../assets/images/dot-pattern.svg"
-import ModernDesign from "../../assets/images/ModernDesign.svg"
-import YourPrudentialImage from "../../assets/images/YourPrudentialImage.svg"
+import ModernDesign from "../../assets/images/ModernDesign.png"
+import YourPrudentialImage from "../../assets/images/YourPrudentialImage.png"
 
-import Aim from "../../assets/images/Aim.svg"
+import Aim from "../../assets/images/AimImage.png"
 import TeamIllustrationSrc from "../../assets/images/team-illustration-2.svg"
 
 // const Container = tw.div`relative`;
@@ -63,13 +63,21 @@ export default ({
 
   return (
     <div className="relative">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 justify-between max-w-screen-xl mx-auto px-16 lg:px-0 py-8 md:py-12 lg:py-16 items-center">
+      <div
+        className={`grid grid-cols-1 lg:grid-cols-2 gap-8 justify-between max-w-screen-xl mx-auto ${
+          isModernDesignImage ? "px-8 lg:px-0" : "pt-40 md:pt-40 lg:pt-40"
+        } py-8 pb-0 md:py-12 md:pb-24 lg:py-16 lg:pb-8  items-center`}
+      >
         {textOnLeft === true ? (
           <div className=" flex-shrink-0 relative lg:ml-16 border border-[#f2f2f2] p-1">
             {isModernDesignImage ? (
-              <YourPrudentialImage alt="YourPrudentialImage-svg" />
+              <img
+                src={YourPrudentialImage.src}
+                alt="YourPrudentialImage-png"
+                className="w-full"
+              />
             ) : (
-              <ModernDesign alt="modern-svg" />
+              <img src={ModernDesign.src} alt="modernDesign-png" />
             )}
 
             {imageDecoratorBlob && (
@@ -80,8 +88,8 @@ export default ({
             )}
           </div>
         ) : (
-          <div className=" flex-shrink-0 relative  mr-16 border border-[#f2f2f2] p-1">
-            <Aim alt="Aim-image" />
+          <div className=" flex-shrink-0 relative lg:mr-16 border border-[#f2f2f2] p-1">
+            <img src={Aim.src} alt="Aim-image" className="w-full" />
             {imageDecoratorBlob && (
               <SvgDotPattern
                 className="w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-primary-500 -z-10"
@@ -113,7 +121,7 @@ export default ({
             </div>
           </div>
         ) : (
-          <div className="md:w-6/12 mt-16 md:mt-0 w-full max-w-md mx-auto md:max-w-none order-last mr-16">
+          <div className="mt-16 md:mt-0 mx-autoorder-last mr-16">
             <div className="lg:py-8 text-center md:text-left">
               <h5 className="text-center md:text-left font-bold text-primary-500">
                 {subheading}

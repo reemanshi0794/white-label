@@ -4,7 +4,7 @@ import tw from "twin.macro"
 import SvgDotPattern from "../../assets/images/dot-pattern.svg"
 import Laptop from "../../assets/images/laptop1.png"
 import TeamIllustrationSrc from "../../assets/images/team-illustration-2.svg"
-import ProcessImage from "../../assets/images/ProcessImage.svg"
+import ProcessImage from "../../assets/images/ProcessImage.png"
 
 // const Container = tw.div`relative`;
 // const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
@@ -84,14 +84,7 @@ export default ({
     <div className="relative">
       <div className="flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto pt-40 md:pt-4 items-center">
         <div className="md:w-6/12 flex-shrink-0 relative w-full max-w-md mx-auto md:max-w-none md:mx-0">
-          {/* <img
-            src={Laptop.src}
-            imageBorder={imageBorder}
-            imageShadow={imageShadow}
-            imageRounded={imageRounded}
-          /> */}
-          <ProcessImage alt="process-svg" />
-
+          <img src={ProcessImage.src} alt="process" />
           {imageDecoratorBlob && (
             <SvgDotPattern
               className="w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-primary-500 -z-10"
