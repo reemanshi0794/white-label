@@ -1,26 +1,42 @@
-import CustomerLoveIconImage from "../assets/images/simple-icon.svg";
-import Features from "../components/features/ThreeColSimple.js";
-import Footer from "../components/footers/FiveColumnWithInputForm.js";
-import Header from "../components/headers/light.js";
-import MainFeature1 from "../components/features/TwoColWithButton.js";
+import CustomerLoveIconImage from '../assets/images/simple-icon.svg';
+import Features from '../components/features/ThreeColSimple.js';
+import Footer from '../components/footers/FiveColumnWithInputForm.js';
+import Header from '../components/headers/light.js';
+import MainFeature1 from '../components/features/TwoColWithButton.js';
 // import Features from "components/features/ThreeColWithSideImage.js";
 // import MainFeature2 from "components/features/TwoColSingleFeatureWithStats.js";
 // import MainFeature3 from "components/features/TwoColSingleFeatureWithStats2.js";
-import React from "react";
-import ShieldIconImage from "../assets/images/shield-icon.svg";
-import SupportIconImage from "../assets/images/support-icon.svg";
-import TeamCardGrid from "../components/cards/ProfileThreeColGrid.js";
+import React from 'react';
+import ShieldIconImage from '../assets/images/shield-icon.svg';
+import SupportIconImage from '../assets/images/support-icon.svg';
+import TeamCardGrid from '../components/cards/ProfileThreeColGrid.js';
 // const Subheading = tw.span`uppercase tracking-wider text-sm`;
+import Head from 'next/head';
+
 export default () => {
   return (
     <>
       <Header />
       <div className="min-h-screen text-secondary-500 p-8 px-24 2xl:p-8 overflow-hidden">
-        {/* <AnimationRevealPage> */}
+        <Head>
+          <title>
+            Software Development Company | Custom App Developer | White Label
+            Technologies
+          </title>
+          <meta
+            name="description"
+            content="Design your apps and website with top software development company at reasonable prices. Experienced custom app designers and developers. Contact us today!"
+          />
+          <meta
+            name="keyword"
+            content="custom mobile app development company, software development company,custom software development,software app developer"
+          />
+        </Head>
+
         <MainFeature1
           subheading={
             <span className="uppercase tracking-wider text-sm">
-              About Whiten App Solutins
+              About Whiten App Solutions
             </span>
           }
           heading="We are a modern design agency."
@@ -47,21 +63,21 @@ export default () => {
           cards={[
             {
               imageSrc: SupportIconImage,
-              title: "24/7 Support",
+              title: '24/7 Support',
               description:
-                "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport",
+                'Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport',
             },
             {
               imageSrc: ShieldIconImage,
-              title: "Strong Teams",
+              title: 'Strong Teams',
               description:
-                "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport",
+                'Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport',
             },
             {
               imageSrc: CustomerLoveIconImage,
-              title: "Customer Satisfaction",
+              title: 'Customer Satisfaction',
               description:
-                "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport",
+                'Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport',
             },
           ]}
           linkText=""

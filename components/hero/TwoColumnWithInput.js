@@ -1,7 +1,7 @@
-import React from "react";
-import BannerImage from "../../assets/images/BannerImage.png";
-import CustomersLogoStripImage from "../../assets/images/Partnerslogo.svg";
-import SvgDecoratorBlob1 from "../../assets/images/svg-decorator-blob-1.svg";
+import React from 'react';
+import BannerImage from '../../assets/images/BannerImage.png';
+import CustomersLogoStripImage from '../../assets/images/Partnerslogo.svg';
+import SvgDecoratorBlob1 from '../../assets/images/svg-decorator-blob-1.svg';
 //eslint-disable-next-line
 // import { css } from "styled-components/macro";
 
@@ -53,14 +53,12 @@ export default () => {
               today and tomorrow.
             </p>
             <div className="relative max-w-md text-center mx-auto lg:mx-0">
-              <input
-                className="sm:pr-48 pl-8 py-4 sm:py-5 rounded-full border-2 w-full font-medium focus:outline-none transition duration-300  focus:border-primary-500 hover:border-gray-500"
-                type="text"
-                placeholder="Your E-mail Address"
-              />
-              <button className="w-full sm:absolute right-0 top-0 bottom-0 bg-primary-500 text-gray-100 font-bold mr-2 my-4 sm:my-2 rounded-full py-4 flex items-center justify-center sm:w-40 sm:leading-none focus:outline-none hover:bg-secondary-900 transition duration-300">
+              <a
+                className="w-full sm:absolute right-0 top-0 bottom-0 bg-primary-500 text-gray-100 font-bold mr-2 my-4 sm:my-2 rounded-full py-4 flex items-center justify-center sm:w-40 sm:leading-none focus:outline-none  transition duration-300"
+                href="/contact-us"
+              >
                 Get Started
-              </button>
+              </a>
             </div>
             <div className="mt-12 lg:mt-20">
               <p className="uppercase text-sm lg:text-xs tracking-wider font-bold text-gray-500">

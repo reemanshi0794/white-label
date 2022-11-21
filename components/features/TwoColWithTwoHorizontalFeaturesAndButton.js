@@ -1,13 +1,13 @@
-import React from "react";
-import styled from "styled-components";
-import tw from "twin.macro";
+import React from 'react';
+import styled from 'styled-components';
+import tw from 'twin.macro';
 // import BriefcaseIcon from "feather-icons/dist/icons/briefcase.svg";
 // import MoneyIcon from "feather-icons/dist/icons/dollar-sign.svg";
-import BriefcaseIcon from "../../assets/icons/brief-case.svg";
-import MoneyIcon from "../../assets/icons/dollar.svg";
-import SvgDotPattern from "../../assets/images/dot-pattern.svg";
-import Principles from "../../assets/images/Principles.png";
-import TeamIllustrationSrc from "../../assets/images/team-illustration-2.svg";
+import BriefcaseIcon from '../../assets/icons/brief-case.svg';
+import MoneyIcon from '../../assets/icons/dollar.svg';
+import SvgDotPattern from '../../assets/images/dot-pattern.svg';
+import Principles from '../../assets/images/Principles.png';
+import TeamIllustrationSrc from '../../assets/images/team-illustration-2.svg';
 
 // const Container = tw.div`relative`;
 // const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
@@ -62,18 +62,18 @@ const Image = styled.img((props) => [
 // ]);
 
 export default ({
-  subheading = "Our Expertise",
+  subheading = 'Our Expertise',
   heading = (
     <>
-      {" "}
+      {' '}
       4 C's
       {/* Designed & Developed by
       <span className="text-primary-500">Professionals.</span> */}
     </>
   ),
-  description = "We are Committed, Creative and Classy Coders empowering our clients businesses with custom Technology solutions. We pride ourselves on building holistic digital solutions with edge-cutting technology and tools that are future-proof. ",
-  primaryButtonText = "Learn More",
-  primaryButtonUrl = "https://timerse.com",
+  description = 'We are Committed, Creative and Classy Coders empowering our clients businesses with custom Technology solutions. We pride ourselves on building holistic digital solutions with edge-cutting technology and tools that are future-proof. ',
+  primaryButtonText = 'Learn More',
+  primaryButtonUrl = 'https://timerse.com',
   imageSrc = TeamIllustrationSrc,
   buttonRounded = true,
   imageRounded = true,
@@ -95,16 +95,16 @@ export default ({
   const defaultFeatures = [
     {
       Icon: MoneyIcon,
-      title: "Affordable",
+      title: 'Affordable',
       description:
-        "Our clients enjoy reasonable pricing for all our solutions and one will see it as the best rates in the industry.",
+        'Our clients enjoy reasonable pricing for all our solutions and one will see it as the best rates in the industry.',
       iconContainerCss: tw`bg-red-300 text-red-800`,
     },
     {
       Icon: BriefcaseIcon,
-      title: "Seasoned",
+      title: 'Seasoned',
       description:
-        "Our Team is well-seasoned and skilled people who hear out your idea and make the right move to bring it into reality within a short time.",
+        'Our Team is well-seasoned and skilled people who hear out your idea and make the right move to bring it into reality within a short time.',
       iconContainerCss: tw`bg-teal-300 text-teal-800`,
     },
   ];
@@ -169,14 +169,14 @@ export default ({
               })}
             </div>
 
-            <button
+            {/* <button
               className="px-8 py-3 font-bold rounded bg-primary-500 text-gray-100 hocus:bg-primary-700 hocus:text-gray-200 focus:outline-none transition duration-300 mt-12 text-sm inline-block mx-auto md:mx-0"
               buttonRounded={buttonRounded}
               as="a"
               href={primaryButtonUrl}
             >
               {primaryButtonText}
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

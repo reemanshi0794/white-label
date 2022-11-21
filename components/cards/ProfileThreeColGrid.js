@@ -168,7 +168,7 @@ export default ({
 }) => {
   return (
     <Container>
-      <ContentWithPaddingXl>
+      {/* <ContentWithPaddingXl>
         <div>
           {subheading && (
             <h5 className="font-bold text-primary-500 text-center mb-3">
@@ -192,8 +192,10 @@ export default ({
               className="mt-24 w-full sm:w-1/2 lg:w-1/3 flex flex-col items-center"
               key={index}
             >
-              {/* <div className={`background-image: url('${card.imageSrc}') w-64 h-64 bg-contain bg-center rounded`} 
-              imageSrc={card.imageSrc} /> */}
+              <div
+                className={`background-image: url('${card.imageSrc}') w-64 h-64 bg-contain bg-center rounded`}
+                imageSrc={card.imageSrc}
+              />
               <div>
                 <img
                   src={card.imageSrc}
@@ -215,7 +217,7 @@ export default ({
                       className="mr-8 last:mr-0 text-gray-400 hocus:text-primary-500 transition duration-300"
                       href={link.url}
                     >
-                      {/* <link.icon className="fill-current w-6 h-6" /> */}
+                      <link.icon className="fill-current w-6 h-6" />
                     </a>
                   ))}
                 </div>
@@ -223,7 +225,7 @@ export default ({
             </div>
           ))}
         </div>
-      </ContentWithPaddingXl>
+      </ContentWithPaddingXl> */}
     </Container>
   );
 };
