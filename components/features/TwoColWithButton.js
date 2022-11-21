@@ -126,7 +126,7 @@ export default ({
             </div>
           </div>
         ) : (
-          <div className="mt-16 md:mt-0 mx-autoorder-last mr-16">
+          <div className="mt-16 md:mt-0 mx-auto order-last">
             <div className="lg:py-8 text-center md:text-left">
               <h5 className="text-center md:text-left font-bold text-primary-500">
                 {subheading}
