@@ -63,9 +63,9 @@ export default ({
 
   return (
     <div className="relative">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 justify-between max-w-screen-xl mx-auto pt-0 lg:pt-32 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 justify-between max-w-screen-xl mx-auto px-16 lg:px-0 py-8 md:py-12 lg:py-16 items-center">
         {textOnLeft === true ? (
-          <div className=" flex-shrink-0 relative   ml-16 border border-[#f2f2f2] p-1">
+          <div className=" flex-shrink-0 relative lg:ml-16 border border-[#f2f2f2] p-1">
             {isModernDesignImage ? (
               <YourPrudentialImage alt="YourPrudentialImage-svg" />
             ) : (

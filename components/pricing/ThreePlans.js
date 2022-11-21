@@ -148,7 +148,7 @@ export default ({
         </div>
 
         <div className=" bg-white rounded-3xl overflow-x-auto shadow-[0_0_50px_-15px_rgba(0,0,0,21%)] mt-16">
-          <div className="grid grid-cols-4 gap-4 w-[910px] lg:w-auto">
+          <div className="grid grid-cols-4 gap-4 w-[910px] xl:w-auto">
             <div className=" py-10 px-5 border-r-[3px] text-center border-[#eaeaea]">
               <h3 className="font-bold text-2xl mb-6 text-black">
                 Technologies
