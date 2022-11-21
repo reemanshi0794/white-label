@@ -3,6 +3,7 @@ import FacebookIcon from '../../assets/images/facebook-icon.svg';
 import TwitterIcon from '../../assets/images/twitter-icon.svg';
 import YoutubeIcon from '../../assets/images/youtube-icon.svg';
 import LogoImage from '../../assets/images/logo.svg';
+import LogoSVG from '../../assets/images/logo.svg';
 
 export default () => {
   const [showLoader, setShowLoader] = useState(false);
@@ -284,12 +285,18 @@ export default () => {
         </div>
         <div className="my-16 border-b-2 border-gray-300 w-full" />
         <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="flex items-center justify-center md:justify-start">
+          {/* <div className="flex items-center justify-center md:justify-start">
             <img className="w-8" src={LogoImage.src} />
             <h5 className="ml-2 text-xl font-black tracking-wider text-gray-800">
               Whiten App Solutions Inc.
             </h5>
+          </div> */}
+
+          <div className="flex items-center justify-center md:justify-start">
+            {/* <FooterSVG alt="footer-svg" /> */}
+            <LogoSVG alt="logo" className="mr-3" />
           </div>
+
           <p className="text-center text-sm sm:text-base mt-8 md:mt-0 font-medium text-gray-500">
             &copy; 2022 Whiten App Solutions Inc. All Rights Reserved.
           </p>
