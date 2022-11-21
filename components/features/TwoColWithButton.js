@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react"
 // import tw from 'twin.macro';
-import SvgDotPattern from '../../assets/images/dot-pattern.svg';
-import ModernDesign from '../../assets/images/ModernDesign.svg';
-import YourPrudentialImage from '../../assets/images/YourPrudentialImage.svg';
+import SvgDotPattern from "../../assets/images/dot-pattern.svg"
+import ModernDesign from "../../assets/images/ModernDesign.svg"
+import YourPrudentialImage from "../../assets/images/YourPrudentialImage.svg"
 
-import Aim from '../../assets/images/Aim.svg';
-import TeamIllustrationSrc from '../../assets/images/team-illustration-2.svg';
+import Aim from "../../assets/images/Aim.svg"
+import TeamIllustrationSrc from "../../assets/images/team-illustration-2.svg"
 
 // const Container = tw.div`relative`;
 // const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
@@ -38,16 +38,16 @@ import TeamIllustrationSrc from '../../assets/images/team-illustration-2.svg';
 // ]);
 
 export default ({
-  subheading = 'Our Expertise',
+  subheading = "Our Expertise",
   heading = (
     <>
       Your Prudential Tech partners for today and hereafter
       {/* <span className="text-primary-500">Professionals.</span> */}
     </>
   ),
-  description = 'Know how it is to be developed by experts in the industry. We give a seamless experience for our clients with exceptional design, development and process that is best suited to their needs and requirements.',
-  primaryButtonText = 'Learn More',
-  primaryButtonUrl = 'https://timerse.com',
+  description = "Know how it is to be developed by experts in the industry. We give a seamless experience for our clients with exceptional design, development and process that is best suited to their needs and requirements.",
+  primaryButtonText = "Learn More",
+  primaryButtonUrl = "https://timerse.com",
   imageSrc = TeamIllustrationSrc,
   buttonRounded = true,
   imageRounded = true,
@@ -63,7 +63,7 @@ export default ({
 
   return (
     <div className="relative">
-      <div className="flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto  pt-32 items-center">
+      <div className="flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto pt-0 md:pt-32 items-center">
         {textOnLeft === true ? (
           <div className="md:w-6/12 flex-shrink-0 relative w-full max-w-md mx-auto md:max-w-none ml-16 border border-[#f2f2f2] p-1">
             {isModernDesignImage ? (
@@ -91,7 +91,7 @@ export default ({
           </div>
         )}
         {textOnLeft === true ? (
-          <div className="md:w-6/12 mt-16 md:mt-0 w-full max-w-md mx-auto md:max-w-none order-first ">
+          <div className="md:w-6/12 mt-0 md:mt-16 md:mt-0 w-full max-w-md mx-auto md:max-w-none order-first ">
             <div className="lg:py-8 text-center md:text-left">
               <h5 className="text-center md:text-left font-bold text-primary-500">
                 {subheading}
@@ -137,5 +137,5 @@ export default ({
         )}
       </div>
     </div>
-  );
-};
+  )
+}
