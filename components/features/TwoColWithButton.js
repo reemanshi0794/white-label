@@ -78,7 +78,11 @@ export default ({
                 className="w-full"
               />
             ) : (
-              <img src={ModernDesign.src} alt="modernDesign-png" />
+              <img
+                src={ModernDesign.src}
+                alt="modernDesign-png"
+                className="w-full"
+              />
             )}
 
             {imageDecoratorBlob && (
