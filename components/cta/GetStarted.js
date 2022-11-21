@@ -1,9 +1,9 @@
-import { Container, ContentWithPaddingXl } from "../../components/misc/Layouts"
+import { Container, ContentWithPaddingXl } from '../../components/misc/Layouts';
 
-import React from "react"
-import SvgDecoratorBlob1 from "../../assets/images/svg-decorator-blob-9.svg"
-import styled from "styled-components" //eslint-disable-line
-import tw from "twin.macro"
+import React from 'react';
+import SvgDecoratorBlob1 from '../../assets/images/svg-decorator-blob-9.svg';
+import styled from 'styled-components'; //eslint-disable-line
+import tw from 'twin.macro';
 // import { css } from "styled-components/macro"; //eslint-disable-line
 
 // const PrimaryBackgroundContainer = tw.div`py-20 lg:py-24 bg-primary-500 rounded-lg relative`;
@@ -34,11 +34,11 @@ import tw from "twin.macro"
 //   SvgDecoratorBlob1
 // )`absolute top-0 right-0 w-80 h-80 transform  translate-x-20 -translate-y-64 text-primary-700 opacity-50`;
 export default ({
-  text = "Developers all over the world are happily using Whiten App Solutions.",
-  primaryLinkText = "Get Started",
-  primaryLinkUrl = "http://timerse.com",
-  secondaryLinkText = "Contact Us",
-  secondaryLinkUrl = "/contact-us",
+  text = 'Developers all over the world are happily using Whiten App Solutions.',
+  primaryLinkText = 'Get Started',
+  primaryLinkUrl = '/contact-us',
+  secondaryLinkText = 'Contact Us',
+  secondaryLinkUrl = '/contact-us',
   pushDownFooter = true,
 }) => {
   return (
@@ -73,5 +73,5 @@ export default ({
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
