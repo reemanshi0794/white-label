@@ -8,8 +8,8 @@ import LogoSVG from '../../assets/images/logo.svg';
 import useAnimatedNavToggler from '../../helpers/useAnimatedNavToggler.js';
 
 const Header = tw.header`
-  flex justify-between items-center
-  max-w-screen-xl mx-auto
+  flex justify-center items-center
+  fixed bg-white top-0 w-full z-20 p-4 px-24 2xl:p-8 mx-auto w-full
 `;
 
 export const NavLinks = tw.div`inline-block`;
@@ -50,7 +50,7 @@ export const MobileNavLinks = motion(styled.div`
 `);
 
 export const DesktopNavLinks = tw.nav`
-  hidden lg:flex flex-1 justify-between items-center
+  hidden lg:flex flex-1 justify-between items-center max-w-screen-xl
 `;
 
 export default ({

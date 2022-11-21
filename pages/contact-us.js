@@ -11,8 +11,8 @@ import React from "react";
 export default () => {
   return (
     <>
+      <Header />
       <div className="min-h-screen text-secondary-500 p-8 px-24 2xl:p-8 overflow-hidden">
-        <Header />
         <ContactUsForm />
         <ContactDetails
           cards={[

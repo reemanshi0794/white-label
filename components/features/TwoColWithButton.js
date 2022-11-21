@@ -59,7 +59,7 @@ export default ({
 
   return (
     <div className="relative">
-      <div className="flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto pt-20 md:pt-4 items-center">
+      <div className="flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto  pt-32 items-center">
         {textOnLeft === true ? (
           <div className="md:w-6/12 flex-shrink-0 relative w-full max-w-md mx-auto md:max-w-none ml-16 border border-[#f2f2f2] p-1">
             <YourPrudentialImage alt="process-svg" />

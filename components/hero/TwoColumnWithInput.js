@@ -4,7 +4,6 @@ import CustomersLogoStripImage from "../../assets/images/Partnerslogo.svg";
 import SvgDecoratorBlob1 from "../../assets/images/svg-decorator-blob-1.svg";
 //eslint-disable-next-line
 // import { css } from "styled-components/macro";
-import Header from "../headers/light.js";
 
 // const Container = tw.div`relative`;
 // const TwoColumn = tw.div`flex flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -39,12 +38,11 @@ import Header from "../headers/light.js";
 //   }
 // `;
 
-export default ({ roundedHeaderButton }) => {
+export default () => {
   return (
     <>
-      <Header roundedHeaderButton={roundedHeaderButton} />
       <div className="relative">
-        <div className="flex flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto py-20 md:py-24">
+        <div className="flex flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto pb-20 pt-32 md:pb-24 md:pt-32">
           <div className="relative lg:w-5/12 text-center max-w-lg mx-auto lg:max-w-none lg:text-left">
             <h1 className="font-bold text-3xl md:text-3xl lg:text-4xl xl:text-5xl text-gray-900 leading-tight">
               Bridging business into Digital Sphere
