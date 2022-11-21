@@ -1,4 +1,3 @@
-import CustomerLoveIconImage from '../assets/images/simple-icon.svg';
 import Features from '../components/features/ThreeColSimple.js';
 import Footer from '../components/footers/FiveColumnWithInputForm.js';
 import Header from '../components/headers/light.js';
@@ -7,9 +6,10 @@ import MainFeature1 from '../components/features/TwoColWithButton.js';
 // import MainFeature2 from "components/features/TwoColSingleFeatureWithStats.js";
 // import MainFeature3 from "components/features/TwoColSingleFeatureWithStats2.js";
 import React from 'react';
-import ShieldIconImage from '../assets/images/shield-icon.svg';
-import SupportIconImage from '../assets/images/support-icon.svg';
 import TeamCardGrid from '../components/cards/ProfileThreeColGrid.js';
+import CustomerSatisfaction from '../assets/images/CustomerSatisfaction.svg';
+import Support from '../assets/images/Support.svg';
+import StrongTeams from '../assets/images/StrongTeams.svg';
 // const Subheading = tw.span`uppercase tracking-wider text-sm`;
 import Head from 'next/head';
 
@@ -62,19 +62,19 @@ export default () => {
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           cards={[
             {
-              imageSrc: SupportIconImage,
+              imageSrc: <Support />,
               title: '24/7 Support',
               description:
                 'Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport',
             },
             {
-              imageSrc: ShieldIconImage,
+              imageSrc: <StrongTeams />,
               title: 'Strong Teams',
               description:
                 'Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport',
             },
             {
-              imageSrc: CustomerLoveIconImage,
+              imageSrc: <CustomerSatisfaction />,
               title: 'Customer Satisfaction',
               description:
                 'Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport',

@@ -1,7 +1,8 @@
 import React from 'react';
 // import tw from 'twin.macro';
 import SvgDotPattern from '../../assets/images/dot-pattern.svg';
-import YourPrudentialImage from '../../assets/images/YourPrudentialImage.svg';
+import ModernDesign from '../../assets/images/ModernDesign.svg';
+import Aim from '../../assets/images/Aim.svg';
 import TeamIllustrationSrc from '../../assets/images/team-illustration-2.svg';
 
 // const Container = tw.div`relative`;
@@ -62,7 +63,7 @@ export default ({
       <div className="flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto  pt-32 items-center">
         {textOnLeft === true ? (
           <div className="md:w-6/12 flex-shrink-0 relative w-full max-w-md mx-auto md:max-w-none ml-16 border border-[#f2f2f2] p-1">
-            <YourPrudentialImage alt="process-svg" />
+            <ModernDesign alt="process-svg" />
 
             {imageDecoratorBlob && (
               <SvgDotPattern
@@ -73,6 +74,7 @@ export default ({
           </div>
         ) : (
           <div className="md:w-6/12 flex-shrink-0 relative w-full max-w-md mx-auto md:max-w-none mr-16 border border-[#f2f2f2] p-1">
+            <Aim alt="Aim-image" />
             {imageDecoratorBlob && (
               <SvgDotPattern
                 className="w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-primary-500 -z-10"
