@@ -79,7 +79,7 @@ export default ({
       imageSrc: CustomizeIconImage,
       title: 'Blockchain Development',
       description:
-        'World-class companies enjoy the benefits of blockchain technology with us through Cryptocurrency, Smart-Contracts, crypto wallets, DeFi and enterprise Blockchain app development and more with the most efficient internal process.',
+        'World-class companies enjoy the benefits of blockchain technology with us through Cryptocurrency, Smart-Contracts, Crypto Wallets, DeFi and Enterprise Blockchain app development and more with the most efficient internal process.',
     },
     {
       imageSrc: ReliableIconImage,
