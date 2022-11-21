@@ -1,11 +1,11 @@
-import MenuIcon from "feather-icons/dist/icons/menu.svg";
-import CloseIcon from "feather-icons/dist/icons/x.svg";
-import { motion } from "framer-motion";
-import React from "react";
-import styled from "styled-components";
-import tw from "twin.macro";
-import LogoSVG from "../../assets/images/logo.svg";
-import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
+import MenuIcon from 'feather-icons/dist/icons/menu.svg';
+import CloseIcon from 'feather-icons/dist/icons/x.svg';
+import { motion } from 'framer-motion';
+import React from 'react';
+import styled from 'styled-components';
+import tw from 'twin.macro';
+import LogoSVG from '../../assets/images/logo.svg';
+import useAnimatedNavToggler from '../../helpers/useAnimatedNavToggler.js';
 
 const Header = tw.header`
   flex justify-between items-center
@@ -58,7 +58,7 @@ export default ({
   logoLink,
   links,
   className,
-  collapseBreakpointClass = "lg",
+  collapseBreakpointClass = 'lg',
 }) => {
   /*
    * This header component accepts an optionals "links" prop that specifies the links to render in the navbar.
@@ -76,7 +76,7 @@ export default ({
   const defaultLinks = [
     <NavLinks key={1}>
       <NavLink href="/about-us">About</NavLink>
-      <NavLink href="/blog">Blog</NavLink>
+      <NavLink href="/Blog">Blog</NavLink>
       <PrimaryLink
         css={roundedHeaderButton && tw`rounded-full`}
         href="/contact-us"
@@ -111,7 +111,7 @@ export default ({
   links = links || defaultLinks;
 
   return (
-    <Header className={className || "header-light"}>
+    <Header className={className || 'header-light'}>
       <DesktopNavLinks css={collapseBreakpointCss.desktopNavLinks}>
         {logoLink}
         {links}
@@ -122,7 +122,7 @@ export default ({
       >
         {logoLink}
         <MobileNavLinks
-          initial={{ x: "150%", display: "none" }}
+          initial={{ x: '150%', display: 'none' }}
           animate={animation}
           css={collapseBreakpointCss.mobileNavLinks}
         >
@@ -130,7 +130,7 @@ export default ({
         </MobileNavLinks>
         <NavToggle
           onClick={toggleNavbar}
-          className={showNavLinks ? "open" : "closed"}
+          className={showNavLinks ? 'open' : 'closed'}
         >
           {showNavLinks ? (
             <CloseIcon className="w-6 h-6" />
