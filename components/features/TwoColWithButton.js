@@ -45,6 +45,7 @@ export default ({
       {/* <span className="text-primary-500">Professionals.</span> */}
     </>
   ),
+
   description = "Know how it is to be developed by experts in the industry. We give a seamless experience for our clients with exceptional design, development and process that is best suited to their needs and requirements.",
   primaryButtonText = "Learn More",
   primaryButtonUrl = "https://timerse.com",

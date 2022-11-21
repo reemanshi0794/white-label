@@ -226,6 +226,31 @@ export default ({
           ))}
         </div>
       </ContentWithPaddingXl> */}
+
+      {/* <div className="aboutBottom-secton">
+        <div className="row">
+          <div className="col-md-6 col-12">
+            <div className="img_section bottom-heading">
+              <h2>Individually committed towards our Clients benefits</h2>
+            </div>
+          </div>
+          <div className="col-md-6 col-12">
+            <div className="content_section bottom-description">
+              <p className="p-0">
+                Our White Label Family consists of many talents. We’re a mix of
+                the fun, like-minded, shrewd band. We value our customer
+                experience and we regularly enhance our services that build
+                trust and abiding relations.
+              </p>
+              <p className="">
+                Our team succeeds through expert team management with effective
+                module and design creation followed by development and testing
+                that are 100% focused on customer satisfaction.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> */}
     </Container>
   );
 };
