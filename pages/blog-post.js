@@ -135,7 +135,7 @@ export default ({
                 );
               })}
             </div>
-            {visible < posts.length && (
+            {/* {visible < posts.length && (
               <div className="flex justify-center">
                 <button
                   className="mt-16 mx-auto px-8 py-3 font-bold rounded bg-primary-500 text-gray-100 hocus:bg-primary-700 hocus:text-gray-200 focus:shadow-outline focus:outline-none transition duration-300"
@@ -144,7 +144,7 @@ export default ({
                   Load More
                 </button>
               </div>
-            )}
+            )} */}
           </div>
         </div>
       </div>
