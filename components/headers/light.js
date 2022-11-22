@@ -1,48 +1,65 @@
-import React, { useState, useEffect } from "react";
-import tw from "twin.macro";
-import LogoSVG from "../../assets/images/logo.svg";
-import useWindowDimensions from "../../helpers/getWindowDimensions";
+import React, { useState, useEffect } from 'react';
+import tw from 'twin.macro';
+import LogoSVG from '../../assets/images/logo.svg';
+import useWindowDimensions from '../../helpers/getWindowDimensions';
+import Link from 'next/link';
+import Appdev from '../../assets/images/Appdev.svg';
+import EnterpriceSoftwares from '../../assets/images/EnterpriceSoftwares.svg';
+import Ecommerce from '../../assets/images/Ecommerce.svg';
+import Webdevelopment from '../../assets/images/Webdevelopment.svg';
+import BlockChain from '../../assets/images/BlockChain.svg';
+import Design from '../../assets/images/Design.svg';
+import QA from '../../assets/images/QA.svg';
+import Nft from '../../assets/images/Nft.svg';
 
-const servicesPages = [
+const ServicesPages = [
   {
-    image: "",
-    title: "App Development",
-    link: "/app-development",
+    image: <Appdev />,
+    title: 'App Development',
+    link: '/app-development',
+    alt: 'App Development',
   },
   {
-    image: "",
-    title: "Enterprise Softwares",
-    link: "/enterprise-softwares",
+    image: <EnterpriceSoftwares />,
+    title: 'Enterprise Softwares',
+    link: '/enterprise-softwares',
+    alt: 'Enterprise Softwares',
   },
   {
-    image: "",
-    title: "eCommerce Development",
-    link: "/eCommerce-development",
+    image: <Ecommerce />,
+    title: 'eCommerce Development',
+    link: '/eCommerce-development',
+    alt: 'eCommerce Development',
   },
   {
-    image: "",
-    title: "Web Development",
-    link: "/web-development",
+    image: <Webdevelopment />,
+    title: 'Web Development',
+    link: '/web-development',
+    alt: 'Web Development',
   },
   {
-    image: "",
-    title: "Blockchain Services",
-    link: "/blockchain-services",
+    image: <BlockChain />,
+    title: 'Blockchain Services',
+    link: '/blockchain-services',
+    alt: 'Blockchain Services',
   },
   {
-    image: "",
-    title: "Design Services",
-    link: "/design-services",
+    image: <Design />,
+    title: 'Design Services',
+    link: '/design-services',
+    alt: 'Design Services',
   },
   {
-    image: "",
-    title: "Quality Assurance",
-    link: "/quality-assurance",
+    image: <QA />,
+    title: 'Quality Assurance',
+    link: '/quality-assurance',
+    alt: 'Quality Assurance',
   },
   {
-    image: "",
-    title: "NFT Marketplace Development",
-    link: "/nft-marketplace-development",
+    image: <Nft />,
+    title: 'NFT Marketplace Development',
+    link: 'nft-marketplace-development',
+    alt: 'NFT Marketplace Development',
   },
 ];
 const Header = tw.header`
@@ -68,6 +85,19 @@ export default ({ logoLink, className }) => {
   logoLink = logoLink || defaultLogoLink;
 
   const [isToggle, setIsToggle] = useState(false);
+  const [openServices, setOpenServices] = useState(false);
+
+  const hideServiceDropdown = () => {
+    setOpenServices(false);
+  };
+
+  const handleShowDropdown = () => {
+    setOpenServices(!openServices);
+  };
+
+  const showServiceDropdown = () => {
+    setOpenServices(true);
+  };
 
   const handleToggle = () => {
     setIsToggle(!isToggle);
@@ -75,12 +105,12 @@ export default ({ logoLink, className }) => {
 
   return (
     <>
-      <Header className={className || "header-light"}>
+      <Header className={className || 'header-light'}>
         <div
           className={
             width > 768
-              ? "flex flex-1 justify-between items-center max-w-screen-xl"
-              : "flex-1 justify-between items-center max-w-screen-xl"
+              ? 'flex flex-1 justify-between items-center max-w-screen-xl'
+              : 'flex-1 justify-between items-center max-w-screen-xl'
           }
         >
           <div className="flex justify-between items-center">
@@ -131,7 +161,37 @@ export default ({ logoLink, className }) => {
               >
                 Blog
               </a>
+              <a
+                onClick={handleShowDropdown}
+                onMouseEnter={showServiceDropdown}
+                className="text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
+                font-semibold tracking-wide transition duration-300
+                pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500"
+              >
+                Services
+              </a>
 
+              <div className={openServices ? 'subMenu pt-lg-4' : 'show'}>
+                <div className="subMenuInner">
+                  <ul className="list-unstyled">
+                    {ServicesPages.map((serviceItems) => {
+                      const { image, title, link, alt } = serviceItems;
+                      <li>
+                        <Link
+                          style={{ textDecoration: 'none' }}
+                          className=""
+                          href={link}
+                        >
+                          <a onClick={hideServiceDropdown}>
+                            <img src={image} alt={alt} />
+                            {title}
+                          </a>
+                        </Link>
+                      </li>;
+                    })}
+                  </ul>
+                </div>
+              </div>
               <a
                 href="/contact-us"
                 className="lg:mx-0
