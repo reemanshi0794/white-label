@@ -186,7 +186,7 @@ export default ({
 
         <div className=" bg-white rounded-3xl overflow-x-auto shadow-[0_0_50px_-15px_rgba(0,0,0,21%)] mt-12 hidden md:block">
           <div className="grid grid-cols-4 gap-4 w-[910px] xl:w-auto">
-            <div className=" py-10 px-5 border-r-[3px] text-center border-[#eaeaea]">
+            <div className="py-10 px-5 border-r-[3px] text-center border-[#eaeaea]">
               <h3 className="font-bold text-2xl mb-6 text-black">
                 Technologies
               </h3>
@@ -252,7 +252,7 @@ export default ({
                 ))}
               </ul>
             </div>
-            <div className=" py-10 px-5 border-r-[3px] text-center border-[#eaeaea]">
+            <div className="py-10 px-5 border-r-[3px] text-center border-[#eaeaea]">
               <h3 className="font-bold text-2xl mb-6 text-black">Available</h3>
               <ul>
                 {["16", "08", "06", "04", "04", "07", "03"].map((nmbr) => (
@@ -262,7 +262,7 @@ export default ({
                 ))}
               </ul>
             </div>
-            <div className=" py-10 px-5 text-center">
+            <div className="py-10 px-5 text-center">
               <h3 className="font-bold text-2xl mb-6 text-black invisible">
                 Hire Us
               </h3>
@@ -289,7 +289,7 @@ export default ({
                 <div className="flex flex-col justify-center items-center shadow-[0_0_50px_-15px_rgba(0,0,0,21%)] bg-white text-center rounded-[10px] w-[70%] p-[14px] mb-5">
                   <img
                     src={data.image.src}
-                    className="w-[100px] mb-[10px] object-cover"
+                    className="w-[88px] mb-[10px] object-cover"
                     alt=""
                   />
                   <div className="flex justify-center items-center mb-2">
