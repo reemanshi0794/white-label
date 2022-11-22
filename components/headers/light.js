@@ -42,7 +42,7 @@ const servicesPages = [
   {
     image: "",
     title: "NFT Marketplace Development",
-    link: "nft-marketplace-development",
+    link: "/nft-marketplace-development",
   },
 ];
 const Header = tw.header`
