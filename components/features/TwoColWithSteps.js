@@ -82,8 +82,8 @@ export default ({
 
   return (
     <div className="relative">
-      <div className="flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto pt-40 md:pt-4 items-center">
-        <div className="md:w-6/12 flex-shrink-0 relative w-full max-w-md mx-auto md:max-w-none md:mx-0">
+      <div className="flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto pt-4 items-center">
+        <div className="md:w-6/12 flex-shrink-0 relative w-full max-w-md mx-auto md:max-w-none md:mx-0 pt-12 pb-24 md:pt-0 md:pb-0">
           <img src={ProcessImage.src} alt="process" />
           {imageDecoratorBlob && (
             <SvgDotPattern
@@ -93,7 +93,7 @@ export default ({
           )}
         </div>
         <div
-          className="md:w-6/12 mt-16 md:mt-0 w-full max-w-md mx-auto md:max-w-none md:ml-16"
+          className="md:w-6/12 mt-16 md:mt-0 w-full max-w-md mx-auto md:max-w-none md:ml-16 order-first md:order-last"
           textOnLeft={textOnLeft}
         >
           <div className="lg:py-8 text-center md:text-left">

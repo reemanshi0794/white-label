@@ -1,19 +1,19 @@
-import ContactDetails from '../components/cards/ThreeColContactDetails.js';
-import ContactUsForm from '../components/forms/TwoColContactUsWithIllustrationFullForm.js';
-import Footer from '../components/footers/FiveColumnWithInputForm.js';
-import Header from '../components/headers/light.js';
-import React from 'react';
+import ContactDetails from "../components/cards/ThreeColContactDetails.js"
+import ContactUsForm from "../components/forms/TwoColContactUsWithIllustrationFullForm.js"
+import Footer from "../components/footers/FiveColumnWithInputForm.js"
+import Header from "../components/headers/light.js"
+import React from "react"
 // const Address = tw.span`leading-relaxed`;
 // const AddressLine = tw.span`block`;
 // const Email = tw.span`text-sm mt-6 block text-gray-500`;
 // const Phone = tw.span`text-sm mt-0 block text-gray-500`;
-import Head from 'next/head';
+import Head from "next/head"
 
 export default () => {
   return (
     <>
       <Header />
-      <div className="min-h-screen text-secondary-500 p-8 px-24 2xl:p-8 overflow-hidden">
+      <div className="min-h-screen text-secondary-500 p-8 md:px-24 2xl:p-8 overflow-hidden">
         <Head>
           <title>
             Software Development Company | Custom App Developer | White Label
@@ -89,7 +89,7 @@ export default () => {
         <ContactDetails
           cards={[
             {
-              title: '',
+              title: "",
               description: (
                 <>
                   <span className="leading-relaxed">
@@ -151,5 +151,5 @@ export default () => {
       </div>
       <Footer />
     </>
-  );
-};
+  )
+}

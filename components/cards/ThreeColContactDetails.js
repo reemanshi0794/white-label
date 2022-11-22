@@ -95,7 +95,7 @@ export default ({
 
   return (
     <div className="relative">
-      <div className="flex flex-col items-center md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-lg mx-auto py-20 md:py-8 ">
+      <div className="flex flex-col items-center md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-lg mx-auto py-4 md:py-8 ">
         {subheading && (
           <SubheadingBase className="mb-4">{subheading}</SubheadingBase>
         )}
