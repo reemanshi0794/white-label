@@ -1,23 +1,23 @@
-import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg"
-import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg"
-import React from "react"
-import tw from "twin.macro"
-import heroScreenshotImageSrc from "../assets/images/hero-screenshot-1.png"
-import macHeroScreenshotImageSrc from "../assets/images/hero-screenshot-2.png"
-import prototypeIllustrationImageSrc from "../assets/images/prototype-illustration.svg"
-import GetStarted from "../components/cta/GetStarted"
-import FAQ from "../components/faqs/SingleCol.js"
-import Features from "../components/features/ThreeColWithSideImage.js"
-import MainFeature from "../components/features/TwoColWithButton.js"
-import FeatureWithSteps from "../components/features/TwoColWithSteps.js"
-import MainFeature2 from "../components/features/TwoColWithTwoHorizontalFeaturesAndButton.js"
-import Footer from "../components/footers/FiveColumnWithBackground.js"
+import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg";
+import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg";
+import React from "react";
+import tw from "twin.macro";
+import heroScreenshotImageSrc from "../assets/images/hero-screenshot-1.png";
+import macHeroScreenshotImageSrc from "../assets/images/hero-screenshot-2.png";
+import prototypeIllustrationImageSrc from "../assets/images/prototype-illustration.svg";
+import GetStarted from "../components/cta/GetStarted";
+import FAQ from "../components/faqs/SingleCol.js";
+import Features from "../components/features/ThreeColWithSideImage.js";
+import MainFeature from "../components/features/TwoColWithButton.js";
+import FeatureWithSteps from "../components/features/TwoColWithSteps.js";
+import MainFeature2 from "../components/features/TwoColWithTwoHorizontalFeaturesAndButton.js";
+import Footer from "../components/footers/FiveColumnWithBackground.js";
 // import { css } from "styled-components/macro"; //eslint-disable-line
-import Hero from "../components/hero/TwoColumnWithInput.js"
-import Pricing from "../components/pricing/ThreePlans.js"
-import Testimonial from "../components/testimonials/TwoColumnWithImageAndRating.js"
-import Header from "../components/headers/light"
-import Head from "next/head"
+import Hero from "../components/hero/TwoColumnWithInput.js";
+import Pricing from "../components/pricing/ThreePlans.js";
+import Testimonial from "../components/testimonials/TwoColumnWithImageAndRating.js";
+import Header from "../components/headers/light";
+import Head from "next/head";
 
 const SaaSProductLandingPage = () => {
   return (
@@ -205,7 +205,7 @@ const SaaSProductLandingPage = () => {
             {
               question: "What are the technologies that you use ?",
               answer:
-                "At Whiten App Solutions we continuously update our tech stack to meet the demand of our clients. Presently we work with technologies including - React, React Native, Flutter, Angular, Golang, Nodejs, Swift, Java, Android.",
+                "At Whiten App Solutions we continuously update our tech stack to meet the demand of our clients. Presently we work with technologies including - React, React Native, Flutter, Angular, Golang, Nodejs, Swift, Java, Android, Power BI, UI/UX, Quality Assurance, MongoDB",
             },
             {
               question: "How Does your Pricing work?",
@@ -228,7 +228,7 @@ const SaaSProductLandingPage = () => {
       </div>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default SaaSProductLandingPage
+export default SaaSProductLandingPage;

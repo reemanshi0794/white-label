@@ -3,6 +3,48 @@ import tw from "twin.macro";
 import LogoSVG from "../../assets/images/logo.svg";
 import useWindowDimensions from "../../helpers/getWindowDimensions";
 
+const servicesPages = [
+  {
+    image: "",
+    title: "App Development",
+    link: "/app-development",
+  },
+  {
+    image: "",
+    title: "Enterprise Softwares",
+    link: "/enterprise-softwares",
+  },
+  {
+    image: "",
+    title: "eCommerce Development",
+    link: "/eCommerce-development",
+  },
+  {
+    image: "",
+    title: "Web Development",
+    link: "/web-development",
+  },
+  {
+    image: "",
+    title: "Blockchain Services",
+    link: "/blockchain-services",
+  },
+  {
+    image: "",
+    title: "Design Services",
+    link: "/design-services",
+  },
+  {
+    image: "",
+    title: "Quality Assurance",
+    link: "/quality-assurance",
+  },
+  {
+    image: "",
+    title: "NFT Marketplace Development",
+    link: "nft-marketplace-development",
+  },
+];
 const Header = tw.header`
   flex justify-center items-center
   fixed bg-white top-0 w-full z-20 p-4 md:px-24 2xl:p-8 mx-auto w-full
