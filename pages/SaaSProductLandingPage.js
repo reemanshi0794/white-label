@@ -205,7 +205,7 @@ const SaaSProductLandingPage = () => {
             {
               question: "What are the technologies that you use ?",
               answer:
-                "At Whiten App Solutions we continuously update our tech stack to meet the demand of our clients. Presently we work with technologies including - React, React Native, Flutter, Angular, etc..",
+                "At Whiten App Solutions we continuously update our tech stack to meet the demand of our clients. Presently we work with technologies including - React, React Native, Flutter, Angular, Golang, Nodejs, Swift, Java, Android.",
             },
             {
               question: "How Does your Pricing work?",
