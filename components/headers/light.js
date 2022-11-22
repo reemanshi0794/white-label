@@ -88,6 +88,7 @@ export default ({ logoLink, className }) => {
   const [openServices, setOpenServices] = useState(false);
 
   const hideServiceDropdown = () => {
+    console.log('hide');
     setOpenServices(false);
   };
 
@@ -96,6 +97,7 @@ export default ({ logoLink, className }) => {
   };
 
   const showServiceDropdown = () => {
+    console.log('show');
     setOpenServices(true);
   };
 
@@ -161,37 +163,46 @@ export default ({ logoLink, className }) => {
               >
                 Blog
               </a>
-              <a
-                onClick={handleShowDropdown}
-                onMouseEnter={showServiceDropdown}
-                className="text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
+              <div>
+                <a
+                  onClick={handleShowDropdown}
+                  onMouseEnter={showServiceDropdown}
+                  className="text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
                 font-semibold tracking-wide transition duration-300
                 pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500"
-              >
-                Services
-              </a>
+                >
+                  Services
+                </a>
 
-              <div className={openServices ? 'subMenu pt-lg-4' : 'show'}>
-                <div className="subMenuInner">
-                  <ul className="list-unstyled">
-                    {ServicesPages.map((serviceItems) => {
-                      const { image, title, link, alt } = serviceItems;
-                      <li>
-                        <Link
-                          style={{ textDecoration: 'none' }}
-                          className=""
-                          href={link}
-                        >
-                          <a onClick={hideServiceDropdown}>
-                            <img src={image} alt={alt} />
-                            {title}
-                          </a>
-                        </Link>
-                      </li>;
-                    })}
-                  </ul>
+                <div
+                  className={openServices ? 'show' : 'hidden'}
+                  onMouseLeave={hideServiceDropdown}
+                >
+                  {ServicesPages.map((serviceItems) => {
+                    const { image, title, link, alt } = serviceItems;
+                    return (
+                      <div className="">
+                        <ul className="">
+                          <li>
+                            <Link
+                              legacyBehavior
+                              style={{ textDecoration: 'none' }}
+                              className=""
+                              href={link}
+                            >
+                              <a onClick={hideServiceDropdown}>
+                                {image}
+                                {title}
+                              </a>
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
+
               <a
                 href="/contact-us"
                 className="lg:mx-0
