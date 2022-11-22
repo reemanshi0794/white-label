@@ -8,6 +8,43 @@ import pythonImg from "../../assets/images/demo/pythonImg.png"
 import swiftImg from "../../assets/images/demo/swiftImg.png"
 import javaImg from "../../assets/images/demo/javaImg.png"
 
+const dummyData = [
+  {
+    image: reactImg,
+    developers: 40,
+    available: 16,
+  },
+  {
+    image: nodeImg,
+    developers: 20,
+    available: 8,
+  },
+  {
+    image: pythonImg,
+    developers: 15,
+    available: 6,
+  },
+  {
+    image: javaImg,
+    developers: 12,
+    available: 4,
+  },
+  {
+    image: androidImg,
+    developers: 12,
+    available: 4,
+  },
+  {
+    image: swiftImg,
+    developers: 10,
+    available: 7,
+  },
+  {
+    image: goLangImg,
+    developers: 7,
+    available: 3,
+  },
+]
 // const HeaderContainer = tw.div`mt-10 w-full flex flex-col items-center`;
 // const Subheading = tw(SubheadingBase)`mb-4`;
 // const Heading = tw(SectionHeading)`w-full`;
@@ -147,7 +184,7 @@ export default ({
           )}
         </div>
 
-        <div className=" bg-white rounded-3xl overflow-x-auto shadow-[0_0_50px_-15px_rgba(0,0,0,21%)] mt-16">
+        <div className=" bg-white rounded-3xl overflow-x-auto shadow-[0_0_50px_-15px_rgba(0,0,0,21%)] mt-12 hidden md:block">
           <div className="grid grid-cols-4 gap-4 w-[910px] xl:w-auto">
             <div className=" py-10 px-5 border-r-[3px] text-center border-[#eaeaea]">
               <h3 className="font-bold text-2xl mb-6 text-black">
@@ -242,6 +279,48 @@ export default ({
                 ))}
               </ul>
             </div>
+          </div>
+        </div>
+
+        <div className="block md:hidden mt-12">
+          <div className=" bg-white items-center rounded-3xl shadow-[0_0_50px_-15px_rgba(0,0,0,21%)] py-10 flex justify-center flex-col">
+            {dummyData.map((data) => {
+              return (
+                <div className="flex flex-col justify-center items-center shadow-[0_0_50px_-15px_rgba(0,0,0,21%)] bg-white text-center rounded-[10px] w-[70%] p-[14px] mb-5">
+                  <img
+                    src={data.image.src}
+                    className="w-[100px] mb-[10px] object-cover"
+                    alt=""
+                  />
+                  <div className="flex justify-center items-center mb-2">
+                    <h3 className="font-normal text-black text-base">
+                      Developers:
+                    </h3>
+                    <ul>
+                      <li className="text-base opacity-50 text-black list-none font-bold ml-[6px]">
+                        {data.developers}
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="flex justify-center items-center mb-2">
+                    <h3 className="font-normal  text-black text-base">
+                      Available:
+                    </h3>
+                    <ul>
+                      <li className="text-base opacity-50 text-black list-none font-bold ml-[6px]">
+                        {data.available}
+                      </li>
+                    </ul>
+                  </div>
+                  <a
+                    className="border-2 border-primary-500 mx-1 mt-1 py-[6px] px-[28px] font-semibold text-xs text-primary-500 hover:bg-primary-500 rounded-full hover:text-white"
+                    href="/contact-us"
+                  >
+                    Hire now
+                  </a>
+                </div>
+              )
+            })}
           </div>
         </div>
       </div>
