@@ -11,6 +11,7 @@ import BlockChain from "../../assets/images/BlockChain.svg"
 import Design from "../../assets/images/Design.svg"
 import QA from "../../assets/images/QA.svg"
 import Nft from "../../assets/images/Nft.svg"
+import ChevronDown from "../../assets/images/down-arrow.png"
 
 const ServicesPages = [
   {
@@ -238,6 +239,56 @@ export default ({ logoLink, className }) => {
                 >
                   Blog
                 </a>
+
+                <div className="flex flex-col items-center mb-5 ">
+                  <div
+                    onClick={handleShowDropdown}
+                    className="flex items-center"
+                  >
+                    <a
+                      className="text-lg lg:text-sm my-2 lg:mx-6 lg:my-0
+                font-semibold tracking-wide transition duration-300 text-[#212529]
+                pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500"
+                    >
+                      Services
+                    </a>
+                    <img
+                      src={ChevronDown.src}
+                      alt="ChevronDown"
+                      className="w-[20px] ml-[6px]"
+                    />
+                  </div>
+                  <div
+                    className={
+                      openServices
+                        ? "show w-full max-w-[585px] text-sm grid grid-cols-2 gap-4 bg-white p-4 shadow-[1px_4px_6px_2px_rgba(4,4,4,13%)] rounded-b-[20px]"
+                        : "hidden"
+                    }
+                  >
+                    {ServicesPages.map((serviceItems) => {
+                      const { image, title, link, alt } = serviceItems
+                      return (
+                        <div className="w-full">
+                          <Link
+                            legacyBehavior
+                            style={{ textDecoration: "none" }}
+                            className=""
+                            href={link}
+                          >
+                            <a
+                              onClick={hideServiceDropdown}
+                              className="flex items-center"
+                            >
+                              {image}
+                              <p className=" ml-[10px]">{title}</p>
+                            </a>
+                          </Link>
+                        </div>
+                      )
+                    })}
+                  </div>
+                </div>
+
                 <a
                   href="/contact-us"
                   className="lg:mx-0
