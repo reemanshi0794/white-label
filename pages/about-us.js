@@ -12,6 +12,7 @@ import Support from '../assets/images/Support.svg';
 import StrongTeams from '../assets/images/StrongTeams.svg';
 // const Subheading = tw.span`uppercase tracking-wider text-sm`;
 import Head from 'next/head';
+import Collaborate from '../assets/images/Collaborate.png';
 
 export default () => {
   return (
@@ -89,6 +90,31 @@ export default () => {
           ]}
           linkText=""
         />
+        <div style={{ width: '100%', textAlign: 'center', marginTop: 60 }}>
+          <img
+            src={Collaborate.src}
+            alt={'Collaboration Icon'}
+            className="img-fluid"
+          />
+        </div>
+
+        <div id="synergy">
+          <div className="container">
+            <div className="main_heading text-center">
+              <h3>The Synergy of White Label Technologies with Innow8 Apps</h3>
+              <p>
+                Since 2017, Innow8 Apps has made an impact across the globe by
+                delivering custom web & mobile apps along with services for
+                digital marketing and expert consultation. White Label
+                Technologies acts an arm for Innow8 Apps and has emerged as the
+                brand representing this alliance in their Canada headquarters.
+                Striving together with the same mission, Innow8 Apps and White
+                Label are under the same ownership umbrella to create an impact
+                Worldwide.
+              </p>
+            </div>
+          </div>
+        </div>
         <TeamCardGrid
           subheading={
             <span className="uppercase tracking-wider text-sm">Our Team</span>
