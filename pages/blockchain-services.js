@@ -22,7 +22,7 @@ import Six from "../assets/images/Blockchain/six.png";
 import Seven from "../assets/images/Blockchain/seven.png";
 import Link from "next/link";
 import Header from "../components/headers/light.js";
-import CryptoWallet from "../assets/images/Blockchain/crypto.svg";
+import CryptoWallet from "../assets/images/Blockchain/crypto.png";
 import NFTMarketplace from "../assets/images/Blockchain/nft-marketplace.png";
 import DApps from "../assets/images/Blockchain/dapps.png";
 import BlockChainSupply from "../assets/images/Blockchain/blockchain.png";
