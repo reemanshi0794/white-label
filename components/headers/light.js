@@ -1,77 +1,77 @@
-import React, { useState, useEffect } from 'react';
-import tw from 'twin.macro';
-import LogoSVG from '../../assets/images/logo.svg';
-import useWindowDimensions from '../../helpers/getWindowDimensions';
-import Link from 'next/link';
-import Appdev from '../../assets/images/Appdev.svg';
-import EnterpriceSoftwares from '../../assets/images/EnterpriceSoftwares.svg';
-import Ecommerce from '../../assets/images/Ecommerce.svg';
-import Webdevelopment from '../../assets/images/Webdevelopment.svg';
-import BlockChain from '../../assets/images/BlockChain.svg';
-import Design from '../../assets/images/Design.svg';
-import QA from '../../assets/images/QA.svg';
-import Nft from '../../assets/images/Nft.svg';
+import React, { useState, useEffect } from "react"
+import tw from "twin.macro"
+import LogoSVG from "../../assets/images/logo.svg"
+import useWindowDimensions from "../../helpers/getWindowDimensions"
+import Link from "next/link"
+import Appdev from "../../assets/images/Appdev.svg"
+import EnterpriceSoftwares from "../../assets/images/EnterpriceSoftwares.svg"
+import Ecommerce from "../../assets/images/Ecommerce.svg"
+import Webdevelopment from "../../assets/images/Webdevelopment.svg"
+import BlockChain from "../../assets/images/BlockChain.svg"
+import Design from "../../assets/images/Design.svg"
+import QA from "../../assets/images/QA.svg"
+import Nft from "../../assets/images/Nft.svg"
 
 const ServicesPages = [
   {
     image: <Appdev />,
-    title: 'App Development',
-    link: '/app-development',
-    alt: 'App Development',
+    title: "App Development",
+    link: "/app-development",
+    alt: "App Development",
   },
   {
     image: <EnterpriceSoftwares />,
-    title: 'Enterprise Softwares',
-    link: '/enterprise-softwares',
-    alt: 'Enterprise Softwares',
+    title: "Enterprise Softwares",
+    link: "/enterprise-softwares",
+    alt: "Enterprise Softwares",
   },
   {
     image: <Ecommerce />,
-    title: 'eCommerce Development',
-    link: '/eCommerce-development',
-    alt: 'eCommerce Development',
+    title: "eCommerce Development",
+    link: "/eCommerce-development",
+    alt: "eCommerce Development",
   },
   {
     image: <Webdevelopment />,
-    title: 'Web Development',
-    link: '/web-development',
-    alt: 'Web Development',
+    title: "Web Development",
+    link: "/web-development",
+    alt: "Web Development",
   },
   {
     image: <BlockChain />,
-    title: 'Blockchain Services',
-    link: '/blockchain-services',
-    alt: 'Blockchain Services',
+    title: "Blockchain Services",
+    link: "/blockchain-services",
+    alt: "Blockchain Services",
   },
   {
     image: <Design />,
-    title: 'Design Services',
-    link: '/design-services',
-    alt: 'Design Services',
+    title: "Design Services",
+    link: "/design-services",
+    alt: "Design Services",
   },
   {
     image: <QA />,
-    title: 'Quality Assurance',
-    link: '/quality-assurance',
-    alt: 'Quality Assurance',
+    title: "Quality Assurance",
+    link: "/quality-assurance",
+    alt: "Quality Assurance",
   },
   {
     image: <Nft />,
-    title: 'NFT Marketplace Development',
-    link: 'nft-marketplace-development',
-    alt: 'NFT Marketplace Development',
+    title: "NFT Marketplace Development",
+    link: "nft-marketplace-development",
+    alt: "NFT Marketplace Development",
   },
-];
+]
 const Header = tw.header`
   flex justify-center items-center
   fixed bg-white top-0 w-full z-20 p-4 md:px-24 2xl:p-8 mx-auto w-full
-`;
+`
 
 export default ({ logoLink, className }) => {
-  const { width } = useWindowDimensions();
+  const { width } = useWindowDimensions()
   useEffect(() => {
-    width > 768 && setIsToggle(false);
-  }, [width]);
+    width > 768 && setIsToggle(false)
+  }, [width])
 
   const defaultLogoLink = (
     <a
@@ -80,39 +80,39 @@ export default ({ logoLink, className }) => {
     >
       <LogoSVG alt="logo" className="mr-3" />
     </a>
-  );
+  )
 
-  logoLink = logoLink || defaultLogoLink;
+  logoLink = logoLink || defaultLogoLink
 
-  const [isToggle, setIsToggle] = useState(false);
-  const [openServices, setOpenServices] = useState(false);
+  const [isToggle, setIsToggle] = useState(false)
+  const [openServices, setOpenServices] = useState(false)
 
   const hideServiceDropdown = () => {
-    console.log('hide');
-    setOpenServices(false);
-  };
+    console.log("hide")
+    setOpenServices(false)
+  }
 
   const handleShowDropdown = () => {
-    setOpenServices(!openServices);
-  };
+    setOpenServices(!openServices)
+  }
 
   const showServiceDropdown = () => {
-    console.log('show');
-    setOpenServices(true);
-  };
+    console.log("show")
+    setOpenServices(true)
+  }
 
   const handleToggle = () => {
-    setIsToggle(!isToggle);
-  };
+    setIsToggle(!isToggle)
+  }
 
   return (
     <>
-      <Header className={className || 'header-light'}>
+      <Header className={className || "header-light"}>
         <div
           className={
             width > 768
-              ? 'flex flex-1 justify-between items-center max-w-screen-xl'
-              : 'flex-1 justify-between items-center max-w-screen-xl'
+              ? "flex flex-1 justify-between items-center max-w-screen-xl"
+              : "flex-1 justify-between items-center max-w-screen-xl"
           }
         >
           <div className="flex justify-between items-center">
@@ -163,42 +163,45 @@ export default ({ logoLink, className }) => {
               >
                 Blog
               </a>
-              <div>
+              <div className="flex">
                 <a
                   onClick={handleShowDropdown}
                   onMouseEnter={showServiceDropdown}
-                  className="text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
-                font-semibold tracking-wide transition duration-300
+                  className="text-lg lg:text-sm my-2 lg:mx-6 lg:my-0
+                font-semibold tracking-wide transition duration-300 text-[#212529]
                 pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500"
                 >
                   Services
                 </a>
 
                 <div
-                  className={openServices ? 'show' : 'hidden'}
+                  className={
+                    openServices
+                      ? "show absolute w-full  top-[73%] max-w-[585px] text-sm grid grid-cols-2 gap-4 translate-x-[-15rem] bg-white p-4 shadow-[1px_4px_6px_2px_rgba(4,4,4,13%)] rounded-b-[20px]"
+                      : "hidden"
+                  }
                   onMouseLeave={hideServiceDropdown}
                 >
                   {ServicesPages.map((serviceItems) => {
-                    const { image, title, link, alt } = serviceItems;
+                    const { image, title, link, alt } = serviceItems
                     return (
-                      <div className="">
-                        <ul className="">
-                          <li>
-                            <Link
-                              legacyBehavior
-                              style={{ textDecoration: 'none' }}
-                              className=""
-                              href={link}
-                            >
-                              <a onClick={hideServiceDropdown}>
-                                {image}
-                                {title}
-                              </a>
-                            </Link>
-                          </li>
-                        </ul>
+                      <div className="w-full">
+                        <Link
+                          legacyBehavior
+                          style={{ textDecoration: "none" }}
+                          className=""
+                          href={link}
+                        >
+                          <a
+                            onClick={hideServiceDropdown}
+                            className="flex items-center"
+                          >
+                            {image}
+                            <p className=" ml-[10px]">{title}</p>
+                          </a>
+                        </Link>
                       </div>
-                    );
+                    )
                   })}
                 </div>
               </div>
@@ -250,5 +253,5 @@ export default ({ logoLink, className }) => {
         </div>
       </Header>
     </>
-  );
-};
+  )
+}
