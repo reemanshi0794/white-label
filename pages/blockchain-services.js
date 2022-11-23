@@ -79,16 +79,20 @@ const BlockChainDev = () => {
       <div className="min-h-screen text-secondary-500 p-8 lg:px-24 2xl:p-8 overflow-hidden">
         <Head>
           <title>
-            Software Development Company | Custom App Developer | White Label
-            Technologies
+            BlockChain App Development Company | Developers | Whiten App
+            Solutions
           </title>
           <meta
             name="description"
-            content="Design your apps and website with top software development company at reasonable prices. Experienced custom app designers and developers. Contact us today!"
+            content="Leading BlockChain App Development Company offers best Blockchain Services.
+            We cover cryptocurrency, eWallets, and data science. Contact today to know more."
           />
           <meta
             name="keyword"
-            content="custom mobile app development company, software development company,custom software development,software app developer"
+            content="blockchain app development company,
+          blockchain developers,
+          blockchain development,
+          blockchain development companies,"
           />
         </Head>
 

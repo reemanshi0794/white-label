@@ -107,16 +107,16 @@ const EcommerceDev = () => {
       <div className="min-h-screen text-secondary-500 p-8 lg:px-24 2xl:p-8 overflow-hidden">
         <Head>
           <title>
-            Software Development Company | Custom App Developer | White Label
-            Technologies
+            Software Development Company | Custom App Developer | Whiten App
+            Solutions
           </title>
           <meta
             name="description"
-            content="Design your apps and website with top software development company at reasonable prices. Experienced custom app designers and developers. Contact us today!"
+            content="Create Ecommerce Websites and Apps that drive sales. Our best eCommerce developers work together to ensure the websites are built to boost conversion rates."
           />
           <meta
             name="keyword"
-            content="custom mobile app development company, software development company,custom software development,software app developer"
+            content="Ecommerce website developer, Ecommerce App Development, ecommerce development services."
           />
         </Head>
 
