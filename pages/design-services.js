@@ -19,47 +19,47 @@ import MainServices from '../components/MainServices';
 import Features from '../components/features/ThreeColSimple.js';
 import Features1 from '../components/features/ThreeColWithSideImage.js';
 
-const EcommerceServicePageItemToDisplay = [
+const DesignServicePageItemToDisplay = [
   {
     id: `1`,
     Imgurl: B2c,
-    heading: `B2C eCommerce Platforms`,
-    desc: `Power up your online store with our feature-rich and high-performance eCommerce websites and Apps. We aim for customer retention for you to hit 4X sales. For Smooth navigation throughout we provide OTP/ Social Logins, multilingual and multiple payment integrations.`,
+    heading: `Static Website Design`,
+    desc: `Our Static website solution packages are utilized by startups and individuals to display simple information regarding their works and solutions. We make engaging and simple static designs that help you give the best impression..`,
     textOnLeft: true,
   },
   {
     id: `2`,
     Imgurl: B2b,
-    heading: `B2B Marketplace`,
-    desc: `Reach out to potential business partners and customers with our B2B Marketplace. We build the most reliable and sustainable B2B Marketplaces where you can easily showcase and trade your products for global clients.`,
+    heading: `Dynamic Website Design`,
+    desc: `We identify your requirements and create effective web solutions with an easy content management system. Be it a blogging site, News site or business website, we help you easily kick start your website using open source technologies.`,
     textOnLeft: false,
   },
   {
     id: `3`,
     Imgurl: MultiVender,
-    heading: `Multi-Vender Platforms`,
-    desc: `Build your eCommerce empire with multiple vendors. Create the perfect platform for small to big businesses to sell their product in a single platform. We assure security and user-friendliness despite the size of the platform.`,
+    heading: `Responsive Website Design`,
+    desc: `Create designs that are compatible with any browser and screen resolution. We help you turn your website visitors into recurring customers with the best Responsive designs.`,
     textOnLeft: true,
   },
   {
     id: `4`,
     Imgurl: CMS,
-    heading: `CMS Integration`,
-    desc: `We help integrate the worlds leading eCommerce CMS to enhance your online store. We provide integration support for Shopify, WooCommerce, BigCommerce, Magento, Prestashop, OpenCart, and osCommerce to take your store to the next level.`,
+    heading: `Ecommerce Web Portal`,
+    desc: `Captivating eCommerce store to enhance the shopping experience. We offer eCommerce web design and development by connecting the latest technologies to fulfil your eCommerce business requirements.`,
     textOnLeft: false,
   },
   {
     id: `5`,
     Imgurl: Migration,
-    heading: `Migration and Support`,
-    desc: `Supporting businesses to scale and upgrade their eCommerce platforms to much-enhanced features and functionality. Advanced edge-cutting technologies are used to meet the demands and standards of the eCommerce industry.`,
+    heading: `Custome Web Design`,
+    desc: `Strengthen your brand’s reputation with our custom web designing service. We create search engine-friendly web designs that are scalable and user friendly.`,
     textOnLeft: true,
   },
   {
     id: `6`,
     Imgurl: ApiIntegration,
-    heading: `API Integration`,
-    desc: `Feature-packed eCommerce solutions are always sustainable. We integrate top-most APIs including Google Analytics and PayPal. FedEx and more to support our client's best interests.`,
+    heading: `Customized Template Design`,
+    desc: `For user convenience, we come with the best-customized templates that let you enjoy Sharp looking at websites and logos`,
   },
 ];
 
@@ -154,7 +154,10 @@ const EcommerceDev = () => {
             Contact Us
           </a>
         </div>
-        {EcommerceServicePageItemToDisplay.map((element) => {
+        <h1 className="uppercase tracking-widest font-bold text-500">
+          Website Designing Services We Offer
+        </h1>
+        {DesignServicePageItemToDisplay.map((element) => {
           return (
             <MainServices
               heading={element.heading}
@@ -165,20 +168,228 @@ const EcommerceDev = () => {
           );
         })}
 
-        <Features1
-          subheading={
-            <span className="uppercase tracking-wider text-sm"></span>
-          }
-          heading={
-            <>
-              What makes Whiten App the best in
-              <span className="text-primary-500"> eCommerce Development?</span>
-            </>
-          }
-          description=""
-          cards={EcommerseCards}
-          isEcommerse={true}
-        />
+        {/* solution-offer  */}
+        {/* <section className="soultion-offer">
+          <div className="col-lg-10 col-md-11 mx-auto">
+            <div className="top">
+              <h3>Solutions that we offer to run your website successfully</h3>
+              <p>
+                For user convenience, we come with the best-customized templates
+                that let you enjoy Sharp looking at websites and logos
+              </p>
+            </div>
+            <div className="row mx-0 mb-0 mt-5 flex-wrap justify-content-center">
+              <Slider {...settings}>
+                
+                <div className="col-lg-6 col-xl-4">
+                  <div className="cardSol">
+                    <div className="cnt">
+                      <img src={ContentWriting.src} alt="ContentWriting" />
+                      <h5>Content Writing</h5>
+                      <p>
+                        A website with SEO optimized and reader-friendly website
+                        is essential for any business. We help you create
+                        stunning content and copywriting to stay out of the
+                        crowd. Partnering with us will remove your weight in
+                        optimizing and ranking your website.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-lg-6 col-xl-4">
+                  <div className="cardSol">
+                    <div className="cnt">
+                      <img src={LogoDesign.src} alt="LogoDesign" />
+                      <h5>Logo Design</h5>
+                      <p>
+                        A logo is a significant foundation of your business. We
+                        create logos that have premium look and feel that can
+                        potentially uplift your brand value. Our logo creation
+                        and redesign services add value to your business and can
+                        help you catch your customer’s attention globally.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-lg-6 col-xl-4">
+                  <div className="cardSol">
+                    <div className="cnt">
+                      <img src={VideoProduction.src} alt="VideoProduction" />
+                      <h5>Video Production</h5>
+                      <p>
+                        As a leading and best marketing strategy for businesses,
+                        creating videos in your niche can help boost
+                        conversions. Our team of Videographers and
+                        cinematographers create tutorials and marketing videos
+                        for our client’s websites that can be shared in various
+                        media.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-lg-6 col-xl-4">
+                  <div className="cardSol">
+                    <div className="cnt">
+                      <img src={Seo.src} alt="Seo" />
+                      <h5>Search engine optimization</h5>
+                      <p>
+                        Ranking your website in search engines is very important
+                        as it is how you gain new visitors online. Prioritizing
+                        the website’s quality and Ranking metrics are done at
+                        Whitelabel to rank your website for your intended
+                        audience.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-lg-6 col-xl-4">
+                  <div className="cardSol">
+                    <div className="cnt">
+                      <img src={Conversation.src} alt="Conversation" />
+                      <h5>Conversion Rate Optimization</h5>
+                      <p>
+                        Optimizing your website in a way to convert your
+                        website, visitors, into potential customers is vital.
+                        Our team helps in optimizing the website speed and
+                        implementing smooth navigation followed by a call to
+                        action to ensure conversions
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-lg-6 col-xl-4">
+                  <div className="cardSol">
+                    <div className="cnt">
+                      <img src={WebsiteAnalysis.src} alt="WebsiteAnalysis" />
+                      <h5>Website Analysis</h5>
+                      <p>
+                        One main module in website designing includes website
+                        analysis. It helps find breaches and threats to your
+                        website and provides solutions that strengthen the
+                        performance of the site. Consequent SEO audits,
+                        competitor analysis and website traffic and performance
+                        are done to improve the overall performance.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-lg-6 col-xl-4">
+                  <div className="cardSol">
+                    <div className="cnt">
+                      <img
+                        src={WebsiteMaintaince.src}
+                        alt="WebsiteMaintaince"
+                      />
+                      <h5>Website Maintenance</h5>
+                      <p>
+                        A website needs continuous monitoring and maintenance to
+                        keep up its performance. We conduct regular site
+                        checkups to analyse maintenance requirements. This
+                        boosts the site’s security, and enhances the user
+                        experience.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Slider>
+            </div>
+            <div className="text-center">
+              <Link
+                style={{ textDecoration: 'none' }}
+                className="nav-link"
+                href="/contact-us"
+              >
+                <button className="btn connect-btn">Let’s Connect</button>
+              </Link>
+            </div>
+          </div>
+        </section> */}
+
+        {/* why-choose  */}
+        {/* <section className="why-choose">
+          <div className="col-lg-10 col-md-11 mx-auto">
+            <div className="top">
+              <h3>Why Choose Whitelabel as your website design partner?</h3>
+            </div>
+            <div className="row mx-0 mb-0 mt-4 flex-wrap justify-content-center">
+              <div className="col-lg-6">
+                <div className="cardSol">
+                  <div className="cnt">
+                    <h5>Client-Centred Approach</h5>
+                    <p>
+                      It is our client’s call to finalize the product. Our
+                      customer success team consists of Project managers and
+                      business analysts that help you stay in the loop. Every
+                      critical choice is passed through our clients ensuring
+                      100% transparency.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-lg-6">
+                <div className="cardSol">
+                  <div className="cnt">
+                    <h5>
+                      Direct Communication With Website Experts And Developers
+                    </h5>
+                    <p>
+                      Discuss your thoughts and ideas directly with our top team
+                      members. Regular meetings and brainstorming sections are
+                      conducted to improve the productivity among our developers
+                      and our clients are welcomed to share their thoughts.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-lg-6">
+                <div className="cardSol">
+                  <div className="cnt">
+                    <h5>Platform Independent Websites</h5>
+                    <p>
+                      Customer behaviour is so unpredictable. That said,
+                      building a website that is sustainable for any change
+                      requires skill. At Whitelabel, we create websites that
+                      perform well regardless of the device and search engines.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-lg-6">
+                <div className="cardSol">
+                  <div className="cnt">
+                    <h5>Futuristic Design</h5>
+                    <p>
+                      We take charge of developing and designing websites that
+                      are future-proof. Staying up to date with design and
+                      responsiveness is critical for any website. Our Website
+                      design solutions are 100% scalable as well.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="text-center">
+              <Link
+                style={{ textDecoration: 'none' }}
+                className="nav-link"
+                href="/contact-us"
+              >
+                <button className="btn connect-btn my-3 my-lg-5">
+                  Call Us Today
+                </button>
+              </Link>
+            </div>
+          </div>
+        </section> */}
 
         {/* <div className="EcommerceDev">
           <div className="Dev EnterpriseDev">
