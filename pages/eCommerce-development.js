@@ -62,6 +62,7 @@ const EcommerceServicePageItemToDisplay = [
     desc: `Feature-packed eCommerce solutions are always sustainable. We integrate top-most APIs including Google Analytics and PayPal. FedEx and more to support our client's best interests.`,
   },
 ];
+
 const EcommerseCards = [
   {
     imageSrc: Agile,
