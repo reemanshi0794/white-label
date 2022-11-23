@@ -135,7 +135,7 @@ const QualityAssurance = () => {
             Contact Us
           </a>
         </div> */}
-
+        {/* 
         <Features
           heading="Our Software Quality Assurance services are further classified
           as"
@@ -165,7 +165,7 @@ const QualityAssurance = () => {
               software development cycle
             </p>
           </div>
-        </div>
+        </div> */}
 
         <Features
           heading="Our Top-notch Quality Assurance services"
