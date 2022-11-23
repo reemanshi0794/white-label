@@ -18,6 +18,7 @@ import Pricing from '../components/pricing/ThreePlans.js';
 import Testimonial from '../components/testimonials/TwoColumnWithImageAndRating.js';
 import Header from '../components/headers/light';
 import Head from 'next/head';
+import Collaborate from '../assets/images/Collaborate.png';
 
 const SaaSProductLandingPage = () => {
   return (
@@ -193,7 +194,7 @@ const SaaSProductLandingPage = () => {
 
         <div style={{ width: '100%', textAlign: 'center', marginTop: 60 }}>
           <img
-            // src={CollabIcon.src}
+            src={Collaborate.src}
             alt={'Collaboration Icon'}
             className="img-fluid"
           />
