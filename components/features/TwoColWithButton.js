@@ -150,5 +150,5 @@ export default ({
         )}
       </div>
     </div>
-  )
-}
+  );
+};
