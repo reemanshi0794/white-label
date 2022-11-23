@@ -1,19 +1,19 @@
-import React from 'react';
-import CustomizeIconImage from '../../assets/images/customize-icon.svg';
-import ShieldIconImage from '../../assets/images/shield-icon.svg';
-import SupportIconImage from '../../assets/images/support-icon.svg';
+import React from "react";
+import CustomizeIconImage from "../../assets/images/customize-icon.svg";
+import ShieldIconImage from "../../assets/images/shield-icon.svg";
+import SupportIconImage from "../../assets/images/support-icon.svg";
 import {
   SectionHeading,
   Subheading as SubheadingBase,
-} from '../../components/misc/Headings.js';
-import CustomerSatisfaction from '../../assets/images/CustomerSatisfaction.svg';
-import Support from '../../assets/images/Support.svg';
-import StrongTeams from '../../assets/images/StrongTeams.svg';
+} from "../../components/misc/Headings.js";
+import CustomerSatisfaction from "../../assets/images/CustomerSatisfaction.svg";
+import Support from "../../assets/images/Support.svg";
+import StrongTeams from "../../assets/images/StrongTeams.svg";
 import {
   Container,
   ContentWithPaddingXl,
-} from '../../components/misc/Layouts.js';
-import { SectionDescription } from '../../components/misc/Typography.js';
+} from "../../components/misc/Layouts.js";
+import { SectionDescription } from "../../components/misc/Typography.js";
 // const Heading = tw(SectionHeading)``;
 // const Subheading = tw(SubheadingBase)`text-center mb-3`;
 // const Description = tw(SectionDescription)`text-center mx-auto`;
@@ -57,28 +57,28 @@ export default ({
   cards = [
     {
       imageSrc: <StrongTeams />,
-      title: 'Secure',
+      title: "Secure",
       description:
-        'We strictly only deal with vendors that provide top notch security.',
-      url: 'https://timerse.com',
+        "We strictly only deal with vendors that provide top notch security.",
+      url: "https://timerse.com",
     },
     {
       imageSrc: <Support />,
-      title: '24/7 Support',
-      description: 'Lorem ipsum donor amet siti ceali placeholder text',
-      url: 'https://google.com',
+      title: "24/7 Support",
+      description: "Lorem ipsum donor amet siti ceali placeholder text",
+      url: "https://google.com",
     },
     {
       imageSrc: <CustomerSatisfaction />,
-      title: 'Customizable',
-      description: 'Lorem ipsum donor amet siti ceali placeholder text',
-      url: 'https://reddit.com',
+      title: "Customizable",
+      description: "Lorem ipsum donor amet siti ceali placeholder text",
+      url: "https://reddit.com",
     },
   ],
-  linkText = 'Learn More',
-  heading = '',
-  subheading = '',
-  description = '',
+  linkText = "Learn More",
+  heading = "",
+  subheading = "",
+  description = "",
   imageContainerCss = null,
   imageCss = null,
 }) => {
@@ -103,41 +103,43 @@ export default ({
             {description}
           </SectionDescription>
         )}
-        <div className="mt-10 flex flex-col items-center lg:items-stretch lg:flex-row flex-wrap lg:justify-center max-w-screen-lg mx-auto">
-          {cards.map((card, i) => (
-            <div className="lg:w-1/3 max-w-xs" key={i}>
-              <a
-                className="flex flex-col items-center text-center h-full mx-4 px-4 py-8 rounded transition-transform duration-300 hover:cursor-pointer transform hover:scale-105"
-                href={card.url}
-              >
-                <span
-                  className="text-center rounded-full p-4 bg-gray-100"
-                  css={imageContainerCss}
+        {cards.length > 0 && (
+          <div className="mt-10 flex flex-col items-center lg:items-stretch lg:flex-row flex-wrap lg:justify-center max-w-screen-lg mx-auto">
+            {cards.map((card, i) => (
+              <div className="lg:w-1/3 max-w-xs" key={i}>
+                <a
+                  className="flex flex-col items-center text-center h-full mx-4 px-4 py-8 rounded transition-transform duration-300 hover:cursor-pointer transform hover:scale-105"
+                  href={card.url}
                 >
-                  {card.imageSrc}
-                  {/* <img
+                  <span
+                    className="text-center rounded-full p-4 bg-gray-100"
+                    css={imageContainerCss}
+                  >
+                    {card.imageSrc}
+                    {/* <img
                     className="`w-8 h-8"
                     src={card.imageSrc.src}
                     alt=""
                     css={imageCss}
                   /> */}
-                </span>
-                <span className="mt-4 font-bold text-xl leading-none">
-                  {card.title}
-                </span>
-                <p className="mt-4 text-sm font-medium text-secondary-300">
-                  {card.description}
-                </p>
-                {linkText && (
-                  <span className="mt-auto inline-flex items-center pt-5 text-sm font-bold text-primary-300 leading-none hocus:text-primary-900 transition duration-300">
-                    <span>{linkText}</span>
-                    <ArrowRightIcon className="ml-2 w-4" />
                   </span>
-                )}
-              </a>
-            </div>
-          ))}
-        </div>
+                  <span className="mt-4 font-bold text-xl leading-none">
+                    {card.title}
+                  </span>
+                  <p className="mt-4 text-sm font-medium text-secondary-300">
+                    {card.description}
+                  </p>
+                  {linkText && (
+                    <span className="mt-auto inline-flex items-center pt-5 text-sm font-bold text-primary-300 leading-none hocus:text-primary-900 transition duration-300">
+                      <span>{linkText}</span>
+                      <ArrowRightIcon className="ml-2 w-4" />
+                    </span>
+                  )}
+                </a>
+              </div>
+            ))}
+          </div>
+        )}
       </ContentWithPaddingXl>
       {/* <SvgDecoratorBlob3 className="pointer-events-none absolute right-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-40" /> */}
     </Container>
