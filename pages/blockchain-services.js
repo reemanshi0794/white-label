@@ -101,7 +101,7 @@ const BlockChainDev = () => {
               </h1>
 
               <div className=" mt-4 xl:mt-8 flex flex-col items-center lg:items-start">
-                <p className="uppercase text-sm lg:text-xs tracking-wider font-bold text-gray-500">
+                <p className="text-sm lg:text-md tracking-wider font-bold text-[#5b5b5b]">
                   Have some ideas that involve transparency, Decentralization
                   and persistence? As the No.1 Blockchain Development company we
                   offer services that are future-proof. Build your Crypto
