@@ -265,17 +265,16 @@ const AppDevelopment = ({
         <div className="flex flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto pb-20 pt-32 md:pb-24 md:pt-32">
           <div className="relative lg:w-5/12 text-center max-w-xs md:max-w-lg  mx-auto lg:max-w-none lg:text-left">
             <h1 className="font-bold text-3xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight">
-              White Label as your mobile
+              Whiten App Solutions as your mobile
               <br /> app development partners
               {/* <span className="text-primary-500">for you.</span> */}
             </h1>
             <p className="my-4 text-base xl:text-lg">
-              As the Leading Highperformace app developer, White Label has
-              always been able to deliver the best app solutions for all our
-              client’s requirements. Our pricing has always been a highlight.
-              Prices are unmatched for our services, but this doesn’t mean we
-              compromise in quality of our service. We just happen to be
-              reasonable.
+              As the Leading Highperformace app developer, Whiten App has always
+              been able to deliver the best app solutions for all our client’s
+              requirements. Our pricing has always been a highlight. Prices are
+              unmatched for our services, but this doesn’t mean we compromise in
+              quality of our service. We just happen to be reasonable.
             </p>
           </div>
           <div className="relative mt-12 lg:mt-0 flex-1 flex flex-col justify-center lg:self-end">
