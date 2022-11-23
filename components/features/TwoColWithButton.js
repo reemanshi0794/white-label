@@ -1,11 +1,11 @@
-import React from "react"
+import React from "react";
 // import tw from 'twin.macro';
-import SvgDotPattern from "../../assets/images/dot-pattern.svg"
-import ModernDesign from "../../assets/images/ModernDesign.png"
-import YourPrudentialImage from "../../assets/images/YourPrudentialImage.png"
+import SvgDotPattern from "../../assets/images/dot-pattern.svg";
+import ModernDesign from "../../assets/images/ModernDesign.png";
+import YourPrudentialImage from "../../assets/images/YourPrudentialImage.png";
 
-import Aim from "../../assets/images/AimImage.png"
-import TeamIllustrationSrc from "../../assets/images/team-illustration-2.svg"
+import Aim from "../../assets/images/AimImage.png";
+import TeamIllustrationSrc from "../../assets/images/team-illustration-2.svg";
 
 // const Container = tw.div`relative`;
 // const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;

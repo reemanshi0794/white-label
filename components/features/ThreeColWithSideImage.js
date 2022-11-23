@@ -53,6 +53,7 @@ export default ({
   heading = 'Amazing Features',
   subheading = 'fcsdf',
   description = 'Laying strong software foundations that yield growth',
+  isEcommerse,
 }) => {
   /*
    * This componets has an array of object denoting the cards defined below. Each object in the cards array can have the key (Change it according to your need, you can also add more objects to have more cards in this feature component) or you can directly pass this using the cards prop:
@@ -118,28 +119,52 @@ export default ({
           </p>
         )}
         <div className="mt-10 w-full" />
-        {cards.map((card, i) => {
-          const IconImage = card.imageSrc;
-          return (
-            <div className="md:w-1/2 lg:w-1/3 max-w-sm" key={i}>
-              <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left h-full mx-4 px-2 pb-8 pt-0 md:py-8">
-                <span className="border text-center rounded-full p-5 flex-shrink-0">
-                  {/* <img className="w-6 h-6" src={ShieldIconImage.src} alt="" /> */}
-                  <IconImage />
-                </span>
-                <span className="sm:ml-4 mt-4 sm:mt-2">
-                  <span className="mt-4 tracking-wide font-bold text-2xl leading-none">
-                    {card.title || 'Fully Secure'}
-                  </span>
-                  <p className="mt-1 sm:mt-4 font-medium text-secondary-100 leading-loose">
-                    {card.description ||
-                      'Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.'}
-                  </p>
-                </span>
-              </div>
-            </div>
-          );
-        })}
+        {!isEcommerse
+          ? cards.map((card, i) => {
+              console.log('card', card);
+              const IconImage = card.imageSrc;
+              return (
+                <div className="md:w-1/2 lg:w-1/3 max-w-sm" key={i}>
+                  <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left h-full mx-4 px-2 pb-8 pt-0 md:py-8">
+                    <span className="border text-center rounded-full p-5 flex-shrink-0">
+                      {/* <img className="w-6 h-6" src={ShieldIconImage.src} alt="" /> */}
+                      <IconImage />
+                    </span>
+                    <span className="sm:ml-4 mt-4 sm:mt-2">
+                      <span className="mt-4 tracking-wide font-bold text-2xl leading-none">
+                        {card.title || 'Fully Secure'}
+                      </span>
+                      <p className="mt-1 sm:mt-4 font-medium text-secondary-100 leading-loose">
+                        {card.description ||
+                          'Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.'}
+                      </p>
+                    </span>
+                  </div>
+                </div>
+              );
+            })
+          : cards.map((card, i) => {
+              console.log('card', card);
+              const IconImage = card.imageSrc;
+              return (
+                <div className="md:w-1/2 lg:w-1/3 max-w-sm" key={i}>
+                  <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left h-full mx-4 px-2 pb-8 pt-0 md:py-8">
+                    <span className="border text-center rounded-full p-5 flex-shrink-0">
+                      <img className="w-6 h-6" src={IconImage.src} alt="" />
+                    </span>
+                    <span className="sm:ml-4 mt-4 sm:mt-2">
+                      <span className="mt-4 tracking-wide font-bold text-2xl leading-none">
+                        {card.title || 'Fully Secure'}
+                      </span>
+                      <p className="mt-1 sm:mt-4 font-medium text-secondary-100 leading-loose">
+                        {card.description ||
+                          'Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.'}
+                      </p>
+                    </span>
+                  </div>
+                </div>
+              );
+            })}
       </div>
       <SvgDecoratorBlob3 className="pointer-events-none absolute right-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-48" />
     </div>

@@ -1,6 +1,6 @@
-import React, { useState } from "react"
-import { PrimaryButton as PrimaryButtonBase } from "../../components/misc/Buttons.js"
-import ContactUsSrc from "../../assets/images/contact-us.png"
+import React, { useState } from "react";
+import { PrimaryButton as PrimaryButtonBase } from "../../components/misc/Buttons.js";
+import ContactUsSrc from "../../assets/images/contact-us.png";
 
 export default ({
   subheading = "Contact Us",
@@ -13,26 +13,26 @@ export default ({
   description = "Let's collaborate",
   submitButtonText = "Send",
 }) => {
-  const webDevelopment = "Web Development"
-  const eCommerceDevelopment = "eCommerce Development"
-  const appDevelopment = "App Development"
-  const enterpriseSoftwares = "Enterprise Softwares"
-  const [contactInfo, setContactInfo] = useState({ service: webDevelopment })
-  const [showLoader, setShowLoader] = useState(false)
+  const webDevelopment = "Web Development";
+  const eCommerceDevelopment = "eCommerce Development";
+  const appDevelopment = "App Development";
+  const enterpriseSoftwares = "Enterprise Softwares";
+  const [contactInfo, setContactInfo] = useState({ service: webDevelopment });
+  const [showLoader, setShowLoader] = useState(false);
   // This message will be displayed if form is submitted successfully or if an error occurrs.
   const [displayMessage, setDisplayMessage] = useState({
     message: "",
     type: "",
-  })
+  });
 
   const handleChange = (key, value) => {
-    setContactInfo({ ...contactInfo, [key]: value })
-  }
+    setContactInfo({ ...contactInfo, [key]: value });
+  };
 
   const sendMail = () => {
     return new Promise((resolve, reject) => {
       try {
-        if (!contactInfo) return
+        if (!contactInfo) return;
         fetch("https://email-innow8.herokuapp.com/email", {
           method: "POST",
           headers: {
@@ -40,6 +40,7 @@ export default ({
           },
           body: JSON.stringify(
             {
+              projectName: "Whiten-App Solutions",
               to: ["kapilbindal1@gmail.com"],
               from: "contact@innow8apps.com",
               subject: "contact form White Label",
@@ -49,23 +50,23 @@ export default ({
           ),
         })
           .then((res) => {
-            console.log("result: ", res)
-            resolve()
+            console.log("result: ", res);
+            resolve();
           })
           .catch((error) => {
-            console.log("send mail api error", error)
-            reject()
-          })
+            console.log("send mail api error", error);
+            reject();
+          });
       } catch (error) {
-        console.log("send mail try catch error", error)
-        reject()
+        console.log("send mail try catch error", error);
+        reject();
       }
-    })
-  }
+    });
+  };
 
   //API to save enterred client data
   const addContactInfo = async () => {
-    return sendMail()
+    return sendMail();
     // const response = await fetch(
     //   "https://afternoon-sierra-04103.herokuapp.com/email",
     //   {
@@ -77,36 +78,36 @@ export default ({
     //   }
     // );
     // return response.json();
-  }
+  };
 
   const emptyFieldValidationCheck =
     !contactInfo.name ||
     !contactInfo.email ||
     !contactInfo.phoneNumber ||
-    !contactInfo.service
+    !contactInfo.service;
 
   const handleSubmit = (event) => {
-    setShowLoader(true)
+    setShowLoader(true);
     addContactInfo()
       .then((res) => {
         setDisplayMessage({
           message: "** Submitted successfully **",
           type: "success",
-        })
-        setShowLoader(false)
-        setTimeout(() => setDisplayMessage({ message: "", type: "" }), 2000)
+        });
+        setShowLoader(false);
+        setTimeout(() => setDisplayMessage({ message: "", type: "" }), 2000);
       })
       .catch((err) => {
         setDisplayMessage({
           message: "** An error occurred **",
           type: "error",
-        })
-        setShowLoader(false)
-        setTimeout(() => setDisplayMessage({ message: "", type: "" }), 2000)
-      })
-    setContactInfo({ service: webDevelopment })
-    event.preventDefault()
-  }
+        });
+        setShowLoader(false);
+        setTimeout(() => setDisplayMessage({ message: "", type: "" }), 2000);
+      });
+    setContactInfo({ service: webDevelopment });
+    event.preventDefault();
+  };
 
   return (
     <div className="relative">
@@ -231,5 +232,5 @@ export default ({
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
