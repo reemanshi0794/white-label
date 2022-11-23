@@ -1,27 +1,27 @@
-import React, { useEffect } from "react";
-import ReactGA from "react-ga";
-import BannerImg from "../assets/images/NftMarketPlaceDev/nftMarketplace-banner.svg";
-import CryptoCurrency from "../assets/images/NftMarketPlaceDev/cryptocurrency.png";
-import Ethereum from "../assets/images/NftMarketPlaceDev/ethereum.png";
-import Binance from "../assets/images/NftMarketPlaceDev/binance.png";
-import Polygon from "../assets/images/NftMarketPlaceDev/polygon.png";
-import Polkadot from "../assets/images/NftMarketPlaceDev/polkadot.png";
-import Cardano from "../assets/images/NftMarketPlaceDev/cardano.png";
-import Solana from "../assets/images/NftMarketPlaceDev/solana.png";
-import { useRouter } from "next/router";
-import { Helmet } from "react-helmet";
-import Link from "next/link";
-import Head from "next/head";
-import Header from "../components/headers/light.js";
-import Footer from "../components/footers/FiveColumnWithInputForm.js";
-import MainServices from "../components/MainServices";
-import Features from "../components/features/ThreeColSimple.js";
-import Features1 from "../components/features/ThreeColWithSideImage.js";
-import MintableImg from "../assets/images/NftMarketPlaceDev/mintable.png";
-import OpenseaImg from "../assets/images/NftMarketPlaceDev/opensea.png";
-import SuperRareImg from "../assets/images/NftMarketPlaceDev/superrare.png";
-import RaribleImg from "../assets/images/NftMarketPlaceDev/rariable.png";
-import NiftyImg from "../assets/images/NftMarketPlaceDev/nifty.png";
+import React, { useEffect } from "react"
+import ReactGA from "react-ga"
+import BannerImg from "../assets/images/NftMarketPlaceDev/nftMarketplace-banner.svg"
+import CryptoCurrency from "../assets/images/NftMarketPlaceDev/cryptocurrency.png"
+import Ethereum from "../assets/images/NftMarketPlaceDev/ethereum.png"
+import Binance from "../assets/images/NftMarketPlaceDev/binance.png"
+import Polygon from "../assets/images/NftMarketPlaceDev/polygon.png"
+import Polkadot from "../assets/images/NftMarketPlaceDev/polkadot.png"
+import Cardano from "../assets/images/NftMarketPlaceDev/cardano.png"
+import Solana from "../assets/images/NftMarketPlaceDev/solana.png"
+import { useRouter } from "next/router"
+import { Helmet } from "react-helmet"
+import Link from "next/link"
+import Head from "next/head"
+import Header from "../components/headers/light.js"
+import Footer from "../components/footers/FiveColumnWithInputForm.js"
+import MainServices from "../components/MainServices"
+import Features from "../components/features/ThreeColSimple.js"
+import Features1 from "../components/features/ThreeColWithSideImage.js"
+import MintableImg from "../assets/images/NftMarketPlaceDev/mintable.png"
+import OpenseaImg from "../assets/images/NftMarketPlaceDev/opensea.png"
+import SuperRareImg from "../assets/images/NftMarketPlaceDev/superrare.png"
+import RaribleImg from "../assets/images/NftMarketPlaceDev/rariable.png"
+import NiftyImg from "../assets/images/NftMarketPlaceDev/nifty.png"
 
 const NftMarkteplaceDevItemToDisplay = [
   {
@@ -59,24 +59,24 @@ const NftMarkteplaceDevItemToDisplay = [
     desc: `Nifty Gateway is one of the top NFT Makerplaces that utilized Blockchain technology to trade/auction digital assets called Nifties. The Nifty platform lets its users sell and buy Nifties without a middleman. By creating a Nifty Gateway clone you can enjoy various revenue streams including Royalties, Setup fee, Launching fee, and bundle fee.`,
     textOnLeft: true,
   },
-];
+]
 
 const NftMarketplaceDev = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-    ReactGA.pageview(window.location.pathname);
-  }, []);
+    window.scrollTo(0, 0)
+    ReactGA.pageview(window.location.pathname)
+  }, [])
 
-  const router = useRouter();
+  const router = useRouter()
 
   const handleClick = (element, e) => {
-    e.preventDefault();
+    e.preventDefault()
     if (element.heading === "OpenSea Clone") {
-      router.push("/opensea-clone");
+      router.push("/opensea-clone")
     } else if (element.heading === "Mintable Clone") {
-      router.push("/mintable-clone");
+      router.push("/mintable-clone")
     }
-  };
+  }
   return (
     <>
       <Header />
@@ -166,67 +166,71 @@ const NftMarketplaceDev = () => {
                   View Details
                 </a> */}
               </>
-            );
+            )
           })}
         </div>
 
-        <Features
-          heading="We build NFT Marketplaces in the following Blockchain"
-          description=""
-          linkText=""
-          cards={[]}
-        />
+        <div className=" pb-20">
+          <Features
+            heading="We build NFT Marketplaces in the following Blockchain"
+            description=""
+            linkText=""
+            cards={[]}
+          />
 
-        <div className="iconWrap flex">
-          <div className="col-12 col-sm-6 col-md-3 col-lg-2">
-            <div className="icon">
+          <div className="flex justify-center flex-wrap">
+            <div className="flex flex-col items-center m-5 mt-0">
               <img src={Ethereum.src} alt="Ethereum" />
-              <h5>Ethereum</h5>
+              <h5 className="mt-5 text-[25px] font-bold text-center">
+                Ethereum
+              </h5>
             </div>
-          </div>
-          <div className="col-12 col-sm-6 col-md-3 col-lg-2">
-            <div className="icon">
-              <img src={Binance.src} alt="Binance" />
-              <h5>Binance Smart Chain</h5>
-            </div>
-          </div>
-          <div className="col-12 col-sm-6 col-md-3 col-lg-2">
-            <div className="icon">
-              <img src={Polygon.src} alt="Polygon" />
-              <h5>Polygon</h5>
-            </div>
-          </div>
-          <div className="col-12 col-sm-6 col-md-3 col-lg-2">
-            <div className="icon">
-              <img src={Polkadot.src} alt="Polkadot" />
-              <h5>Polkadot</h5>
-            </div>
-          </div>
-          <div className="col-12 col-sm-6 col-md-3 col-lg-2">
-            <div className="icon">
-              <img src={Cardano.src} alt="Cardano" />
-              <h5>Cardano</h5>
-            </div>
-          </div>
-          <div className="col-12 col-sm-6 col-md-3 col-lg-2">
-            <div className="icon">
-              <img src={Solana.src} alt="Solana" />
-              <h5>Solana</h5>
-            </div>
-          </div>
-        </div>
 
-        <div className="flex items-center justify-center">
-          <a
-            href="/contact-us"
-            className="lg:mx-0 px-8 py-3 bg-primary-500 text-gray-100 hover:bg-secondary-700 hover:text-gray-200 focus:shadow-outline border-b-0 rounded-full"
-          >
-            Contact Us
-          </a>
-        </div>
-        {/* <div className="NftMarketplace">
+            <div className="flex flex-col items-center m-5 mt-0">
+              <img src={Binance.src} alt="Binance" />
+              <h5 className="mt-5 text-[25px] font-bold text-center">
+                Binance Smart Chain
+              </h5>
+            </div>
+
+            <div className="flex flex-col items-center m-5 mt-0">
+              <img src={Polygon.src} alt="Polygon" />
+              <h5 className="mt-5 text-[25px] font-bold text-center">
+                Polygon
+              </h5>
+            </div>
+
+            <div className="flex flex-col items-center m-5 mt-0">
+              <img src={Polkadot.src} alt="Polkadot" />
+              <h5 className="mt-5 text-[25px] font-bold text-center">
+                Polkadot
+              </h5>
+            </div>
+
+            <div className="flex flex-col items-center m-5 mt-0">
+              <img src={Cardano.src} alt="Cardano" />
+              <h5 className="mt-5 text-[25px] font-bold text-center">
+                Cardano
+              </h5>
+            </div>
+
+            <div className="flex flex-col items-center m-5 mt-0">
+              <img src={Solana.src} alt="Solana" />
+              <h5 className="mt-5 text-[25px] font-bold text-center">Solana</h5>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-center mt-8">
+            <a
+              href="/contact-us"
+              className="lg:mx-0 px-8 py-3 bg-primary-500 text-gray-100 hover:bg-secondary-700 hover:text-gray-200 focus:shadow-outline border-b-0 rounded-full"
+            >
+              Contact Us
+            </a>
+          </div>
+          {/* <div className="NftMarketplace">
           <div className="Dev EnterpriseDev"> */}
-        {/* <section className="nft-development-service">
+          {/* <section className="nft-development-service">
               <div className="col-lg-10 col-md-11 mx-auto">
                 <div className="top">
                   <h2>NFT MarketPlace Development Services</h2>
@@ -278,7 +282,7 @@ const NftMarketplaceDev = () => {
               </div>
             </section> */}
 
-        {/* <section className="Art-Trading">
+          {/* <section className="Art-Trading">
               <div className="col-lg-10 col-md-11 mx-auto">
                 <div className="top">
                   <h3>NFT Art Trading Platform</h3>
@@ -348,12 +352,13 @@ const NftMarketplaceDev = () => {
                 </div>
               </div>
             </section> */}
-        {/* </div>
+          {/* </div>
         </div> */}
+        </div>
       </div>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default NftMarketplaceDev;
+export default NftMarketplaceDev
