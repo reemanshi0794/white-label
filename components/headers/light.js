@@ -220,7 +220,7 @@ export default ({ logoLink, className }) => {
           </div>
           {isToggle && (
             <div>
-              <div className="flex flex-col p-4 font-semibold md:flex-row md:space-x-8 md:mt-0 text-lg lg:text-sm items-center bg-white text-black rounded-lg">
+              <div className="flex flex-col p-4 font-semibold md:flex-row md:space-x-8 md:mt-0 text-lg lg:text-sm items-start bg-white text-black rounded-lg">
                 <a
                   href="/about-us"
                   className="text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
@@ -240,7 +240,7 @@ export default ({ logoLink, className }) => {
                   Blog
                 </a>
 
-                <div className="flex flex-col items-center mb-5 ">
+                <div className="flex flex-col items-start mb-5 ">
                   <div
                     onClick={handleShowDropdown}
                     className="flex items-center"

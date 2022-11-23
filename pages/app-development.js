@@ -1,24 +1,25 @@
-import React, { useEffect } from 'react';
-import ReactGA from 'react-ga';
+import React, { useEffect } from "react";
+import ReactGA from "react-ga";
 // import AppBanner from '../assets/images/AppDevelopment/Appbanner.svg';
-import MobileApp from '../assets/images/AppDevelopment/mobileapp1.png';
-import Android from '../assets/images/AppDevelopment/icon/android.png';
-import Apple from '../assets/images/AppDevelopment/icon/apple.png';
-import ReactNative from '../assets/images/AppDevelopment/icon/reactNative.png';
-import Flutter from '../assets/images/AppDevelopment/icon/Flutter.png';
-import Xamarin from '../assets/images/AppDevelopment/icon/Xamarin.png';
-import Ecommerce from '../assets/images/AppDevelopment/icon/ecommerce.svg';
-import Education from '../assets/images/AppDevelopment/icon/education.svg';
-import Travel from '../assets/images/AppDevelopment/icon/travel.svg';
-import Fintech from '../assets/images/AppDevelopment/icon/fintech.svg';
-import HealthCare from '../assets/images/AppDevelopment/icon/healthcare.svg';
-import Fitness from '../assets/images/AppDevelopment/icon/fitness.svg';
-import Business from '../assets/images/AppDevelopment/icon/business.png';
-import Social from '../assets/images/AppDevelopment/icon/social.png';
-import FoodBag from '../assets/images/AppDevelopment/icon/foodbag.png';
-import WhiteLablePartner from '../assets/images/AppDevelopment/whitelable-partner.png';
-import HireDevloper from '../assets/images/AppDevelopment/hireDev.png';
-import Head from 'next/head';
+import MobileApp from "../assets/images/AppDevelopment/mobileapp1.png";
+import Android from "../assets/images/AppDevelopment/icon/android.png";
+import Apple from "../assets/images/AppDevelopment/icon/apple.png";
+import ReactNative from "../assets/images/AppDevelopment/icon/reactNative.png";
+import Flutter from "../assets/images/AppDevelopment/icon/Flutter.png";
+import Xamarin from "../assets/images/AppDevelopment/icon/Xamarin.png";
+import Ecommerce from "../assets/images/AppDevelopment/icon/ecommerce.svg";
+import Education from "../assets/images/AppDevelopment/icon/education.svg";
+import Travel from "../assets/images/AppDevelopment/icon/travel.svg";
+import Fintech from "../assets/images/AppDevelopment/icon/fintech.svg";
+import HealthCare from "../assets/images/AppDevelopment/icon/healthcare.svg";
+import Fitness from "../assets/images/AppDevelopment/icon/fitness.svg";
+import Business from "../assets/images/AppDevelopment/icon/business.png";
+import Social from "../assets/images/AppDevelopment/icon/social.png";
+import FoodBag from "../assets/images/AppDevelopment/icon/foodbag.png";
+import WhiteLablePartner from "../assets/images/AppDevelopment/whitelable-partner.png";
+import HireDevloper from "../assets/images/AppDevelopment/hireDev.png";
+import Head from "next/head";
+import Header from "../components/headers/light.js";
 
 // import Link from 'next/link';
 
@@ -43,6 +44,7 @@ const AppDevelopment = () => {
           content="custom mobile app development company, software development company,custom software development,software app developer"
         />
       </Head>
+      <Header />
       <div className="Dev AppDev">
         <div className="heroBanner">
           <div className="col-lg-10 col-md-11 mx-auto">
