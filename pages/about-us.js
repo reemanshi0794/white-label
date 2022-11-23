@@ -1,18 +1,18 @@
-import Features from "../components/features/ThreeColSimple.js"
-import Footer from "../components/footers/FiveColumnWithInputForm.js"
-import Header from "../components/headers/light.js"
-import MainFeature1 from "../components/features/TwoColWithButton.js"
+import Features from "../components/features/ThreeColSimple.js";
+import Footer from "../components/footers/FiveColumnWithInputForm.js";
+import Header from "../components/headers/light.js";
+import MainFeature1 from "../components/features/TwoColWithButton.js";
 // import Features from "components/features/ThreeColWithSideImage.js";
 // import MainFeature2 from "components/features/TwoColSingleFeatureWithStats.js";
 // import MainFeature3 from "components/features/TwoColSingleFeatureWithStats2.js";
-import React from "react"
-import TeamCardGrid from "../components/cards/ProfileThreeColGrid.js"
-import CustomerSatisfaction from "../assets/images/CustomerSatisfaction.svg"
-import Support from "../assets/images/Support.svg"
-import StrongTeams from "../assets/images/StrongTeams.svg"
+import React from "react";
+import TeamCardGrid from "../components/cards/ProfileThreeColGrid.js";
+import CustomerSatisfaction from "../assets/images/CustomerSatisfaction.svg";
+import Support from "../assets/images/Support.svg";
+import StrongTeams from "../assets/images/StrongTeams.svg";
 // const Subheading = tw.span`uppercase tracking-wider text-sm`;
-import Head from "next/head"
-import Collaborate from "../assets/images/Collaborate.png"
+import Head from "next/head";
+import Collaborate from "../assets/images/Collaborate.png";
 
 export default () => {
   return (
@@ -21,8 +21,8 @@ export default () => {
       <div className="min-h-screen text-secondary-500 p-8 lg:px-24 2xl:p-8 overflow-hidden">
         <Head>
           <title>
-            Software Development Company | Custom App Developer | White Label
-            Technologies
+            Software Development Company | Custom App Developer | Whiten App
+            Solutions
           </title>
           <meta
             name="description"
@@ -101,16 +101,16 @@ export default () => {
             </div>
             <div className=" py-[60px] text-center">
               <h3 className=" text-[40px] mb-8 font-extrabold">
-                The Synergy of White Label Technologies with Innow8 Apps
+                The Synergy of Whiten App Solutions with Innow8 Apps
               </h3>
               <p className=" text-xl leading-7">
                 Since 2017, Innow8 Apps has made an impact across the globe by
                 delivering custom web & mobile apps along with services for
-                digital marketing and expert consultation. White Label
+                digital marketing and expert consultation. Whiten App
                 Technologies acts an arm for Innow8 Apps and has emerged as the
                 brand representing this alliance in their Canada headquarters.
-                Striving together with the same mission, Innow8 Apps and White
-                Label are under the same ownership umbrella to create an impact
+                Striving together with the same mission, Innow8 Apps and Whiten
+                App are under the same ownership umbrella to create an impact
                 Worldwide.
               </p>
             </div>
@@ -125,5 +125,5 @@ export default () => {
       </div>
       <Footer />
     </>
-  )
-}
+  );
+};

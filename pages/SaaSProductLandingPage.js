@@ -1,24 +1,24 @@
-import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg"
-import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg"
-import React from "react"
-import tw from "twin.macro"
-import heroScreenshotImageSrc from "../assets/images/hero-screenshot-1.png"
-import macHeroScreenshotImageSrc from "../assets/images/hero-screenshot-2.png"
-import prototypeIllustrationImageSrc from "../assets/images/prototype-illustration.svg"
-import GetStarted from "../components/cta/GetStarted"
-import FAQ from "../components/faqs/SingleCol.js"
-import Features from "../components/features/ThreeColWithSideImage.js"
-import MainFeature from "../components/features/TwoColWithButton.js"
-import FeatureWithSteps from "../components/features/TwoColWithSteps.js"
-import MainFeature2 from "../components/features/TwoColWithTwoHorizontalFeaturesAndButton.js"
-import Footer from "../components/footers/FiveColumnWithBackground.js"
+import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg";
+import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg";
+import React from "react";
+import tw from "twin.macro";
+import heroScreenshotImageSrc from "../assets/images/hero-screenshot-1.png";
+import macHeroScreenshotImageSrc from "../assets/images/hero-screenshot-2.png";
+import prototypeIllustrationImageSrc from "../assets/images/prototype-illustration.svg";
+import GetStarted from "../components/cta/GetStarted";
+import FAQ from "../components/faqs/SingleCol.js";
+import Features from "../components/features/ThreeColWithSideImage.js";
+import MainFeature from "../components/features/TwoColWithButton.js";
+import FeatureWithSteps from "../components/features/TwoColWithSteps.js";
+import MainFeature2 from "../components/features/TwoColWithTwoHorizontalFeaturesAndButton.js";
+import Footer from "../components/footers/FiveColumnWithBackground.js";
 // import { css } from "styled-components/macro"; //eslint-disable-line
-import Hero from "../components/hero/TwoColumnWithInput.js"
-import Pricing from "../components/pricing/ThreePlans.js"
-import Testimonial from "../components/testimonials/TwoColumnWithImageAndRating.js"
-import Header from "../components/headers/light"
-import Head from "next/head"
-import Collaborate from "../assets/images/Collaborate.png"
+import Hero from "../components/hero/TwoColumnWithInput.js";
+import Pricing from "../components/pricing/ThreePlans.js";
+import Testimonial from "../components/testimonials/TwoColumnWithImageAndRating.js";
+import Header from "../components/headers/light";
+import Head from "next/head";
+import Collaborate from "../assets/images/Collaborate.png";
 
 const SaaSProductLandingPage = () => {
   return (
@@ -27,8 +27,8 @@ const SaaSProductLandingPage = () => {
       <div className="min-h-screen text-secondary-500 p-8 lg:px-24 2xl:p-8 overflow-hidden">
         <Head>
           <title>
-            Software Development Company | Custom App Developer | White Label
-            Technologies
+            Software Development Company | Custom App Developer | Whiten App
+            Solutions
           </title>
           <meta
             name="description"
@@ -203,16 +203,16 @@ const SaaSProductLandingPage = () => {
             </div>
             <div className=" py-[60px] text-center">
               <h3 className=" text-[40px] mb-8 font-extrabold">
-                The Synergy of White Label Technologies with Innow8 Apps
+                The Synergy of Whiten App Solutions with Innow8 Apps
               </h3>
               <p className=" text-xl leading-7">
                 Since 2017, Innow8 Apps has made an impact across the globe by
                 delivering custom web & mobile apps along with services for
-                digital marketing and expert consultation. White Label
+                digital marketing and expert consultation. Whiten App
                 Technologies acts an arm for Innow8 Apps and has emerged as the
                 brand representing this alliance in their Canada headquarters.
-                Striving together with the same mission, Innow8 Apps and White
-                Label are under the same ownership umbrella to create an impact
+                Striving together with the same mission, Innow8 Apps and Whiten
+                App are under the same ownership umbrella to create an impact
                 Worldwide.
               </p>
             </div>
@@ -257,7 +257,7 @@ const SaaSProductLandingPage = () => {
       </div>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default SaaSProductLandingPage
+export default SaaSProductLandingPage;
