@@ -7,7 +7,7 @@ import BestUi from "../assets/images/EcommerceDev/icons/bestUi.png";
 import FeatureRich from "../assets/images/EcommerceDev/icons/featureRich.png";
 import TechStack from "../assets/images/EcommerceDev/icons/besttechstack.png";
 import B2b from "../assets/images/EcommerceDev/b2b.png";
-import B2c from "../assets/images/EcommerceDev/b2c.svg";
+import B2c from "../assets/images/EcommerceDev/b2c.png";
 import MultiVender from "../assets/images/EcommerceDev/multivender.png";
 import CMS from "../assets/images/EcommerceDev/cmsintegration.png";
 import Migration from "../assets/images/EcommerceDev/migrationsupport.png";
@@ -62,6 +62,7 @@ const EcommerceServicePageItemToDisplay = [
     desc: `Feature-packed eCommerce solutions are always sustainable. We integrate top-most APIs including Google Analytics and PayPal. FedEx and more to support our client's best interests.`,
   },
 ];
+
 const EcommerseCards = [
   {
     imageSrc: Agile,
@@ -163,6 +164,7 @@ const EcommerceDev = () => {
             Contact Us
           </a>
         </div>
+
         {EcommerceServicePageItemToDisplay.map((element) => {
           return (
             <MainServices
