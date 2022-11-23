@@ -149,7 +149,9 @@ const AppDevelopment = ({
             </SectionDescription>
           )}
           {Subheading && (
-            <h5 className="mb-4 font-bold text-primary-500">{Subheading}</h5>
+            <h5 className="mb-4 font-bold text-primary-500 mt-[20px] text-center">
+              {Subheading}
+            </h5>
           )}
           <div className="mt-10 flex flex-col items-center lg:items-stretch lg:flex-row flex-wrap lg:justify-center max-w-screen-lg mx-auto">
             <div className="max-w-md text-center mx-auto lg:mx-0 flex justify-center lg:justify-start">
