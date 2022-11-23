@@ -1,23 +1,23 @@
-import React, { useEffect } from "react"
-import ReactGA from "react-ga"
-import EcommerceBanner from "../assets/images/EcommerceDev/Ecommerce-banner.svg"
-import Agile from "../assets/images/EcommerceDev/icons/AgileApproach.png"
-import Platform from "../assets/images/EcommerceDev/icons/platformIndep.png"
-import BestUi from "../assets/images/EcommerceDev/icons/bestUi.png"
-import FeatureRich from "../assets/images/EcommerceDev/icons/featureRich.png"
-import TechStack from "../assets/images/EcommerceDev/icons/besttechstack.png"
-import B2b from "../assets/images/EcommerceDev/b2b.png"
-import B2c from "../assets/images/EcommerceDev/b2c.svg"
-import MultiVender from "../assets/images/EcommerceDev/multivender.png"
-import CMS from "../assets/images/EcommerceDev/cmsintegration.png"
-import Migration from "../assets/images/EcommerceDev/migrationsupport.png"
-import ApiIntegration from "../assets/images/EcommerceDev/apiIntegration.png"
-import Head from "next/head"
-import Header from "../components/headers/light.js"
-import Footer from "../components/footers/FiveColumnWithInputForm.js"
-import MainServices from "../components/MainServices"
-import Features from "../components/features/ThreeColSimple.js"
-import Features1 from "../components/features/ThreeColWithSideImage.js"
+import React, { useEffect } from "react";
+import ReactGA from "react-ga";
+import EcommerceBanner from "../assets/images/EcommerceDev/Ecommerce-banner.svg";
+import Agile from "../assets/images/EcommerceDev/icons/AgileApproach.png";
+import Platform from "../assets/images/EcommerceDev/icons/platformIndep.png";
+import BestUi from "../assets/images/EcommerceDev/icons/bestUi.png";
+import FeatureRich from "../assets/images/EcommerceDev/icons/featureRich.png";
+import TechStack from "../assets/images/EcommerceDev/icons/besttechstack.png";
+import B2b from "../assets/images/EcommerceDev/b2b.png";
+import B2c from "../assets/images/EcommerceDev/b2c.svg";
+import MultiVender from "../assets/images/EcommerceDev/multivender.png";
+import CMS from "../assets/images/EcommerceDev/cmsintegration.png";
+import Migration from "../assets/images/EcommerceDev/migrationsupport.png";
+import ApiIntegration from "../assets/images/EcommerceDev/apiIntegration.png";
+import Head from "next/head";
+import Header from "../components/headers/light.js";
+import Footer from "../components/footers/FiveColumnWithInputForm.js";
+import MainServices from "../components/MainServices";
+import Features from "../components/features/ThreeColSimple.js";
+import Features1 from "../components/features/ThreeColWithSideImage.js";
 
 const EcommerceServicePageItemToDisplay = [
   {
@@ -61,7 +61,7 @@ const EcommerceServicePageItemToDisplay = [
     heading: `API Integration`,
     desc: `Feature-packed eCommerce solutions are always sustainable. We integrate top-most APIs including Google Analytics and PayPal. FedEx and more to support our client's best interests.`,
   },
-]
+];
 const EcommerseCards = [
   {
     imageSrc: Agile,
@@ -93,13 +93,13 @@ const EcommerseCards = [
     description:
       "As the tech stack is the foundation of any software, we make sure that we use only the best-suited technologystack for our eCommerce solutions. This helps us come up with the best architecture and layout for your eCommerce needs",
   },
-]
+];
 
 const EcommerceDev = () => {
   useEffect(() => {
-    window.scrollTo(0, 0)
-    ReactGA.pageview(window.location.pathname)
-  }, [])
+    window.scrollTo(0, 0);
+    ReactGA.pageview(window.location.pathname);
+  }, []);
   return (
     <>
       <Header />
@@ -129,8 +129,8 @@ const EcommerceDev = () => {
               <p className="my-4 text-base xl:text-lg">
                 Developing global-level eCommerce Stores for future
               </p>
-              <div className="mt-3 xl:mt-8 flex flex-col items-center lg:items-start">
-                <p className="text-sm lg:text-xs tracking-wider font-bold text-[#5b5b5b]">
+              <div className="mt-3 flex flex-col items-center lg:items-start">
+                <p className="text-sm lg:text-md tracking-wider font-bold text-[#5b5b5b]">
                   Whiten App is a leading eCommerce development company offering
                   eCommerce web and mobile development solutions. Leveraging
                   handpicked tools and platforms we create eCommerce solutions
@@ -171,7 +171,7 @@ const EcommerceDev = () => {
               description={element.desc}
               textOnLeft={element.textOnLeft}
             />
-          )
+          );
         })}
 
         <Features1
@@ -181,7 +181,7 @@ const EcommerceDev = () => {
           heading={
             <>
               What makes Whiten App the best in
-              <span className="text-primary-500">eCommerce Development?</span>
+              <span className="text-primary-500"> eCommerce Development?</span>
             </>
           }
           description=""
@@ -246,7 +246,7 @@ const EcommerceDev = () => {
       </div>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default EcommerceDev
+export default EcommerceDev;
