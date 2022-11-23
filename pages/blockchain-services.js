@@ -1,34 +1,34 @@
-import React, { useEffect } from "react";
-import ReactGA from "react-ga";
-import BlockChainBanner from "../assets/images/Blockchain/blockChainBanner.svg";
-import Etherium from "../assets/images/Blockchain/etherium.png";
-import HyperLedger from "../assets/images/Blockchain/hyperledger.png";
-import Corda from "../assets/images/Blockchain/corda.png";
-import MultiChain from "../assets/images/Blockchain/multichain.png";
-import EOS from "../assets/images/Blockchain/eos.png";
-import Stellar from "../assets/images/Blockchain/Stellar.png";
-import Tron from "../assets/images/Blockchain/tron.png";
-import Head from "next/head";
-import Footer from "../components/footers/FiveColumnWithInputForm.js";
-import MainServices from "../components/MainServices";
+import React, { useEffect } from "react"
+import ReactGA from "react-ga"
+import BlockChainBanner from "../assets/images/Blockchain/blockChainBanner.svg"
+import Etherium from "../assets/images/Blockchain/etherium.png"
+import HyperLedger from "../assets/images/Blockchain/hyperledger.png"
+import Corda from "../assets/images/Blockchain/corda.png"
+import MultiChain from "../assets/images/Blockchain/multichain.png"
+import EOS from "../assets/images/Blockchain/eos.png"
+import Stellar from "../assets/images/Blockchain/Stellar.png"
+import Tron from "../assets/images/Blockchain/tron.png"
+import Head from "next/head"
+import Footer from "../components/footers/FiveColumnWithInputForm.js"
+import MainServices from "../components/MainServices"
 
 // import { BlockChainAppPageItemToDisplay } from "../data/data";
-import One from "../assets/images/Blockchain/one.png";
-import Two from "../assets/images/Blockchain/two.png";
-import Three from "../assets/images/Blockchain/three.png";
-import Four from "../assets/images/Blockchain/four.png";
-import Five from "../assets/images/Blockchain/five.png";
-import Six from "../assets/images/Blockchain/six.png";
-import Seven from "../assets/images/Blockchain/seven.png";
-import Link from "next/link";
-import Header from "../components/headers/light.js";
-import CryptoWallet from "../assets/images/Blockchain/crypto.svg";
-import NFTMarketplace from "../assets/images/Blockchain/nft-marketplace.png";
-import DApps from "../assets/images/Blockchain/dapps.png";
-import BlockChainSupply from "../assets/images/Blockchain/blockchain.png";
-import PrivateBlockChain from "../assets/images/Blockchain/private.png";
-import Features from "../components/features/ThreeColSimple.js";
-import Features1 from "../components/features/ThreeColWithSideImage.js";
+import One from "../assets/images/Blockchain/one.png"
+import Two from "../assets/images/Blockchain/two.png"
+import Three from "../assets/images/Blockchain/three.png"
+import Four from "../assets/images/Blockchain/four.png"
+import Five from "../assets/images/Blockchain/five.png"
+import Six from "../assets/images/Blockchain/six.png"
+import Seven from "../assets/images/Blockchain/seven.png"
+import Link from "next/link"
+import Header from "../components/headers/light.js"
+import CryptoWallet from "../assets/images/Blockchain/crypto.svg"
+import NFTMarketplace from "../assets/images/Blockchain/nft-marketplace.png"
+import DApps from "../assets/images/Blockchain/dapps.png"
+import BlockChainSupply from "../assets/images/Blockchain/blockchain.png"
+import PrivateBlockChain from "../assets/images/Blockchain/private.png"
+import Features from "../components/features/ThreeColSimple.js"
+import Features1 from "../components/features/ThreeColWithSideImage.js"
 
 const BlockChainAppPageItemToDisplay = [
   {
@@ -66,13 +66,13 @@ const BlockChainAppPageItemToDisplay = [
     desc: `For banks and Businesses, we provide Private (Permissioned Blockchains ) to advance smooth operations. Our developers are well packed to help you decentralize daily operations`,
     textOnLeft: true,
   },
-];
+]
 
 const BlockChainDev = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-    ReactGA.pageview(window.location.pathname);
-  }, []);
+    window.scrollTo(0, 0)
+    ReactGA.pageview(window.location.pathname)
+  }, [])
   return (
     <>
       <Header />
@@ -145,253 +145,203 @@ const BlockChainDev = () => {
               description={element.desc}
               textOnLeft={element.textOnLeft}
             />
-          );
+          )
         })}
-        <div className="Dev blockChain">
-          <section className="development-process">
-            <div className="col-lg-11 col-md-10 mx-auto">
-              <div className="top text-center">
-                <h3>Our Blockchain Development Process</h3>
-              </div>
-              <div className="row justify-content-center align-items-center m-0">
-                <div className="col-md-6  col-lg-4">
-                  <div className="left-cnt">
-                    <span className="no">01</span>
-                  </div>
-                </div>
-                <div className="col-md-4 process-wrap">
-                  <div className="img process-one">
-                    <img src={One.src} alt="one" />
-                  </div>
-                </div>
-                <div className="col-md-6  col-lg-4">
-                  <div className="right-cnt">
-                    <div className="title">
-                      <h5>Analysis</h5>
-                      <p>
-                        We take a deep dive into our client’s business and
-                        technical requirements that are essential to meet the
-                        specific requirements to build the blockchain product.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* 2 */}
-              <div className="row justify-content-center align-items-center flex-column-reverse flex-md-row  m-0">
-                <div className="col-md-6  col-lg-4">
-                  <div className="left-cnt">
-                    <div className="title">
-                      <h5>Prototyping And Blueprints</h5>
-                      <p>
-                        As the first step to developing our designers and tech
-                        leads sit together to create a prototype of the
-                        blockchain system. At this stage, a clear understanding
-                        of the front-end backend and database interaction is
-                        depicted.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4 process-wrap">
-                  <div className="img process-two">
-                    <img src={Two.src} alt="two" />
-                  </div>
-                </div>
-                <div className="col-md-6  col-lg-4">
-                  <div className="right-cnt">
-                    <span className="no">02</span>
-                  </div>
-                </div>
-              </div>
-              {/* 3 */}
-              <div className="row justify-content-center align-items-center  m-0">
-                <div className="col-md-6  col-lg-4">
-                  <div className="left-cnt">
-                    <span className="no">03</span>
-                  </div>
-                </div>
-                <div className="col-md-4 process-wrap">
-                  <div className="img process-three">
-                    <img src={Three.src} alt="three" />
-                  </div>
-                </div>
-                <div className="col-md-6  col-lg-4">
-                  <div className="right-cnt">
-                    <div className="title">
-                      <h5>Design</h5>
-                      <p>
-                        Our designer comes up with the most suitable prototype
-                        that shows an outline of all the UI and UX elements
-                        which is submitted before the client for approval.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* 4 */}
-              <div className="row justify-content-center align-items-center flex-column-reverse flex-md-row  m-0">
-                <div className="col-md-6  col-lg-4">
-                  <div className="left-cnt">
-                    <div className="title">
-                      <h5>Block Chain Development</h5>
-                      <p>
-                        Our Highly Skilled team of Block Chain Developers create
-                        best performing blockchain product that yields quality
-                        and security.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4 process-wrap">
-                  <div className="img process-four">
-                    <img src={Four.src} alt="Four" />
-                  </div>
-                </div>
-                <div className="col-md-6  col-lg-4">
-                  <div className="right-cnt">
-                    <span className="no">04</span>
-                  </div>
-                </div>
-              </div>
-              {/* 5 */}
-              <div className="row justify-content-center align-items-center  m-0">
-                <div className="col-md-6  col-lg-4">
-                  <div className="left-cnt">
-                    <div className="no">05</div>
-                  </div>
-                </div>
-                <div className="col-md-4 process-wrap">
-                  <div className="img process-five">
-                    <img src={Five.src} alt="five" />
-                  </div>
-                </div>
-                <div className="col-md-6  col-lg-4">
-                  <div className="right-cnt">
-                    <div className="title">
-                      <h5>Quality Assurance</h5>
-                      <p>
-                        Our team of blockchain developers and testers together
-                        work on the testing part of the Blockchain product to
-                        assure its quality of it. Both manual and automated
-                        testing for blockchain products has led us to deploy
-                        error-free solutions.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* 6 */}
-              <div className="row justify-content-center align-items-center flex-column-reverse flex-md-row  m-0">
-                <div className="col-md-6  col-lg-4">
-                  <div className="left-cnt">
-                    <div className="title">
-                      <h5>Deployment</h5>
-                      <p>
-                        By Following all the standard protocols in deploying
-                        blockchain solutions we make it easily accessible for
-                        all our client’s customers easily
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4 process-wrap">
-                  <div className="img process-six">
-                    <img src={Six.src} alt="Six" />
-                  </div>
-                </div>
-                <div className="col-md-6  col-lg-4">
-                  <div className="right-cnt">
-                    <span className="no">06</span>
-                  </div>
-                </div>
-              </div>
-              {/* 7 */}
-              <div className="row justify-content-center align-items-center  m-0">
-                <div className="col-md-6  col-lg-4">
-                  <div className="left-cnt">
-                    <span className="no">07</span>
-                  </div>
-                </div>
-                <div className="col-md-4 process-wrap">
-                  <div className="img process-seven">
-                    <img src={Seven.src} alt="Seven" />
-                  </div>
-                </div>
-                <div className="col-md-6  col-lg-4">
-                  <div className="right-cnt">
-                    <div className="title">
-                      <h5>Support and Maintenance</h5>
-                      <p>
-                        Scaling is inevitable for blockchain products, which is
-                        why provide post-delivery support and maintenance to
-                        blockchain solutions to assure smooth functioning
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
+        <div className="bg-[#efeefe] py-20 px-8">
+          <div className="top text-center mb-[100px] mx-5">
+            <h3 className="text-[45px] font-bold">
+              Our Blockchain Development Process
+            </h3>
+          </div>
+          <div className="grid grid-cols-3 gap-4">
+            <div>
+              <span className="hidden">01</span>
             </div>
-          </section>
-          {/* most trusted */}
+            <div className=" relative flex items-center justify-center after:content-['']  after:absolute after:bg-[#526ee2] after:left-2/4 after:h-full after:w-[2px] after:top-[72%]">
+              <img src={One.src} alt="one" />
+            </div>
+            <div className="bg-white rounded-[30px] p-16 text-center max-w-[500px] m-auto relative  before:content-[''] before:absolute before:border-r-[50px] before:border-r-white before:border-y-[25px] before:border-y-transparent before:left-[-48px] before:top-[50%] before:translate-y-[-50%] before:h-[50px] before:w-[50px]">
+              <h5 className="text-[25px] font-bold mb-4">Analysis</h5>
+              <p className=" text-lg text-[#363636e6]">
+                We take a deep dive into our client’s business and technical
+                requirements that are essential to meet the specific
+                requirements to build the blockchain product.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-3 gap-4">
+            <div className="bg-white rounded-[30px] p-16 text-center max-w-[500px] m-auto relative  before:content-[''] before:absolute before:border-r-[50px] before:border-r-white before:border-y-[25px] before:border-y-transparent before:left-[100%] before:top-[50%] before:rotate-180 before:translate-y-[-50%] before:h-[50px] before:w-[50px]">
+              <h5 className="text-[25px] font-bold mb-4">
+                Prototyping And Blueprints
+              </h5>
+              <p className=" text-lg text-[#363636e6]">
+                As the first step to developing our designers and tech leads sit
+                together to create a prototype of the blockchain system. At this
+                stage, a clear understanding of the front-end backend and
+                database interaction is depicted.
+              </p>
+            </div>
+            <div className=" relative flex items-center justify-center after:content-['']  after:absolute after:bg-[#526ee2] after:left-2/4 after:h-full after:w-[2px] after:top-[72%]">
+              <img src={Two.src} alt="two" />
+            </div>
+            <div>
+              <span className="hidden">01</span>
+            </div>
+          </div>
+          <div className="grid grid-cols-3 gap-4">
+            <div>
+              <span className="hidden">01</span>
+            </div>
+            <div className=" relative flex items-center justify-center after:content-['']  after:absolute after:bg-[#526ee2] after:left-2/4 after:h-full after:w-[2px] after:top-[72%]">
+              <img src={Three.src} alt="three" />
+            </div>
+            <div className="bg-white rounded-[30px] p-16 text-center max-w-[500px] m-auto relative  before:content-[''] before:absolute before:border-r-[50px] before:border-r-white before:border-y-[25px] before:border-y-transparent before:left-[-48px] before:top-[50%] before:translate-y-[-50%] before:h-[50px] before:w-[50px]">
+              <h5 className="text-[25px] font-bold mb-4">Design</h5>
+              <p className=" text-lg text-[#363636e6]">
+                Our designer comes up with the most suitable prototype that
+                shows an outline of all the UI and UX elements which is
+                submitted before the client for approval.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-3 gap-4">
+            <div className="bg-white rounded-[30px] p-16 text-center max-w-[500px] m-auto relative  before:content-[''] before:absolute before:border-r-[50px] before:border-r-white before:border-y-[25px] before:border-y-transparent before:left-[100%] before:top-[50%] before:rotate-180 before:translate-y-[-50%] before:h-[50px] before:w-[50px]">
+              <h5 className="text-[25px] font-bold mb-4">
+                Block Chain Development
+              </h5>
+              <p className=" text-lg text-[#363636e6]">
+                Our Highly Skilled team of Block Chain Developers create best
+                performing blockchain product that yields quality and security.
+              </p>
+            </div>
+            <div className=" relative flex items-center justify-center after:content-['']  after:absolute after:bg-[#526ee2] after:left-2/4 after:h-full after:w-[2px] after:top-[72%]">
+              <img src={Four.src} alt="Four" />
+            </div>
+            <div>
+              <span className="hidden">01</span>
+            </div>
+          </div>
+          <div className="grid grid-cols-3 gap-4">
+            <div>
+              <span className="hidden">01</span>
+            </div>
+            <div className=" relative flex items-center justify-center after:content-['']  after:absolute after:bg-[#526ee2] after:left-2/4 after:h-full after:w-[2px] after:top-[72%]">
+              <img src={Five.src} alt="five" />
+            </div>
+            <div className="bg-white rounded-[30px] p-16 text-center max-w-[500px] m-auto relative  before:content-[''] before:absolute before:border-r-[50px] before:border-r-white before:border-y-[25px] before:border-y-transparent before:left-[-48px] before:top-[50%] before:translate-y-[-50%] before:h-[50px] before:w-[50px]">
+              <h5 className="text-[25px] font-bold mb-4">Quality Assurance</h5>
+              <p className=" text-lg text-[#363636e6]">
+                Our team of blockchain developers and testers together work on
+                the testing part of the Blockchain product to assure its quality
+                of it. Both manual and automated testing for blockchain products
+                has led us to deploy error-free solutions.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-3 gap-4">
+            <div className="bg-white rounded-[30px] p-16 text-center max-w-[500px] m-auto relative  before:content-[''] before:absolute before:border-r-[50px] before:border-r-white before:border-y-[25px] before:border-y-transparent before:left-[100%] before:top-[50%] before:rotate-180 before:translate-y-[-50%] before:h-[50px] before:w-[50px]">
+              <h5 className="text-[25px] font-bold mb-4">Deployment</h5>
+              <p className=" text-lg text-[#363636e6]">
+                By Following all the standard protocols in deploying blockchain
+                solutions we make it easily accessible for all our client’s
+                customers easily
+              </p>
+            </div>
+            <div className=" relative flex items-center justify-center after:content-['']  after:absolute after:bg-[#526ee2] after:left-2/4 after:h-full after:w-[2px] after:top-[72%]">
+              <img src={Six.src} alt="Six" />
+            </div>
+            <div>
+              <span className="hidden">01</span>
+            </div>
+          </div>
+          <div className="grid grid-cols-3 gap-4">
+            <div>
+              <span className="hidden">01</span>
+            </div>
+            <div className=" relative flex items-center justify-center ">
+              <img src={Seven.src} alt="Seven" />
+            </div>
+            <div className="bg-white rounded-[30px] p-16 text-center max-w-[500px] m-auto relative  before:content-[''] before:absolute before:border-r-[50px] before:border-r-white before:border-y-[25px] before:border-y-transparent before:left-[-48px] before:top-[50%] before:translate-y-[-50%] before:h-[50px] before:w-[50px]">
+              <h5 className="text-[25px] font-bold mb-4">
+                Support and Maintenance
+              </h5>
+              <p className=" text-lg text-[#363636e6]">
+                Scaling is inevitable for blockchain products, which is why
+                provide post-delivery support and maintenance to blockchain
+                solutions to assure smooth functioning
+              </p>
+            </div>
+          </div>
         </div>
 
-        <Features1
-          subheading={
-            <span className="uppercase tracking-wider text-sm"></span>
-          }
-          heading={
-            <>
-              Most Trusted Blockchain Platforms that we use to decentralize
-              businesses
-              {/* <span className="text-primary-500"> eCommerce Development?</span> */}
-            </>
-          }
-          description=""
-          cards={[]}
-        />
-        <div className="row iconSec m-0 flex">
-          <div className="col icons">
-            <img src={Etherium.src} alt="Etherium" />
-            <h5>Etherium</h5>
+        {/* most trusted */}
+        <div className=" py-20">
+          <Features1
+            subheading={
+              <span className="uppercase tracking-wider text-sm"></span>
+            }
+            heading={
+              <>
+                Most Trusted Blockchain Platforms that we use to decentralize
+                businesses
+                {/* <span className="text-primary-500"> eCommerce Development?</span> */}
+              </>
+            }
+            description=""
+            cards={[]}
+          />
+          <div className="flex justify-center flex-wrap">
+            <div className="flex flex-col items-center m-5">
+              <img src={Etherium.src} alt="Etherium" />
+              <h5 className="mt-5 text-[25px] font-bold text-center">
+                Etherium
+              </h5>
+            </div>
+            <div className="flex flex-col items-center m-5">
+              <img src={HyperLedger.src} alt="Hyperledger" />
+              <h5 className="mt-5 text-[25px] font-bold text-center">
+                Hyperledger
+              </h5>
+            </div>
+            <div className="flex flex-col items-center m-5">
+              <img src={Corda.src} alt="Corda" />
+              <h5 className="mt-5 text-[25px] font-bold text-center">Corda</h5>
+            </div>
+            <div className="flex flex-col items-center m-5">
+              <img src={MultiChain.src} alt="MultiChain" />
+              <h5 className="mt-5 text-[25px] font-bold text-center">
+                Multichain
+              </h5>
+            </div>
+            <div className="flex flex-col items-center m-5">
+              <img src={EOS.src} alt="EOS" />
+              <h5 className="mt-5 text-[25px] font-bold text-center">EOS</h5>
+            </div>
+            <div className="flex flex-col items-center m-5">
+              <img src={Stellar.src} alt="Stellar" />
+              <h5 className="mt-5 text-[25px] font-bold text-center">
+                Stellar
+              </h5>
+            </div>
+            <div className="flex flex-col items-center m-5">
+              <img src={Tron.src} alt="Tron" />
+              <h5 className="mt-5 text-[25px] font-bold text-center">Tron</h5>
+            </div>
           </div>
-          <div className="col icons">
-            <img src={HyperLedger.src} alt="Hyperledger" />
-            <h5>Hyperledger</h5>
+          <div className="flex items-center justify-center mt-8">
+            <a
+              href="/contact-us"
+              className="lg:mx-0 px-8 py-3 bg-primary-500 text-gray-100 hover:bg-secondary-700 hover:text-gray-200 focus:shadow-outline border-b-0 rounded-full"
+            >
+              Contact Us
+            </a>
           </div>
-          <div className="col icons">
-            <img src={Corda.src} alt="Corda" />
-            <h5>Corda</h5>
-          </div>
-          <div className="col icons">
-            <img src={MultiChain.src} alt="MultiChain" />
-            <h5>Multichain</h5>
-          </div>
-          <div className="col icons">
-            <img src={EOS.src} alt="EOS" />
-            <h5>EOS</h5>
-          </div>
-          <div className="col icons">
-            <img src={Stellar.src} alt="Stellar" />
-            <h5>Stellar</h5>
-          </div>
-          <div className="col icons">
-            <img src={Tron.src} alt="Tron" />
-            <h5>Tron</h5>
-          </div>
-        </div>
-        <div className="flex items-center justify-center">
-          <a
-            href="/contact-us"
-            className="lg:mx-0 px-8 py-3 bg-primary-500 text-gray-100 hover:bg-secondary-700 hover:text-gray-200 focus:shadow-outline border-b-0 rounded-full"
-          >
-            Contact Us
-          </a>
         </div>
       </div>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default BlockChainDev;
+export default BlockChainDev
