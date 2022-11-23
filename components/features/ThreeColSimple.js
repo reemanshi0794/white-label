@@ -1,19 +1,19 @@
-import React from "react";
-import CustomizeIconImage from "../../assets/images/customize-icon.svg";
-import ShieldIconImage from "../../assets/images/shield-icon.svg";
-import SupportIconImage from "../../assets/images/support-icon.svg";
+import React from 'react';
+import CustomizeIconImage from '../../assets/images/customize-icon.svg';
+import ShieldIconImage from '../../assets/images/shield-icon.svg';
+import SupportIconImage from '../../assets/images/support-icon.svg';
 import {
   SectionHeading,
   Subheading as SubheadingBase,
-} from "../../components/misc/Headings.js";
-import CustomerSatisfaction from "../../assets/images/CustomerSatisfaction.svg";
-import Support from "../../assets/images/Support.svg";
-import StrongTeams from "../../assets/images/StrongTeams.svg";
+} from '../../components/misc/Headings.js';
+import CustomerSatisfaction from '../../assets/images/CustomerSatisfaction.svg';
+import Support from '../../assets/images/Support.svg';
+import StrongTeams from '../../assets/images/StrongTeams.svg';
 import {
   Container,
   ContentWithPaddingXl,
-} from "../../components/misc/Layouts.js";
-import { SectionDescription } from "../../components/misc/Typography.js";
+} from '../../components/misc/Layouts.js';
+import { SectionDescription } from '../../components/misc/Typography.js';
 // const Heading = tw(SectionHeading)``;
 // const Subheading = tw(SubheadingBase)`text-center mb-3`;
 // const Description = tw(SectionDescription)`text-center mx-auto`;
@@ -57,28 +57,28 @@ export default ({
   cards = [
     {
       imageSrc: <StrongTeams />,
-      title: "Secure",
+      title: 'Secure',
       description:
-        "We strictly only deal with vendors that provide top notch security.",
-      url: "https://timerse.com",
+        'We strictly only deal with vendors that provide top notch security.',
+      url: 'https://timerse.com',
     },
     {
       imageSrc: <Support />,
-      title: "24/7 Support",
-      description: "Lorem ipsum donor amet siti ceali placeholder text",
-      url: "https://google.com",
+      title: '24/7 Support',
+      description: 'Lorem ipsum donor amet siti ceali placeholder text',
+      url: 'https://google.com',
     },
     {
       imageSrc: <CustomerSatisfaction />,
-      title: "Customizable",
-      description: "Lorem ipsum donor amet siti ceali placeholder text",
-      url: "https://reddit.com",
+      title: 'Customizable',
+      description: 'Lorem ipsum donor amet siti ceali placeholder text',
+      url: 'https://reddit.com',
     },
   ],
-  linkText = "Learn More",
-  heading = "",
-  subheading = "",
-  description = "",
+  linkText = 'Learn More',
+  heading = '',
+  subheading = '',
+  description = '',
   imageContainerCss = null,
   imageCss = null,
 }) => {
