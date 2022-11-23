@@ -96,7 +96,7 @@ export default () => {
               <img
                 src={Collaborate.src}
                 alt={"Collaboration Icon"}
-                className="w-[40%]"
+                className="w-full md:w-[40%]"
               />
             </div>
             <div className=" py-[60px] text-center">
