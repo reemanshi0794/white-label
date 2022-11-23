@@ -1,7 +1,7 @@
-import React from "react"
-import BannerImage from "../../assets/images/BannerImage.png"
-import CustomersLogoStripImage from "../../assets/images/Partnerslogo.svg"
-import SvgDecoratorBlob1 from "../../assets/images/svg-decorator-blob-1.svg"
+import React from "react";
+import BannerImage from "../../assets/images/BannerImage.png";
+import CustomersLogoStripImage from "../../assets/images/Partnerslogo.svg";
+import SvgDecoratorBlob1 from "../../assets/images/svg-decorator-blob-1.svg";
 //eslint-disable-next-line
 // import { css } from "styled-components/macro";
 
@@ -84,5 +84,5 @@ export default () => {
         <SvgDecoratorBlob1 className="pointer-events-none opacity-5 absolute left-0 bottom-0 h-64 w-64 transform -translate-x-2/3" />
       </div>
     </>
-  )
-}
+  );
+};
