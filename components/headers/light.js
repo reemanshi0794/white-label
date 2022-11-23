@@ -261,7 +261,7 @@ export default ({ logoLink, className }) => {
                   <div
                     className={
                       openServices
-                        ? "show w-full max-w-[585px] text-sm grid grid-cols-1 gap-4 bg-white p-4 shadow-[1px_4px_6px_2px_rgba(4,4,4,13%)] rounded-b-[20px]"
+                        ? "show w-full max-w-[585px] text-sm grid grid-cols-1 gap-4 bg-white p-4 shadow-[1px_4px_6px_2px_rgba(4,4,4,13%)]"
                         : "hidden"
                     }
                   >
