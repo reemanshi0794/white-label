@@ -82,17 +82,14 @@ const NftMarketplaceDev = () => {
       <Header />
       <div className="min-h-screen text-secondary-500 p-8 lg:px-24 2xl:p-8 overflow-hidden">
         <Head>
-          <title>
-            Software Development Company | Custom App Developer | White Label
-            Technologies
-          </title>
+          <title>Nft Marketplace Development Company | NFT Developers</title>
           <meta
             name="description"
-            content="Design your apps and website with top software development company at reasonable prices. Experienced custom app designers and developers. Contact us today!"
+            content="At Whitelabel, we offer NFT Marketplaces services with top features and security that are aimed at boosting user interaction. Contact our NFT developers today."
           />
           <meta
             name="keyword"
-            content="custom mobile app development company, software development company,custom software development,software app developer"
+            content="NFT Marketplace development, NFT developers, NFT services, NFT marketplace development company"
           />
         </Head>
 

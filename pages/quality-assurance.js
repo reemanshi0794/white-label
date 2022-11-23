@@ -86,16 +86,16 @@ const QualityAssurance = () => {
       <div className="min-h-screen text-secondary-500 p-8 lg:px-24 2xl:p-8 overflow-hidden">
         <Head>
           <title>
-            Software Development Company | Custom App Developer | White Label
-            Technologies
+            Software Quality Assurance | Web & Mobile Testing Specialist |
+            Whiten App Solutions
           </title>
           <meta
             name="description"
-            content="Design your apps and website with top software development company at reasonable prices. Experienced custom app designers and developers. Contact us today!"
+            content="We offer premium Software Quality Assurance. Get Website, Mobile apps, Performance, Functional & API QA testing at a competitive price. Contact us for services."
           />
           <meta
             name="keyword"
-            content="custom mobile app development company, software development company,custom software development,software app developer"
+            content="quality software assurance,quality assurance testing, mobile app quality assurance, web quality assurance"
           />
         </Head>
 

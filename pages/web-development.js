@@ -54,16 +54,16 @@ const WebDevelopment = () => {
       <div className="min-h-screen text-secondary-500 p-8 lg:px-24 2xl:p-8 overflow-hidden">
         <Head>
           <title>
-            Software Development Company | Custom App Developer | White Label
+            Custom Web Developers | Website Design Company | Whiten App
             Technologies
           </title>
           <meta
             name="description"
-            content="Design your apps and website with top software development company at reasonable prices. Experienced custom app designers and developers. Contact us today!"
+            content="Looking for a best Custom Web Development & Design Company? Contact us; our experience web developers create unique website design as your requirement."
           />
           <meta
             name="keyword"
-            content="custom mobile app development company, software development company,custom software development,software app developer"
+            content="web development company website developers website development services, custom web design"
           />
         </Head>
 
