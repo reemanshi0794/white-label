@@ -1,17 +1,17 @@
-import Features from "../components/features/ThreeColSimple.js";
-import Footer from "../components/footers/FiveColumnWithInputForm.js";
-import Header from "../components/headers/light.js";
-import MainFeature1 from "../components/features/TwoColWithButton.js";
+import Features from '../components/features/ThreeColSimple.js';
+import Footer from '../components/footers/FiveColumnWithInputForm.js';
+import Header from '../components/headers/light.js';
+import MainFeature1 from '../components/features/TwoColWithButton.js';
 // import Features from "components/features/ThreeColWithSideImage.js";
 // import MainFeature2 from "components/features/TwoColSingleFeatureWithStats.js";
 // import MainFeature3 from "components/features/TwoColSingleFeatureWithStats2.js";
-import React from "react";
-import TeamCardGrid from "../components/cards/ProfileThreeColGrid.js";
-import CustomerSatisfaction from "../assets/images/CustomerSatisfaction.svg";
-import Support from "../assets/images/Support.svg";
-import StrongTeams from "../assets/images/StrongTeams.svg";
+import React from 'react';
+import TeamCardGrid from '../components/cards/ProfileThreeColGrid.js';
+import CustomerSatisfaction from '../assets/images/CustomerSatisfaction.svg';
+import Support from '../assets/images/Support.svg';
+import StrongTeams from '../assets/images/StrongTeams.svg';
 // const Subheading = tw.span`uppercase tracking-wider text-sm`;
-import Head from "next/head";
+import Head from 'next/head';
 
 export default () => {
   return (
@@ -70,21 +70,21 @@ export default () => {
           cards={[
             {
               imageSrc: <Support />,
-              title: "Advancing technology",
+              title: 'Advancing technology',
               description:
-                "We refresh our tech stack and services to ensure all solutions that leave our doors are built future-proof. ",
+                'We refresh our tech stack and services to ensure all solutions that leave our doors are built future-proof. ',
             },
             {
               imageSrc: <StrongTeams />,
-              title: "Dream Teams",
+              title: 'Dream Teams',
               description:
-                "We achieve strong skillset development and growth for our team with flexible work hours and space that benefits both the work-life balance and productivity.",
+                'We achieve strong skillset development and growth for our team with flexible work hours and space that benefits both the work-life balance and productivity.',
             },
             {
               imageSrc: <CustomerSatisfaction />,
-              title: "Customer Success",
+              title: 'Customer Success',
               description:
-                "By building impactful digital solutions we thrive to deliver a 100% success rate for our clients.",
+                'By building impactful digital solutions we thrive to deliver a 100% success rate for our clients.',
             },
           ]}
           linkText=""
