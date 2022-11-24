@@ -178,8 +178,8 @@ export default ({ logoLink, className }) => {
                 <div
                   className={
                     openServices
-                      ? "show absolute w-full  top-[73%] max-w-[585px] text-sm grid grid-cols-2 gap-4 translate-x-[-15rem] bg-white p-4 shadow-[1px_4px_6px_2px_rgba(4,4,4,13%)] rounded-b-[20px]"
-                      : "hidden"
+                      ? "show absolute w-full  top-[84%] max-w-[585px] text-sm grid grid-cols-2 gap-4 translate-x-[-15rem] bg-white p-[30px] shadow-[0_0_72px_0_rgba(0,0,0,11%)]"
+                      : "show absolute w-full  top-[84%] max-w-[585px] text-sm grid grid-cols-2 gap-4 translate-x-[-15rem] bg-white p-[30px] shadow-[0_0_72px_0_rgba(0,0,0,11%)]"
                   }
                   onMouseLeave={hideServiceDropdown}
                 >
@@ -193,13 +193,19 @@ export default ({ logoLink, className }) => {
                           className=""
                           href={link}
                         >
-                          <a
-                            onClick={hideServiceDropdown}
-                            className="flex items-center"
-                          >
-                            {image}
-                            <p className=" ml-[10px]">{title}</p>
-                          </a>
+                          <ul>
+                            <li>
+                              <a
+                                onClick={hideServiceDropdown}
+                                className="flex items-center hover:text-secondary-700"
+                              >
+                                <div className=" w-[30px] h-[30px] bg-[#0d7f7233]">
+                                  {image}
+                                </div>
+                                {title}
+                              </a>
+                            </li>
+                          </ul>
                         </Link>
                       </div>
                     )
