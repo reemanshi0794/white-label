@@ -1,14 +1,14 @@
-import ContactDetails from "../components/cards/ThreeColContactDetails.js";
-import ContactUsForm from "../components/forms/TwoColContactUsWithIllustrationFullForm.js";
-import Footer from "../components/footers/FiveColumnWithInputForm.js";
-import Header from "../components/headers/light.js";
-import React from "react";
+import ContactDetails from '../components/cards/ThreeColContactDetails.js';
+import ContactUsForm from '../components/forms/TwoColContactUsWithIllustrationFullForm.js';
+import Footer from '../components/footers/FiveColumnWithInputForm.js';
+import Header from '../components/headers/light.js';
+import React from 'react';
 // const Address = tw.span`leading-relaxed`;
 // const AddressLine = tw.span`block`;
 // const Email = tw.span`text-sm mt-6 block text-gray-500`;
 // const Phone = tw.span`text-sm mt-0 block text-gray-500`;
-import Head from "next/head";
-import bestechBuildingImg from "../assets/images/bestechBuilding.jpeg";
+import Head from 'next/head';
+import bestechBuildingImg from '../assets/images/bestechBuilding.jpeg';
 
 export default () => {
   return (
@@ -90,7 +90,7 @@ export default () => {
         <ContactDetails
           cards={[
             {
-              title: "",
+              title: '',
               description: (
                 <>
                   <span className="leading-relaxed">
@@ -159,7 +159,7 @@ export default () => {
             <div className="col-span-4">
               <iframe
                 title="1"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.513731625386!2d76.73857951540091!3d30.675818695423857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fed0d445bac8f%3A0x6d889e3ca9576442!2sInnow8%20Apps%20-%20Mobile%20and%20Web%20Application%20Development%20Company!5e0!3m2!1sen!2sin!4v1669202286647!5m2!1sen!2sin"
+                src="https://maps.google.com/maps?width=2048&amp;height=551&amp;hl=en&amp;q=Whiten App Solutions Inc. 510-9015 120 Street Delta BC V4C 0E3 CanadaUniversity of Oxford&amp;t=&amp;z=1&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                 width="100%"
                 height="100%"
                 allowfullscreen=""
