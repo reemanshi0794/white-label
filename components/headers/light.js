@@ -12,13 +12,71 @@ import Webdevelopment from "../../assets/images/Webdevelopment.svg"
 import Design from "../../assets/images/Design.svg"
 import QA from "../../assets/images/QA.svg"
 import Nft from "../../assets/images/Nft.svg"
+import GreenApp from "../../assets/images/GreenApp.svg"
+import GreenBlockchain from "../../assets/images/GreenBlockchain.svg"
+import GreenDesign from "../../assets/images/GreenDesign.svg"
+import GreenEcommerce from "../../assets/images/GreenEcommerce.svg"
+import GreenEnterprise from "../../assets/images/GreenEnterprise.svg"
+import GreenNFT from "../../assets/images/GreenNFT.svg"
+import GreenQA from "../../assets/images/GreenQA.svg"
+import GreenWeb from "../../assets/images/GreenWeb.svg"
 
 const ServicesPages = [
   {
-    image: <Appdev />,
+    image: <GreenApp />,
     title: "App Development",
     link: "/app-development",
     alt: "App Development",
+  },
+  {
+    image: <GreenEnterprise />,
+    title: "Enterprise Softwares",
+    link: "/enterprise-softwares",
+    alt: "Enterprise Softwares",
+  },
+  {
+    image: <GreenEcommerce />,
+    title: "eCommerce Development",
+    link: "/eCommerce-development",
+    alt: "eCommerce Development",
+  },
+  {
+    image: <GreenWeb />,
+    title: "Web Development",
+    link: "/web-development",
+    alt: "Web Development",
+  },
+  {
+    image: <GreenBlockchain />,
+    title: "Blockchain Services",
+    link: "/blockchain-services",
+    alt: "Blockchain Services",
+  },
+  {
+    image: <GreenDesign />,
+    title: "Design Services",
+    link: "/design-services",
+    alt: "Design Services",
+  },
+  {
+    image: <GreenQA />,
+    title: "Quality Assurance",
+    link: "/quality-assurance",
+    alt: "Quality Assurance",
+  },
+  {
+    image: <GreenNFT />,
+    title: "NFT Marketplace Development",
+    link: "nft-marketplace-development",
+    alt: "NFT Marketplace Development",
+  },
+]
+
+const HoverServices = [
+  {
+    image: <Appdev />,
+    link: "/app-development",
+    title: "App Development",
   },
   {
     image: <EnterpriceSoftwares />,
@@ -87,6 +145,7 @@ export default ({ logoLink, className }) => {
 
   const [isToggle, setIsToggle] = useState(false)
   const [openServices, setOpenServices] = useState(false)
+  const [colourChange, setColourChange] = useState(true)
 
   const hideServiceDropdown = () => {
     setOpenServices(false)
@@ -192,10 +251,18 @@ export default ({ logoLink, className }) => {
                           href={link}
                         >
                           <a
-                            onClick={hideServiceDropdown}
+                            // onClick={hideServiceDropdown}
                             className="flex items-center mb-4 text-base font-medium"
                           >
-                            <div className=" pr-4">{image}</div>
+                            <div
+                              className=" pr-4"
+
+                              // colourChange
+                              //   ? 'hover:border-primary-500'
+                              //   : 'black'
+                            >
+                              {image}
+                            </div>
                             {title}
                           </a>
                         </Link>
@@ -204,14 +271,14 @@ export default ({ logoLink, className }) => {
                   })}
                 </div>
               </div>
-              <a
+              {/* <a
                 href="/career"
                 className="text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
                 font-semibold tracking-wide transition duration-300
                 pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500"
               >
                 Careers
-              </a>
+              </a> */}
 
               <a
                 href="/contact-us"
@@ -283,6 +350,7 @@ export default ({ logoLink, className }) => {
                           >
                             <a
                               onClick={hideServiceDropdown}
+                              onMouseEnter={showServiceDropdown}
                               className="flex items-center"
                             >
                               {image}

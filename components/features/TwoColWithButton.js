@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 // import tw from 'twin.macro';
-import SvgDotPattern from "../../assets/images/dot-pattern.svg";
-import ModernDesign from "../../assets/images/ModernDesign.png";
-import YourPrudentialImage from "../../assets/images/YourPrudentialImage.png";
+import SvgDotPattern from '../../assets/images/dot-pattern.svg';
+import ModernDesign from '../../assets/images/ModernDesign.png';
+import YourPrudentialImage from '../../assets/images/YourPrudentialImage.png';
 
-import Aim from "../../assets/images/AimImage.png";
-import TeamIllustrationSrc from "../../assets/images/team-illustration-2.svg";
+import Aim from '../../assets/images/AimImage.png';
+import TeamIllustrationSrc from '../../assets/images/team-illustration-2.svg';
 
 // const Container = tw.div`relative`;
 // const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
@@ -38,7 +38,7 @@ import TeamIllustrationSrc from "../../assets/images/team-illustration-2.svg";
 // ]);
 
 export default ({
-  subheading = "Our Expertise",
+  subheading = 'Our Expertise',
   heading = (
     <>
       Your Prudential Tech partners for today and hereafter
@@ -46,9 +46,9 @@ export default ({
     </>
   ),
 
-  description = "Know how it is to be developed by experts in the industry. We give a seamless experience for our clients with exceptional design, development and process that is best suited to their needs and requirements.",
-  primaryButtonText = "Learn More",
-  primaryButtonUrl = "https://timerse.com",
+  description = 'Know how it is to be developed by experts in the industry. We give a seamless experience for our clients with exceptional design, development and process that is best suited to their needs and requirements.',
+  primaryButtonText = 'Learn More',
+  primaryButtonUrl = 'https://timerse.com',
   imageSrc = TeamIllustrationSrc,
   buttonRounded = true,
   imageRounded = true,
@@ -66,7 +66,7 @@ export default ({
     <div className="relative">
       <div
         className={`grid grid-cols-1 lg:grid-cols-2 gap-8 justify-between max-w-screen-xl mx-auto ${
-          isModernDesignImage ? "px-8 lg:px-0" : "pt-40 md:pt-40 lg:pt-40"
+          isModernDesignImage ? 'px-8 lg:px-0' : 'pt-40 md:pt-40 lg:pt-40'
         } py-8 pb-0 md:py-12 md:pb-24 lg:py-16 lg:pb-8  items-center`}
       >
         {textOnLeft === true ? (
@@ -115,14 +115,12 @@ export default ({
               <p className="mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100">
                 {description}
               </p>
-              {/* <button
+              <a
                 className="mt-8 md:mt-8 text-sm inline-block mx-auto md:mx-0 px-8 py-3 font-bold rounded bg-primary-500 text-gray-100 hocus:bg-primary-700 hocus:text-gray-200 focus:outline-none transition duration-300"
-                buttonRounded={buttonRounded}
-                as="a"
-                href={primaryButtonUrl}
+                href="/contact-us"
               >
                 {primaryButtonText}
-              </button> */}
+              </a>
             </div>
           </div>
         ) : (
@@ -141,10 +139,16 @@ export default ({
                 className="mt-8 md:mt-8 text-sm inline-block mx-auto md:mx-0 px-8 py-3 font-bold rounded bg-primary-500 text-gray-100 hocus:bg-primary-700 hocus:text-gray-200 focus:outline-none transition duration-300"
                 buttonRounded={buttonRounded}
                 as="a"
-                href={primaryButtonUrl}
+                href="/contact-us"
               >
                 {primaryButtonText}
               </button> */}
+              <a
+                className="mt-8 md:mt-8 text-sm inline-block mx-auto md:mx-0 px-8 py-3 font-bold rounded bg-primary-500 text-gray-100 hocus:bg-primary-700 hocus:text-gray-200 focus:outline-none transition duration-300"
+                href="/contact-us"
+              >
+                Contact Us
+              </a>
             </div>
           </div>
         )}
