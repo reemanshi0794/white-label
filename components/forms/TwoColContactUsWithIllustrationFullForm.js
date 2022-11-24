@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { PrimaryButton as PrimaryButtonBase } from "../../components/misc/Buttons.js";
-import ContactUsSrc from "../../assets/images/contact-us.png";
+import React, { useState } from 'react';
+import { PrimaryButton as PrimaryButtonBase } from '../../components/misc/Buttons.js';
+import ContactUsSrc from '../../assets/images/contact-us.png';
 
 export default ({
-  subheading = "Contact Us",
+  subheading = 'Contact Us',
   heading = (
     <>
       Feel free to <span tw="text-primary-500">get in touch</span>
@@ -11,18 +11,18 @@ export default ({
     </>
   ),
   description = "Let's collaborate",
-  submitButtonText = "Send",
+  submitButtonText = 'Send',
 }) => {
-  const webDevelopment = "Web Development";
-  const eCommerceDevelopment = "eCommerce Development";
-  const appDevelopment = "App Development";
-  const enterpriseSoftwares = "Enterprise Softwares";
+  const webDevelopment = 'Web Development';
+  const eCommerceDevelopment = 'eCommerce Development';
+  const appDevelopment = 'App Development';
+  const enterpriseSoftwares = 'Enterprise Softwares';
   const [contactInfo, setContactInfo] = useState({ service: webDevelopment });
   const [showLoader, setShowLoader] = useState(false);
   // This message will be displayed if form is submitted successfully or if an error occurrs.
   const [displayMessage, setDisplayMessage] = useState({
-    message: "",
-    type: "",
+    message: '',
+    type: '',
   });
 
   const handleChange = (key, value) => {
@@ -33,32 +33,32 @@ export default ({
     return new Promise((resolve, reject) => {
       try {
         if (!contactInfo) return;
-        fetch("https://email-innow8.herokuapp.com/email", {
-          method: "POST",
+        fetch('https://email-innow8.herokuapp.com/email', {
+          method: 'POST',
           headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
           },
           body: JSON.stringify(
             {
-              projectName: "Whiten-App Solutions",
-              to: ["kapilbindal1@gmail.com"],
-              from: "contact@innow8apps.com",
-              subject: "contact form White Label",
+              projectName: 'Whiten-App Solutions',
+              to: ['kapilbindal1@gmail.com'],
+              from: 'contact@innow8apps.com',
+              subject: 'contact form White Label',
               text: JSON.stringify(contactInfo),
               htmlText: JSON.stringify(contactInfo),
-            } || ""
+            } || ''
           ),
         })
           .then((res) => {
-            console.log("result: ", res);
+            console.log('result: ', res);
             resolve();
           })
           .catch((error) => {
-            console.log("send mail api error", error);
+            console.log('send mail api error', error);
             reject();
           });
       } catch (error) {
-        console.log("send mail try catch error", error);
+        console.log('send mail try catch error', error);
         reject();
       }
     });
@@ -91,19 +91,19 @@ export default ({
     addContactInfo()
       .then((res) => {
         setDisplayMessage({
-          message: "** Submitted successfully **",
-          type: "success",
+          message: '** Submitted successfully **',
+          type: 'success',
         });
         setShowLoader(false);
-        setTimeout(() => setDisplayMessage({ message: "", type: "" }), 2000);
+        setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
       })
       .catch((err) => {
         setDisplayMessage({
-          message: "** An error occurred **",
-          type: "error",
+          message: '** An error occurred **',
+          type: 'error',
         });
         setShowLoader(false);
-        setTimeout(() => setDisplayMessage({ message: "", type: "" }), 2000);
+        setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
       });
     setContactInfo({ service: webDevelopment });
     event.preventDefault();
@@ -138,39 +138,39 @@ export default ({
               <input
                 type="text"
                 name="name"
-                value={contactInfo.name || ""}
+                value={contactInfo.name || ''}
                 placeholder="Full Name"
                 className="mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
                 id="exampleInputEmail1"
                 required
                 aria-describedby="emailHelp"
-                onChange={(event) => handleChange("name", event.target.value)}
+                onChange={(event) => handleChange('name', event.target.value)}
                 autoComplete="off"
               />
               <input
                 type="email"
                 name="email"
                 required
-                value={contactInfo.email || ""}
+                value={contactInfo.email || ''}
                 placeholder="Email Address"
                 className="mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
-                onChange={(event) => handleChange("email", event.target.value)}
+                onChange={(event) => handleChange('email', event.target.value)}
                 autoComplete="off"
               />
               <input
                 type="tel"
                 name="phoneNumber"
                 required
-                value={contactInfo.phoneNumber || ""}
+                value={contactInfo.phoneNumber || ''}
                 placeholder="Phone Number"
                 className="mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
                 onChange={(event) =>
                   handleChange(
-                    "phoneNumber",
+                    'phoneNumber',
                     event.target.value >= 0 ? event.target.value : 0
                   )
                 }
@@ -199,12 +199,12 @@ export default ({
                 className="mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
                 name="message"
                 required
-                value={contactInfo.message || ""}
+                value={contactInfo.message || ''}
                 placeholder="Message"
                 id="exampleFormControlTextarea1"
                 rows="2"
                 onChange={(event) =>
-                  handleChange("message", event.target.value)
+                  handleChange('message', event.target.value)
                 }
               />
               {showLoader ? (
