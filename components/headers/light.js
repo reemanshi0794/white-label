@@ -258,11 +258,11 @@ export default ({ logoLink, className }) => {
                             className="flex items-center mb-4 text-base font-medium"
                           >
                             <div
-                              className={
-                                colourChange
-                                  ? 'hover:border-primary-500'
-                                  : 'black'
-                              }
+                              className=" pr-4"
+
+                              // colourChange
+                              //   ? 'hover:border-primary-500'
+                              //   : 'black'
                             >
                               {image}
                             </div>
