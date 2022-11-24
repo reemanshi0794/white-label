@@ -243,10 +243,7 @@ export default ({ logoLink, className }) => {
                   {ServicesPages.map((serviceItems) => {
                     const { image, title, link, alt } = serviceItems;
                     return (
-                      <div
-                        className="w-full"
-                        onMouseLeave={hideServiceDropdown}
-                      >
+                      <div className="w-full">
                         <Link
                           legacyBehavior
                           style={{ textDecoration: 'none' }}
