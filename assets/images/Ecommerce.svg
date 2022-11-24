@@ -1,12 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
   <defs>
+    <linearGradient id="linear-gradient" y1="0.477" x2="1" y2="0.482" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#009385"/>
+      <stop offset="1" stop-color="#005b4e"/>
+    </linearGradient>
     <clipPath id="clip-path">
       <rect id="Rectangle_7270" data-name="Rectangle 7270" width="11.777" height="11.226" fill="#fff"/>
     </clipPath>
   </defs>
-  <g id="E_commerce" data-name="E commerce" transform="translate(9520 1898)">
-    <circle id="Ellipse_609" data-name="Ellipse 609" cx="15" cy="15" r="15" transform="translate(-9520 -1898)" fill="#808080"/>
-    <g id="Group_40753" data-name="Group 40753" transform="translate(-9511 -1888)">
+  <g id="Group_51281" data-name="Group 51281" transform="translate(1365 2662)">
+    <circle id="Ellipse_827" data-name="Ellipse 827" cx="15" cy="15" r="15" transform="translate(-1365 -2662)" fill="url(#linear-gradient)"/>
+    <g id="Group_51271" data-name="Group 51271" transform="translate(-1356 -2652)">
       <g id="Group_40752" data-name="Group 40752" clip-path="url(#clip-path)">
         <path id="Path_84428" data-name="Path 84428" d="M0,.437A.593.593,0,0,1,.668,0c.36.014.721,0,1.08.021a1.139,1.139,0,0,1,.988.838c.07.317.112.641.161.963.01.067.031.093.1.089.088,0,.176,0,.265,0h7.915a.534.534,0,0,1,.593.429.786.786,0,0,1-.013.284q-.412,2.073-.83,4.145a1.454,1.454,0,0,1-1.5,1.219q-2.686,0-5.372,0a1.477,1.477,0,0,1-1.517-1.34c-.16-1.146-.333-2.29-.5-3.434q-.143-.978-.283-1.956c-.024-.165-.056-.2-.219-.2-.284,0-.568-.012-.851,0A.6.6,0,0,1,0,.644Z" transform="translate(0 0)" fill="#fff"/>
         <path id="Path_84429" data-name="Path 84429" d="M236.208,263.739a1.37,1.37,0,1,1-1.37-1.363,1.371,1.371,0,0,1,1.37,1.363" transform="translate(-225.917 -253.889)" fill="#fff"/>
