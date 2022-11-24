@@ -204,6 +204,14 @@ export default ({ logoLink, className }) => {
                   })}
                 </div>
               </div>
+              <a
+                href="/career"
+                className="text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
+                font-semibold tracking-wide transition duration-300
+                pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500"
+              >
+                Careers
+              </a>
 
               <a
                 href="/contact-us"
