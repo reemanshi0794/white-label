@@ -1,78 +1,78 @@
-import React, { useState, useEffect } from 'react';
-import tw from 'twin.macro';
-import LogoSVG from '../../assets/images/logo.svg';
-import useWindowDimensions from '../../helpers/getWindowDimensions';
-import Link from 'next/link';
-import ChevronDown from '../../assets/images/down-arrow.png';
-import App from '../../assets/images/App.png';
-import Enterprise from '../../assets/images/Enterprise.png';
-import Ecommerce from '../../assets/images/Ecommerce.png';
-import Web from '../../assets/images/Web.png';
-import Blockchain from '../../assets/images/Blockchain.png';
-import DesignService from '../../assets/images/DesignService.png';
-import QA from '../../assets/images/QA.png';
-import NFT from '../../assets/images/NFT.png';
+import React, { useState, useEffect } from "react"
+import tw from "twin.macro"
+import LogoSVG from "../../assets/images/logo.svg"
+import useWindowDimensions from "../../helpers/getWindowDimensions"
+import Link from "next/link"
+import ChevronDown from "../../assets/images/down-arrow.png"
+import App from "../../assets/images/App.png"
+import Enterprise from "../../assets/images/Enterprise.png"
+import Ecommerce from "../../assets/images/Ecommerce.png"
+import Web from "../../assets/images/Web.png"
+import Blockchain from "../../assets/images/Blockchain.png"
+import DesignService from "../../assets/images/DesignService.png"
+import QA from "../../assets/images/QA.png"
+import NFT from "../../assets/images/NFT.png"
 
 const ServicesPages = [
   {
     image: App,
-    title: 'App Development',
-    link: '/app-development',
-    alt: 'App Development',
+    title: "App Development",
+    link: "/app-development",
+    alt: "App Development",
   },
   {
     image: Enterprise,
-    title: 'Enterprise Softwares',
-    link: '/enterprise-softwares',
-    alt: 'Enterprise Softwares',
+    title: "Enterprise Softwares",
+    link: "/enterprise-softwares",
+    alt: "Enterprise Softwares",
   },
   {
     image: Ecommerce,
-    title: 'eCommerce Development',
-    link: '/eCommerce-development',
-    alt: 'eCommerce Development',
+    title: "eCommerce Development",
+    link: "/eCommerce-development",
+    alt: "eCommerce Development",
   },
   {
     image: Web,
-    title: 'Web Development',
-    link: '/web-development',
-    alt: 'Web Development',
+    title: "Web Development",
+    link: "/web-development",
+    alt: "Web Development",
   },
   {
     image: Blockchain,
-    title: 'Blockchain Services',
-    link: '/blockchain-services',
-    alt: 'Blockchain Services',
+    title: "Blockchain Services",
+    link: "/blockchain-services",
+    alt: "Blockchain Services",
   },
   {
     image: DesignService,
-    title: 'Design Services',
-    link: '/design-services',
-    alt: 'Design Services',
+    title: "Design Services",
+    link: "/design-services",
+    alt: "Design Services",
   },
   {
     image: QA,
-    title: 'Quality Assurance',
-    link: '/quality-assurance',
-    alt: 'Quality Assurance',
+    title: "Quality Assurance",
+    link: "/quality-assurance",
+    alt: "Quality Assurance",
   },
   {
     image: NFT,
-    title: 'NFT Marketplace Development',
-    link: 'nft-marketplace-development',
-    alt: 'NFT Marketplace Development',
+    title: "NFT Marketplace Development",
+    link: "nft-marketplace-development",
+    alt: "NFT Marketplace Development",
   },
-];
+]
 const Header = tw.header`
   flex justify-center items-center
   fixed bg-white top-0 w-full z-20 p-4 md:px-24 2xl:p-8 mx-auto w-full
-`;
+`
 
 export default ({ logoLink, className }) => {
-  const { width } = useWindowDimensions();
+  const { width } = useWindowDimensions()
   useEffect(() => {
-    width > 768 && setIsToggle(false);
-  }, [width]);
+    width > 768 && setIsToggle(false)
+  }, [width])
 
   const defaultLogoLink = (
     <a
@@ -81,39 +81,39 @@ export default ({ logoLink, className }) => {
     >
       <LogoSVG alt="logo" className="mr-3" />
     </a>
-  );
+  )
 
-  logoLink = logoLink || defaultLogoLink;
+  logoLink = logoLink || defaultLogoLink
 
-  const [isToggle, setIsToggle] = useState(false);
-  const [openServices, setOpenServices] = useState(false);
+  const [isToggle, setIsToggle] = useState(false)
+  const [openServices, setOpenServices] = useState(false)
 
   const hideServiceDropdown = () => {
-    console.log('hide');
-    setOpenServices(false);
-  };
+    console.log("hide")
+    setOpenServices(false)
+  }
 
   const handleShowDropdown = () => {
-    setOpenServices(!openServices);
-  };
+    setOpenServices(!openServices)
+  }
 
   const showServiceDropdown = () => {
-    console.log('show');
-    setOpenServices(true);
-  };
+    console.log("show")
+    setOpenServices(true)
+  }
 
   const handleToggle = () => {
-    setIsToggle(!isToggle);
-  };
+    setIsToggle(!isToggle)
+  }
 
   return (
     <>
-      <Header className={className || 'header-light'}>
+      <Header className={className || "header-light"}>
         <div
           className={
             width > 768
-              ? 'flex flex-1 justify-between items-center max-w-screen-xl'
-              : 'flex-1 justify-between items-center max-w-screen-xl'
+              ? "flex flex-1 justify-between items-center max-w-screen-xl"
+              : "flex-1 justify-between items-center max-w-screen-xl"
           }
         >
           <div className="flex justify-between items-center">
@@ -178,37 +178,33 @@ export default ({ logoLink, className }) => {
                 <div
                   className={
                     openServices
-                      ? 'show absolute w-full  top-[84%] max-w-[585px] text-sm grid grid-cols-2 gap-4 translate-x-[-15rem] bg-white p-[30px] shadow-[0_0_72px_0_rgba(0,0,0,11%)]'
-                      : 'show absolute w-full  top-[84%] max-w-[585px] text-sm grid grid-cols-2 gap-4 translate-x-[-15rem] bg-white p-[30px] shadow-[0_0_72px_0_rgba(0,0,0,11%)]'
+                      ? "show absolute w-full  top-[84%] max-w-[673px] text-sm grid grid-cols-2 gap-x-4 translate-x-[-24rem] bg-white p-[30px] shadow-[0_0_72px_0_rgba(0,0,0,11%)]"
+                      : "show absolute w-full  top-[84%] max-w-[673px] text-sm grid grid-cols-2 gap-x-4 translate-x-[-24rem] bg-white p-[30px] shadow-[0_0_72px_0_rgba(0,0,0,11%)]"
                   }
                   onMouseLeave={hideServiceDropdown}
                 >
                   {ServicesPages.map((serviceItems) => {
-                    const { image, title, link, alt } = serviceItems;
+                    const { image, title, link, alt } = serviceItems
                     return (
                       <div className="w-full">
                         <Link
                           legacyBehavior
-                          style={{ textDecoration: 'none' }}
+                          style={{ textDecoration: "none" }}
                           className=""
                           href={link}
                         >
-                          <ul>
-                            <li>
-                              <a
-                                onClick={hideServiceDropdown}
-                                className="flex items-center hover:text-secondary-700"
-                              >
-                                <div className=" w-[30px] h-[30px] bg-[#0d7f7233]">
-                                  <img src={image.src} alt={alt} />
-                                </div>
-                                {title}
-                              </a>
-                            </li>
-                          </ul>
+                          <a
+                            onClick={hideServiceDropdown}
+                            className="flex items-center text-base hover:text-[#005B4E] mb-4"
+                          >
+                            <div className=" pr-12">
+                              <img src={image.src} alt={alt} />
+                            </div>
+                            {title}
+                          </a>
                         </Link>
                       </div>
-                    );
+                    )
                   })}
                 </div>
               </div>
@@ -267,17 +263,17 @@ export default ({ logoLink, className }) => {
                   <div
                     className={
                       openServices
-                        ? 'show w-full max-w-[585px] text-sm grid grid-cols-1 gap-4 bg-white p-4 shadow-[1px_4px_6px_2px_rgba(4,4,4,13%)]'
-                        : 'hidden'
+                        ? "show w-full max-w-[585px] text-sm grid grid-cols-1 gap-4 bg-white p-4 shadow-[1px_4px_6px_2px_rgba(4,4,4,13%)]"
+                        : "hidden"
                     }
                   >
                     {ServicesPages.map((serviceItems) => {
-                      const { image, title, link, alt } = serviceItems;
+                      const { image, title, link, alt } = serviceItems
                       return (
                         <div className="w-full">
                           <Link
                             legacyBehavior
-                            style={{ textDecoration: 'none' }}
+                            style={{ textDecoration: "none" }}
                             className=""
                             href={link}
                           >
@@ -290,7 +286,7 @@ export default ({ logoLink, className }) => {
                             </a>
                           </Link>
                         </div>
-                      );
+                      )
                     })}
                   </div>
                 </div>
@@ -310,5 +306,5 @@ export default ({ logoLink, className }) => {
         </div>
       </Header>
     </>
-  );
-};
+  )
+}
