@@ -1,10 +1,10 @@
-import React from "react";
+import React from "react"
 import {
   SectionHeading,
   Subheading as SubheadingBase,
-} from "../../components/misc/Headings.js";
-import { SectionDescription } from "../../components/misc/Typography.js";
-import bestechBuildingImg from "../../assets/images/bestechBuilding.jpeg";
+} from "../../components/misc/Headings.js"
+import { SectionDescription } from "../../components/misc/Typography.js"
+import bestechBuildingImg from "../../assets/images/bestechBuilding.jpeg"
 // const Container = tw.div`relative`;
 
 // const ThreeColumnContainer = styled.div`
@@ -90,40 +90,31 @@ export default ({
       description:
         "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.",
     },
-  ];
+  ]
 
-  if (!cards) cards = defaultCards;
+  if (!cards) cards = defaultCards
 
   return (
-    <div className="relative">
-      <div className="flex flex-col items-center md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-lg mx-auto py-4 md:py-8 ">
+    <div>
+      <div className="flex flex-col items-center justify-center xl:justify-start md:flex-row flex-wrap  max-w-screen-lg mx-auto mb-8 xl:mb-0 xl:mt-8 pr-16 2xl:pl-20 ">
         {subheading && (
           <SubheadingBase className="mb-4">{subheading}</SubheadingBase>
         )}
-        <SectionHeading className="w-full">{heading}</SectionHeading>
-        {/* {description && (
-          <SectionDescription className="w-full text-center">
-            {description}
-          </SectionDescription>
-        )} */}
-
+        <SectionHeading className="w-full !text-center xl:!text-left !text-[35px] xl:!text-[40px] 2xl:!text-5xl">
+          {heading}
+        </SectionHeading>
         {cards.map((card, i) => (
-          <div className="md:w-1/2 lg:w-1/3 max-w-sm" key={i}>
-            <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left h-full mx-4 px-2 py-8 pt-0">
-              <span className="sm:ml-4 mt-4 sm:mt-2">
-                <span className="mt-4 tracking-wide font-bold text-2xl leading-none">
-                  {card.title}
-                </span>
-                <p className="mt-1 sm:mt-4 font-medium text-secondary-100 leading-loose">
-                  {card.description ||
-                    "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud."}
-                </p>
-              </span>
+          <div key={i}>
+            <div className="flex flex-col sm:flex-row items-center sm:items-start text-center xl:text-left">
+              <p className="mt-1 sm:mt-4 font-medium text-secondary-100 leading-loose">
+                {card.description ||
+                  "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud."}
+              </p>
             </div>
           </div>
         ))}
       </div>
       {/* <SvgDecoratorBlob3 className="pointer-events-none absolute right-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-48" /> */}
     </div>
-  );
-};
+  )
+}

@@ -177,7 +177,7 @@ export default ({ logoLink, className }) => {
                   className={
                     openServices
                       ? "show absolute w-full  top-[84%] max-w-[673px] text-sm grid grid-cols-2 gap-x-4 translate-x-[-24rem] bg-white p-[30px] shadow-[0_0_72px_0_rgba(0,0,0,11%)]"
-                      : "show absolute w-full  top-[84%] max-w-[673px] text-sm grid grid-cols-2 gap-x-4 translate-x-[-24rem] bg-white p-[30px] shadow-[0_0_72px_0_rgba(0,0,0,11%)]"
+                      : "hidden"
                   }
                   onMouseLeave={hideServiceDropdown}
                 >
