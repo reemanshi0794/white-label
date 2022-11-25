@@ -467,7 +467,7 @@ const SaaSProductLandingPage = ({
                           onClick={handleSubmit}
                           disabled={emptyFieldValidationCheck}
                         >
-                          Submit Now
+                          Submit
                         </PrimaryButtonBase>
                       </div>
                     </form>
