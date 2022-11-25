@@ -92,12 +92,12 @@ export default ({ logoLink, className }) => {
   }, [width]);
 
   const defaultLogoLink = (
-    <a
+    <div
       className="my-2 lg:text-sm lg:my-0 tracking-wide transition duration-300 pb-1 border-transparent hover:border-primary-500 hocus:text-primary-500 flex items-center font-black border-b-0 xl:text-2xl ml-0!"
-      href="/"
+      // href="/"
     >
       <LogoSVG alt="logo" className="mr-3" />
-    </a>
+    </div>
   );
 
   logoLink = logoLink || defaultLogoLink;
@@ -146,16 +146,16 @@ export default ({ logoLink, className }) => {
             >
               <span className="sr-only">Open main menu</span>
               <svg
-                class="w-6 h-6"
+                className="w-6 h-6"
                 aria-hidden="true"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 ></path>
               </svg>
             </button>
