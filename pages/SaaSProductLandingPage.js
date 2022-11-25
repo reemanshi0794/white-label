@@ -49,7 +49,8 @@ const SaaSProductLandingPage = ({
 
     return () => clearTimeout(timer);
   }, []);
-  const sendMail = () => {
+
+  function sendMail() {
     return new Promise((resolve, reject) => {
       try {
         if (!contactInfo) return;
@@ -82,7 +83,7 @@ const SaaSProductLandingPage = ({
         reject();
       }
     });
-  };
+  }
 
   const addContactInfo = async () => {
     return sendMail();
