@@ -1,122 +1,122 @@
-import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg"
-import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg"
-import React, { useState, useEffect } from "react"
-import tw from "twin.macro"
-import heroScreenshotImageSrc from "../assets/images/hero-screenshot-1.png"
-import macHeroScreenshotImageSrc from "../assets/images/hero-screenshot-2.png"
-import prototypeIllustrationImageSrc from "../assets/images/prototype-illustration.svg"
-import GetStarted from "../components/cta/GetStarted"
-import FAQ from "../components/faqs/SingleCol.js"
-import Features from "../components/features/ThreeColWithSideImage.js"
-import MainFeature from "../components/features/TwoColWithButton.js"
-import FeatureWithSteps from "../components/features/TwoColWithSteps.js"
-import MainFeature2 from "../components/features/TwoColWithTwoHorizontalFeaturesAndButton.js"
-import Footer from "../components/footers/FiveColumnWithBackground.js"
+import { ReactComponent as BriefcaseIcon } from 'feather-icons/dist/icons/briefcase.svg';
+import { ReactComponent as MoneyIcon } from 'feather-icons/dist/icons/dollar-sign.svg';
+import React, { useState, useEffect } from 'react';
+import tw from 'twin.macro';
+import heroScreenshotImageSrc from '../assets/images/hero-screenshot-1.png';
+import macHeroScreenshotImageSrc from '../assets/images/hero-screenshot-2.png';
+import prototypeIllustrationImageSrc from '../assets/images/prototype-illustration.svg';
+import GetStarted from '../components/cta/GetStarted';
+import FAQ from '../components/faqs/SingleCol.js';
+import Features from '../components/features/ThreeColWithSideImage.js';
+import MainFeature from '../components/features/TwoColWithButton.js';
+import FeatureWithSteps from '../components/features/TwoColWithSteps.js';
+import MainFeature2 from '../components/features/TwoColWithTwoHorizontalFeaturesAndButton.js';
+import Footer from '../components/footers/FiveColumnWithBackground.js';
 // import { css } from "styled-components/macro"; //eslint-disable-line
-import Hero from "../components/hero/TwoColumnWithInput.js"
-import Pricing from "../components/pricing/ThreePlans.js"
-import Testimonial from "../components/testimonials/TwoColumnWithImageAndRating.js"
-import Header from "../components/headers/light"
-import Head from "next/head"
-import Collaborate from "../assets/images/Collaborate.png"
-import ContactUsSrc from "../assets/images/contact-us.png"
-import { PrimaryButton as PrimaryButtonBase } from "../components/misc/Buttons.js"
-import close from "../assets/images/close.png"
+import Hero from '../components/hero/TwoColumnWithInput.js';
+import Pricing from '../components/pricing/ThreePlans.js';
+import Testimonial from '../components/testimonials/TwoColumnWithImageAndRating.js';
+import Header from '../components/headers/light';
+import Head from 'next/head';
+import Collaborate from '../assets/images/Collaborate.png';
+import ContactUsSrc from '../assets/images/contact-us.png';
+import { PrimaryButton as PrimaryButtonBase } from '../components/misc/Buttons.js';
+import Cross from '../assets/images/Cross.png';
 
 const SaaSProductLandingPage = ({
-  subheading = "Contact Us Feel free to get in touch with us.",
+  subheading = 'Contact Us Feel free to get in touch with us.',
   heading = <></>,
   description = "Let's collaborate",
-  submitButtonText = "Send",
+  submitButtonText = 'Send',
 }) => {
-  const [show, setShow] = useState(false)
-  const handleClose = () => setShow(false)
-  const webDevelopment = "Web Development"
-  const [contactInfo, setContactInfo] = useState({ service: webDevelopment })
-  const [showLoader, setShowLoader] = useState(false)
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const webDevelopment = 'Web Development';
+  const [contactInfo, setContactInfo] = useState({ service: webDevelopment });
+  const [showLoader, setShowLoader] = useState(false);
   const [displayMessage, setDisplayMessage] = useState({
-    message: "",
-    type: "",
-  })
+    message: '',
+    type: '',
+  });
 
   const handleChange = (key, value) => {
-    setContactInfo({ ...contactInfo, [key]: value })
-  }
+    setContactInfo({ ...contactInfo, [key]: value });
+  };
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShow(true)
-    }, 8000)
+      setShow(true);
+    }, 8000);
 
-    return () => clearTimeout(timer)
-  }, [])
+    return () => clearTimeout(timer);
+  }, []);
 
   function sendMail() {
     return new Promise((resolve, reject) => {
       try {
-        if (!contactInfo) return
-        fetch("https://email-innow8.herokuapp.com/email", {
-          method: "POST",
+        if (!contactInfo) return;
+        fetch('https://email-innow8.herokuapp.com/email', {
+          method: 'POST',
           headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
           },
           body: JSON.stringify(
             {
-              projectName: "Whiten-App Solutions",
-              to: ["kapilbindal1@gmail.com"],
-              from: "contact@innow8apps.com",
-              subject: "contact form White Label",
+              projectName: 'Whiten-App Solutions',
+              to: ['kapilbindal1@gmail.com'],
+              from: 'contact@innow8apps.com',
+              subject: 'contact form White Label',
               text: JSON.stringify(contactInfo),
               htmlText: JSON.stringify(contactInfo),
-            } || ""
+            } || ''
           ),
         })
           .then((res) => {
-            console.log("result: ", res)
-            resolve()
+            console.log('result: ', res);
+            resolve();
           })
           .catch((error) => {
-            console.log("send mail api error", error)
-            reject()
-          })
+            console.log('send mail api error', error);
+            reject();
+          });
       } catch (error) {
-        console.log("send mail try catch error", error)
-        reject()
+        console.log('send mail try catch error', error);
+        reject();
       }
-    })
+    });
   }
 
   const addContactInfo = async () => {
-    return sendMail()
-  }
+    return sendMail();
+  };
 
   const emptyFieldValidationCheck =
     !contactInfo.name ||
     !contactInfo.email ||
     !contactInfo.phoneNumber ||
-    !contactInfo.service
+    !contactInfo.service;
   const handleSubmit = (event) => {
-    setShowLoader(true)
+    setShowLoader(true);
     addContactInfo()
       .then((res) => {
         setDisplayMessage({
-          message: "** Submitted successfully **",
-          type: "success",
-        })
-        setShowLoader(false)
-        setTimeout(() => setDisplayMessage({ message: "", type: "" }), 2000)
+          message: '** Submitted successfully **',
+          type: 'success',
+        });
+        setShowLoader(false);
+        setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
       })
       .catch((err) => {
         setDisplayMessage({
-          message: "** An error occurred **",
-          type: "error",
-        })
-        setShowLoader(false)
-        setTimeout(() => setDisplayMessage({ message: "", type: "" }), 2000)
-      })
-    setContactInfo({ service: webDevelopment })
-    event.preventDefault()
-  }
+          message: '** An error occurred **',
+          type: 'error',
+        });
+        setShowLoader(false);
+        setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
+      });
+    setContactInfo({ service: webDevelopment });
+    event.preventDefault();
+  };
 
   return (
     <>
@@ -164,7 +164,7 @@ const SaaSProductLandingPage = ({
         <FeatureWithSteps
           subheading={
             <span className="uppercase tracking-widest font-bold text-primary-500">
-              {" "}
+              {' '}
               <>
                 Take the easy <span className="text-primary-500">way out</span>
               </>
@@ -188,16 +188,16 @@ const SaaSProductLandingPage = ({
           features={[
             {
               Icon: MoneyIcon,
-              title: "Affordable",
+              title: 'Affordable',
               description:
-                "We promise to offer you the best rate we can - at par with the industry standard.",
+                'We promise to offer you the best rate we can - at par with the industry standard.',
               iconContainerCss: tw`bg-green-300 text-green-800`,
             },
             {
               Icon: BriefcaseIcon,
-              title: "Professionalism",
+              title: 'Professionalism',
               description:
-                "We assure you that our templates are designed and created by professional designers.",
+                'We assure you that our templates are designed and created by professional designers.',
               iconContainerCss: tw`bg-red-300 text-red-800`,
             },
           ]}
@@ -210,46 +210,46 @@ const SaaSProductLandingPage = ({
           }
           heading={
             <>
-              Find the best Developers{" "}
+              Find the best Developers{' '}
               <span className="text-primary-500">here.</span>
             </>
           }
           plans={[
             {
-              name: "Technology",
-              price: "$17.99",
-              duration: "Monthly",
-              mainFeature: "Individuals",
+              name: 'Technology',
+              price: '$17.99',
+              duration: 'Monthly',
+              mainFeature: 'Individuals',
               features: [
-                "30 Templates",
-                "7 Landing Pages",
-                "12 Internal Pages",
-                "Basic Assistance",
+                '30 Templates',
+                '7 Landing Pages',
+                '12 Internal Pages',
+                'Basic Assistance',
               ],
             },
             {
-              name: "Total Developers",
-              price: "$37.99",
-              duration: "Monthly",
-              mainFeature: "Startups",
+              name: 'Total Developers',
+              price: '$37.99',
+              duration: 'Monthly',
+              mainFeature: 'Startups',
               features: [
-                "60 Templates",
-                "15 Landing Pages",
-                "22 Internal Pages",
-                "Priority Assistance",
+                '60 Templates',
+                '15 Landing Pages',
+                '22 Internal Pages',
+                'Priority Assistance',
               ],
               featured: true,
             },
             {
-              name: "To be allocated",
-              price: "$57.99",
-              duration: "Monthly",
-              mainFeature: "Enterprises",
+              name: 'To be allocated',
+              price: '$57.99',
+              duration: 'Monthly',
+              mainFeature: 'Enterprises',
               features: [
-                "90 Templates",
-                "27 Landing Pages",
-                "37 Internal Pages",
-                "Personal Assistance",
+                '90 Templates',
+                '27 Landing Pages',
+                '37 Internal Pages',
+                'Personal Assistance',
               ],
             },
           ]}
@@ -294,7 +294,7 @@ const SaaSProductLandingPage = ({
             <div className="flex items-center justify-center">
               <img
                 src={Collaborate.src}
-                alt={"Collaboration Icon"}
+                alt={'Collaboration Icon'}
                 className="w-full md:w-[50%] lg:w-[40%]"
               />
             </div>
@@ -326,24 +326,24 @@ const SaaSProductLandingPage = ({
           }
           faqs={[
             {
-              question: "What are the technologies that you use ?",
+              question: 'What are the technologies that you use ?',
               answer:
-                "At Whiten App Solutions we continuously update our tech stack to meet the demand of our clients. Presently we work with technologies including - React, React Native, Flutter, Angular, Golang, Nodejs, Swift, Java, Android, Power BI, UI/UX, Quality Assurance, MongoDB",
+                'At Whiten App Solutions we continuously update our tech stack to meet the demand of our clients. Presently we work with technologies including - React, React Native, Flutter, Angular, Golang, Nodejs, Swift, Java, Android, Power BI, UI/UX, Quality Assurance, MongoDB',
             },
             {
-              question: "How Does your Pricing work?",
+              question: 'How Does your Pricing work?',
               answer:
-                "All our solutions and services are 100% custom and are built according to the need of our clients. The pricing of each solution varies as its purely dependent on the demands and feature requirements.",
+                'All our solutions and services are 100% custom and are built according to the need of our clients. The pricing of each solution varies as its purely dependent on the demands and feature requirements.',
             },
             {
-              question: "Can I hire only one developer?",
+              question: 'Can I hire only one developer?',
               answer:
-                "Yes, If you already have a team and are behind a developer, you can hire our top developers to work with your team. We provide contract hiring services to help clients finish their projects quickly by not making commitments and avoiding permanent hires for temporary needs.",
+                'Yes, If you already have a team and are behind a developer, you can hire our top developers to work with your team. We provide contract hiring services to help clients finish their projects quickly by not making commitments and avoiding permanent hires for temporary needs.',
             },
             {
-              question: "What time zone do we follow?",
+              question: 'What time zone do we follow?',
               answer:
-                "Our clients are all around the globe and thereby each project is handled carefully by assigning a team who works on our clients timeline to avoid communication gaps and to be well synchronized with your team.",
+                'Our clients are all around the globe and thereby each project is handled carefully by assigning a team who works on our clients timeline to avoid communication gaps and to be well synchronized with your team.',
             },
           ]}
         />
@@ -355,9 +355,9 @@ const SaaSProductLandingPage = ({
           <div className="relative w-full max-w-[88%] 2xl:max-w-[61%] h-full lg:h-auto">
             <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
               <div className="flex justify-end p-[14px]">
-                <button>
+                <button onClick={handleClose} className="cursor-pointer">
                   <img
-                    src={close.src}
+                    src={Cross.src}
                     className="text-center rounded-full bg-gray-100 w-8 p-2"
                   />
                 </button>
@@ -392,14 +392,14 @@ const SaaSProductLandingPage = ({
                       <input
                         type="text"
                         name="name"
-                        value={contactInfo.name || ""}
+                        value={contactInfo.name || ''}
                         placeholder="Full Name"
                         className="mt-6 first:mt-0 border-2 px-4 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
                         id="exampleInputEmail1"
                         required
                         aria-describedby="emailHelp"
                         onChange={(event) =>
-                          handleChange("name", event.target.value)
+                          handleChange('name', event.target.value)
                         }
                         autoComplete="off"
                       />
@@ -407,13 +407,13 @@ const SaaSProductLandingPage = ({
                         type="email"
                         name="email"
                         required
-                        value={contactInfo.email || ""}
+                        value={contactInfo.email || ''}
                         placeholder="Email Address"
                         className="mt-6 first:mt-0 border-2 px-4 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
                         id="exampleInputEmail1"
                         aria-describedby="emailHelp"
                         onChange={(event) =>
-                          handleChange("email", event.target.value)
+                          handleChange('email', event.target.value)
                         }
                         autoComplete="off"
                       />
@@ -421,14 +421,14 @@ const SaaSProductLandingPage = ({
                         type="tel"
                         name="phoneNumber"
                         required
-                        value={contactInfo.phoneNumber || ""}
+                        value={contactInfo.phoneNumber || ''}
                         placeholder="Phone Number"
                         className="mt-6 first:mt-0 border-2 px-4 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
                         id="exampleInputEmail1"
                         aria-describedby="emailHelp"
                         onChange={(event) =>
                           handleChange(
-                            "phoneNumber",
+                            'phoneNumber',
                             event.target.value >= 0 ? event.target.value : 0
                           )
                         }
@@ -438,12 +438,12 @@ const SaaSProductLandingPage = ({
                         className="mt-6 first:mt-0 border-2 px-4 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
                         name="message"
                         required
-                        value={contactInfo.message || ""}
+                        value={contactInfo.message || ''}
                         placeholder="Message"
                         id="exampleFormControlTextarea1"
                         rows="2"
                         onChange={(event) =>
-                          handleChange("message", event.target.value)
+                          handleChange('message', event.target.value)
                         }
                       />
                       {showLoader ? (
@@ -479,7 +479,7 @@ const SaaSProductLandingPage = ({
         </div>
       )}
     </>
-  )
-}
+  );
+};
 
-export default SaaSProductLandingPage
+export default SaaSProductLandingPage;
