@@ -19,10 +19,28 @@ import Testimonial from '../components/testimonials/TwoColumnWithImageAndRating.
 import Header from '../components/headers/light';
 import Head from 'next/head';
 import Collaborate from '../assets/images/Collaborate.png';
+import ContactUsSrc from '../assets/images/contact-us.png';
+import { PrimaryButton as PrimaryButtonBase } from '../components/misc/Buttons.js';
 
-const SaaSProductLandingPage = () => {
+const SaaSProductLandingPage = ({
+  subheading = 'Contact Us Feel free to get in touch with us.',
+  heading = <></>,
+  description = "Let's collaborate",
+  submitButtonText = 'Send',
+}) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
+  const webDevelopment = 'Web Development';
+  const [contactInfo, setContactInfo] = useState({ service: webDevelopment });
+  const [showLoader, setShowLoader] = useState(false);
+  const [displayMessage, setDisplayMessage] = useState({
+    message: '',
+    type: '',
+  });
+
+  const handleChange = (key, value) => {
+    setContactInfo({ ...contactInfo, [key]: value });
+  };
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -31,6 +49,72 @@ const SaaSProductLandingPage = () => {
 
     return () => clearTimeout(timer);
   }, []);
+  const sendMail = () => {
+    return new Promise((resolve, reject) => {
+      try {
+        if (!contactInfo) return;
+        fetch('https://email-innow8.herokuapp.com/email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(
+            {
+              projectName: 'Whiten-App Solutions',
+              to: ['kapilbindal1@gmail.com'],
+              from: 'contact@innow8apps.com',
+              subject: 'contact form White Label',
+              text: JSON.stringify(contactInfo),
+              htmlText: JSON.stringify(contactInfo),
+            } || ''
+          ),
+        })
+          .then((res) => {
+            console.log('result: ', res);
+            resolve();
+          })
+          .catch((error) => {
+            console.log('send mail api error', error);
+            reject();
+          });
+      } catch (error) {
+        console.log('send mail try catch error', error);
+        reject();
+      }
+    });
+  };
+
+  const addContactInfo = async () => {
+    return sendMail();
+  };
+
+  const emptyFieldValidationCheck =
+    !contactInfo.name ||
+    !contactInfo.email ||
+    !contactInfo.phoneNumber ||
+    !contactInfo.service;
+  const handleSubmit = (event) => {
+    setShowLoader(true);
+    addContactInfo()
+      .then((res) => {
+        setDisplayMessage({
+          message: '** Submitted successfully **',
+          type: 'success',
+        });
+        setShowLoader(false);
+        setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
+      })
+      .catch((err) => {
+        setDisplayMessage({
+          message: '** An error occurred **',
+          type: 'error',
+        });
+        setShowLoader(false);
+        setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
+      });
+    setContactInfo({ service: webDevelopment });
+    event.preventDefault();
+  };
 
   return (
     <>
@@ -266,7 +350,113 @@ const SaaSProductLandingPage = () => {
       <Footer />
       {show && (
         <div className="flex items-center justify-center text-[3rem] font-bold text-white h-screen fixed top-0 left-0 w-full right-0 bottom-0 z-50 bg-[#56565699] ">
-          Learn
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-screen-xl mx-auto pb-10 pt-32 bg-white">
+            <div className="flex-shrink-0">
+              <img src={ContactUsSrc.src} alt="contact-us" className="w-full" />
+            </div>
+            <div className={` md:mx-0 mt-16 md:mt-0 lg:mr-16 lg:order-first`}>
+              <div className="lg:py-8 text-center md:text-left">
+                {subheading && (
+                  <h5 className="font-bold text-primary-500 text-center md:text-left">
+                    {subheading}
+                  </h5>
+                )}
+                <h2 className="text-4xl sm:text-5xl font-black tracking-wide text-center mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight">
+                  {heading}
+                </h2>
+                {description && (
+                  <p className="mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100">
+                    {description}
+                  </p>
+                )}
+                <form
+                  action=""
+                  method="post"
+                  className="mt-8 md:mt-10 text-sm flex flex-col lg:max-w-sm mx-auto md:mx-0"
+                >
+                  <input
+                    type="text"
+                    name="name"
+                    value={contactInfo.name || ''}
+                    placeholder="Full Name"
+                    className="mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
+                    id="exampleInputEmail1"
+                    required
+                    aria-describedby="emailHelp"
+                    onChange={(event) =>
+                      handleChange('name', event.target.value)
+                    }
+                    autoComplete="off"
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    value={contactInfo.email || ''}
+                    placeholder="Email Address"
+                    className="mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    onChange={(event) =>
+                      handleChange('email', event.target.value)
+                    }
+                    autoComplete="off"
+                  />
+                  <input
+                    type="tel"
+                    name="phoneNumber"
+                    required
+                    value={contactInfo.phoneNumber || ''}
+                    placeholder="Phone Number"
+                    className="mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    onChange={(event) =>
+                      handleChange(
+                        'phoneNumber',
+                        event.target.value >= 0 ? event.target.value : 0
+                      )
+                    }
+                    autoComplete="off"
+                  />
+                  <textarea
+                    className="mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
+                    name="message"
+                    required
+                    value={contactInfo.message || ''}
+                    placeholder="Message"
+                    id="exampleFormControlTextarea1"
+                    rows="2"
+                    onChange={(event) =>
+                      handleChange('message', event.target.value)
+                    }
+                  />
+                  {showLoader ? (
+                    <div className="text-center loader py-2">
+                      <div
+                        className="spinner-border text-secondary"
+                        role="status"
+                      >
+                        <span className="visually-hidden">Loading...</span>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className={`message-${displayMessage.type}`}>
+                      <span>{displayMessage.message}</span>
+                    </div>
+                  )}
+                  <PrimaryButtonBase
+                    className="inline-block mt-8"
+                    type="submit"
+                    onClick={handleSubmit}
+                    disabled={emptyFieldValidationCheck}
+                  >
+                    {submitButtonText}
+                  </PrimaryButtonBase>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       )}
     </>

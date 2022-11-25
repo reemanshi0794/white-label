@@ -176,25 +176,6 @@ export default ({
                 }
                 autoComplete="off"
               />
-              {/* <select
-                className="mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
-                aria-label="Default select example"
-                value={contactInfo.service || ""}
-                name="service"
-                required
-                onChange={(event) =>
-                  handleChange("service", event.target.value)
-                }
-              >
-                <option value={webDevelopment}>Web Development</option>
-                <option value={eCommerceDevelopment}>
-                  eCommerce Development
-                </option>
-                <option value={appDevelopment}>App Development</option>
-                <option value={enterpriseSoftwares}>
-                  Enterprise Softwares
-                </option>
-              </select> */}
               <textarea
                 className="mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
                 name="message"
@@ -218,7 +199,6 @@ export default ({
                   <span>{displayMessage.message}</span>
                 </div>
               )}
-              {/* </div> */}
               <PrimaryButtonBase
                 className="inline-block mt-8"
                 type="submit"
