@@ -1,6 +1,6 @@
 import { ReactComponent as BriefcaseIcon } from 'feather-icons/dist/icons/briefcase.svg';
 import { ReactComponent as MoneyIcon } from 'feather-icons/dist/icons/dollar-sign.svg';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import tw from 'twin.macro';
 import heroScreenshotImageSrc from '../assets/images/hero-screenshot-1.png';
 import macHeroScreenshotImageSrc from '../assets/images/hero-screenshot-2.png';
@@ -21,6 +21,17 @@ import Head from 'next/head';
 import Collaborate from '../assets/images/Collaborate.png';
 
 const SaaSProductLandingPage = () => {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShow(true);
+    }, 8000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       <Header roundedHeaderButton={true} />
@@ -253,6 +264,11 @@ const SaaSProductLandingPage = () => {
         <GetStarted />
       </div>
       <Footer />
+      {show && (
+        <div className="flex items-center justify-center text-[3rem] font-bold text-white h-screen fixed top-0 left-0 w-full right-0 bottom-0 z-50 bg-[#56565699] ">
+          Learn
+        </div>
+      )}
     </>
   );
 };
