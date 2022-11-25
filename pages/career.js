@@ -1,18 +1,18 @@
-import ReactGA from 'react-ga';
-import Head from 'next/head';
-import Header from '../components/headers/light.js';
-import BannerImage from '../assets/images/BannerImage.png';
-import SvgDecoratorBlob1 from '../assets/images/svg-decorator-blob-1.svg';
-import { useEffect } from 'react';
-import CustomerSatisfaction from '../assets/images/CustomerSatisfaction.svg';
-import Support from '../assets/images/Support.svg';
-import StrongTeams from '../assets/images/StrongTeams.svg';
-import Innovation from '../assets/images/Innovation.svg';
-import Teamwork from '../assets/images/Teamwork.svg';
-import Creativity from '../assets/images/Creativity.svg';
-import Motivation from '../assets/images/Motivation.svg';
+import ReactGA from "react-ga"
+import Head from "next/head"
+import Header from "../components/headers/light.js"
+import BannerImage from "../assets/images/BannerImage.png"
+import SvgDecoratorBlob1 from "../assets/images/svg-decorator-blob-1.svg"
+import { useEffect } from "react"
+import CustomerSatisfaction from "../assets/images/CustomerSatisfaction.svg"
+import Support from "../assets/images/Support.svg"
+import StrongTeams from "../assets/images/StrongTeams.svg"
+import Innovation from "../assets/images/Innovation.svg"
+import Teamwork from "../assets/images/Teamwork.svg"
+import Creativity from "../assets/images/Creativity.svg"
+import Motivation from "../assets/images/Motivation.svg"
 
-import Footer from '../components/footers/FiveColumnWithInputForm.js';
+import Footer from "../components/footers/FiveColumnWithInputForm.js"
 
 // import Header from '../src/components/Header';
 // import { CareerPageItemToDisplay } from '../src/data/data';
@@ -22,30 +22,30 @@ const CareerPage = ({
   cards = [
     {
       imageSrc: <Innovation />,
-      title: 'Innovation',
-      description: 'Curiosity and passion without limits',
+      title: "Innovation",
+      description: "Curiosity and passion without limits",
     },
     {
       imageSrc: <Teamwork />,
-      title: 'Teamwork',
-      description: 'Different people forming a unique team',
+      title: "Teamwork",
+      description: "Different people forming a unique team",
     },
     {
       imageSrc: <Creativity />,
-      title: 'Creativity',
-      description: 'Creative people who love design',
+      title: "Creativity",
+      description: "Creative people who love design",
     },
     {
       imageSrc: <Motivation />,
-      title: 'Motivation',
-      description: 'Commitment to the project',
+      title: "Motivation",
+      description: "Commitment to the project",
     },
   ],
 }) => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-    ReactGA.pageview(window.location.pathname);
-  }, []);
+    window.scrollTo(0, 0)
+    ReactGA.pageview(window.location.pathname)
+  }, [])
   return (
     <div id="career">
       <Head>
@@ -84,19 +84,27 @@ const CareerPage = ({
         </div>
         <div className="max-w-screen-xl mx-auto pt-16 pb-8">
           <div className=" text-center">
-            <h2 className=" text-[40px] font-extrabold mb-4">Open Positions</h2>
-            <h4 className="  text-2xl font-bold mb-4">Join Us Today</h4>
-            <h5 className=" text-2xl font-bold mb-4">Drop your resume's at</h5>
-            <a className=" text-[32px] font-bold mb-4">hr@whiten-App.io</a>
+            <h2 className=" text-3xl md:text-[40px] font-extrabold mb-3 md:mb-4">
+              Open Positions
+            </h2>
+            <h4 className=" text-xl md:text-2xl font-bold mb-3 md:mb-4">
+              Join Us Today
+            </h4>
+            <h5 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">
+              Drop your resume's at
+            </h5>
+            <a className=" text-[28px] md:text-[32px] font-bold mb-3 md:mb-4">
+              hr@whiten-App.io
+            </a>
           </div>
 
-          <div className=" mx-auto w-[94%] md:w-4/5 mt-8 md:mt-16">
+          <div className=" mx-auto w-[100%] md:w-4/5 mt-8 md:mt-16">
             <div className=" mb-4 md:mb-[28px] p-[14px] md:px-4 md:py-5 flex justify-between items-center bg-white shadow-[0_0px_20px_rgba(95,125,149,30%)]">
               <div>
-                <h4 className=" font-bold text-base md:text-[28px] text-black mb-[2px] md:mb-2">
+                <h4 className=" font-bold text-sm md:text-[28px] text-black mb-[2px] md:mb-2">
                   Senior React Developer
                 </h4>
-                <h5 className=" text-sm md:text-lg text-[#a7a7a7]">Remote</h5>
+                <h5 className=" text-xs md:text-lg text-[#a7a7a7]">Remote</h5>
               </div>
               <a
                 href="/contact-us"
@@ -182,7 +190,7 @@ const CareerPage = ({
       </div>
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default CareerPage;
+export default CareerPage
