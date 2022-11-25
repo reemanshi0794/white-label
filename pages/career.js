@@ -1,4 +1,3 @@
-// import React, { useEffect } from 'react';
 // import ReactGA from 'react-ga';
 // import Head from 'next/head';
 // import Header from '../components/headers/light.js';
@@ -8,7 +7,13 @@
 // // import Header from '../src/components/Header';
 // // import { CareerPageItemToDisplay } from '../src/data/data';
 // // import Career from '../src/assets/images/career.png';
+import React from 'react';
 
+function Career() {
+  return <div>career</div>;
+}
+
+export default Career;
 // const CareerPage = () => {
 //   useEffect(() => {
 //     window.scrollTo(0, 0);
