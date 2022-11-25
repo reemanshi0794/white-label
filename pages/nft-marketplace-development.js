@@ -146,7 +146,7 @@ const NftMarketplaceDev = () => {
         </div>
 
         <div>
-          <h2 className="text-center mb-5">NFT Marketplace Clones</h2>
+          <h2 className="text-center mb-5"></h2>
           {NftMarkteplaceDevItemToDisplay.map((element) => {
             return (
               <>
