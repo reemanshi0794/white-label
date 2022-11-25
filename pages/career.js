@@ -1,12 +1,13 @@
-import ReactGA from "react-ga"
-import Head from "next/head"
-import Header from "../components/headers/light.js"
-import BannerImage from "../assets/images/BannerImage.png"
-import SvgDecoratorBlob1 from "../assets/images/svg-decorator-blob-1.svg"
-import { useEffect } from "react"
-import CustomerSatisfaction from "../assets/images/CustomerSatisfaction.svg"
-import Support from "../assets/images/Support.svg"
-import StrongTeams from "../assets/images/StrongTeams.svg"
+import ReactGA from 'react-ga';
+import Head from 'next/head';
+import Header from '../components/headers/light.js';
+import BannerImage from '../assets/images/BannerImage.png';
+import SvgDecoratorBlob1 from '../assets/images/svg-decorator-blob-1.svg';
+import { useEffect } from 'react';
+import CustomerSatisfaction from '../assets/images/CustomerSatisfaction.svg';
+import Support from '../assets/images/Support.svg';
+import StrongTeams from '../assets/images/StrongTeams.svg';
+import Footer from '../components/footers/FiveColumnWithInputForm.js';
 
 // import Header from '../src/components/Header';
 // import { CareerPageItemToDisplay } from '../src/data/data';
@@ -16,34 +17,30 @@ const CareerPage = ({
   cards = [
     {
       imageSrc: <StrongTeams />,
-      title: "Secure",
-      description: "Lorem ipsum donor amet siti ceali placeholder text",
-      url: "https://timerse.com",
+      title: 'Innovation',
+      description: 'Curiosity and passion without limits',
     },
     {
       imageSrc: <Support />,
-      title: "24/7 Support",
-      description: "Lorem ipsum donor amet siti ceali placeholder text",
-      url: "https://google.com",
+      title: 'Teamwork',
+      description: 'Different people forming a unique team',
     },
     {
       imageSrc: <CustomerSatisfaction />,
-      title: "Customizable",
-      description: "Lorem ipsum donor amet siti ceali placeholder text",
-      url: "https://reddit.com",
+      title: 'Creativity',
+      description: 'Creative people who love design',
     },
     {
       imageSrc: <CustomerSatisfaction />,
-      title: "Customizable",
-      description: "Lorem ipsum donor amet siti ceali placeholder text",
-      url: "https://reddit.com",
+      title: 'Motivation',
+      description: 'Commitment to the project',
     },
   ],
 }) => {
   useEffect(() => {
-    window.scrollTo(0, 0)
-    ReactGA.pageview(window.location.pathname)
-  }, [])
+    window.scrollTo(0, 0);
+    ReactGA.pageview(window.location.pathname);
+  }, []);
   return (
     <div id="career">
       <Head>
@@ -160,7 +157,7 @@ const CareerPage = ({
             {cards.map((card, i) => (
               <div key={i}>
                 <a
-                  className="flex flex-col items-center text-center h-full mx-4 px-4 pt-8 lg:py-8 rounded transition-transform duration-300 hover:cursor-pointer transform hover:scale-105"
+                  className="flex flex-col items-center text-center h-full mx-4 px-4 pt-8 lg:py-8 rounded transition-transform duration-300  transform hover:scale-105"
                   href={card.url}
                 >
                   <span className="text-center rounded-full p-4 bg-gray-100">
@@ -178,8 +175,9 @@ const CareerPage = ({
           </div>
         </div>
       </div>
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default CareerPage
+export default CareerPage;
