@@ -1,121 +1,121 @@
-import { ReactComponent as BriefcaseIcon } from 'feather-icons/dist/icons/briefcase.svg';
-import { ReactComponent as MoneyIcon } from 'feather-icons/dist/icons/dollar-sign.svg';
-import React, { useState, useEffect } from 'react';
-import tw from 'twin.macro';
-import heroScreenshotImageSrc from '../assets/images/hero-screenshot-1.png';
-import macHeroScreenshotImageSrc from '../assets/images/hero-screenshot-2.png';
-import prototypeIllustrationImageSrc from '../assets/images/prototype-illustration.svg';
-import GetStarted from '../components/cta/GetStarted';
-import FAQ from '../components/faqs/SingleCol.js';
-import Features from '../components/features/ThreeColWithSideImage.js';
-import MainFeature from '../components/features/TwoColWithButton.js';
-import FeatureWithSteps from '../components/features/TwoColWithSteps.js';
-import MainFeature2 from '../components/features/TwoColWithTwoHorizontalFeaturesAndButton.js';
-import Footer from '../components/footers/FiveColumnWithBackground.js';
+import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg"
+import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg"
+import React, { useState, useEffect } from "react"
+import tw from "twin.macro"
+import heroScreenshotImageSrc from "../assets/images/hero-screenshot-1.png"
+import macHeroScreenshotImageSrc from "../assets/images/hero-screenshot-2.png"
+import prototypeIllustrationImageSrc from "../assets/images/prototype-illustration.svg"
+import GetStarted from "../components/cta/GetStarted"
+import FAQ from "../components/faqs/SingleCol.js"
+import Features from "../components/features/ThreeColWithSideImage.js"
+import MainFeature from "../components/features/TwoColWithButton.js"
+import FeatureWithSteps from "../components/features/TwoColWithSteps.js"
+import MainFeature2 from "../components/features/TwoColWithTwoHorizontalFeaturesAndButton.js"
+import Footer from "../components/footers/FiveColumnWithBackground.js"
 // import { css } from "styled-components/macro"; //eslint-disable-line
-import Hero from '../components/hero/TwoColumnWithInput.js';
-import Pricing from '../components/pricing/ThreePlans.js';
-import Testimonial from '../components/testimonials/TwoColumnWithImageAndRating.js';
-import Header from '../components/headers/light';
-import Head from 'next/head';
-import Collaborate from '../assets/images/Collaborate.png';
-import ContactUsSrc from '../assets/images/contact-us.png';
-import { PrimaryButton as PrimaryButtonBase } from '../components/misc/Buttons.js';
+import Hero from "../components/hero/TwoColumnWithInput.js"
+import Pricing from "../components/pricing/ThreePlans.js"
+import Testimonial from "../components/testimonials/TwoColumnWithImageAndRating.js"
+import Header from "../components/headers/light"
+import Head from "next/head"
+import Collaborate from "../assets/images/Collaborate.png"
+import ContactUsSrc from "../assets/images/contact-us.png"
+import { PrimaryButton as PrimaryButtonBase } from "../components/misc/Buttons.js"
 
 const SaaSProductLandingPage = ({
-  subheading = 'Contact Us Feel free to get in touch with us.',
+  subheading = "Contact Us Feel free to get in touch with us.",
   heading = <></>,
   description = "Let's collaborate",
-  submitButtonText = 'Send',
+  submitButtonText = "Send",
 }) => {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const webDevelopment = 'Web Development';
-  const [contactInfo, setContactInfo] = useState({ service: webDevelopment });
-  const [showLoader, setShowLoader] = useState(false);
+  const [show, setShow] = useState(false)
+  const handleClose = () => setShow(false)
+  const webDevelopment = "Web Development"
+  const [contactInfo, setContactInfo] = useState({ service: webDevelopment })
+  const [showLoader, setShowLoader] = useState(false)
   const [displayMessage, setDisplayMessage] = useState({
-    message: '',
-    type: '',
-  });
+    message: "",
+    type: "",
+  })
 
   const handleChange = (key, value) => {
-    setContactInfo({ ...contactInfo, [key]: value });
-  };
+    setContactInfo({ ...contactInfo, [key]: value })
+  }
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShow(true);
-    }, 8000);
+      setShow(true)
+    }, 1000)
 
-    return () => clearTimeout(timer);
-  }, []);
+    return () => clearTimeout(timer)
+  }, [])
 
   function sendMail() {
     return new Promise((resolve, reject) => {
       try {
-        if (!contactInfo) return;
-        fetch('https://email-innow8.herokuapp.com/email', {
-          method: 'POST',
+        if (!contactInfo) return
+        fetch("https://email-innow8.herokuapp.com/email", {
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify(
             {
-              projectName: 'Whiten-App Solutions',
-              to: ['kapilbindal1@gmail.com'],
-              from: 'contact@innow8apps.com',
-              subject: 'contact form White Label',
+              projectName: "Whiten-App Solutions",
+              to: ["kapilbindal1@gmail.com"],
+              from: "contact@innow8apps.com",
+              subject: "contact form White Label",
               text: JSON.stringify(contactInfo),
               htmlText: JSON.stringify(contactInfo),
-            } || ''
+            } || ""
           ),
         })
           .then((res) => {
-            console.log('result: ', res);
-            resolve();
+            console.log("result: ", res)
+            resolve()
           })
           .catch((error) => {
-            console.log('send mail api error', error);
-            reject();
-          });
+            console.log("send mail api error", error)
+            reject()
+          })
       } catch (error) {
-        console.log('send mail try catch error', error);
-        reject();
+        console.log("send mail try catch error", error)
+        reject()
       }
-    });
+    })
   }
 
   const addContactInfo = async () => {
-    return sendMail();
-  };
+    return sendMail()
+  }
 
   const emptyFieldValidationCheck =
     !contactInfo.name ||
     !contactInfo.email ||
     !contactInfo.phoneNumber ||
-    !contactInfo.service;
+    !contactInfo.service
   const handleSubmit = (event) => {
-    setShowLoader(true);
+    setShowLoader(true)
     addContactInfo()
       .then((res) => {
         setDisplayMessage({
-          message: '** Submitted successfully **',
-          type: 'success',
-        });
-        setShowLoader(false);
-        setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
+          message: "** Submitted successfully **",
+          type: "success",
+        })
+        setShowLoader(false)
+        setTimeout(() => setDisplayMessage({ message: "", type: "" }), 2000)
       })
       .catch((err) => {
         setDisplayMessage({
-          message: '** An error occurred **',
-          type: 'error',
-        });
-        setShowLoader(false);
-        setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
-      });
-    setContactInfo({ service: webDevelopment });
-    event.preventDefault();
-  };
+          message: "** An error occurred **",
+          type: "error",
+        })
+        setShowLoader(false)
+        setTimeout(() => setDisplayMessage({ message: "", type: "" }), 2000)
+      })
+    setContactInfo({ service: webDevelopment })
+    event.preventDefault()
+  }
 
   return (
     <>
@@ -163,7 +163,7 @@ const SaaSProductLandingPage = ({
         <FeatureWithSteps
           subheading={
             <span className="uppercase tracking-widest font-bold text-primary-500">
-              {' '}
+              {" "}
               <>
                 Take the easy <span className="text-primary-500">way out</span>
               </>
@@ -187,16 +187,16 @@ const SaaSProductLandingPage = ({
           features={[
             {
               Icon: MoneyIcon,
-              title: 'Affordable',
+              title: "Affordable",
               description:
-                'We promise to offer you the best rate we can - at par with the industry standard.',
+                "We promise to offer you the best rate we can - at par with the industry standard.",
               iconContainerCss: tw`bg-green-300 text-green-800`,
             },
             {
               Icon: BriefcaseIcon,
-              title: 'Professionalism',
+              title: "Professionalism",
               description:
-                'We assure you that our templates are designed and created by professional designers.',
+                "We assure you that our templates are designed and created by professional designers.",
               iconContainerCss: tw`bg-red-300 text-red-800`,
             },
           ]}
@@ -209,46 +209,46 @@ const SaaSProductLandingPage = ({
           }
           heading={
             <>
-              Find the best Developers{' '}
+              Find the best Developers{" "}
               <span className="text-primary-500">here.</span>
             </>
           }
           plans={[
             {
-              name: 'Technology',
-              price: '$17.99',
-              duration: 'Monthly',
-              mainFeature: 'Individuals',
+              name: "Technology",
+              price: "$17.99",
+              duration: "Monthly",
+              mainFeature: "Individuals",
               features: [
-                '30 Templates',
-                '7 Landing Pages',
-                '12 Internal Pages',
-                'Basic Assistance',
+                "30 Templates",
+                "7 Landing Pages",
+                "12 Internal Pages",
+                "Basic Assistance",
               ],
             },
             {
-              name: 'Total Developers',
-              price: '$37.99',
-              duration: 'Monthly',
-              mainFeature: 'Startups',
+              name: "Total Developers",
+              price: "$37.99",
+              duration: "Monthly",
+              mainFeature: "Startups",
               features: [
-                '60 Templates',
-                '15 Landing Pages',
-                '22 Internal Pages',
-                'Priority Assistance',
+                "60 Templates",
+                "15 Landing Pages",
+                "22 Internal Pages",
+                "Priority Assistance",
               ],
               featured: true,
             },
             {
-              name: 'To be allocated',
-              price: '$57.99',
-              duration: 'Monthly',
-              mainFeature: 'Enterprises',
+              name: "To be allocated",
+              price: "$57.99",
+              duration: "Monthly",
+              mainFeature: "Enterprises",
               features: [
-                '90 Templates',
-                '27 Landing Pages',
-                '37 Internal Pages',
-                'Personal Assistance',
+                "90 Templates",
+                "27 Landing Pages",
+                "37 Internal Pages",
+                "Personal Assistance",
               ],
             },
           ]}
@@ -293,7 +293,7 @@ const SaaSProductLandingPage = ({
             <div className="flex items-center justify-center">
               <img
                 src={Collaborate.src}
-                alt={'Collaboration Icon'}
+                alt={"Collaboration Icon"}
                 className="w-full md:w-[50%] lg:w-[40%]"
               />
             </div>
@@ -325,24 +325,24 @@ const SaaSProductLandingPage = ({
           }
           faqs={[
             {
-              question: 'What are the technologies that you use ?',
+              question: "What are the technologies that you use ?",
               answer:
-                'At Whiten App Solutions we continuously update our tech stack to meet the demand of our clients. Presently we work with technologies including - React, React Native, Flutter, Angular, Golang, Nodejs, Swift, Java, Android, Power BI, UI/UX, Quality Assurance, MongoDB',
+                "At Whiten App Solutions we continuously update our tech stack to meet the demand of our clients. Presently we work with technologies including - React, React Native, Flutter, Angular, Golang, Nodejs, Swift, Java, Android, Power BI, UI/UX, Quality Assurance, MongoDB",
             },
             {
-              question: 'How Does your Pricing work?',
+              question: "How Does your Pricing work?",
               answer:
-                'All our solutions and services are 100% custom and are built according to the need of our clients. The pricing of each solution varies as its purely dependent on the demands and feature requirements.',
+                "All our solutions and services are 100% custom and are built according to the need of our clients. The pricing of each solution varies as its purely dependent on the demands and feature requirements.",
             },
             {
-              question: 'Can I hire only one developer?',
+              question: "Can I hire only one developer?",
               answer:
-                'Yes, If you already have a team and are behind a developer, you can hire our top developers to work with your team. We provide contract hiring services to help clients finish their projects quickly by not making commitments and avoiding permanent hires for temporary needs.',
+                "Yes, If you already have a team and are behind a developer, you can hire our top developers to work with your team. We provide contract hiring services to help clients finish their projects quickly by not making commitments and avoiding permanent hires for temporary needs.",
             },
             {
-              question: 'What time zone do we follow?',
+              question: "What time zone do we follow?",
               answer:
-                'Our clients are all around the globe and thereby each project is handled carefully by assigning a team who works on our clients timeline to avoid communication gaps and to be well synchronized with your team.',
+                "Our clients are all around the globe and thereby each project is handled carefully by assigning a team who works on our clients timeline to avoid communication gaps and to be well synchronized with your team.",
             },
           ]}
         />
@@ -350,118 +350,125 @@ const SaaSProductLandingPage = ({
       </div>
       <Footer />
       {show && (
-        <div className="flex items-center justify-center text-[3rem] font-bold text-white h-screen fixed top-0 left-0 w-full right-0 bottom-0 z-50 bg-[#56565699] ">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-screen-xl mx-auto pb-10 pt-32 bg-white">
-            <div className="flex-shrink-0">
-              <img src={ContactUsSrc.src} alt="contact-us" className="w-full" />
-            </div>
-            <div className={` md:mx-0 mt-16 md:mt-0 lg:mr-16 lg:order-first`}>
-              <div className="lg:py-8 text-center md:text-left">
-                {subheading && (
-                  <h5 className="font-bold text-primary-500 text-center md:text-left">
-                    {subheading}
-                  </h5>
-                )}
-                <h2 className="text-4xl sm:text-5xl font-black tracking-wide text-center mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight">
-                  {heading}
-                </h2>
-                {description && (
-                  <p className="mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100">
-                    {description}
-                  </p>
-                )}
-                <form
-                  action=""
-                  method="post"
-                  className="mt-8 md:mt-10 text-sm flex flex-col lg:max-w-sm mx-auto md:mx-0"
+        <div className="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 bg-[#56565699] z-50 p-4 w-full md:inset-0 h-modal md:h-full justify-center items-center flex">
+          <div className="relative w-full max-w-[88%] 2xl:max-w-[61%] h-full lg:h-auto">
+            <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+              <div className="grid grid-cols-1 lg:grid-cols-2 p-12 items-center">
+                <div className="flex-shrink-0">
+                  <img
+                    src={ContactUsSrc.src}
+                    alt="contact-us"
+                    className="w-[67%] m-auto lg:w-full"
+                  />
+                </div>
+                <div
+                  className={` md:mx-0  mt-12 md:mt-0 lg:mr-16 lg:order-first`}
                 >
-                  <input
-                    type="text"
-                    name="name"
-                    value={contactInfo.name || ''}
-                    placeholder="Full Name"
-                    className="mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
-                    id="exampleInputEmail1"
-                    required
-                    aria-describedby="emailHelp"
-                    onChange={(event) =>
-                      handleChange('name', event.target.value)
-                    }
-                    autoComplete="off"
-                  />
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    value={contactInfo.email || ''}
-                    placeholder="Email Address"
-                    className="mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
-                    id="exampleInputEmail1"
-                    aria-describedby="emailHelp"
-                    onChange={(event) =>
-                      handleChange('email', event.target.value)
-                    }
-                    autoComplete="off"
-                  />
-                  <input
-                    type="tel"
-                    name="phoneNumber"
-                    required
-                    value={contactInfo.phoneNumber || ''}
-                    placeholder="Phone Number"
-                    className="mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
-                    id="exampleInputEmail1"
-                    aria-describedby="emailHelp"
-                    onChange={(event) =>
-                      handleChange(
-                        'phoneNumber',
-                        event.target.value >= 0 ? event.target.value : 0
-                      )
-                    }
-                    autoComplete="off"
-                  />
-                  <textarea
-                    className="mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
-                    name="message"
-                    required
-                    value={contactInfo.message || ''}
-                    placeholder="Message"
-                    id="exampleFormControlTextarea1"
-                    rows="2"
-                    onChange={(event) =>
-                      handleChange('message', event.target.value)
-                    }
-                  />
-                  {showLoader ? (
-                    <div className="text-center loader py-2">
-                      <div
-                        className="spinner-border text-secondary"
-                        role="status"
+                  <div className="text-center md:text-left">
+                    {subheading && (
+                      <h5 className="font-bold text-3xl text-primary-500 text-center lg:text-left">
+                        Feel free to get in touch with us.
+                      </h5>
+                    )}
+                    {description && (
+                      <p className="mt-4 text-center lg:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100">
+                        {description}
+                      </p>
+                    )}
+                    <form
+                      action=""
+                      method="post"
+                      className="mt-4 md:mt-10 text-sm flex flex-col lg:max-w-sm mx-auto md:mx-0"
+                    >
+                      <input
+                        type="text"
+                        name="name"
+                        value={contactInfo.name || ""}
+                        placeholder="Full Name"
+                        className="mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
+                        id="exampleInputEmail1"
+                        required
+                        aria-describedby="emailHelp"
+                        onChange={(event) =>
+                          handleChange("name", event.target.value)
+                        }
+                        autoComplete="off"
+                      />
+                      <input
+                        type="email"
+                        name="email"
+                        required
+                        value={contactInfo.email || ""}
+                        placeholder="Email Address"
+                        className="mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                        onChange={(event) =>
+                          handleChange("email", event.target.value)
+                        }
+                        autoComplete="off"
+                      />
+                      <input
+                        type="tel"
+                        name="phoneNumber"
+                        required
+                        value={contactInfo.phoneNumber || ""}
+                        placeholder="Phone Number"
+                        className="mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                        onChange={(event) =>
+                          handleChange(
+                            "phoneNumber",
+                            event.target.value >= 0 ? event.target.value : 0
+                          )
+                        }
+                        autoComplete="off"
+                      />
+                      <textarea
+                        className="mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
+                        name="message"
+                        required
+                        value={contactInfo.message || ""}
+                        placeholder="Message"
+                        id="exampleFormControlTextarea1"
+                        rows="2"
+                        onChange={(event) =>
+                          handleChange("message", event.target.value)
+                        }
+                      />
+                      {showLoader ? (
+                        <div className="text-center loader py-2">
+                          <div
+                            className="spinner-border text-secondary"
+                            role="status"
+                          >
+                            <span className="visually-hidden">Loading...</span>
+                          </div>
+                        </div>
+                      ) : (
+                        <div className={`message-${displayMessage.type}`}>
+                          <span>{displayMessage.message}</span>
+                        </div>
+                      )}
+                      <PrimaryButtonBase
+                        className="inline-block mt-8"
+                        type="submit"
+                        onClick={handleSubmit}
+                        disabled={emptyFieldValidationCheck}
                       >
-                        <span className="visually-hidden">Loading...</span>
-                      </div>
-                    </div>
-                  ) : (
-                    <div className={`message-${displayMessage.type}`}>
-                      <span>{displayMessage.message}</span>
-                    </div>
-                  )}
-                  <PrimaryButtonBase
-                    className="inline-block mt-8"
-                    type="submit"
-                    onClick={handleSubmit}
-                    disabled={emptyFieldValidationCheck}
-                  >
-                    {submitButtonText}
-                  </PrimaryButtonBase>
-                </form>
+                        {submitButtonText}
+                      </PrimaryButtonBase>
+                    </form>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       )}
     </>
-  );
-};
+  )
+}
 
-export default SaaSProductLandingPage;
+export default SaaSProductLandingPage
