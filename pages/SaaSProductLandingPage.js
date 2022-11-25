@@ -46,7 +46,7 @@ const SaaSProductLandingPage = ({
   useEffect(() => {
     const timer = setTimeout(() => {
       setShow(true)
-    }, 1000)
+    }, 8000)
 
     return () => clearTimeout(timer)
   }, [])
