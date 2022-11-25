@@ -1,23 +1,23 @@
-import React, { useEffect } from "react";
-import ReactGA from "react-ga";
-import EcommerceBanner from "../assets/images/EcommerceDev/Ecommerce-banner.svg";
-import Agile from "../assets/images/EcommerceDev/icons/AgileApproach.png";
-import Platform from "../assets/images/EcommerceDev/icons/platformIndep.png";
-import BestUi from "../assets/images/EcommerceDev/icons/bestUi.png";
-import FeatureRich from "../assets/images/EcommerceDev/icons/featureRich.png";
-import TechStack from "../assets/images/EcommerceDev/icons/besttechstack.png";
-import B2b from "../assets/images/EcommerceDev/b2b.png";
-import B2c from "../assets/images/EcommerceDev/b2c.svg";
-import MultiVender from "../assets/images/EcommerceDev/multivender.png";
-import CMS from "../assets/images/EcommerceDev/cmsintegration.png";
-import Migration from "../assets/images/EcommerceDev/migrationsupport.png";
-import ApiIntegration from "../assets/images/EcommerceDev/apiIntegration.png";
-import Head from "next/head";
-import Header from "../components/headers/light.js";
-import Footer from "../components/footers/FiveColumnWithInputForm.js";
-import MainServices from "../components/MainServices";
-import Features from "../components/features/ThreeColSimple.js";
-import Features1 from "../components/features/ThreeColWithSideImage.js";
+import React, { useEffect } from "react"
+import ReactGA from "react-ga"
+import EcommerceBanner from "../assets/images/EcommerceDev/Ecommerce-banner.svg"
+import Agile from "../assets/images/EcommerceDev/icons/AgileApproach.png"
+import Platform from "../assets/images/EcommerceDev/icons/platformIndep.png"
+import BestUi from "../assets/images/EcommerceDev/icons/bestUi.png"
+import FeatureRich from "../assets/images/EcommerceDev/icons/featureRich.png"
+import TechStack from "../assets/images/EcommerceDev/icons/besttechstack.png"
+import B2b from "../assets/images/EcommerceDev/b2b.png"
+import B2c from "../assets/images/EcommerceDev/b2c.svg"
+import MultiVender from "../assets/images/EcommerceDev/multivender.png"
+import CMS from "../assets/images/EcommerceDev/cmsintegration.png"
+import Migration from "../assets/images/EcommerceDev/migrationsupport.png"
+import ApiIntegration from "../assets/images/EcommerceDev/apiIntegration.png"
+import Head from "next/head"
+import Header from "../components/headers/light.js"
+import Footer from "../components/footers/FiveColumnWithInputForm.js"
+import MainServices from "../components/MainServices"
+import Features from "../components/features/ThreeColSimple.js"
+import Features1 from "../components/features/ThreeColWithSideImage.js"
 
 const EnterpriseServicePageItemToDisplay = [
   {
@@ -61,7 +61,7 @@ const EnterpriseServicePageItemToDisplay = [
     heading: `Modernizing Legacy Applications`,
     desc: `Without interrupting the business flow, we modernize existing technology with the latest software to create a powerful system. We assist in updating IT Stacks to achieve corporate goals. This includes platform migration,re-design and architecture and simplifying the business process with automation.`,
   },
-];
+]
 
 const EnterpriseCards = [
   {
@@ -94,13 +94,13 @@ const EnterpriseCards = [
     description:
       "As the tech stack is the foundation of any software, we make sure that we use only the best-suited technologystack for our eCommerce solutions. This helps us come up with the best architecture and layout for your eCommerce needs",
   },
-];
+]
 
 const EnterpriseSoftwares = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-    ReactGA.pageview(window.location.pathname);
-  }, []);
+    window.scrollTo(0, 0)
+    ReactGA.pageview(window.location.pathname)
+  }, [])
   return (
     <>
       <Header />
@@ -167,7 +167,7 @@ const EnterpriseSoftwares = () => {
               description={element.desc}
               textOnLeft={element.textOnLeft}
             />
-          );
+          )
         })}
 
         <Features1
@@ -184,65 +184,10 @@ const EnterpriseSoftwares = () => {
           cards={EnterpriseCards}
           isEcommerse={true}
         />
-
-        {/* <div className="EcommerceDev">
-          <div className="Dev EnterpriseDev">
-            <section className="well-know">
-              <div className="col-lg-10 col-md-11 mx-auto">
-                <div className="row infoCards m-0">
-                  <div className="top">
-                    <h3>We are well-known for…</h3>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="cnt infoCard darkorange">
-                      <h4>Domain experts</h4>
-                      <p>
-                        We have been Serving the eCommerce Domain for a long
-                        time. This has exposed us to challenges that have led us
-                        to mould into the best eCommerce Developers.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="cnt infoCard golden">
-                      <h4>Agile Work Flow</h4>
-                      <p>
-                        From prototype building to delivery of the product, we
-                        follow an agile methodology that served us with superior
-                        quality, control, satisfaction and reduced risk.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="cnt infoCard golden ">
-                      <h4>Timely delivery</h4>
-                      <p>
-                        Time is money, For us and as well as for our customers.
-                        We get things are done within the estimated time that
-                        was handed over to our clients at the beginning of the
-                        project.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="cnt infoCard darkorange">
-                      <h4>Post delivery support and Maintenance</h4>
-                      <p>
-                        We know the game begins when the store is up and
-                        running. To assure smooth running and scaling we provide
-                        24/7 support and extended maintenance service.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div> */}
       </div>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default EnterpriseSoftwares;
+export default EnterpriseSoftwares
