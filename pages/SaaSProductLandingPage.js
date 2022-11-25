@@ -12,10 +12,8 @@ import MainFeature from '../components/features/TwoColWithButton.js';
 import FeatureWithSteps from '../components/features/TwoColWithSteps.js';
 import MainFeature2 from '../components/features/TwoColWithTwoHorizontalFeaturesAndButton.js';
 import Footer from '../components/footers/FiveColumnWithBackground.js';
-// import { css } from "styled-components/macro"; //eslint-disable-line
 import Hero from '../components/hero/TwoColumnWithInput.js';
 import Pricing from '../components/pricing/ThreePlans.js';
-import Testimonial from '../components/testimonials/TwoColumnWithImageAndRating.js';
 import Header from '../components/headers/light';
 import Head from 'next/head';
 import Collaborate from '../assets/images/Collaborate.png';
@@ -23,18 +21,6 @@ import ContactModal from '../components/ContactModal';
 
 const SaaSProductLandingPage = () => {
   const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const webDevelopment = 'Web Development';
-  const [contactInfo, setContactInfo] = useState({ service: webDevelopment });
-  const [showLoader, setShowLoader] = useState(false);
-  const [displayMessage, setDisplayMessage] = useState({
-    message: '',
-    type: '',
-  });
-
-  const handleChange = (key, value) => {
-    setContactInfo({ ...contactInfo, [key]: value });
-  };
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -43,73 +29,6 @@ const SaaSProductLandingPage = () => {
 
     return () => clearTimeout(timer);
   }, []);
-
-  function sendMail() {
-    return new Promise((resolve, reject) => {
-      try {
-        if (!contactInfo) return;
-        fetch('https://email-innow8.herokuapp.com/email', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(
-            {
-              projectName: 'Whiten-App Solutions',
-              to: ['kapilbindal1@gmail.com'],
-              from: 'contact@innow8apps.com',
-              subject: 'contact form White Label',
-              text: JSON.stringify(contactInfo),
-              htmlText: JSON.stringify(contactInfo),
-            } || ''
-          ),
-        })
-          .then((res) => {
-            console.log('result: ', res);
-            resolve();
-          })
-          .catch((error) => {
-            console.log('send mail api error', error);
-            reject();
-          });
-      } catch (error) {
-        console.log('send mail try catch error', error);
-        reject();
-      }
-    });
-  }
-
-  const addContactInfo = async () => {
-    return sendMail();
-  };
-
-  const emptyFieldValidationCheck =
-    !contactInfo.name ||
-    !contactInfo.email ||
-    !contactInfo.phoneNumber ||
-    !contactInfo.service;
-  const handleSubmit = (event) => {
-    setShowLoader(true);
-    addContactInfo()
-      .then((res) => {
-        setDisplayMessage({
-          message: '** Submitted successfully **',
-          type: 'success',
-        });
-        setShowLoader(false);
-        setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
-      })
-      .catch((err) => {
-        setDisplayMessage({
-          message: '** An error occurred **',
-          type: 'error',
-        });
-        setShowLoader(false);
-        setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
-      });
-    setContactInfo({ service: webDevelopment });
-    event.preventDefault();
-  };
 
   return (
     <>
