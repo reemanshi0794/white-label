@@ -1,10 +1,12 @@
-import React from "react"
-import FacebookIcon from "../../assets/images/facebook-icon.svg"
-import Logo from "../../assets/images/logo.png"
-import SvgDecoratorBlob1 from "../../assets/images/svg-decorator-blob-9.svg"
-import TwitterIcon from "../../assets/images/twitter-icon.svg"
-import YoutubeIcon from "../../assets/images/youtube-icon.svg"
-import FooterSVG from "../../assets/images/FooterSVG.svg"
+import React from 'react';
+import FacebookIcon from '../../assets/images/facebook-icon.svg';
+import Logo from '../../assets/images/logo.png';
+import SvgDecoratorBlob1 from '../../assets/images/svg-decorator-blob-9.svg';
+import TwitterIcon from '../../assets/images/twitter-icon.svg';
+import YoutubeIcon from '../../assets/images/youtube-icon.svg';
+import InstagramWhite from '../../assets/images/InstagramWhite.svg';
+import LinkedinWhite from '../../assets/images/LinkedinWhite.svg';
+import FooterSVG from '../../assets/images/FooterSVG.svg';
 // const Container = tw.div`relative bg-primary-500 text-gray-100 -mb-8 -mx-8 px-8 py-20 lg:py-24`;
 // const Content = tw.div`max-w-screen-xl mx-auto relative z-10`;
 // const FiveColumns = tw.div`flex flex-wrap text-center sm:text-left justify-center sm:justify-start md:justify-between -mt-12`;
@@ -45,12 +47,12 @@ import FooterSVG from "../../assets/images/FooterSVG.svg"
 
 export default () => {
   const handleFaq = (id) => {
-    const violation = document.getElementById(id)
+    const violation = document.getElementById(id);
     window.scrollTo({
       top: violation.offsetTop,
-      behavior: "smooth",
-    })
-  }
+      behavior: 'smooth',
+    });
+  };
   return (
     <div className=" overflow-hidden">
       <div className="relative bg-primary-500 text-gray-100 px-8 py-20 lg:py-24">
@@ -253,19 +255,31 @@ export default () => {
             <div className="mt-8 md:mt-0 flex">
               <a
                 className="cursor-pointer p-2 rounded-full bg-gray-100 text-gray-900 hover:bg-gray-400 transition duration-300 mr-4 last:mr-0"
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=100088241919758"
               >
                 <FacebookIcon className="w-4 h-4" />
               </a>
               <a
+                className="cursor-pointer p-2 rounded-full bg-gray-900 text-gray-100 hover:bg-gray-700 transition duration-300 mr-4 last:mr-0"
+                href="https://www.facebook.com/profile.php?id=100088241919758"
+              >
+                <LinkedinWhite className="w-4 h-4" />
+              </a>
+              <a
+                className="cursor-pointer p-2 rounded-full bg-gray-900 text-gray-100 hover:bg-gray-700 transition duration-300 mr-4 last:mr-0"
+                href="https://www.instagram.com/whiten_apps/"
+              >
+                <InstagramWhite className="w-4 h-4" />
+              </a>
+              <a
                 className="cursor-pointer p-2 rounded-full bg-gray-100 text-gray-900 hover:bg-gray-400 transition duration-300 mr-4 last:mr-0"
-                href="https://twitter.com"
+                href="https://twitter.com/WhitenApps"
               >
                 <TwitterIcon className="w-4 h-4" />
               </a>
               <a
                 className="cursor-pointer p-2 rounded-full bg-gray-100 text-gray-900 hover:bg-gray-400 transition duration-300 mr-4 last:mr-0"
-                href="https://youtube.com"
+                href="https://www.youtube.com/@whitenappssolutions"
               >
                 <YoutubeIcon className="w-4 h-4" />
               </a>
@@ -278,5 +292,5 @@ export default () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

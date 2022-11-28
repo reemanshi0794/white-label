@@ -1,40 +1,46 @@
 import React, { useState } from 'react';
 import Header from '../components/headers/light.js';
 import Footer from '../components/footers/FiveColumnWithInputForm.js';
+import Crowdfunding from '../assets/images/Crowdfunding.png';
+import Nft from '../assets/images/Nft.png';
 import Head from 'next/head';
 
 export default ({
   headingText = 'Blog Posts',
   posts = [
     {
-      imageSrc:
-        'https://images.unsplash.com/photo-1499678329028-101435549a4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80',
-      category: 'Travel Tips',
-      date: 'April 21, 2020',
-      title: 'Safely Travel in Foreign Countries',
+      imageSrc: Crowdfunding,
+      date: 'November 28, 2022',
+      title: 'A complete guide for developing Crowdfunding App in 2022',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      url: 'https://timerse.com',
-      featured: true,
+        'In the digital economy, crowdfunding is gaining popularity and rising to the top. The size of the worldwide crowdfunding business was over $17 billion in 2021, and by 2028, it is expected to be worth over $43 billion....',
+      url: 'https://reddit.com',
     },
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
-    getPlaceholderPost(),
+    {
+      imageSrc: Nft,
+      date: 'November 28, 2022',
+      title: 'Development of a Whiten Apps NFT Marketplace',
+      description:
+        'The building of the NFT marketplace can use ready-made solutions called NFT Marketplace Clone solutions.It entails copying any well-known NFT marketplace, such as Opensea or Rarible, and implementing UI platform adjustments based on the needs of the company...',
+      url: 'https://reddit.com',
+    },
+    // getPlaceholderPost(),
+    // getPlaceholderPost(),
+    // getPlaceholderPost(),
+    // getPlaceholderPost(),
+    // getPlaceholderPost(),
+    // getPlaceholderPost(),
+    // getPlaceholderPost(),
+    // getPlaceholderPost(),
+    // getPlaceholderPost(),
+    // getPlaceholderPost(),
+    // getPlaceholderPost(),
+    // getPlaceholderPost(),
+    // getPlaceholderPost(),
+    // getPlaceholderPost(),
+    // getPlaceholderPost(),
+    // getPlaceholderPost(),
+    // getPlaceholderPost(),
   ],
 }) => {
   const [visible, setVisible] = useState(7);
@@ -96,7 +102,7 @@ export default ({
                         }
                       >
                         <img
-                          src={post.imageSrc}
+                          src={post.imageSrc.src}
                           className={
                             post.featured ? 'w-full object-cover h-96' : ''
                           }
@@ -118,7 +124,7 @@ export default ({
                         <div className="mt-1 font-black text-2xl text-gray-900 group-hover:text-primary-500 transition duration-300">
                           {post.title}
                         </div>
-                        {post.featured && post.description && (
+                        {post.description && (
                           <div
                             className={
                               post.featured
@@ -156,10 +162,19 @@ export default ({
 const getPlaceholderPost = () => ({
   imageSrc:
     'https://images.unsplash.com/photo-1418854982207-12f710b74003?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80',
-  category: 'Travel Guide',
-  date: 'April 19, 2020',
-  title: 'Visit the beautiful Alps in Switzerland',
+  date: 'November 28, 2022',
+  title: 'A complete guide for developing Crowdfunding App in 2022',
   description:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   url: 'https://reddit.com',
 });
+// {
+//   imageSrc:
+//     'https://images.unsplash.com/photo-1418854982207-12f710b74003?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80',
+//   category: 'Travel Guide',
+//   date: 'April 19, 2020',
+//   title: 'Visit the beautiful Alps in Switzerland',
+//   description:
+//     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+//   url: 'https://reddit.com',
+// }

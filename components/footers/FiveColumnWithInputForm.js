@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import FacebookIcon from '../../assets/images/facebook-icon.svg';
 import TwitterIcon from '../../assets/images/twitter-icon.svg';
 import YoutubeIcon from '../../assets/images/youtube-icon.svg';
+import LinkedinBlack from '../../assets/images/LinkedinBlack.svg';
+import InstagramBlack from '../../assets/images/InstagramBlack.svg';
 import Loader from '../../assets/images/loader.gif';
 
 export default () => {
@@ -80,7 +82,7 @@ export default () => {
         })
         .catch((err) => {
           setDisplayMessage({
-            message: ' An error occurred ',
+            message: 'An error occurred',
             type: 'error',
           });
           setShowLoader(false);
@@ -88,7 +90,7 @@ export default () => {
         });
     } else {
       setDisplayMessage({
-        message: ' Invalid Email ',
+        message: 'Invalid Email',
         type: 'error',
       });
       setShowLoader(false);
@@ -223,19 +225,31 @@ export default () => {
           <div className="mt-8 md:mt-0 flex">
             <a
               className="cursor-pointer p-2 rounded-full bg-gray-900 text-gray-100 hover:bg-gray-700 transition duration-300 mr-4 last:mr-0"
-              href="https://facebook.com"
+              href="https://www.facebook.com/profile.php?id=100088241919758"
             >
               <FacebookIcon className="w-4 h-4" />
             </a>
             <a
               className="cursor-pointer p-2 rounded-full bg-gray-900 text-gray-100 hover:bg-gray-700 transition duration-300 mr-4 last:mr-0"
-              href="https://twitter.com"
+              href="https://www.facebook.com/profile.php?id=100088241919758"
+            >
+              <LinkedinBlack className="w-4 h-4" />
+            </a>
+            <a
+              className="cursor-pointer p-2 rounded-full bg-gray-900 text-gray-100 hover:bg-gray-700 transition duration-300 mr-4 last:mr-0"
+              href="https://www.instagram.com/whiten_apps/"
+            >
+              <InstagramBlack className="w-4 h-4" />
+            </a>
+            <a
+              className="cursor-pointer p-2 rounded-full bg-gray-900 text-gray-100 hover:bg-gray-700 transition duration-300 mr-4 last:mr-0"
+              href="https://twitter.com/WhitenApps"
             >
               <TwitterIcon className="w-4 h-4" />
             </a>
             <a
               className="cursor-pointer p-2 rounded-full bg-gray-900 text-gray-100 hover:bg-gray-700 transition duration-300 mr-4 last:mr-0"
-              href="https://youtube.com"
+              href="https://www.youtube.com/@whitenappssolutions"
             >
               <YoutubeIcon className="w-4 h-4" />
             </a>
