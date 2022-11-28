@@ -153,7 +153,7 @@ const BlockChainDev = () => {
         })}
 
         <div className="bg-[#efeefe] py-20 px-8 md:px-20 lg:px-8">
-          <div className="top text-center mb-[100px] mx-5">
+          <div className="top text-center mb-[27px] md:mb-[100px] mx-5">
             <h3 className="text-[30px] lg:text-[45px] font-bold">
               Our Blockchain Development Process
             </h3>
