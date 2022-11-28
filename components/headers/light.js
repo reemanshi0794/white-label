@@ -125,6 +125,10 @@ export default ({ logoLink, className }) => {
     setIsToggle(!isToggle);
   };
 
+  const getServicesLink = () => {
+    return ServicesPages.map((service) => service.link);
+  };
+
   return (
     width !== 0 && (
       <>
@@ -195,9 +199,11 @@ export default ({ logoLink, className }) => {
                   <a
                     onClick={handleShowDropdown}
                     onMouseEnter={showServiceDropdown}
-                    className="text-lg lg:text-sm my-2 lg:mx-6 lg:my-0
-                font-semibold tracking-wide transition duration-300 text-[#212529]
-                pb-1 border-b-2 border-transparent hover:border-primary-500 focus:text-primary-500"
+                    className={
+                      getServicesLink().includes(router.asPath)
+                        ? 'text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent border-primary-500 focus:text-primary-500'
+                        : 'text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500'
+                    }
                   >
                     Services
                   </a>
@@ -229,7 +235,7 @@ export default ({ logoLink, className }) => {
                             >
                               {selectedService === index ? (
                                 <>
-                                  <div className=" pr-4">{image}</div>
+                                  <div className="pr-4">{image}</div>
                                   <div className="pr-4 text-primary-500">
                                     {title}
                                   </div>
