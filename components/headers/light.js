@@ -20,6 +20,7 @@ import GreenEnterprise from '../../assets/images/GreenEnterprise.svg';
 import GreenNFT from '../../assets/images/GreenNFT.svg';
 import GreenQA from '../../assets/images/GreenQA.svg';
 import GreenWeb from '../../assets/images/GreenWeb.svg';
+import { useRouter } from 'next/router';
 
 const ServicesPages = [
   {
@@ -90,6 +91,8 @@ export default ({ logoLink, className }) => {
   useEffect(() => {
     width > 768 && setIsToggle(false);
   }, [width]);
+
+  const router = useRouter();
 
   const defaultLogoLink = (
     <div
@@ -168,9 +171,11 @@ export default ({ logoLink, className }) => {
               <div className="flex flex-col p-4 mt-4 font-semibold md:flex-row md:space-x-8 md:mt-0 text-lg lg:text-sm items-center">
                 <a
                   href="/about-us"
-                  className="text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
-                font-semibold tracking-wide transition duration-300
-                pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500"
+                  className={
+                    router.asPath === '/about-us'
+                      ? 'text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent border-primary-500 focus:text-primary-500'
+                      : 'text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500'
+                  }
                   aria-current="page"
                 >
                   About
@@ -178,9 +183,11 @@ export default ({ logoLink, className }) => {
 
                 <a
                   href="/blog-post"
-                  className="text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
-                font-semibold tracking-wide transition duration-300
-                pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500"
+                  className={
+                    router.asPath === '/blog-post'
+                      ? 'text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent border-primary-500 focus:text-primary-500'
+                      : 'text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500'
+                  }
                 >
                   Blog
                 </a>
@@ -190,7 +197,7 @@ export default ({ logoLink, className }) => {
                     onMouseEnter={showServiceDropdown}
                     className="text-lg lg:text-sm my-2 lg:mx-6 lg:my-0
                 font-semibold tracking-wide transition duration-300 text-[#212529]
-                pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500"
+                pb-1 border-b-2 border-transparent hover:border-primary-500 focus:text-primary-500"
                   >
                     Services
                   </a>
@@ -242,9 +249,11 @@ export default ({ logoLink, className }) => {
                 </div>
                 <a
                   href="/career"
-                  className="text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
-                font-semibold tracking-wide transition duration-300
-                pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500"
+                  className={
+                    router.asPath === '/career'
+                      ? 'text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent border-primary-500 focus:text-primary-500'
+                      : 'text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500'
+                  }
                 >
                   Careers
                 </a>
