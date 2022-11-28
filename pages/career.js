@@ -11,6 +11,7 @@ import Innovation from '../assets/images/Innovation.svg';
 import Teamwork from '../assets/images/Teamwork.svg';
 import Creativity from '../assets/images/Creativity.svg';
 import Motivation from '../assets/images/Motivation.svg';
+import Map from '../assets/images/Map.svg';
 
 import Footer from '../components/footers/FiveColumnWithInputForm.js';
 import ContactModal from '../components/ContactModal/index.js';
@@ -40,6 +41,28 @@ const CareerPage = ({
       imageSrc: <Motivation />,
       title: 'Motivation',
       description: 'Commitment to the project',
+    },
+  ],
+  techCards = [
+    {
+      title: 'Senior React Developer',
+      buttonTitle: 'Apply Now',
+      image: <Map />,
+    },
+    {
+      title: 'Java Tech Lead',
+      buttonTitle: 'Apply Now',
+      image: <Map />,
+    },
+    {
+      title: 'React Native Developer',
+      buttonTitle: 'Apply Now',
+      image: <Map />,
+    },
+    {
+      title: 'NodeJs Developer',
+      buttonTitle: 'Apply Now',
+      image: <Map />,
     },
   ],
 }) => {
@@ -134,23 +157,33 @@ const CareerPage = ({
           </div>
 
           <div className=" mx-auto w-[100%] md:w-4/5 mt-8 md:mt-16">
-            <div className=" mb-4 md:mb-[28px] p-[14px] md:px-4 md:py-5 flex justify-between items-center bg-white shadow-[0_0px_20px_rgba(95,125,149,30%)]">
-              <div>
-                <h4 className=" font-bold text-sm md:text-[28px] text-black mb-[2px] md:mb-2">
-                  Senior React Developer
-                </h4>
-                <h5 className=" text-xs md:text-lg text-[#a7a7a7]">Remote</h5>
-              </div>
-              <a
-                // href="/contact-us"
-                onClick={() => setShow(true)}
-                className=" text-sm md:text-base lg:mx-0 py-[7px] px-5 md:px-8 md:py-3 bg-primary-500 text-gray-100 hover:bg-secondary-700 hover:text-gray-200 focus:shadow-outline border-b-0 rounded-full"
-              >
-                Apply Now
-              </a>
-              {show && <ContactModal setShow={setShow} />}
-            </div>
-            <div className=" mb-4 md:mb-[28px] p-[14px] md:px-4 md:py-5 flex justify-between items-center bg-white shadow-[0_0px_20px_rgba(95,125,149,30%)]">
+            {techCards.map((card) => {
+              const { title, buttonTitle, image } = card;
+              return (
+                <div className=" mb-4 md:mb-[28px] p-[14px] md:px-4 md:py-5 flex justify-between items-center bg-white shadow-[0_0px_20px_rgba(95,125,149,30%)]">
+                  <div className="flex flex-col">
+                    <h4 className=" font-bold text-sm md:text-[28px] text-black mb-[2px] md:mb-2">
+                      {title}
+                    </h4>
+                    <div className="flex items-center">
+                      {image}
+                      <h5 className=" text-xs md:text-lg text-[#a7a7a7] ml-1">
+                        Remote
+                      </h5>
+                    </div>
+                  </div>
+                  <a
+                    // href="/contact-us"
+                    onClick={() => setShow(true)}
+                    className=" text-sm md:text-base lg:mx-0 cursor-pointer py-[7px] px-5 md:px-8 md:py-3 bg-primary-500 text-gray-100 hover:bg-secondary-700 hover:text-gray-200 focus:shadow-outline border-b-0 rounded-full"
+                  >
+                    {buttonTitle}
+                  </a>
+                </div>
+              );
+            })}
+            {show && <ContactModal setShow={setShow} />}
+            {/* <div className=" mb-4 md:mb-[28px] p-[14px] md:px-4 md:py-5 flex justify-between items-center bg-white shadow-[0_0px_20px_rgba(95,125,149,30%)]">
               <div>
                 <h4 className=" font-bold text-base md:text-[28px] text-black mb-[2px] md:mb-2">
                   Java Tech Lead
@@ -191,7 +224,7 @@ const CareerPage = ({
               >
                 Apply Now
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
