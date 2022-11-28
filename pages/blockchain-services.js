@@ -1,34 +1,34 @@
-import React, { useEffect } from "react"
-import ReactGA from "react-ga"
-import BlockChainBanner from "../assets/images/Blockchain/blockChainBanner.svg"
-import Etherium from "../assets/images/Blockchain/etherium.png"
-import HyperLedger from "../assets/images/Blockchain/hyperledger.png"
-import Corda from "../assets/images/Blockchain/corda.png"
-import MultiChain from "../assets/images/Blockchain/multichain.png"
-import EOS from "../assets/images/Blockchain/eos.png"
-import Stellar from "../assets/images/Blockchain/Stellar.png"
-import Tron from "../assets/images/Blockchain/tron.png"
-import Head from "next/head"
-import Footer from "../components/footers/FiveColumnWithInputForm.js"
-import MainServices from "../components/MainServices"
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
+import BlockChainBanner from '../assets/images/Blockchain/blockChainBanner.svg';
+import Etherium from '../assets/images/Blockchain/etherium.png';
+import HyperLedger from '../assets/images/Blockchain/hyperledger.png';
+import Corda from '../assets/images/Blockchain/corda.png';
+import MultiChain from '../assets/images/Blockchain/multichain.png';
+import EOS from '../assets/images/Blockchain/eos.png';
+import Stellar from '../assets/images/Blockchain/Stellar.png';
+import Tron from '../assets/images/Blockchain/tron.png';
+import Head from 'next/head';
+import Footer from '../components/footers/FiveColumnWithInputForm.js';
+import MainServices from '../components/MainServices';
 
 // import { BlockChainAppPageItemToDisplay } from "../data/data";
-import One from "../assets/images/Blockchain/one.png"
-import Two from "../assets/images/Blockchain/two.png"
-import Three from "../assets/images/Blockchain/three.png"
-import Four from "../assets/images/Blockchain/four.png"
-import Five from "../assets/images/Blockchain/five.png"
-import Six from "../assets/images/Blockchain/six.png"
-import Seven from "../assets/images/Blockchain/seven.png"
-import Link from "next/link"
-import Header from "../components/headers/light.js"
-import CryptoWallet from "../assets/images/Blockchain/crypto.svg"
-import NFTMarketplace from "../assets/images/Blockchain/nft-marketplace.png"
-import DApps from "../assets/images/Blockchain/dapps.png"
-import BlockChainSupply from "../assets/images/Blockchain/blockchain.png"
-import PrivateBlockChain from "../assets/images/Blockchain/private.png"
-import Features from "../components/features/ThreeColSimple.js"
-import Features1 from "../components/features/ThreeColWithSideImage.js"
+import One from '../assets/images/One.png';
+import Two from '../assets/images/Two.png';
+import Three from '../assets/images/Three.png';
+import Four from '../assets/images/Four.png';
+import Five from '../assets/images/Five.png';
+import Six from '../assets/images/Six.png';
+import Seven from '../assets/images/Seven.png';
+import Link from 'next/link';
+import Header from '../components/headers/light.js';
+import CryptoWallet from '../assets/images/Blockchain/crypto.svg';
+import NFTMarketplace from '../assets/images/Blockchain/nft-marketplace.png';
+import DApps from '../assets/images/Blockchain/dapps.png';
+import BlockChainSupply from '../assets/images/Blockchain/blockchain.png';
+import PrivateBlockChain from '../assets/images/Blockchain/private.png';
+import Features from '../components/features/ThreeColSimple.js';
+import Features1 from '../components/features/ThreeColWithSideImage.js';
 
 const BlockChainAppPageItemToDisplay = [
   {
@@ -66,13 +66,13 @@ const BlockChainAppPageItemToDisplay = [
     desc: `For banks and Businesses, we provide Private (Permissioned Blockchains ) to advance smooth operations. Our developers are well packed to help you decentralize daily operations`,
     textOnLeft: true,
   },
-]
+];
 
 const BlockChainDev = () => {
   useEffect(() => {
-    window.scrollTo(0, 0)
-    ReactGA.pageview(window.location.pathname)
-  }, [])
+    window.scrollTo(0, 0);
+    ReactGA.pageview(window.location.pathname);
+  }, []);
   return (
     <>
       <Header />
@@ -149,7 +149,7 @@ const BlockChainDev = () => {
               description={element.desc}
               textOnLeft={element.textOnLeft}
             />
-          )
+          );
         })}
 
         <div className="bg-[#efeefe] py-20 px-8">
@@ -345,7 +345,7 @@ const BlockChainDev = () => {
       </div>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default BlockChainDev
+export default BlockChainDev;
