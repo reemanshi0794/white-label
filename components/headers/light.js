@@ -93,12 +93,8 @@ export default ({ logoLink, className }) => {
   }, [width]);
 
   const router = useRouter();
-
   const defaultLogoLink = (
-    <div
-      className="my-2 lg:text-sm lg:my-0 tracking-wide transition duration-300 pb-1 border-transparent hover:border-primary-500 hocus:text-primary-500 flex items-center font-black border-b-0 xl:text-2xl ml-0!"
-      // href="/"
-    >
+    <div className="my-2 lg:text-sm lg:my-0 tracking-wide transition duration-300 pb-1 border-transparent hover:border-primary-500 hocus:text-primary-500 flex items-center font-black border-b-0 xl:text-2xl ml-0!">
       <LogoSVG alt="logo" className="mr-3" />
     </div>
   );
@@ -287,9 +283,11 @@ export default ({ logoLink, className }) => {
                 <div className="flex flex-col p-4 font-semibold md:flex-row md:space-x-8 md:mt-0 text-lg lg:text-sm items-start bg-white text-black rounded-lg">
                   <a
                     href="/about-us"
-                    className="text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
-                font-semibold tracking-wide transition duration-300
-                pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500"
+                    className={
+                      router.asPath === '/about-us'
+                        ? 'text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent border-primary-500 Focus:text-primary-500'
+                        : 'text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent hover:border-primary-500 Focus:text-primary-500'
+                    }
                     aria-current="page"
                   >
                     About
@@ -297,9 +295,11 @@ export default ({ logoLink, className }) => {
 
                   <a
                     href="/blog-post"
-                    className="text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
-                font-semibold tracking-wide transition duration-300
-                pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500"
+                    className={
+                      router.asPath === '/blog-post'
+                        ? 'text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent border-primary-500 hocus:text-primary-500'
+                        : 'text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500'
+                    }
                   >
                     Blog
                   </a>
@@ -310,9 +310,11 @@ export default ({ logoLink, className }) => {
                       className="flex items-center"
                     >
                       <a
-                        className="text-lg lg:text-sm my-2 lg:mx-6 lg:my-0
-                font-semibold tracking-wide transition duration-300 text-[#212529]
-                pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500"
+                        className={
+                          getServicesLink().includes(router.asPath)
+                            ? 'text-lg lg:text-sm my-2 lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 text-[#212529]pb-1 border-b-2 border-transparent border-primary-500 hocus:text-primary-500'
+                            : 'text-lg lg:text-sm my-2 lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 text-[#212529]pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500'
+                        }
                       >
                         Services
                       </a>
@@ -353,7 +355,16 @@ export default ({ logoLink, className }) => {
                       })}
                     </div>
                   </div>
-
+                  <a
+                    href="/career"
+                    className={
+                      router.asPath === '/career'
+                        ? 'text-lg lg:text-sm my-2 lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 text-[#212529]pb-1 border-b-2 border-transparent border-primary-500 hocus:text-primary-500'
+                        : 'text-lg lg:text-sm my-2 lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 text-[#212529]pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500'
+                    }
+                  >
+                    Careers
+                  </a>
                   <a
                     href="/contact-us"
                     className="lg:mx-0

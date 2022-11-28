@@ -1,49 +1,49 @@
-import React, { useState } from "react";
-import FacebookIcon from "../../assets/images/facebook-icon.svg";
-import TwitterIcon from "../../assets/images/twitter-icon.svg";
-import YoutubeIcon from "../../assets/images/youtube-icon.svg";
-import LogoImage from "../../assets/images/logo.svg";
-import LogoSVG from "../../assets/images/logo.svg";
+import React, { useState } from 'react';
+import FacebookIcon from '../../assets/images/facebook-icon.svg';
+import TwitterIcon from '../../assets/images/twitter-icon.svg';
+import YoutubeIcon from '../../assets/images/youtube-icon.svg';
+import LogoImage from '../../assets/images/logo.svg';
+import LogoSVG from '../../assets/images/logo.svg';
 
 export default () => {
   const [showLoader, setShowLoader] = useState(false);
   // This message will be displayed if form is submitted successfully or if an error occurrs.
   const [displayMessage, setDisplayMessage] = useState({
-    message: "",
-    type: "",
+    message: '',
+    type: '',
   });
-  const [contactInfo, setContactInfo] = useState({ email: "" });
+  const [contactInfo, setContactInfo] = useState({ email: '' });
 
   const sendMail = () => {
     return new Promise((resolve, reject) => {
       try {
         if (!contactInfo) return;
-        fetch("https://email-innow8.herokuapp.com/email", {
-          method: "POST",
+        fetch('https://email-innow8.herokuapp.com/email', {
+          method: 'POST',
           headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
           },
           body: JSON.stringify(
             {
-              projectName: "Whiten-App Solutions",
-              to: ["kapilbindal1@gmail.com"],
-              from: "contact@innow8apps.com",
-              subject: "contact form White Label",
+              projectName: 'Whiten-App Solutions',
+              to: ['kapilbindal1@gmail.com'],
+              from: 'contact@innow8apps.com',
+              subject: 'contact form White Label',
               text: JSON.stringify(contactInfo),
               htmlText: JSON.stringify(contactInfo),
-            } || ""
+            } || ''
           ),
         })
           .then((res) => {
-            console.log("result: ", res);
+            console.log('result: ', res);
             resolve();
           })
           .catch((error) => {
-            console.log("send mail api error", error);
+            console.log('send mail api error', error);
             reject();
           });
       } catch (error) {
-        console.log("send mail try catch error", error);
+        console.log('send mail try catch error', error);
         reject();
       }
     });
@@ -70,19 +70,19 @@ export default () => {
     addContactInfo()
       .then((res) => {
         setDisplayMessage({
-          message: "** Submitted successfully **",
-          type: "success",
+          message: '** Submitted successfully **',
+          type: 'success',
         });
         setShowLoader(false);
-        setTimeout(() => setDisplayMessage({ message: "", type: "" }), 2000);
+        setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
       })
       .catch((err) => {
         setDisplayMessage({
-          message: "** An error occurred **",
-          type: "error",
+          message: '** An error occurred **',
+          type: 'error',
         });
         setShowLoader(false);
-        setTimeout(() => setDisplayMessage({ message: "", type: "" }), 2000);
+        setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
       });
     event.preventDefault();
   };
@@ -149,7 +149,7 @@ export default () => {
             
             <LogoSVG alt="logo" className="mr-3" />
           </div> */}
-          <div className="px-4 sm:px-0 sm:w-1/4 md:w-auto mt-12 text-center lg:text-left w-full! lg:w-auto! mt-20 lg:mt-12">
+          <div className="px-4 sm:px-0 sm:w-1/4 md:w-auto  text-center lg:text-left w-full! lg:w-auto! mt-20 lg:mt-12">
             <div className="max-w-sm mx-auto lg:mx-0 ">
               <h5 className="uppercase font-bold">
                 Subscribe to our Newsletter
