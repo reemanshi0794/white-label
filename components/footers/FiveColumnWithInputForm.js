@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import FacebookIcon from '../../assets/images/facebook-icon.svg';
 import TwitterIcon from '../../assets/images/twitter-icon.svg';
 import YoutubeIcon from '../../assets/images/youtube-icon.svg';
-import LogoImage from '../../assets/images/logo.svg';
-import LogoSVG from '../../assets/images/logo.svg';
+import Loader from '../../assets/images/loader.gif';
 
 export default () => {
   const [showLoader, setShowLoader] = useState(false);
@@ -28,7 +27,7 @@ export default () => {
               projectName: 'Whiten-App Solutions',
               to: ['kapilbindal1@gmail.com'],
               from: 'contact@innow8apps.com',
-              subject: 'contact form White Label',
+              subject: 'contact form Whiten-App Solutions',
               text: JSON.stringify(contactInfo),
               htmlText: JSON.stringify(contactInfo),
             } || ''
@@ -67,25 +66,36 @@ export default () => {
 
   const handleSubmit = (event) => {
     setShowLoader(true);
-    addContactInfo()
-      .then((res) => {
-        setDisplayMessage({
-          message: '** Submitted successfully **',
-          type: 'success',
+    var validRegex =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (contactInfo.email.match(validRegex)) {
+      addContactInfo()
+        .then((res) => {
+          setDisplayMessage({
+            message: 'Submitted successfully',
+            type: 'success',
+          });
+          setShowLoader(false);
+          setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
+        })
+        .catch((err) => {
+          setDisplayMessage({
+            message: ' An error occurred ',
+            type: 'error',
+          });
+          setShowLoader(false);
+          setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
         });
-        setShowLoader(false);
-        setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
-      })
-      .catch((err) => {
-        setDisplayMessage({
-          message: '** An error occurred **',
-          type: 'error',
-        });
-        setShowLoader(false);
-        setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
+    } else {
+      setDisplayMessage({
+        message: ' Invalid Email ',
+        type: 'error',
       });
+      setShowLoader(false);
+    }
     event.preventDefault();
   };
+
   return (
     <div className="relative bg-gray-200 text-gray-700 px-8 py-20 lg:py-24">
       <div className="max-w-screen-xl mx-auto relative z-10">
@@ -158,6 +168,7 @@ export default () => {
                 We deliver high quality blog posts written by professionals
                 weekly. And we promise no spam.
               </p>
+
               <form
                 className="mt-4 lg:mt-6 text-sm sm:flex max-w-xs sm:max-w-none mx-auto sm:mx-0"
                 method="get"
@@ -170,28 +181,40 @@ export default () => {
                   value={contactInfo.email}
                   onChange={(e) => setContactInfo({ email: e.target.value })}
                 />
-                {showLoader ? (
-                  <div className="text-center loader py-2">
-                    <div
-                      className="spinner-border text-secondary"
-                      role="status"
-                    >
-                      <span className="visually-hidden">Loading...</span>
-                    </div>
-                  </div>
-                ) : (
-                  <div className={`message-${displayMessage.type}`}>
-                    <span>{displayMessage.message}</span>
-                  </div>
-                )}
+
                 <button
-                  className="mt-4 sm:mt-0 w-full sm:w-auto rounded sm:rounded-l-none px-8 py-3 font-bold bg-primary-500 text-gray-100 hocus:bg-primary-700 hocus:text-gray-200   focus:outline-none transition duration-300"
+                  className="flex items-center w-[260px] mt-4 sm:mt-0 w-full rounded sm:rounded-l-none px-8 py-3 font-bold bg-primary-500 text-gray-100 hocus:bg-primary-700 hocus:text-gray-200   focus:outline-none transition duration-300"
                   type="submit"
                   onClick={handleSubmit}
                 >
                   Subscribe
                 </button>
               </form>
+
+              {showLoader ? (
+                <div className="text-center flex items-center justify-center loader py-2">
+                  <div className="spinner-border text-secondary" role="status">
+                    <img
+                      src={Loader.src}
+                      alt="loader"
+                      width="30"
+                      className="mr-8"
+                    />
+                  </div>
+                </div>
+              ) : (
+                <div className={`message-${displayMessage.type} mt-3`}>
+                  <span
+                    className={
+                      displayMessage.message === 'Submitted successfully'
+                        ? 'text-green-600'
+                        : 'text-red-600'
+                    }
+                  >
+                    {displayMessage.message}
+                  </span>
+                </div>
+              )}
             </div>
           </div>
           <p className="text-center text-sm sm:text-base mt-8 md:mt-0 font-medium text-gray-500">

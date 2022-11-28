@@ -50,12 +50,12 @@ export default () => {
               {/* <span className="text-primary-500">for you.</span> */}
             </h1>
             <p className="my-4 text-base xl:text-lg">
-              A one-stop development Studio to gear up your business demands for
+              A one-stop development studio to gear up your business demands for
               today and tomorrow.
             </p>
             <div className="max-w-md text-center mx-auto lg:mx-0 flex justify-center lg:justify-start">
               <a
-                className="w-full bg-primary-500 text-gray-100 font-bold rounded-full p-4 flex items-center justify-center sm:w-40 sm:leading-none focus:outline-none  transition duration-300"
+                className="w-full bg-primary-500 text-gray-100 font-bold rounded-full p-4 flex items-center justify-center sm:w-40 sm:leading-none focus:outline-none  hover:bg-secondary-700 transition duration-300"
                 href="/contact-us"
               >
                 Get Started

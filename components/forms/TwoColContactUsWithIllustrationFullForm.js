@@ -43,7 +43,7 @@ export default ({
               projectName: 'Whiten-App Solutions',
               to: ['kapilbindal1@gmail.com'],
               from: 'contact@innow8apps.com',
-              subject: 'contact form White Label',
+              subject: 'contact form Whiten-App Solutions',
               text: JSON.stringify(contactInfo),
               htmlText: JSON.stringify(contactInfo),
             } || ''
@@ -88,23 +88,34 @@ export default ({
 
   const handleSubmit = (event) => {
     setShowLoader(true);
-    addContactInfo()
-      .then((res) => {
-        setDisplayMessage({
-          message: '** Submitted successfully **',
-          type: 'success',
+    var validRegex =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (contactInfo.email.match(validRegex)) {
+      addContactInfo()
+        .then((res) => {
+          setDisplayMessage({
+            message: 'Submitted successfully',
+            type: 'success',
+          });
+          setShowLoader(false);
+          setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
+        })
+        .catch((err) => {
+          setDisplayMessage({
+            message: 'An error occurred',
+            type: 'error',
+          });
+          setShowLoader(false);
+          setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
         });
-        setShowLoader(false);
-        setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
-      })
-      .catch((err) => {
-        setDisplayMessage({
-          message: '** An error occurred **',
-          type: 'error',
-        });
-        setShowLoader(false);
-        setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
+    } else {
+      setDisplayMessage({
+        message: ' Invalid Email ',
+        type: 'error',
       });
+      setShowLoader(false);
+    }
+
     setContactInfo({ service: webDevelopment });
     event.preventDefault();
   };
@@ -191,12 +202,25 @@ export default ({
               {showLoader ? (
                 <div className="text-center loader py-2">
                   <div className="spinner-border text-secondary" role="status">
-                    <span className="visually-hidden">Loading...</span>
+                    <img
+                      src={Loader.src}
+                      alt="loader"
+                      width="30"
+                      className="mr-8"
+                    />
                   </div>
                 </div>
               ) : (
                 <div className={`message-${displayMessage.type}`}>
-                  <span>{displayMessage.message}</span>
+                  <span
+                    className={
+                      displayMessage.message === 'Submitted successfully'
+                        ? 'text-green-600'
+                        : 'text-red-600'
+                    }
+                  >
+                    {displayMessage.message}
+                  </span>
                 </div>
               )}
               <PrimaryButtonBase

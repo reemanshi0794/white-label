@@ -54,7 +54,7 @@ export default () => {
             </span>
           }
           heading="We aim to disrupt the design space."
-          buttonRounded={false}
+          buttonRounded={true}
           primaryButtonText="Contact Us"
           imageSrc="https://images.unsplash.com/3/doctype-hi-res.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=768&q=80"
           textOnLeft={false}

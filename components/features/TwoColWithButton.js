@@ -116,7 +116,7 @@ export default ({
                 {description}
               </p>
               <a
-                className="mt-8 md:mt-8 text-sm inline-block mx-auto md:mx-0 px-8 py-3 font-bold rounded bg-primary-500 text-gray-100 hocus:bg-primary-700 hocus:text-gray-200 focus:outline-none transition duration-300"
+                className="mt-8 md:mt-8 text-sm inline-block mx-auto md:mx-0 px-8 py-3 font-bold  bg-primary-500 text-gray-100 hocus:bg-primary-700 hocus:text-gray-200 focus:outline-none transition duration-300 rounded-full hover:bg-secondary-700"
                 href="/contact-us"
               >
                 {primaryButtonText}
@@ -144,7 +144,7 @@ export default ({
                 {primaryButtonText}
               </button> */}
               <a
-                className="mt-8 md:mt-8 text-sm inline-block mx-auto md:mx-0 px-8 py-3 font-bold rounded bg-primary-500 text-gray-100 hocus:bg-primary-700 hocus:text-gray-200 focus:outline-none transition duration-300"
+                className="mt-8 md:mt-8 text-sm inline-block mx-auto md:mx-0 px-8 py-3 font-bold  bg-primary-500 text-gray-100 focus:bg-primary-700 hocus:text-gray-200 focus:outline-none transition duration-300 rounded-full hover:bg-secondary-700"
                 href="/contact-us"
               >
                 Contact Us
