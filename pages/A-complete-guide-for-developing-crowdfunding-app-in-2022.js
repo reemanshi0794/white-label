@@ -1,9 +1,12 @@
-import React, { useEffect } from 'react';
-import ReactGA from 'react-ga';
-import Title from '../components/blog/Title';
-import Description from '../components/blog/Description';
-import Image from '../components/blog/Image';
-import { CrowdFundingAppData } from '../helpers/utils';
+import React, { useEffect } from "react";
+import ReactGA from "react-ga";
+import Title from "../components/blog/Title";
+import Description from "../components/blog/Description";
+import Image from "../components/blog/Image";
+import { CrowdFundingAppData } from "../helpers/utils";
+import Head from "next/head";
+import Header from "../components/headers/light.js";
+import Footer from "../components/footers/FiveColumnWithInputForm.js";
 
 const Howmuchcosttodevelop = () => {
   useEffect(() => {
@@ -24,14 +27,29 @@ const Howmuchcosttodevelop = () => {
 
   return (
     <div className="min-h-screen text-secondary-500 p-8 lg:px-24 2xl:p-8 overflow-hidden">
+      <Head>
+        <title>
+          Software Development Company | Custom App Developer | Whiten App
+          Solutions
+        </title>
+        <meta
+          name="description"
+          content="Looking for a best Custom app Development & Design Company? Contact us; our experience app developers create unique app design as your requirement."
+        />
+        <meta
+          name="keyword"
+          content="mobile app development company,app development,app developers,mobile application development services"
+        />
+      </Head>
+      <Header />
       <div className="inner-sec">
         <div
           className="banner size"
           style={{
             // backgroundImage: `url(${CostDevelopBanner.src})`,
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
           }}
         >
           <div className="container">
@@ -48,6 +66,7 @@ const Howmuchcosttodevelop = () => {
           <div className={className}>{getComponent(type, content)}</div>
         ))}
       </div>
+      <Footer />
     </div>
   );
 };
