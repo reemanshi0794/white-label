@@ -57,13 +57,15 @@ const NftMarketplace = () => {
                 {/* <h1 className="text-[#151514] text-[60px] font-bold mb-10">
                   A complete guide for developing Crowdfunding App in 2022
                 </h1> */}
+                  </div>
+                </div>
               </div>
             </div>
+            {NFTMarketplace.map(({ type, content, className }) => (
+              <div className={className}>{getComponent(type, content)}</div>
+            ))}
           </div>
         </div>
-        {NFTMarketplace.map(({ type, content, className }) => (
-          <div className={className}>{getComponent(type, content)}</div>
-        ))}
       </div>
       <Footer />
     </div>

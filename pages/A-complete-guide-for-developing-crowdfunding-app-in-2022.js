@@ -60,11 +60,11 @@ const Howmuchcosttodevelop = () => {
                 </h1>
               </div>
             </div>
+            {CrowdFundingAppData.map(({ type, content, className }) => (
+              <div className={className}>{getComponent(type, content)}</div>
+            ))}
           </div>
         </div>
-        {CrowdFundingAppData.map(({ type, content, className }) => (
-          <div className={className}>{getComponent(type, content)}</div>
-        ))}
       </div>
       <Footer />
     </div>
