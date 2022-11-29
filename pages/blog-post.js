@@ -22,7 +22,7 @@ export default ({
       title: 'Development of a Whiten Apps NFT Marketplace',
       description:
         'The building of the NFT marketplace can use ready-made solutions called NFT Marketplace Clone solutions.It entails copying any well-known NFT marketplace, such as Opensea or Rarible, and implementing UI platform adjustments based on the needs of the company...',
-      url: 'https://reddit.com',
+      url: '/Development-of-a-whiten-apps-nft-marketplace-2022',
     },
     // getPlaceholderPost(),
     // getPlaceholderPost(),
