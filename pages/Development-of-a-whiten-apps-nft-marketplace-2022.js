@@ -25,50 +25,50 @@ const NftMarketplace = () => {
   };
 
   return (
-    <div className="min-h-screen text-secondary-500 p-8 lg:px-24 2xl:p-8 overflow-hidden">
-      <Head>
-        <title>
-          Software Development Company | Custom App Developer | Whiten App
-          Solutions
-        </title>
-        <meta
-          name="description"
-          content="Looking for a best Custom app Development & Design Company? Contact us; our experience app developers create unique app design as your requirement."
-        />
-        <meta
-          name="keyword"
-          content="mobile app development company,app development,app developers,mobile application development services"
-        />
-      </Head>
-      <Header />
-      <div className="inner-sec">
-        <div
-          className="banner size"
-          style={{
-            // backgroundImage: `url(${CostDevelopBanner.src})`,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-          }}
-        >
-          <div className="container">
-            <div className="row m-0">
-              <div className="col">
-                {/* <h1 className="text-[#151514] text-[60px] font-bold mb-10">
+    <>
+      <div className="min-h-screen text-secondary-500 p-8 lg:px-24 2xl:p-8 overflow-hidden">
+        <Head>
+          <title>
+            Software Development Company | Custom App Developer | Whiten App
+            Solutions
+          </title>
+          <meta
+            name="description"
+            content="Looking for a best Custom app Development & Design Company? Contact us; our experience app developers create unique app design as your requirement."
+          />
+          <meta
+            name="keyword"
+            content="mobile app development company,app development,app developers,mobile application development services"
+          />
+        </Head>
+        <Header />
+        <div className="inner-sec">
+          <div
+            className="banner size"
+            style={{
+              // backgroundImage: `url(${CostDevelopBanner.src})`,
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+            }}
+          >
+            <div className="container">
+              <div className="row m-0">
+                <div className="col">
+                  {/* <h1 className="text-[#151514] text-[60px] font-bold mb-10">
                   A complete guide for developing Crowdfunding App in 2022
                 </h1> */}
-                  </div>
                 </div>
               </div>
             </div>
-            {NFTMarketplace.map(({ type, content, className }) => (
-              <div className={className}>{getComponent(type, content)}</div>
-            ))}
           </div>
+          {NFTMarketplace.map(({ type, content, className }) => (
+            <div className={className}>{getComponent(type, content)}</div>
+          ))}
         </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </>
   );
 };
 
