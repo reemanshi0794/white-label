@@ -177,24 +177,13 @@ export default ({ logoLink, className }) => {
                   className={
                     router.asPath === '/about-us'
                       ? 'text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent border-primary-500 focus:text-primary-500'
-                      : 'text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500'
+                      : 'text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent hover:border-primary-500 focus:text-primary-500'
                   }
                   aria-current="page"
                 >
                   About
                 </a>
 
-                <a
-                  href="/blog-post"
-                  onMouseLeave={hideServiceDropdown}
-                  className={
-                    router.asPath === '/blog-post'
-                      ? 'text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent border-primary-500 focus:text-primary-500'
-                      : 'text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500'
-                  }
-                >
-                  Blog
-                </a>
                 <div className="flex">
                   <a
                     href="/app-development"
@@ -202,8 +191,8 @@ export default ({ logoLink, className }) => {
                     onMouseEnter={showServiceDropdown}
                     className={
                       getServicesLink().includes(router.asPath)
-                        ? 'text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent border-primary-500 focus:text-primary-500'
-                        : 'text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500'
+                        ? 'text-lg my-2 lg:text-sm lg:mr-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent border-primary-500 focus:text-primary-500'
+                        : 'text-lg my-2 lg:text-sm lg:mr-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500'
                     }
                   >
                     Services
@@ -213,7 +202,7 @@ export default ({ logoLink, className }) => {
                     <div
                       className={
                         openServices
-                          ? 'show absolute w-full  top-[84%] max-w-[673px] text-sm grid grid-cols-2 gap-x-4 translate-x-[-19rem] bg-white p-[30px] shadow-[0_0_72px_0_rgba(0,0,0,11%)]'
+                          ? 'show absolute w-full  top-[80%] max-w-[673px] text-sm grid grid-cols-2 gap-x-4 translate-x-[-17rem] bg-white p-[30px] shadow-[0_0_72px_0_rgba(0,0,0,11%)]'
                           : 'hidden'
                       }
                       onMouseLeave={hideServiceDropdown}
@@ -257,6 +246,17 @@ export default ({ logoLink, className }) => {
                   }
                 </div>
                 <a
+                  href="/blog-post"
+                  onMouseLeave={hideServiceDropdown}
+                  className={
+                    router.asPath === '/blog-post'
+                      ? 'text-lg my-2 lg:text-sm lg:mx-6 !mr-8 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent border-primary-500 focus:text-primary-500'
+                      : 'text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent hover:border-primary-500 focus:text-primary-500'
+                  }
+                >
+                  Blog
+                </a>
+                <a
                   href="/career"
                   onMouseLeave={hideServiceDropdown}
                   className={
@@ -294,18 +294,7 @@ export default ({ logoLink, className }) => {
                     About
                   </a>
 
-                  <a
-                    href="/blog-post"
-                    className={
-                      router.asPath === '/blog-post'
-                        ? 'text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent border-primary-500 hocus:text-primary-500'
-                        : 'text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500'
-                    }
-                  >
-                    Blog
-                  </a>
-
-                  <div className="flex flex-col items-start mb-5 ">
+                  <div className="flex flex-col items-start">
                     <div
                       onClick={handleShowDropdown}
                       className="flex items-center"
@@ -356,6 +345,16 @@ export default ({ logoLink, className }) => {
                       })}
                     </div>
                   </div>
+                  <a
+                    href="/blog-post"
+                    className={
+                      router.asPath === '/blog-post'
+                        ? 'text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent border-primary-500 hocus:text-primary-500'
+                        : 'text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500'
+                    }
+                  >
+                    Blog
+                  </a>
                   <a
                     href="/career"
                     className={

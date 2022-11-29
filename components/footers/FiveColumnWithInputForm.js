@@ -231,7 +231,7 @@ export default () => {
             </a>
             <a
               className="cursor-pointer p-2 rounded-full bg-gray-900 text-gray-100 hover:bg-gray-700 transition duration-300 mr-4 last:mr-0"
-              href="https://www.facebook.com/profile.php?id=100088241919758"
+              href="https://www.linkedin.com/company/whiten-app-solutions/"
             >
               <LinkedinWhite className="w-4 h-4" />
             </a>
