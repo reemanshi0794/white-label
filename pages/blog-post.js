@@ -14,7 +14,7 @@ export default ({
       title: 'A complete guide for developing Crowdfunding App in 2022',
       description:
         'In the digital economy, crowdfunding is gaining popularity and rising to the top. The size of the worldwide crowdfunding business was over $17 billion in 2021, and by 2028, it is expected to be worth over $43 billion....',
-      url: 'https://reddit.com',
+      url: '/A-complete-guide-for-developing-crowdfunding-app-in-2022',
     },
     {
       imageSrc: Nft,
