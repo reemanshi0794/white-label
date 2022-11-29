@@ -256,30 +256,35 @@ export default () => {
               <a
                 className="cursor-pointer p-2 rounded-full bg-gray-100 text-gray-900 hover:bg-gray-400 transition duration-300 mr-4 last:mr-0"
                 href="https://www.facebook.com/profile.php?id=100088241919758"
+                target="_blank"
               >
                 <FacebookIcon className="w-4 h-4" />
               </a>
               <a
                 className="cursor-pointer p-2 rounded-full bg-gray-100 text-gray-900 hover:bg-gray-400 transition duration-300 mr-4 last:mr-0"
                 href="https://www.linkedin.com/company/whiten-app-solutions/"
+                target="_blank"
               >
                 <LinkedinBlack className="w-4 h-4" />
               </a>
               <a
                 className="cursor-pointer p-2 rounded-full bg-gray-100 text-gray-900 hover:bg-gray-400 transition duration-300 mr-4 last:mr-0"
                 href="https://www.instagram.com/whiten_apps/"
+                target="_blank"
               >
                 <InstagramBlack className="w-4 h-4" />
               </a>
               <a
                 className="cursor-pointer p-2 rounded-full bg-gray-100 text-gray-900 hover:bg-gray-400 transition duration-300 mr-4 last:mr-0"
                 href="https://twitter.com/WhitenApps"
+                target="_blank"
               >
                 <TwitterIcon className="w-4 h-4" />
               </a>
               <a
                 className="cursor-pointer p-2 rounded-full bg-gray-100 text-gray-900 hover:bg-gray-400 transition duration-300 mr-4 last:mr-0"
                 href="https://www.youtube.com/@whitenappssolutions"
+                target="_blank"
               >
                 <YoutubeIcon className="w-4 h-4" />
               </a>
