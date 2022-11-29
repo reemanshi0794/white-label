@@ -4,6 +4,7 @@ import Footer from '../components/footers/FiveColumnWithInputForm.js';
 import Crowdfunding from '../assets/images/Crowdfunding.png';
 import Nft from '../assets/images/Nft.png';
 import Head from 'next/head';
+import MobileApps from '../assets/images/MobileApps.png';
 
 export default ({
   headingText = 'Blog Posts',
@@ -23,6 +24,13 @@ export default ({
       description:
         'The building of the NFT marketplace can use ready-made solutions called NFT Marketplace Clone solutions.It entails copying any well-known NFT marketplace, such as Opensea or Rarible, and implementing UI platform adjustments based on the needs of the company...',
       url: '/Development-of-a-whiten-apps-nft-marketplace-2022',
+    },
+    {
+      imageSrc: MobileApps,
+      date: 'November 28, 2022',
+      title: 'The On Demand Mobile Apps',
+      description: `The market has significantly shifted in favour of on-demand app upgrade as a result of the technology's quick advancement and the entry of the smart mobile sector. Now, areas that largely make up people's daily lives are being devoured by the mobile sector. Customers today need not just high...`,
+      url: '/The-On-Demand-Mobile-Apps',
     },
     // getPlaceholderPost(),
     // getPlaceholderPost(),

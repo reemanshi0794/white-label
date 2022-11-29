@@ -518,3 +518,214 @@ export const NFTMarketplace = [
     content: `Regardless of the kind of your business, we are here to help you turn it into a revenue-friendly reality when we develop the NFT platform.`,
   },
 ];
+
+export const MobileAppsData = [
+  {
+    type: 'Description',
+    content: `The market has significantly shifted in favour of on-demand app upgrade as a result of the technology's quick advancement and the entry of the smart mobile sector. Now, areas that largely make up people's daily lives are being devoured by the mobile sector. Customers today need not just high-quality items but also quick and convenient service. Mobile apps that are available on demand now constitute a brand-new, rapidly expanding area of smart mobile business. More ways than we can count the ways in which technology has changed our lives are due to cell phones. With only a few swipes of our fingertips, we can transfer money, shop online, order meals, and do a lot more things.`,
+  },
+  {
+    type: 'Title',
+    content: `AN OVERVIEW:
+    `,
+  },
+  {
+    type: 'Description',
+    content: `The on-demand mobile apps are popular because customers want speed, convenience, and simplicity. Additionally, in order to stay at home as much as possible during the Coronavirus pandemic epidemic, many now prefer to have the majority of their purchases delivered right to their doorway. You might be shocked to learn that in 2013, on-demand mobile applications and websites generated $15 billion in sales income, with an expected increase to $335 billion by 2025.
+
+    According to these figures, if you are considering developing an on-demand app in the USA, have a look at these 20 ideas for on-demand apps, which are in high demand and may help you find new business ventures. Be the first to take the lead.`,
+  },
+  {
+    type: 'Title',
+    content: `WHAT ARE ON-DEMAND MOBILE APPS?`,
+  },
+  {
+    type: 'Description',
+    content: `Typically, an on-demand mobile app is seen as a middleman between service providers and users. Its primary purpose is to make a negotiation between two parties simpler so that both sides may feel comfortable spending their time and money on it. Due to their sophisticated payment, monitoring, and feedback systems, these programmes are also highly commended by suppliers and consumers for their transparency.
+    `,
+  },
+  {
+    type: 'Title',
+    content: `WHAT MAKES ON-DEMAND APPS STAND OUT?`,
+  },
+  {
+    type: 'Title',
+    content: `FOR SERVICE PROVIDERS:`,
+  },
+  {
+    type: 'Description',
+    content: `User profile: Simple registration for service providers using an email address, social network account, or even a phone number using an OTP.
+    When a user uses a service provider's services or products, they are immediately notified through push notification.
+    Accept & Reject Request: This function enables service providers to accept or reject requests in a predetermined amount of time.
+    Online/Offline Status: This feature gives service providers the opportunity to decide whether they are available to deliver a service.
+    Payment Module: A feature that aids service providers in keeping track of their profits is required.
+    Once a booking is established, the service provider may talk with the customer in real time to plan services or answer any other questions.
+    Vendors or service providers will have capabilities to manage their riders, personnel, services, billing, and clients.
+    Informative Dashboard: This essential element gives the service provider access to a centralised platform where they may see their performance, service history, profits, and other information.
+    `,
+  },
+  {
+    type: 'Title',
+    content: `FOR CUSTOMERS:`,
+  },
+  {
+    type: 'Title',
+    content: `User profile:`,
+  },
+  {
+    type: 'Description',
+    content: `Users may create accounts and log in using their email addresses, phone numbers, or social media accounts.
+
+    Requests may be found and scheduled using this feature's search functionality. This could even allow you to monitor the current availability of their staff members and the status of the service providers. The customer can arrange services at the time and day of their choosing.
+    One of the most crucial features is Instant Notifications, which informs users of the most recent deals, the progress of their orders, and critical alerts. It contains rewards for consumers, such as vouchers, discounts, and referrals.
+    `,
+  },
+  {
+    type: 'Title',
+    content: `Payment Estimation:`,
+  },
+  {
+    type: 'Description',
+    content: `Calculates the cost based on a predetermined set of factors, including fixed costs, distance-based dynamic costs, potential taxes, and more.
+    `,
+  },
+  {
+    type: 'Title',
+    content: `Real-time tracking:`,
+  },
+  {
+    type: 'Description',
+    content: `The capacity to search for services and use them are the two essential components of every on-demand software. By informing customers in real time of projected arrival and delivery, this service increases consumer confidence.
+
+    Users have a variety of secure payment methods to choose from, including cash, credit and debit cards, wallets, and more.
+    On-demand applications are all about trustworthiness, according to reviews and ratings. And what's more reliable for boosting sales and making adjustments than customer feedback. Customers are able to rate and offer detailed comments for a specific service or product using this feature.`,
+  },
+  {
+    type: 'Title',
+    content: 'Order History: ',
+  },
+  {
+    type: 'Description',
+    content: `Customers may look at all of their prior orders and refund details at any time, anywhere.
+    `,
+  },
+  {
+    type: 'Title',
+    content: 'Support and Help: ',
+  },
+  {
+    type: 'Description',
+    content: `Users can access the support and assistance.`,
+  },
+  {
+    type: 'Description',
+    content: `The greatest on-demand startup ideas are listed below with detailed descriptions to assist you in launching your on-demand business.
+    `,
+  },
+  {
+    type: 'Title',
+    content: 'THE PROCESS:',
+  },
+  {
+    type: 'Title',
+    content: '1. Establish Business Needs and Audience Targets',
+  },
+  {
+    type: 'Description',
+    content: `Finding the purpose is the first step. A wide range of domains and services can use on-demand services, and each service may have its own set of guidelines and specifications.`,
+  },
+  {
+    type: 'Title',
+    content: '2. Defending a Business Need',
+  },
+  {
+    type: 'Description',
+    content: `It is necessary to make a list of the different user kinds and the platforms they will use once you have determined which industry and for what reason you are constructing the solution. Concentrate on determining the specifications depending on whether clients will use mobile apps, if vendors will utilise web panels, and whether employees will use mobile apps for location and service tracking.`,
+  },
+  {
+    type: 'Title',
+    content: '3. Choose the Right Technology',
+  },
+  {
+    type: 'Description',
+    content: `Finding the tech stack required to construct the app is the next stage. Hire a team of experts that can design mobile apps on demand.`,
+  },
+  {
+    type: 'Title',
+    content: '4. Planning and Execution',
+  },
+  {
+    type: 'Description',
+    content: `Once the technology and requirements are in place, an expert on-demand delivery app development business may create and apply a methodology that works for the project and the project's budget to assist provide the best results.`,
+  },
+  {
+    type: 'Title',
+    content: '5. Launch and test the app',
+  },
+  {
+    type: 'Description',
+    content: `The mobile app development partner might do a pilot or beta run once the main set of features have been completed to evaluate the performance and solve bugs. The solution is well linked with the learning objectives in order to provide the greatest user experience.`,
+  },
+  {
+    type: 'Title',
+    content: `HERE’S A LIST OF ON-DEMAND APP IDEAS:
+    `,
+  },
+  {
+    type: 'Title',
+    content: `1.On-demand Travel Apps Comparable to Uber`,
+  },
+  {
+    type: 'Description',
+    content: `The Uber app was used by 93 million users every month in the fourth quarter of 2020. Uber and Airbnb heralded the dawn of the on-demand app age. In this fast-paced, opportunity-driven world, nobody wants to fall behind, not even for a moment. The rapid growth of the Uber app and Uber equivalents like Lyft and Careem gave the transportation and logistics sector a new focus in a relatively short amount of time. We have created more than 40 on-demand solutions and Uber-like apps for our clients as the top mobile app development business.`,
+  },
+  {
+    type: 'Title',
+    content: `2. Apps for on-demand pharmacy delivery
+    `,
+  },
+  {
+    type: 'Description',
+    content: `In 2022 alone, internet pharmacy sales are expected to reach $22.5 billion. China is where most of the money originates from. We are up against a completely undetectable opponent with COVID-19. Only by taking the necessary measures, such as using hand sanitizer and donning masks, can we defeat it. Additionally, a lot of folks these days don't feel like stepping outside due to the COVID issue.This explains why delivery applications for pharmacies or prescriptions are so popular right now.
+    `,
+  },
+  {
+    type: 'Title',
+    content: `3. On-demand Apps for Fashion
+
+    `,
+  },
+  {
+    type: 'Description',
+    content: `For all last-minute orders, fashion apps are a one-stop shop.
+    The creation of an eCommerce app can provide you similar exposure to Amazon. There will always be new fashion trends. In addition, retail eCommerce revenues from sales of clothing and accessories in the United States increased from $144.8 billion in 2020 to $180.5 billion in 2021.`,
+  },
+  {
+    type: 'Title',
+    content: `4. Demand-based Health Apps`,
+  },
+  {
+    type: 'Description',
+    content: `In 2025, the global market for mobile health is expected to reach $189 billion. The market for on-demand health applications has a bright future.
+    People are becoming more health-conscious on a daily basis. Not everyone can make it to the gym or a meditation class due to their hectic schedule. Your software will act as a convenient fitness kit for them in this situation.
+    You may develop applications for meditation, health and fitness regimens, major illnesses information, and medical consultations.
+    There is much more to learn, and a great on-demand app concept may boost your business's profits and reputation.
+    `,
+  },
+  {
+    type: 'Title',
+    content: `5. Apps for On-Demand Mechanics
+    `,
+  },
+  {
+    type: 'Description',
+    content: `Between 2015 and 2021, the market for plumbing fixtures and fittings will grow at a CAGR of 5.45%, from $74.72 billion in 2015. Because it has consistently aided in bridging the gap between auto technicians and automobile owners.
+    bridge the gap between automobile owners and mechanics. Applications for auto repair are in high demand right now. With their forms of transportation, people are moving across the world. Your software is a lifesaver for tourists in locations where there are neither garages nor mechanics available.`,
+  },
+  { type: 'Title', content: 'FINAL WORDS:' },
+  {
+    type: 'Description',
+    content: `Innovative on-demand app solutions, which are currently a significant area of the quickly emerging smart-world, have a broad open market in the modern day. Keep in mind that your software should be simple to use and ensure smooth performance, versatility, and scalability as you climb the corporate ladder. Our team at Whiten App Solutions is skilled in giving your customers' regular routines a fresh perspective. So, if you have good ideas for on-demand applications, you may succeed and be embraced by the market. Just send us a message!
+    `,
+  },
+];
