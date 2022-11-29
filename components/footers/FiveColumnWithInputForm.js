@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import FacebookIcon from '../../assets/images/facebook-icon.svg';
 import TwitterIcon from '../../assets/images/twitter-icon.svg';
 import YoutubeIcon from '../../assets/images/youtube-icon.svg';
-import LinkedinBlack from '../../assets/images/LinkedinBlack.svg';
-import InstagramBlack from '../../assets/images/InstagramBlack.svg';
+import LinkedinWhite from '../../assets/images/LinkedinWhite.svg';
+import InstagramWhite from '../../assets/images/InstagramWhite.svg';
 import Loader from '../../assets/images/loader.gif';
 
 export default () => {
@@ -233,13 +233,13 @@ export default () => {
               className="cursor-pointer p-2 rounded-full bg-gray-900 text-gray-100 hover:bg-gray-700 transition duration-300 mr-4 last:mr-0"
               href="https://www.facebook.com/profile.php?id=100088241919758"
             >
-              <LinkedinBlack className="w-4 h-4" />
+              <LinkedinWhite className="w-4 h-4" />
             </a>
             <a
               className="cursor-pointer p-2 rounded-full bg-gray-900 text-gray-100 hover:bg-gray-700 transition duration-300 mr-4 last:mr-0"
               href="https://www.instagram.com/whiten_apps/"
             >
-              <InstagramBlack className="w-4 h-4" />
+              <InstagramWhite className="w-4 h-4" />
             </a>
             <a
               className="cursor-pointer p-2 rounded-full bg-gray-900 text-gray-100 hover:bg-gray-700 transition duration-300 mr-4 last:mr-0"
