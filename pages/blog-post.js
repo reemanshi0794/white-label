@@ -68,17 +68,17 @@ export default ({
         <Header />
         <div className="min-h-screen text-secondary-500 p-8 lg:px-24 2xl:p-8 overflow-hidden">
           <div className="relative">
-            <div className="max-w-screen-xl mx-auto pb-24 pt-[11rem]">
-              <div className="flex">
-                <h2 className="text-4xl sm:text-5xl font-black tracking-wide text-center text-gray-900">
+            <div className="max-w-screen-xl mx-auto pb-24 pt-32 2xl:pt-[9rem]">
+              <div className="flex mb-8 ">
+                <h2 className=" text-3xl 2xl:text-5xl font-black tracking-wide text-center text-gray-900">
                   {headingText}
                 </h2>
               </div>
-              <div className="mt-6 sm:-mr-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3">
+              <div className="sm:-mr-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {posts.slice(0, visible).map((post, index) => {
                   return (
                     <div
-                      className={post.featured ? " sm:pr-8" : "mt-10 sm:pr-8"}
+                      className={post.featured ? " sm:pr-8" : "mb-10 sm:pr-8"}
                       key={index}
                       featured={post.featured}
                     >
@@ -103,15 +103,15 @@ export default ({
                             className={
                               post.featured
                                 ? "object-cover w-full h-full"
-                                : "w-full h-full"
+                                : "object-cover w-full h-full"
                             }
                           />
                         </div>
                         <div
                           className={
                             post.featured
-                              ? "sm:-mr-4 sm:pl-8 sm:flex-1 sm:rounded-none sm:rounded-r-lg sm:border-t-2 sm:border-l-0 p-8 border-2 border-t-0 rounded-lg rounded-t-none"
-                              : "p-8 border-2 border-t-0 rounded-lg rounded-t-none"
+                              ? "sm:-mr-4 sm:pl-8 sm:flex-1 sm:rounded-none sm:rounded-r-lg sm:border-t-2 sm:border-l-0 p-5 border-2 border-t-0 rounded-lg rounded-t-none"
+                              : "p-5 border-2 border-t-0 rounded-lg rounded-t-none"
                           }
                         >
                           <div className="uppercase text-primary-500 text-xs font-bold tracking-widest leading-loose after:content after:block after:border-b-2 after:border-primary-500 after:w-8">
@@ -120,15 +120,15 @@ export default ({
                           <div className="mt-4 uppercase text-gray-600 italic font-semibold text-xs">
                             {post.date}
                           </div>
-                          <div className="mt-1 font-black text-2xl text-gray-900 group-hover:text-primary-500 transition duration-300">
+                          <div className="line-clamp-2 mt-1 mb-[10px] font-black text-xl leading-7 2xl:text-2xl text-gray-900 group-hover:text-primary-500 transition duration-300">
                             {post.title}
                           </div>
                           {post.description && (
                             <div
                               className={
                                 post.featured
-                                  ? "text-sm mt-3 leading-loose text-gray-600 font-medium "
-                                  : ""
+                                  ? "text-sm leading-6 text-gray-600 font-medium line-clamp-none md:line-clamp-4 lg:line-clamp-5"
+                                  : "text-sm leading-6 text-gray-600 font-medium line-clamp-none md:line-clamp-4 lg:line-clamp-5"
                               }
                             >
                               {post.description}

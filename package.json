@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.10.5",
+    "@tailwindcss/line-clamp": "^0.4.2",
     "autoprefixer": "^10.4.13",
     "eslint": "8.26.0",
     "eslint-config-next": "13.0.0",
