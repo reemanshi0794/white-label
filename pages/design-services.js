@@ -1,106 +1,106 @@
-import React, { useEffect } from "react"
-import ReactGA from "react-ga"
-import EcommerceBanner from "../assets/images/EcommerceDev/Ecommerce-banner.svg"
-import Agile from "../assets/images/EcommerceDev/icons/AgileApproach.png"
-import Platform from "../assets/images/EcommerceDev/icons/platformIndep.png"
-import BestUi from "../assets/images/EcommerceDev/icons/bestUi.png"
-import FeatureRich from "../assets/images/EcommerceDev/icons/featureRich.png"
-import TechStack from "../assets/images/EcommerceDev/icons/besttechstack.png"
-import B2b from "../assets/images/EcommerceDev/b2b.png"
-import B2c from "../assets/images/EcommerceDev/b2c.svg"
-import MultiVender from "../assets/images/EcommerceDev/multivender.png"
-import CMS from "../assets/images/EcommerceDev/cmsintegration.png"
-import Migration from "../assets/images/EcommerceDev/migrationsupport.png"
-import ApiIntegration from "../assets/images/EcommerceDev/apiIntegration.png"
-import Head from "next/head"
-import Header from "../components/headers/light.js"
-import Footer from "../components/footers/FiveColumnWithInputForm.js"
-import MainServices from "../components/MainServices"
-import Features from "../components/features/ThreeColSimple.js"
-import Features1 from "../components/features/ThreeColWithSideImage.js"
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
+import DesignBanner from '../assets/images/DesignBanner.png';
+import Agile from '../assets/images/EcommerceDev/icons/AgileApproach.png';
+import Platform from '../assets/images/EcommerceDev/icons/platformIndep.png';
+import BestUi from '../assets/images/EcommerceDev/icons/bestUi.png';
+import FeatureRich from '../assets/images/EcommerceDev/icons/featureRich.png';
+import TechStack from '../assets/images/EcommerceDev/icons/besttechstack.png';
+import B2bDesign from '../assets/images/B2bDesign.png';
+import B2cDesign from '../assets/images/B2cDesign.png';
+import MultiVenderDesign from '../assets/images/MultiVenderDesign.png';
+import CMSDesign from '../assets/images/CMSDesign.png';
+import MigrationDesign from '../assets/images/MigrationDesign.png';
+import ApiIntegrationDesign from '../assets/images/ApiIntegrationDesign.png';
+import Head from 'next/head';
+import Header from '../components/headers/light.js';
+import Footer from '../components/footers/FiveColumnWithInputForm.js';
+import MainServices from '../components/MainServices';
+import Features from '../components/features/ThreeColSimple.js';
+import Features1 from '../components/features/ThreeColWithSideImage.js';
 
 const DesignServicePageItemToDisplay = [
   {
     id: `1`,
-    Imgurl: B2c,
+    Imgurl: B2cDesign,
     heading: `Static Website Design`,
     desc: `Our Static website solution packages are utilized by startups and individuals to display simple information regarding their works and solutions. We make engaging and simple static designs that help you give the best impression..`,
     textOnLeft: true,
   },
   {
     id: `2`,
-    Imgurl: B2b,
+    Imgurl: B2bDesign,
     heading: `Dynamic Website Design`,
     desc: `We identify your requirements and create effective web solutions with an easy content management system. Be it a blogging site, News site or business website, we help you easily kick start your website using open source technologies.`,
     textOnLeft: false,
   },
   {
     id: `3`,
-    Imgurl: MultiVender,
+    Imgurl: MultiVenderDesign,
     heading: `Responsive Website Design`,
     desc: `Create designs that are compatible with any browser and screen resolution. We help you turn your website visitors into recurring customers with the best Responsive designs.`,
     textOnLeft: true,
   },
   {
     id: `4`,
-    Imgurl: CMS,
+    Imgurl: CMSDesign,
     heading: `Ecommerce Web Portal`,
     desc: `Captivating eCommerce store to enhance the shopping experience. We offer eCommerce web design and development by connecting the latest technologies to fulfil your eCommerce business requirements.`,
     textOnLeft: false,
   },
   {
     id: `5`,
-    Imgurl: Migration,
+    Imgurl: MigrationDesign,
     heading: `Custome Web Design`,
     desc: `Strengthen your brand’s reputation with our custom web designing service. We create search engine-friendly web designs that are scalable and user friendly.`,
     textOnLeft: true,
   },
   {
     id: `6`,
-    Imgurl: ApiIntegration,
+    Imgurl: ApiIntegrationDesign,
     heading: `Customized Template Design`,
     desc: `For user convenience, we come with the best-customized templates that let you enjoy Sharp looking at websites and logos`,
   },
-]
+];
 
 const EcommerseCards = [
   {
     imageSrc: Agile,
-    title: "Agile Approach",
+    title: 'Agile Approach',
     description:
-      " Our Agile Development method brings the best in less time helping our clients launch their eCommerce platforms in no time.",
+      ' Our Agile Development method brings the best in less time helping our clients launch their eCommerce platforms in no time.',
   },
   {
     imageSrc: Platform,
-    title: "Platform Independent",
+    title: 'Platform Independent',
     description:
-      "All our eCommerce web solutions are made to adapt the  screen and features of all types of devices making them  usable on multiple platforms with consistency ",
+      'All our eCommerce web solutions are made to adapt the  screen and features of all types of devices making them  usable on multiple platforms with consistency ',
   },
   {
     imageSrc: BestUi,
-    title: "Best User Interface",
+    title: 'Best User Interface',
     description:
-      "We deliver all our eCommerce solutions with top-notch UI/UX designs to assure the best user experience ",
+      'We deliver all our eCommerce solutions with top-notch UI/UX designs to assure the best user experience ',
   },
   {
     imageSrc: FeatureRich,
-    title: "Feature-rich",
+    title: 'Feature-rich',
     description:
-      "We never stop upgrading our feature support as we believe one factor for the best-performing website is evaluated by the feature it supports.",
+      'We never stop upgrading our feature support as we believe one factor for the best-performing website is evaluated by the feature it supports.',
   },
   {
     imageSrc: TechStack,
-    title: "Best Technology Stacks",
+    title: 'Best Technology Stacks',
     description:
-      "As the tech stack is the foundation of any software, we make sure that we use only the best-suited technologystack for our eCommerce solutions. This helps us come up with the best architecture and layout for your eCommerce needs",
+      'As the tech stack is the foundation of any software, we make sure that we use only the best-suited technologystack for our eCommerce solutions. This helps us come up with the best architecture and layout for your eCommerce needs',
   },
-]
+];
 
 const EcommerceDev = () => {
   useEffect(() => {
-    window.scrollTo(0, 0)
-    ReactGA.pageview(window.location.pathname)
-  }, [])
+    window.scrollTo(0, 0);
+    ReactGA.pageview(window.location.pathname);
+  }, []);
   return (
     <>
       <Header />
@@ -134,7 +134,7 @@ const EcommerceDev = () => {
             </div>
             <div className="relative mt-12 lg:mt-0 flex-1 flex flex-col justify-center lg:self-end">
               <div className="flex justify-center lg:justify-end items-center">
-                <EcommerceBanner />
+                <img src={DesignBanner.src} alt="" />
               </div>
             </div>
           </div>
@@ -159,7 +159,7 @@ const EcommerceDev = () => {
                 description={element.desc}
                 textOnLeft={element.textOnLeft}
               />
-            )
+            );
           })}
         </div>
 
@@ -443,7 +443,7 @@ const EcommerceDev = () => {
       </div>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default EcommerceDev
+export default EcommerceDev;
