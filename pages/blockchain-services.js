@@ -26,9 +26,10 @@ import CryptoWallet from '../assets/images/CryptoWallet.png';
 import NFTMarketplace from '../assets/images/NFTMarketplace.png';
 import DApps from '../assets/images/DApps.png';
 import BlockChainSupply from '../assets/images/BlockChainSupply.png';
-import PrivateBlockChain from '../assets/images/PrivateBlockChain.png';
+import NftBannerImg from '../assets/images/NftBannerImg.png';
 import Features from '../components/features/ThreeColSimple.js';
 import Features1 from '../components/features/ThreeColWithSideImage.js';
+import PrivateBlockChain from '../assets/images/PrivateBlockChain.png';
 
 const BlockChainAppPageItemToDisplay = [
   {
@@ -61,7 +62,7 @@ const BlockChainAppPageItemToDisplay = [
   },
   {
     id: `5`,
-    Imgurl: PrivateBlockChain,
+    Imgurl: NftBannerImg,
     heading: `Private Blockchain`,
     desc: `For banks and Businesses, we provide Private (Permissioned Blockchains ) to advance smooth operations. Our developers are well packed to help you decentralize daily operations`,
     textOnLeft: true,

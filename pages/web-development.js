@@ -1,17 +1,17 @@
-import React, { useEffect } from "react";
-import ReactGA from "react-ga";
-import WebBanner from "../assets/images/WebApplication/webBanner.svg";
-import Head from "next/head";
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
+import WebdevBanner from '../assets/images/WebdevBanner.png';
+import Head from 'next/head';
 
-import WebDevImg from "../assets/images/WebApplication/webdev.png";
-import ECommerceDevImg from "../assets/images/WebApplication/eCommerceDev.png";
-import ProgressiveWebImg from "../assets/images/WebApplication/progressiveWeb.png";
-import EnterpriseWebImg from "../assets/images/WebApplication/enterpriseWeb.png";
-import Header from "../components/headers/light.js";
-import Footer from "../components/footers/FiveColumnWithInputForm.js";
-import MainServices from "../components/MainServices";
-import Features from "../components/features/ThreeColSimple.js";
-import Features1 from "../components/features/ThreeColWithSideImage.js";
+import WebDevImg from '../assets/images/WebDevImg.png';
+import ECommerceDevImg from '../assets/images/ECommerceDevImg.png';
+import ProgressiveWebImg from '../assets/images/ProgressiveWebImg.png';
+import EnterpriseWebImg from '../assets/images/EnterpriseWebImg.png';
+import Header from '../components/headers/light.js';
+import Footer from '../components/footers/FiveColumnWithInputForm.js';
+import MainServices from '../components/MainServices';
+import Features from '../components/features/ThreeColSimple.js';
+import Features1 from '../components/features/ThreeColWithSideImage.js';
 
 const WebAppPageItemToDisplay = [
   {
@@ -81,7 +81,7 @@ const WebDevelopment = () => {
             </div>
             <div className="relative mt-12 lg:mt-0 flex-1 flex flex-col justify-center lg:self-end">
               <div className="flex justify-center lg:justify-end items-center">
-                <WebBanner />
+                <img src={WebdevBanner.src} alt="WebdevBanner image" />
               </div>
             </div>
           </div>
