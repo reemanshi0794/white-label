@@ -22,11 +22,11 @@ import Six from '../assets/images/Six.png';
 import Seven from '../assets/images/Seven.png';
 import Link from 'next/link';
 import Header from '../components/headers/light.js';
-import CryptoWallet from '../assets/images/Blockchain/crypto.svg';
-import NFTMarketplace from '../assets/images/Blockchain/nft-marketplace.png';
-import DApps from '../assets/images/Blockchain/dapps.png';
-import BlockChainSupply from '../assets/images/Blockchain/blockchain.png';
-import PrivateBlockChain from '../assets/images/Blockchain/private.png';
+import CryptoWallet from '../assets/images/CryptoWallet.png';
+import NFTMarketplace from '../assets/images/NFTMarketplace.png';
+import DApps from '../assets/images/DApps.png';
+import BlockChainSupply from '../assets/images/BlockChainSupply.png';
+import PrivateBlockChain from '../assets/images/PrivateBlockChain.png';
 import Features from '../components/features/ThreeColSimple.js';
 import Features1 from '../components/features/ThreeColWithSideImage.js';
 
@@ -116,7 +116,10 @@ const BlockChainDev = () => {
             </div>
             <div className="relative mt-12 lg:mt-0 flex-1 flex flex-col justify-center lg:self-end">
               <div className="flex justify-center lg:justify-end items-center">
-                <BlockChainBanner />
+                <img
+                  src={PrivateBlockChain.src}
+                  alt="PrivateBlockChain image"
+                />
               </div>
             </div>
           </div>
