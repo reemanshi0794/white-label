@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import ReactGA from 'react-ga';
-import BannerImg from '../assets/images/NftMarketPlaceDev/nftMarketplace-banner.svg';
+import NftBannerImg from '../assets/images/NftBannerImg.png';
 import CryptoCurrency from '../assets/images/NftMarketPlaceDev/cryptocurrency.png';
 import Ethereum from '../assets/images/NftMarketPlaceDev/ethereum.png';
 import Binance from '../assets/images/NftMarketPlaceDev/binance.png';
@@ -106,7 +106,7 @@ const NftMarketplaceDev = () => {
             </div>
             <div className="relative mt-12 lg:mt-0 flex-1 flex flex-col justify-center lg:self-end">
               <div className="flex justify-center lg:justify-end items-center">
-                <BannerImg />
+                <img src={NftBannerImg.src} alt="NftBannerImg" />
               </div>
             </div>
           </div>

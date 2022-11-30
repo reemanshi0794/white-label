@@ -1,18 +1,18 @@
-import React, { useEffect } from "react";
-import ReactGA from "react-ga";
-import QualityBanner from "../assets/images/QualityAssurance/qualityBanner.svg";
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
+import QualityBanner from '../assets/images/QualityBanner.png';
 // import { QualityAppPageItemToDisplay } from "../src/data/data";
-import Head from "next/head";
-import Header from "../components/headers/light.js";
+import Head from 'next/head';
+import Header from '../components/headers/light.js';
 // import Link from "next/link";
-import WebAppTestingImg from "../assets/images/QualityAssurance/webAppTesting.png";
-import MobileAppTestingImg from "../assets/images/QualityAssurance/mobileAppTesting.png";
-import GameTestingImg from "../assets/images/QualityAssurance/gameTesting.png";
-import DesktopTestingImg from "../assets/images/QualityAssurance/desktopTesting.png";
-import CloudTestingImg from "../assets/images/QualityAssurance/cloudTesting.png";
-import Features from "../components/features/ThreeColSimple.js";
-import MainServices from "../components/MainServices";
-import Footer from "../components/footers/FiveColumnWithInputForm.js";
+import WebAppTestingImg from '../assets/images/WebAppTestingImg.png';
+import MobileAppTestingImg from '../assets/images/MobileAppTestingImg.png';
+import GameTestingImg from '../assets/images/GameTestingImg.png';
+import DesktopTestingImg from '../assets/images/DesktopTestingImg.png';
+import CloudTestingImg from '../assets/images/CloudTestingImg.png';
+import Features from '../components/features/ThreeColSimple.js';
+import MainServices from '../components/MainServices';
+import Footer from '../components/footers/FiveColumnWithInputForm.js';
 
 const QualityAppPageItemToDisplay = [
   {
@@ -112,7 +112,7 @@ const QualityAssurance = () => {
             </div>
             <div className="relative mt-12 lg:mt-0 flex-1 flex flex-col justify-center lg:self-end">
               <div className="flex justify-center lg:justify-end items-center">
-                <QualityBanner />
+                <img src={QualityBanner.src} alt="QualityBanner" />
               </div>
             </div>
           </div>
