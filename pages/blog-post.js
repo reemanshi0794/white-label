@@ -28,7 +28,7 @@ export default ({
     {
       imageSrc: MobileApps,
       date: 'November 28, 2022',
-      title: 'The On Demand Mobile Apps',
+      title: 'The On Demand Mobile Apps in 2022',
       description: `The market has significantly shifted in favour of on-demand app upgrade as a result of the technology's quick advancement and the entry of the smart mobile sector. Now, areas that largely make up people's daily lives are being devoured by the mobile sector. Customers today need not just high...`,
       url: '/The-On-Demand-Mobile-Apps',
     },
