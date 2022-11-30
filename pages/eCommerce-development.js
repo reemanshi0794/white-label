@@ -1,17 +1,17 @@
 import React, { useEffect } from 'react';
 import ReactGA from 'react-ga';
-import EcommerceBanner from '../assets/images/EcommerceDev/Ecommerce-banner.svg';
+import EcommerceBanner from '../assets/images/EcommerceBanner.png';
 import Agile from '../assets/images/EcommerceDev/icons/AgileApproach.png';
 import Platform from '../assets/images/EcommerceDev/icons/platformIndep.png';
 import BestUi from '../assets/images/EcommerceDev/icons/bestUi.png';
 import FeatureRich from '../assets/images/EcommerceDev/icons/featureRich.png';
 import TechStack from '../assets/images/EcommerceDev/icons/besttechstack.png';
-import B2b from '../assets/images/EcommerceDev/b2b.png';
-import B2c from '../assets/images/EcommerceDev/b2c.png';
-import MultiVender from '../assets/images/EcommerceDev/multivender.png';
-import CMS from '../assets/images/EcommerceDev/cmsintegration.png';
-import Migration from '../assets/images/EcommerceDev/migrationsupport.png';
-import ApiIntegration from '../assets/images/EcommerceDev/apiIntegration.png';
+import B2b from '../assets/images/B2b.png';
+import B2c from '../assets/images/B2c.png';
+import MultiVender from '../assets/images/MultiVender.png';
+import CMS from '../assets/images/CMS.png';
+import Migration from '../assets/images/Migration.png';
+import ApiIntegration from '../assets/images/ApiIntegration.png';
 import Head from 'next/head';
 import Header from '../components/headers/light.js';
 import Footer from '../components/footers/FiveColumnWithInputForm.js';
@@ -141,7 +141,7 @@ const EcommerceDev = () => {
             </div>
             <div className="relative mt-12 lg:mt-0 flex-1 flex flex-col justify-center lg:self-end">
               <div className="flex justify-center lg:justify-end items-center">
-                <EcommerceBanner />
+                <img src={EcommerceBanner.src} alt="EcommerceBanner image" />
               </div>
             </div>
           </div>
