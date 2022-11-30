@@ -1,12 +1,12 @@
-import React from "react"
-import SvgDecoratorBlob from "../../assets/images/svg-decorator-blob-6.svg"
-import androidImg from "../../assets/images/demo/androidImg.png"
-import reactImg from "../../assets/images/demo/reactImg.png"
-import nodeImg from "../../assets/images/demo/nodeImg.png"
-import goLangImg from "../../assets/images/demo/goLangImg.png"
-import pythonImg from "../../assets/images/demo/pythonImg.png"
-import swiftImg from "../../assets/images/demo/swiftImg.png"
-import javaImg from "../../assets/images/demo/javaImg.png"
+import React from 'react';
+import SvgDecoratorBlob from '../../assets/images/svg-decorator-blob-6.svg';
+import androidImg from '../../assets/images/demo/androidImg.png';
+import reactImg from '../../assets/images/demo/reactImg.png';
+import nodeImg from '../../assets/images/demo/nodeImg.png';
+import goLangImg from '../../assets/images/demo/goLangImg.png';
+import pythonImg from '../../assets/images/demo/pythonImg.png';
+import swiftImg from '../../assets/images/demo/swiftImg.png';
+import javaImg from '../../assets/images/demo/javaImg.png';
 
 const dummyData = [
   {
@@ -44,7 +44,7 @@ const dummyData = [
     developers: 7,
     available: 3,
   },
-]
+];
 // const HeaderContainer = tw.div`mt-10 w-full flex flex-col items-center`;
 // const Subheading = tw(SubheadingBase)`mb-4`;
 // const Heading = tw(SectionHeading)`w-full`;
@@ -119,53 +119,53 @@ const dummyData = [
 // `;
 
 export default ({
-  subheading = "Pricing",
-  heading = "Flexible Plans.",
-  description = "Get the best developers to work for you on a contract basis with no strings attached ",
+  subheading = 'Pricing',
+  heading = 'Flexible Plans.',
+  description = 'Get the best developers to work for you on a contract basis with no strings attached',
   plans = null,
-  primaryButtonText = "Buy Now",
+  primaryButtonText = 'Buy Now',
 }) => {
   const defaultPlans = [
     {
-      name: "Personal",
-      price: "$17.99",
-      duration: "Monthly",
-      mainFeature: "Suited for Personal Blogs",
+      name: 'Personal',
+      price: '$17.99',
+      duration: 'Monthly',
+      mainFeature: 'Suited for Personal Blogs',
       features: [
-        "30 Templates",
-        "7 Landing Pages",
-        "12 Internal Pages",
-        "Basic Assistance",
+        '30 Templates',
+        '7 Landing Pages',
+        '12 Internal Pages',
+        'Basic Assistance',
       ],
     },
     {
-      name: "Business",
-      price: "$37.99",
-      duration: "Monthly",
-      mainFeature: "Suited for Production Websites",
+      name: 'Business',
+      price: '$37.99',
+      duration: 'Monthly',
+      mainFeature: 'Suited for Production Websites',
       features: [
-        "60 Templates",
-        "8 Landing Pages",
-        "22 Internal Pages",
-        "Priority Assistance",
+        '60 Templates',
+        '8 Landing Pages',
+        '22 Internal Pages',
+        'Priority Assistance',
       ],
       featured: true,
     },
     {
-      name: "Enterprise",
-      price: "$57.99",
-      duration: "Monthly",
-      mainFeature: "Suited for Big Companies",
+      name: 'Enterprise',
+      price: '$57.99',
+      duration: 'Monthly',
+      mainFeature: 'Suited for Big Companies',
       features: [
-        "90 Templates",
-        "9 Landing Pages",
-        "37 Internal Pages",
-        "Personal Assistance",
+        '90 Templates',
+        '9 Landing Pages',
+        '37 Internal Pages',
+        'Personal Assistance',
       ],
     },
-  ]
+  ];
 
-  if (!plans) plans = defaultPlans
+  if (!plans) plans = defaultPlans;
 
   return (
     <div className="relative">
@@ -187,9 +187,7 @@ export default ({
         <div className=" bg-white rounded-3xl overflow-x-auto shadow-[0_0_50px_-15px_rgba(0,0,0,21%)] mt-12 hidden md:block">
           <div className="grid grid-cols-4 gap-4 w-[910px] xl:w-auto">
             <div className="py-10 px-5 border-r-[3px] text-center border-[#eaeaea]">
-              <h3 className="font-bold text-2xl mb-6 text-black">
-                Technologies
-              </h3>
+              <h3 className="font-bold text-2xl mb-6 text-black">Technology</h3>
               <ul className="flex items-center flex-col">
                 <li className="mb-3">
                   <img
@@ -243,9 +241,11 @@ export default ({
               </ul>
             </div>
             <div className="py-10 px-5 border-r-[3px] text-center border-[#eaeaea]">
-              <h3 className="font-bold text-2xl mb-6 text-black">Developers</h3>
+              <h3 className="font-bold text-2xl mb-6 text-black">
+                Total Developers
+              </h3>
               <ul>
-                {["40", "20", "15", "12", "12", "10", "07"].map((nmbr) => (
+                {['40', '20', '15', '12', '12', '10', '07'].map((nmbr) => (
                   <li className="text-2xl mb-6 opacity-50 text-black list-none font-bold">
                     {nmbr}
                   </li>
@@ -253,9 +253,11 @@ export default ({
               </ul>
             </div>
             <div className="py-10 px-5 border-r-[3px] text-center border-[#eaeaea]">
-              <h3 className="font-bold text-2xl mb-6 text-black">Available</h3>
+              <h3 className="font-bold text-2xl mb-6 text-black">
+                To be allocated{' '}
+              </h3>
               <ul>
-                {["16", "08", "06", "04", "04", "07", "03"].map((nmbr) => (
+                {['16', '08', '06', '04', '04', '07', '03'].map((nmbr) => (
                   <li className="text-2xl mb-6 opacity-50 text-black list-none font-bold">
                     {nmbr}
                   </li>
@@ -263,8 +265,8 @@ export default ({
               </ul>
             </div>
             <div className="py-10 px-5 text-center">
-              <h3 className="font-bold text-2xl mb-6 text-black invisible">
-                Hire Us
+              <h3 className="font-bold text-2xl mb-6 text-black">
+                Take Action
               </h3>
               <ul>
                 {[1, 2, 3, 4, 5, 6, 7].map((text) => (
@@ -319,11 +321,11 @@ export default ({
                     Hire now
                   </a>
                 </div>
-              )
+              );
             })}
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

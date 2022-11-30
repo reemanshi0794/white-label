@@ -71,7 +71,7 @@ export default ({
       <span className="text-primary-500">Professionals.</span> */}
     </>
   ),
-  description = 'We are Committed, Creative and Classy Coders empowering our clients businesses with custom Technology solutions. We pride ourselves on building holistic digital solutions with edge-cutting technology and tools that are future-proof. ',
+  description = `We are Committed, Creative and Classy Coders empowering our client's businesses with custom technology solutions. We pride ourselves on building holistic digital solutions with edge-cutting technology and tools that are future-proof. `,
   primaryButtonText = 'Learn More',
   primaryButtonUrl = 'https://timerse.com',
   imageSrc = TeamIllustrationSrc,
@@ -104,7 +104,7 @@ export default ({
       Icon: BriefcaseIcon,
       title: 'Seasoned',
       description:
-        'Our Team is well-seasoned and skilled people who hear out your idea and make the right move to bring it into reality within a short time.',
+        'Our team is well-seasoned and skilled people who hear out your idea and make the right move to bring it into reality within a short time. ',
       iconContainerCss: tw`bg-teal-300 text-teal-800`,
     },
   ];

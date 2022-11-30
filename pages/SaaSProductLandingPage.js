@@ -58,7 +58,7 @@ const SaaSProductLandingPage = () => {
           }
           heading={
             <>
-              COUNT ON <span className="text-primary-500">US.</span>
+              Count Us <span className="text-primary-500">on</span>
             </>
           }
         />
@@ -122,7 +122,7 @@ const SaaSProductLandingPage = () => {
           }
           heading={
             <>
-              Find the best Developers{' '}
+              Find the best Developers here{' '}
               <span className="text-primary-500">here.</span>
             </>
           }
@@ -228,34 +228,36 @@ const SaaSProductLandingPage = () => {
         <FAQ
           subheading={
             <span className="uppercase tracking-widest font-bold text-primary-500">
-              FAQS
+              FAQ
             </span>
           }
           heading={
             <>
-              Do You have a <span className="text-primary-500">Question ?</span>
+              Do You have a <span className="text-primary-500">Question?</span>
             </>
           }
           faqs={[
             {
-              question: 'What are the technologies that you use ?',
-              answer:
-                'At Whiten App Solutions we continuously update our tech stack to meet the demand of our clients. Presently we work with technologies including - React, React Native, Flutter, Angular, Golang, Nodejs, Swift, Java, Android, Power BI, UI/UX, Quality Assurance, MongoDB',
+              question: 'What are the technologies that you use?',
+              answer: `At Whiten app Solutions we continuously update our tech stack to meet the demand of our clients. Presently we work with technologies including
+              Languages - React, React Native, Flutter, Angular, Golang, Nodejs, Swift, Java, Android, Power BI, UI/UX, Quality Assurance, MongoDB.
+              Tools - Jira board, Azure DevOps, Visual Studio Code, Vercel, Heroku, Firebase, Github. `,
             },
             {
               question: 'How Does your Pricing work?',
-              answer:
-                'All our solutions and services are 100% custom and are built according to the need of our clients. The pricing of each solution varies as its purely dependent on the demands and feature requirements.',
+              answer: `All our solutions and services are 100% custom and are built according to the need of our clients. The pricing of each solution varies as its purely dependent on the demands and feature requirements. 
+                We do not have hidden fees and our Free QA and overtime help you cut development costs by up to 75%.
+                To get free evaluation and price estimation by contacting us. To do so, click on the contact us button in the top right corner of this page.
+                `,
             },
             {
               question: 'Can I hire only one developer?',
               answer:
-                'Yes, If you already have a team and are behind a developer, you can hire our top developers to work with your team. We provide contract hiring services to help clients finish their projects quickly by not making commitments and avoiding permanent hires for temporary needs.',
+                'Yes, If you already have a team and are behind a developer, you can hire our top developers to work with your team. We provide contract hiring services to help clients finish their projects quickly by not making commitments and avoiding permanent hires for temporary needs. ',
             },
             {
               question: 'What time zone do we follow?',
-              answer:
-                'Our clients are all around the globe and thereby each project is handled carefully by assigning a team who works on our clients timeline to avoid communication gaps and to be well synchronized with your team.',
+              answer: `Our clients are all around the globe and thereby each project is handled carefully by assigning a team who works on our client's timeline to avoid communication gaps and to be well synchronized with your team. `,
             },
           ]}
         />

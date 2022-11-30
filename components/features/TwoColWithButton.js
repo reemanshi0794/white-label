@@ -41,7 +41,7 @@ export default ({
   subheading = 'Our Expertise',
   heading = (
     <>
-      Your Prudential Tech partners for today and hereafter
+      Your prudential tech partners for today and hereafter
       {/* <span className="text-primary-500">Professionals.</span> */}
     </>
   ),

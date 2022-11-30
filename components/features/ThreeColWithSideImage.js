@@ -68,25 +68,25 @@ export default ({
       imageSrc: ShieldIconImage,
       title: 'App Development',
       description:
-        'An app for your Brand. We fix your business challenges by creating premium mobile apps for Android and iOS customers. ',
+        'An app for your brand. We fix your business challenges by creating premium mobile apps for Android and iOS customers.',
     },
     {
       imageSrc: SupportIconImage,
-      title: 'Enterprise Softwares',
+      title: 'Enterprise Application Development',
       description:
-        'We develop solutions that solve real problems that are beyond the capabilities of traditional ERP systems. Build feature rich CMS, CRM, POS, ERP, CDP with us.',
+        'We develop solutions that solve real problems that are beyond the capabilities of traditional ERP systems. Build feature-rich CMS, CRM, POS, ERP, and DP with us.',
     },
     {
       imageSrc: CustomizeIconImage,
       title: 'Blockchain Development',
       description:
-        'World-class companies enjoy the benefits of blockchain technology with us through Cryptocurrency, Smart-Contracts, crypto wallets, DeFi and enterprise Blockchain app development and more with the most efficient internal process.',
+        'World-class companies enjoy the benefits of blockchain technology with us through cryptocurrency, smart contracts, crypto wallets, DeFi and enterprise blockchain app development and more with the most efficient internal process.',
     },
     {
       imageSrc: ReliableIconImage,
       title: 'eCommerce Development',
       description:
-        'We back startups and young entrepreneurs with exclusive stores by increasing their brand loyalty and authenticity with custom build eCommerce Stores.',
+        'We back startups and young entrepreneurs with exclusive stores by increasing their brand loyalty and authenticity with custom build eCommerce stores. ',
     },
     {
       imageSrc: FastIconImage,
@@ -98,7 +98,7 @@ export default ({
       imageSrc: SimpleIconImage,
       title: 'Metaverse Development',
       description:
-        'The potential use cases of Metaverse are designed and developed at White Label to help our clients tap into endless opportunities of the new era internet with Blockchain, AI and AR/VR.',
+        'The potential use cases of metaverse are designed and developed at Whiten App to help our clients tap into endless opportunities of the new era internet with blockchain, AI and AR/VR.',
     },
   ];
 

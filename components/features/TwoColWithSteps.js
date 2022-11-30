@@ -64,15 +64,15 @@ export default ({
     {
       heading: 'Register',
       description:
-        'Let us know more about your expectations, resources and time. Our Customer success will connect you with respective tech leads and will sit together with you for evaluation before prototyping.',
+        'Let us more about your expectations, resources and time. Our customer success will connect you with respective tech leads and will sit together with you for evaluation before prototyping.',
     },
     {
       heading: 'Development',
       description:
-        'Once we are on the same page, a dedicated team of managers, developers, testers and support is assigned to your project to ensure transparency in each step of development from design to deployment.',
+        'Once we are on the same page, a dedicated team of managers, developers, testers and support is assigned to your project to ensure transparency in each step of development from design to deployment',
     },
     {
-      heading: 'Support and Scale',
+      heading: 'Support and scale',
       description:
         'A business needs updating. We assist with free-of-cost post-delivery support and product scaling with the growth of your business.',
     },
