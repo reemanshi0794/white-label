@@ -152,20 +152,22 @@ const BlockChainDev = () => {
           );
         })}
 
-        <div className="bg-[#efeefe] py-20 px-8">
-          <div className="top text-center mb-[100px] mx-5">
-            <h3 className="text-[45px] font-bold">
+        <div className="bg-[#efeefe] py-20 px-8 md:px-20 lg:px-8">
+          <div className="top text-center mb-[27px] md:mb-[100px] mx-5">
+            <h3 className="text-[30px] lg:text-[45px] font-bold">
               Our Blockchain Development Process
             </h3>
           </div>
-          <div className="grid grid-cols-3 gap-4">
-            <div>
-              <span className="hidden">01</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-4">
+            <div className="flex items-center justify-center">
+              <span className="lg:hidden text-[100px] font-bold block text-center text-[#018073]">
+                01
+              </span>
             </div>
-            <div className=" relative flex items-center justify-center after:content-['']  after:absolute after:bg-[#018073] after:left-2/4 after:h-full after:w-[2px] after:top-[68%]">
+            <div className="hidden relative lg:flex items-center justify-center after:content-['']  after:absolute after:bg-[#018073] after:left-2/4 after:h-full after:w-[2px] after:top-[68%]">
               <img src={One.src} alt="one" className=" z-10" />
             </div>
-            <div className="bg-white rounded-[30px] p-16 text-center max-w-[500px] m-auto relative  before:content-[''] before:absolute before:border-r-[50px] before:border-r-white before:border-y-[25px] before:border-y-transparent before:left-[-48px] before:top-[50%] before:translate-y-[-50%] before:h-[50px] before:w-[50px]">
+            <div className="bg-white rounded-[30px] p-8 lg:p-16 text-center max-w-[500px] m-auto relative  lg:before:content-[''] lg:before:absolute lg:before:border-r-[50px] lg:before:border-r-white lg:before:border-y-[25px] lg:before:border-y-transparent lg:before:left-[-48px] lg:before:top-[50%] lg:before:translate-y-[-50%] lg:before:h-[50px] lg:before:w-[50px]">
               <h5 className="text-[25px] font-bold mb-4">Analysis</h5>
               <p className=" text-lg text-[#363636e6]">
                 We take a deep dive into our client’s business and technical
@@ -174,8 +176,8 @@ const BlockChainDev = () => {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-4">
-            <div className="bg-white rounded-[30px] p-16 text-center max-w-[500px] m-auto relative  before:content-[''] before:absolute before:border-r-[50px] before:border-r-white before:border-y-[25px] before:border-y-transparent before:left-[100%] before:top-[50%] before:rotate-180 before:translate-y-[-50%] before:h-[50px] before:w-[50px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-4">
+            <div className="bg-white rounded-[30px] p-8 lg:p-16 text-center max-w-[500px] m-auto relative  lg:before:content-[''] lg:before:absolute lg:before:border-r-[50px] lg:before:border-r-white lg:before:border-y-[25px] lg:before:border-y-transparent lg:before:left-[100%] lg:before:top-[50%] lg:before:rotate-180 lg:before:translate-y-[-50%] lg:before:h-[50px] before:w-[50px]">
               <h5 className="text-[25px] font-bold mb-4">
                 Prototyping And Blueprints
               </h5>
@@ -186,21 +188,25 @@ const BlockChainDev = () => {
                 database interaction is depicted.
               </p>
             </div>
-            <div className=" relative flex items-center justify-center after:content-['']  after:absolute after:bg-[#018073] after:left-2/4 after:h-full after:w-[2px] after:top-[68%]">
+            <div className=" hidden relative lg:flex items-center justify-center after:content-['']  after:absolute after:bg-[#018073] after:left-2/4 after:h-full after:w-[2px] after:top-[68%]">
               <img src={Two.src} alt="two" className=" z-10" />
             </div>
-            <div>
-              <span className="hidden">01</span>
+            <div className="flex items-center justify-center order-first md:order-last">
+              <span className="lg:hidden text-[100px] font-bold block text-center text-[#018073]">
+                02
+              </span>
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-4">
-            <div>
-              <span className="hidden">01</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-4">
+            <div className="flex items-center justify-center">
+              <span className="lg:hidden text-[100px] font-bold block text-center text-[#018073]">
+                03
+              </span>
             </div>
-            <div className=" relative flex items-center justify-center after:content-['']  after:absolute after:bg-[#018073] after:left-2/4 after:h-full after:w-[2px] after:top-[68%]">
+            <div className=" hidden relative lg:flex items-center justify-center after:content-['']  after:absolute after:bg-[#018073] after:left-2/4 after:h-full after:w-[2px] after:top-[68%]">
               <img src={Three.src} alt="three" className=" z-10" />
             </div>
-            <div className="bg-white rounded-[30px] p-16 text-center max-w-[500px] m-auto relative  before:content-[''] before:absolute before:border-r-[50px] before:border-r-white before:border-y-[25px] before:border-y-transparent before:left-[-48px] before:top-[50%] before:translate-y-[-50%] before:h-[50px] before:w-[50px]">
+            <div className="bg-white rounded-[30px] p-8 lg:p-16 text-center max-w-[500px] m-auto relative  lg:before:content-[''] lg:before:absolute lg:before:border-r-[50px] lg:before:border-r-white lg:before:border-y-[25px] lg:before:border-y-transparent lg:before:left-[-48px] lg:before:top-[50%] lg:before:translate-y-[-50%] lg:before:h-[50px] lg:before:w-[50px]">
               <h5 className="text-[25px] font-bold mb-4">Design</h5>
               <p className=" text-lg text-[#363636e6]">
                 Our designer comes up with the most suitable prototype that
@@ -209,8 +215,8 @@ const BlockChainDev = () => {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-4">
-            <div className="bg-white rounded-[30px] p-16 text-center max-w-[500px] m-auto relative  before:content-[''] before:absolute before:border-r-[50px] before:border-r-white before:border-y-[25px] before:border-y-transparent before:left-[100%] before:top-[50%] before:rotate-180 before:translate-y-[-50%] before:h-[50px] before:w-[50px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-4">
+            <div className="bg-white rounded-[30px] p-8 lg:p-16 text-center max-w-[500px] m-auto relative  lg:before:content-[''] lg:before:absolute lg:before:border-r-[50px] lg:before:border-r-white lg:before:border-y-[25px] lg:before:border-y-transparent lg:before:left-[100%] lg:before:top-[50%] lg:before:rotate-180 lg:before:translate-y-[-50%] lg:before:h-[50px] before:w-[50px]">
               <h5 className="text-[25px] font-bold mb-4">
                 Block Chain Development
               </h5>
@@ -219,21 +225,25 @@ const BlockChainDev = () => {
                 performing blockchain product that yields quality and security.
               </p>
             </div>
-            <div className=" relative flex items-center justify-center after:content-['']  after:absolute after:bg-[#018073] after:left-2/4 after:h-full after:w-[2px] after:top-[68%]">
+            <div className=" hidden relative lg:flex items-center justify-center after:content-['']  after:absolute after:bg-[#018073] after:left-2/4 after:h-full after:w-[2px] after:top-[68%]">
               <img src={Four.src} alt="Four" className=" z-10" />
             </div>
-            <div>
-              <span className="hidden">01</span>
+            <div className="flex items-center justify-center order-first md:order-last">
+              <span className="lg:hidden text-[100px] font-bold block text-center text-[#018073]">
+                04
+              </span>
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-4">
-            <div>
-              <span className="hidden">01</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-4">
+            <div className="flex items-center justify-center">
+              <span className="lg:hidden text-[100px] font-bold block text-center text-[#018073]">
+                05
+              </span>
             </div>
-            <div className=" relative flex items-center justify-center after:content-['']  after:absolute after:bg-secondary-700 after:left-2/4 after:h-full after:w-[2px] after:top-[68%]">
+            <div className=" hidden relative lg:flex items-center justify-center after:content-['']  after:absolute after:bg-[#018073] after:left-2/4 after:h-full after:w-[2px] after:top-[68%]">
               <img src={Five.src} alt="five" className=" z-10" />
             </div>
-            <div className="bg-white rounded-[30px] p-16 text-center max-w-[500px] m-auto relative  before:content-[''] before:absolute before:border-r-[50px] before:border-r-white before:border-y-[25px] before:border-y-transparent before:left-[-48px] before:top-[50%] before:translate-y-[-50%] before:h-[50px] before:w-[50px]">
+            <div className="bg-white rounded-[30px] p-8 lg:p-16 text-center max-w-[500px] m-auto relative  lg:before:content-[''] lg:before:absolute lg:before:border-r-[50px] lg:before:border-r-white lg:before:border-y-[25px] lg:before:border-y-transparent lg:before:left-[-48px] lg:before:top-[50%] lg:before:translate-y-[-50%] lg:before:h-[50px] lg:before:w-[50px]">
               <h5 className="text-[25px] font-bold mb-4">Quality Assurance</h5>
               <p className=" text-lg text-[#363636e6]">
                 Our team of blockchain developers and testers together work on
@@ -243,8 +253,8 @@ const BlockChainDev = () => {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-4">
-            <div className="bg-white rounded-[30px] p-16 text-center max-w-[500px] m-auto relative  before:content-[''] before:absolute before:border-r-[50px] before:border-r-white before:border-y-[25px] before:border-y-transparent before:left-[100%] before:top-[50%] before:rotate-180 before:translate-y-[-50%] before:h-[50px] before:w-[50px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-4">
+            <div className="bg-white rounded-[30px] p-8 lg:p-16 text-center max-w-[500px] m-auto relative  lg:before:content-[''] lg:before:absolute lg:before:border-r-[50px] lg:before:border-r-white lg:before:border-y-[25px] lg:before:border-y-transparent lg:before:left-[100%] lg:before:top-[50%] lg:before:rotate-180 lg:before:translate-y-[-50%] lg:before:h-[50px] before:w-[50px]">
               <h5 className="text-[25px] font-bold mb-4">Deployment</h5>
               <p className=" text-lg text-[#363636e6]">
                 By Following all the standard protocols in deploying blockchain
@@ -252,21 +262,25 @@ const BlockChainDev = () => {
                 customers easily
               </p>
             </div>
-            <div className=" relative flex items-center justify-center after:content-['']  after:absolute after:bg-[#018073] after:left-2/4 after:h-full after:w-[2px] after:top-[68%]">
+            <div className=" hidden relative lg:flex items-center justify-center after:content-['']  after:absolute after:bg-[#018073] after:left-2/4 after:h-full after:w-[2px] after:top-[68%]">
               <img src={Six.src} alt="Six" className=" z-10" />
             </div>
-            <div>
-              <span className="hidden">01</span>
+            <div className="flex items-center justify-center order-first md:order-last">
+              <span className="lg:hidden text-[100px] font-bold block text-center text-[#018073]">
+                06
+              </span>
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-4">
-            <div>
-              <span className="hidden">01</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-4">
+            <div className="flex items-center justify-center">
+              <span className="lg:hidden text-[100px] font-bold block text-center text-[#018073]">
+                07
+              </span>
             </div>
-            <div className=" relative flex items-center justify-center ">
+            <div className=" hidden relative lg:flex items-center justify-center ">
               <img src={Seven.src} alt="Seven" />
             </div>
-            <div className="bg-white rounded-[30px] p-16 text-center max-w-[500px] m-auto relative  before:content-[''] before:absolute before:border-r-[50px] before:border-r-white before:border-y-[25px] before:border-y-transparent before:left-[-48px] before:top-[50%] before:translate-y-[-50%] before:h-[50px] before:w-[50px]">
+            <div className="bg-white rounded-[30px] p-8 lg:p-16 text-center max-w-[500px] m-auto relative  lg:before:content-[''] lg:before:absolute lg:before:border-r-[50px] lg:before:border-r-white lg:before:border-y-[25px] lg:before:border-y-transparent lg:before:left-[-48px] lg:before:top-[50%] lg:before:translate-y-[-50%] lg:before:h-[50px] lg:before:w-[50px]">
               <h5 className="text-[25px] font-bold mb-4">
                 Support and Maintenance
               </h5>
