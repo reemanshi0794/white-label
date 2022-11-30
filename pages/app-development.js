@@ -37,6 +37,9 @@ import SimpleIconImage from '../assets/images/simple-icon.svg';
 import SupportIconImage from '../assets/images/support-icon.svg';
 import SvgDecoratorBlob3 from '../assets/images/svg-decorator-blob-3.svg';
 import Footer from '../components/footers/FiveColumnWithBackground.js';
+import LeadingMobileApp from '../assets/images/LeadingMobileApp.png';
+import CustomMobileapps from '../assets/images/CustomMobileapps.png';
+import AppPartners from '../assets/images/AppPartners.png';
 
 // import Link from 'next/link';
 
@@ -132,7 +135,7 @@ const AppDevelopment = ({
               <div className="flex justify-center lg:justify-end items-center">
                 <img
                   tw="min-w-0 w-full max-w-lg xl:max-w-3xl"
-                  src={BannerImage.src}
+                  src={LeadingMobileApp.src}
                   alt="Design Illustration"
                 />
               </div>
@@ -198,7 +201,7 @@ const AppDevelopment = ({
               <div className="flex justify-center lg:justify-end items-center">
                 <img
                   tw="min-w-0 w-full max-w-lg xl:max-w-3xl"
-                  src={BannerImage.src}
+                  src={CustomMobileapps.src}
                   alt="Design Illustration"
                 />
               </div>
@@ -290,7 +293,7 @@ const AppDevelopment = ({
               <div className="flex justify-center lg:justify-end items-center">
                 <img
                   tw="min-w-0 w-full max-w-lg xl:max-w-3xl"
-                  src={BannerImage.src}
+                  src={AppPartners.src}
                   alt="Design Illustration"
                 />
               </div>
