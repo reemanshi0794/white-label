@@ -218,7 +218,7 @@ const AppDevelopment = ({
           <h1 className="font-bold text-lg md:text-3xl 2xl:text-5xl leading-tight pt-0 md:pt-4 text-center">
             Industry-wise App development Solutions
           </h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-8 md:mt-12 px-4 2xl:px-[17rem] gap-8 xl:gap-16 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-8 md:mt-12 2xl:mt-16 px-4 2xl:px-[17rem] gap-8 xl:gap-16 ">
             {cards.map((card, i) => {
               const IconImage = card.imageSrc
               return (

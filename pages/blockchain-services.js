@@ -1,35 +1,35 @@
-import React, { useEffect } from 'react';
-import ReactGA from 'react-ga';
-import BlockChainBanner from '../assets/images/Blockchain/blockChainBanner.svg';
-import Etherium from '../assets/images/Blockchain/etherium.png';
-import HyperLedger from '../assets/images/Blockchain/hyperledger.png';
-import Corda from '../assets/images/Blockchain/corda.png';
-import MultiChain from '../assets/images/Blockchain/multichain.png';
-import EOS from '../assets/images/Blockchain/eos.png';
-import Stellar from '../assets/images/Blockchain/Stellar.png';
-import Tron from '../assets/images/Blockchain/tron.png';
-import Head from 'next/head';
-import Footer from '../components/footers/FiveColumnWithInputForm.js';
-import MainServices from '../components/MainServices';
+import React, { useEffect } from "react"
+import ReactGA from "react-ga"
+import BlockChainBanner from "../assets/images/Blockchain/blockChainBanner.svg"
+import Etherium from "../assets/images/Blockchain/etherium.png"
+import HyperLedger from "../assets/images/Blockchain/hyperledger.png"
+import Corda from "../assets/images/Blockchain/corda.png"
+import MultiChain from "../assets/images/Blockchain/multichain.png"
+import EOS from "../assets/images/Blockchain/eos.png"
+import Stellar from "../assets/images/Blockchain/Stellar.png"
+import Tron from "../assets/images/Blockchain/tron.png"
+import Head from "next/head"
+import Footer from "../components/footers/FiveColumnWithInputForm.js"
+import MainServices from "../components/MainServices"
 
 // import { BlockChainAppPageItemToDisplay } from "../data/data";
-import One from '../assets/images/One.png';
-import Two from '../assets/images/Two.png';
-import Three from '../assets/images/Three.png';
-import Four from '../assets/images/Four.png';
-import Five from '../assets/images/Five.png';
-import Six from '../assets/images/Six.png';
-import Seven from '../assets/images/Seven.png';
-import Link from 'next/link';
-import Header from '../components/headers/light.js';
-import CryptoWallet from '../assets/images/CryptoWallet.png';
-import NFTMarketplace from '../assets/images/NFTMarketplace.png';
-import DApps from '../assets/images/DApps.png';
-import BlockChainSupply from '../assets/images/BlockChainSupply.png';
-import NftBannerImg from '../assets/images/NftBannerImg.png';
-import Features from '../components/features/ThreeColSimple.js';
-import Features1 from '../components/features/ThreeColWithSideImage.js';
-import PrivateBlockChain from '../assets/images/PrivateBlockChain.png';
+import One from "../assets/images/One.png"
+import Two from "../assets/images/Two.png"
+import Three from "../assets/images/Three.png"
+import Four from "../assets/images/Four.png"
+import Five from "../assets/images/Five.png"
+import Six from "../assets/images/Six.png"
+import Seven from "../assets/images/Seven.png"
+import Link from "next/link"
+import Header from "../components/headers/light.js"
+import CryptoWallet from "../assets/images/CryptoWallet.png"
+import NFTMarketplace from "../assets/images/NFTMarketplace.png"
+import DApps from "../assets/images/DApps.png"
+import BlockChainSupply from "../assets/images/BlockChainSupply.png"
+import NftBannerImg from "../assets/images/NftBannerImg.png"
+import Features from "../components/features/ThreeColSimple.js"
+import Features1 from "../components/features/ThreeColWithSideImage.js"
+import PrivateBlockChain from "../assets/images/PrivateBlockChain.png"
 
 const BlockChainAppPageItemToDisplay = [
   {
@@ -67,13 +67,13 @@ const BlockChainAppPageItemToDisplay = [
     desc: `For banks and Businesses, we provide Private (Permissioned Blockchains ) to advance smooth operations. Our developers are well packed to help you decentralize daily operations`,
     textOnLeft: true,
   },
-];
+]
 
 const BlockChainDev = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-    ReactGA.pageview(window.location.pathname);
-  }, []);
+    window.scrollTo(0, 0)
+    ReactGA.pageview(window.location.pathname)
+  }, [])
   return (
     <>
       <Header />
@@ -97,27 +97,24 @@ const BlockChainDev = () => {
           />
         </Head>
 
-        <div className="relative">
-          <div className="flex flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto pb-20 pt-32 md:pb-24 md:pt-32">
-            <div className="relative lg:w-5/12 text-center max-w-xs md:max-w-lg  mx-auto lg:max-w-none lg:text-left">
-              <h1 className="font-bold text-3xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight">
+        <div className="relative mt-32 2xl:mt-40">
+          <div className="grid grid-cols-1 lg:grid-cols-2 max-w-screen-xl mx-auto items-center">
+            <div className="relative text-center lg:text-left">
+              <h1 className="font-bold text-lg md:text-3xl 2xl:text-5xl leading-tight">
                 Blockchain
                 <br /> Development Services
               </h1>
-
-              <div className=" mt-4 xl:mt-8 flex flex-col items-center lg:items-start">
-                <p className="text-sm lg:text-md tracking-wider font-bold text-[#5b5b5b]">
-                  Have some ideas that involve transparency, Decentralization
-                  and persistence? As the No.1 Blockchain Development company we
-                  offer services that are future-proof. Build your Crypto
-                  wallets, dApps, NFT marketplaces, Smart contracts and more
-                  with us.
-                </p>
-              </div>
+              <p className="my-4 text-sm md:text-base 2xl:text-lg lg:pr-[132px] font-medium leading-relaxed text-secondary-100">
+                Have some ideas that involve transparency, Decentralization and
+                persistence? As the No.1 Blockchain Development company we offer
+                services that are future-proof. Build your Crypto wallets,
+                dApps, NFT marketplaces, Smart contracts and more with us.
+              </p>
             </div>
-            <div className="relative mt-12 lg:mt-0 flex-1 flex flex-col justify-center lg:self-end">
+            <div className="relative mt-8 md:mt-12 lg:mt-0 flex-1 flex flex-col justify-center lg:self-end">
               <div className="flex justify-center lg:justify-end items-center">
                 <img
+                  tw="min-w-0 w-full max-w-lg xl:max-w-3xl"
                   src={PrivateBlockChain.src}
                   alt="PrivateBlockChain image"
                 />
@@ -126,23 +123,25 @@ const BlockChainDev = () => {
           </div>
         </div>
 
-        <Features
-          heading="Couple Your Idea with Blockchain"
-          description="Delivering decentralized solutions to empower your business
+        <div>
+          <Features
+            heading="Couple Your Idea with Blockchain"
+            description="Delivering decentralized solutions to empower your business
           demands. Whiten App’s blockchain development service facilitates
           the absolute solution to meet our client’s demands, and strategic
           perceptions. We provide challenging and unmatchable solutions in
           major Blockchain platforms."
-          linkText=""
-          cards={[]}
-        />
-        <div className="flex items-center justify-center">
-          <a
-            href="/contact-us"
-            className="lg:mx-0 px-8 py-3 bg-primary-500 text-gray-100 hover:bg-secondary-700 hover:text-gray-200 focus:shadow-outline border-b-0 rounded-full"
-          >
-            Contact Us
-          </a>
+            linkText=""
+            cards={[]}
+          />
+          <div className="flex items-center justify-center">
+            <a
+              href="/contact-us"
+              className="lg:mx-0 px-8 py-3 bg-primary-500 text-gray-100 hover:bg-secondary-700 hover:text-gray-200 focus:shadow-outline border-b-0 rounded-full"
+            >
+              Contact Us
+            </a>
+          </div>
         </div>
 
         {BlockChainAppPageItemToDisplay.map((element) => {
@@ -153,10 +152,10 @@ const BlockChainDev = () => {
               description={element.desc}
               textOnLeft={element.textOnLeft}
             />
-          );
+          )
         })}
 
-        <div className="bg-[#efeefe] py-20 px-8 md:px-20 lg:px-8">
+        <div className="bg-[#efeefe] px-8 md:px-20 lg:px-8 py-8 md:py-20 mt-8">
           <div className="top text-center mb-[27px] md:mb-[100px] mx-5">
             <h3 className="text-[30px] lg:text-[45px] font-bold">
               Our Blockchain Development Process
@@ -300,9 +299,6 @@ const BlockChainDev = () => {
         {/* most trusted */}
         <div className=" py-20">
           <Features1
-            subheading={
-              <span className="uppercase tracking-wider text-sm"></span>
-            }
             heading={
               <>
                 Most Trusted Blockchain Platforms that we use to decentralize
@@ -363,7 +359,7 @@ const BlockChainDev = () => {
       </div>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default BlockChainDev;
+export default BlockChainDev

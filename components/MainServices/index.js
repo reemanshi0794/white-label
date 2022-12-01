@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react"
 
 function MainServices({ heading, imageSrc, description, textOnLeft }) {
   return (
@@ -18,21 +18,21 @@ function MainServices({ heading, imageSrc, description, textOnLeft }) {
         {textOnLeft === true ? (
           <div className="mt-0 order-first ">
             <div className="lg:py-8 text-center md:text-left">
-              <h2 className="mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl md:text-left leading-tight text-4xl sm:text-5xl tracking-wide text-center">
+              <h2 className="font-bold text-lg md:text-3xl 2xl:text-5xl leading-tight">
                 {heading}
               </h2>
-              <p className="mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100">
+              <p className="my-4 text-sm md:text-base 2xl:text-lg  font-medium leading-relaxed text-secondary-100">
                 {description}
               </p>
             </div>
           </div>
         ) : (
-          <div className="mt-16 md:mt-0 mx-auto order-first md:order-last">
+          <div className=" order-first md:order-last">
             <div className="lg:py-8 text-center md:text-left">
-              <h2 className="mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl md:text-left leading-tight text-4xl sm:text-5xl tracking-wide text-center">
+              <h2 className="font-bold text-lg md:text-3xl 2xl:text-5xl leading-tight">
                 {heading}
               </h2>
-              <p className="mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100">
+              <p className="my-4 text-sm md:text-base 2xl:text-lg font-medium leading-relaxed text-secondary-100">
                 {description}
               </p>
             </div>
@@ -40,7 +40,7 @@ function MainServices({ heading, imageSrc, description, textOnLeft }) {
         )}
       </div>
     </div>
-  );
+  )
 }
 
-export default MainServices;
+export default MainServices
