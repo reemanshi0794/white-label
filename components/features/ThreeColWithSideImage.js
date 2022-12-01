@@ -105,7 +105,7 @@ export default ({
   if (!cards) cards = defaultCards
 
   return (
-    <div className="relative mt-12 md:mt-8">
+    <div className="relative xl:mt-8">
       <h2 className="font-extrabold text-[22px] md:text-3xl 2xl:text-5xl leading-tight pt-0 md:pt-4 text-center">
         {heading}
       </h2>

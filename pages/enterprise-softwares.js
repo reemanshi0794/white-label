@@ -1,23 +1,23 @@
-import React, { useEffect } from 'react';
-import ReactGA from 'react-ga';
-import EnterpriseBanner from '../assets/images/EnterpriseBanner.png';
-import AgileFill from '../assets/images/AgileFill.png';
-import Platform from '../assets/images/Platform.png';
-import BestUi from '../assets/images/BestUi.png';
-import FeatureRich from '../assets/images/FeatureRich.png';
-import TechStack from '../assets/images/TechStack.png';
-import B2bEnterprise from '../assets/images/B2bEnterprise.png';
-import B2cEnterprise from '../assets/images/B2cEnterprise.png';
-import MultiVenderEnterprise from '../assets/images/MultiVenderEnterprise.png';
-import CMSEnterprise from '../assets/images/CMSEnterprise.png';
-import MigrationEnterprise from '../assets/images/MigrationEnterprise.png';
-import ApiIntegrationEnterprise from '../assets/images/ApiIntegrationEnterprise.png';
-import Head from 'next/head';
-import Header from '../components/headers/light.js';
-import Footer from '../components/footers/FiveColumnWithInputForm.js';
-import MainServices from '../components/MainServices';
-import Features from '../components/features/ThreeColSimple.js';
-import Features1 from '../components/features/ThreeColWithSideImage.js';
+import React, { useEffect } from "react"
+import ReactGA from "react-ga"
+import EnterpriseBanner from "../assets/images/EnterpriseBanner.png"
+import AgileFill from "../assets/images/AgileFill.png"
+import Platform from "../assets/images/Platform.png"
+import BestUi from "../assets/images/BestUi.png"
+import FeatureRich from "../assets/images/FeatureRich.png"
+import TechStack from "../assets/images/TechStack.png"
+import B2bEnterprise from "../assets/images/B2bEnterprise.png"
+import B2cEnterprise from "../assets/images/B2cEnterprise.png"
+import MultiVenderEnterprise from "../assets/images/MultiVenderEnterprise.png"
+import CMSEnterprise from "../assets/images/CMSEnterprise.png"
+import MigrationEnterprise from "../assets/images/MigrationEnterprise.png"
+import ApiIntegrationEnterprise from "../assets/images/ApiIntegrationEnterprise.png"
+import Head from "next/head"
+import Header from "../components/headers/light.js"
+import Footer from "../components/footers/FiveColumnWithInputForm.js"
+import MainServices from "../components/MainServices"
+import Features from "../components/features/ThreeColSimple.js"
+import Features1 from "../components/features/ThreeColWithSideImage.js"
 
 const EnterpriseServicePageItemToDisplay = [
   {
@@ -61,46 +61,46 @@ const EnterpriseServicePageItemToDisplay = [
     heading: `Modernizing Legacy Applications`,
     desc: `Without interrupting the business flow, we modernize existing technology with the latest software to create a powerful system. We assist in updating IT Stacks to achieve corporate goals. This includes platform migration,re-design and architecture and simplifying the business process with automation.`,
   },
-];
+]
 
 const EnterpriseCards = [
   {
     imageSrc: AgileFill,
-    title: 'Agile Approach',
+    title: "Agile Approach",
     description:
-      ' Our Agile Development method brings the best in less time helping our clients launch their eCommerce platforms in no time.',
+      " Our Agile Development method brings the best in less time helping our clients launch their eCommerce platforms in no time.",
   },
   {
     imageSrc: Platform,
-    title: 'Platform Independent',
+    title: "Platform Independent",
     description:
-      'All our eCommerce web solutions are made to adapt the  screen and features of all types of devices making them  usable on multiple platforms with consistency ',
+      "All our eCommerce web solutions are made to adapt the  screen and features of all types of devices making them  usable on multiple platforms with consistency ",
   },
   {
     imageSrc: BestUi,
-    title: 'Best User Interface',
+    title: "Best User Interface",
     description:
-      'We deliver all our eCommerce solutions with top-notch UI/UX designs to assure the best user experience ',
+      "We deliver all our eCommerce solutions with top-notch UI/UX designs to assure the best user experience ",
   },
   {
     imageSrc: FeatureRich,
-    title: 'Feature-rich',
+    title: "Feature-rich",
     description:
-      'We never stop upgrading our feature support as we believe one factor for the best-performing website is evaluated by the feature it supports.',
+      "We never stop upgrading our feature support as we believe one factor for the best-performing website is evaluated by the feature it supports.",
   },
   {
     imageSrc: TechStack,
-    title: 'Best Technology Stacks',
+    title: "Best Technology Stacks",
     description:
-      'As the tech stack is the foundation of any software, we make sure that we use only the best-suited technologystack for our eCommerce solutions. This helps us come up with the best architecture and layout for your eCommerce needs',
+      "As the tech stack is the foundation of any software, we make sure that we use only the best-suited technologystack for our eCommerce solutions. This helps us come up with the best architecture and layout for your eCommerce needs",
   },
-];
+]
 
 const EnterpriseSoftwares = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-    ReactGA.pageview(window.location.pathname);
-  }, []);
+    window.scrollTo(0, 0)
+    ReactGA.pageview(window.location.pathname)
+  }, [])
   return (
     <>
       <Header />
@@ -119,25 +119,23 @@ const EnterpriseSoftwares = () => {
           />
         </Head>
 
-        <div className="relative">
-          <div className="flex flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto pt-32 md:pt-32">
-            <div className="relative lg:w-5/12 text-center max-w-xs md:max-w-lg  mx-auto lg:max-w-none lg:text-left">
-              <h1 className="font-bold text-3xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight">
+        <div className="relative mt-32 2xl:mt-40">
+          <div className="grid grid-cols-1 lg:grid-cols-2 max-w-screen-xl mx-auto items-center">
+            <div className="relative text-center lg:text-left">
+              <h1 className="font-extrabold text-[22px] md:text-3xl 2xl:text-5xl leading-tight">
                 Enterprise Software
                 <br /> Development
               </h1>
               <p className="my-4 text-base xl:text-lg">
                 Agile solutions for your Enterprise Demands
               </p>
-              <div className="mt-3 flex flex-col items-center lg:items-start">
-                <p className="text-sm lg:text-md tracking-wider font-bold text-[#5b5b5b]">
-                  Whiten App offers you the most reliable enterprise solutions
-                  to streamline all business requirements and deliver the
-                  perfect user experience.
-                </p>
-              </div>
+              <p className="my-4 text-sm md:text-base 2xl:text-lg px-0 md:px-20 lg:pl-0 lg:pr-16 font-medium leading-relaxed text-secondary-100">
+                Whiten App offers you the most reliable enterprise solutions to
+                streamline all business requirements and deliver the perfect
+                user experience.
+              </p>
             </div>
-            <div className="relative mt-12 lg:mt-0 flex-1 flex flex-col justify-center lg:self-end">
+            <div className="relative mt-8 md:mt-12 lg:mt-0 flex-1 flex flex-col justify-center lg:self-end">
               <div className="flex justify-center lg:justify-end items-center">
                 <img src={EnterpriseBanner.src} alt="EnterpriseBanner image" />
               </div>
@@ -167,7 +165,7 @@ const EnterpriseSoftwares = () => {
               description={element.desc}
               textOnLeft={element.textOnLeft}
             />
-          );
+          )
         })}
 
         <Features1
@@ -177,7 +175,7 @@ const EnterpriseSoftwares = () => {
           heading={
             <>
               What makes Whiten App the best in
-              <span className="text-primary-500"> eCommerce Development?</span>
+              <h6 className="text-primary-500"> eCommerce Development?</h6>
             </>
           }
           description=""
@@ -187,7 +185,7 @@ const EnterpriseSoftwares = () => {
       </div>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default EnterpriseSoftwares;
+export default EnterpriseSoftwares

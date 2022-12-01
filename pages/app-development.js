@@ -126,7 +126,7 @@ const AppDevelopment = ({
                 Leading Mobile App
                 <br /> Development Company
               </h1>
-              <p className="my-4 text-sm md:text-base 2xl:text-lg lg:pr-[132px] font-medium leading-relaxed text-secondary-100">
+              <p className="mt-4 text-sm md:text-base 2xl:text-lg lg:pr-[132px] font-medium leading-relaxed text-secondary-100">
                 The potential an app withhold is our key to developing stunning
                 mobile applications.
               </p>
@@ -177,7 +177,6 @@ const AppDevelopment = ({
               <h1 className="font-extrabold text-[22px] md:text-3xl 2xl:text-5xl leading-tight">
                 Custom Mobile apps
                 <br /> Not Just for businesses
-                {/* <span className="text-primary-500">for you.</span> */}
               </h1>
               <p className="my-4 text-sm md:text-base 2xl:text-lg px-0 md:px-20 lg:pl-0 lg:pr-16 font-medium leading-relaxed text-secondary-100">
                 People have the idea that apps are just for business. Let us
