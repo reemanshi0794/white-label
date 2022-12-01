@@ -1,25 +1,25 @@
-import React, { useEffect } from 'react';
-import ReactGA from 'react-ga';
-import NftBanner from '../assets/images/NftBanner.png';
-import CryptoCurrency from '../assets/images/CryptoCurrency.png';
-import Ethereum from '../assets/images/NftMarketPlaceDev/ethereum.png';
-import Binance from '../assets/images/NftMarketPlaceDev/binance.png';
-import Polygon from '../assets/images/NftMarketPlaceDev/polygon.png';
-import Polkadot from '../assets/images/NftMarketPlaceDev/polkadot.png';
-import Cardano from '../assets/images/NftMarketPlaceDev/cardano.png';
-import Solana from '../assets/images/NftMarketPlaceDev/solana.png';
-import { useRouter } from 'next/router';
-import Head from 'next/head';
-import Header from '../components/headers/light.js';
-import Footer from '../components/footers/FiveColumnWithInputForm.js';
-import MainServices from '../components/MainServices';
-import Features from '../components/features/ThreeColSimple.js';
-import Features1 from '../components/features/ThreeColWithSideImage.js';
-import MintableImg from '../assets/images/MintableImg.png';
-import OpenseaImg from '../assets/images/OpenseaImg.png';
-import SuperRareImg from '../assets/images/SuperRareImg.png';
-import RaribleImg from '../assets/images/RaribleImg.png';
-import NiftyImg from '../assets/images/NiftyImg.png';
+import React, { useEffect } from "react"
+import ReactGA from "react-ga"
+import NftBanner from "../assets/images/NftBanner.png"
+import CryptoCurrency from "../assets/images/CryptoCurrency.png"
+import Ethereum from "../assets/images/NftMarketPlaceDev/ethereum.png"
+import Binance from "../assets/images/NftMarketPlaceDev/binance.png"
+import Polygon from "../assets/images/NftMarketPlaceDev/polygon.png"
+import Polkadot from "../assets/images/NftMarketPlaceDev/polkadot.png"
+import Cardano from "../assets/images/NftMarketPlaceDev/cardano.png"
+import Solana from "../assets/images/NftMarketPlaceDev/solana.png"
+import { useRouter } from "next/router"
+import Head from "next/head"
+import Header from "../components/headers/light.js"
+import Footer from "../components/footers/FiveColumnWithInputForm.js"
+import MainServices from "../components/MainServices"
+import Features from "../components/features/ThreeColSimple.js"
+import Features1 from "../components/features/ThreeColWithSideImage.js"
+import MintableImg from "../assets/images/MintableImg.png"
+import OpenseaImg from "../assets/images/OpenseaImg.png"
+import SuperRareImg from "../assets/images/SuperRareImg.png"
+import RaribleImg from "../assets/images/RaribleImg.png"
+import NiftyImg from "../assets/images/NiftyImg.png"
 
 const NftMarkteplaceDevItemToDisplay = [
   {
@@ -57,24 +57,24 @@ const NftMarkteplaceDevItemToDisplay = [
     desc: `Nifty Gateway is one of the top NFT Makerplaces that utilized Blockchain technology to trade/auction digital assets called Nifties. The Nifty platform lets its users sell and buy Nifties without a middleman. By creating a Nifty Gateway clone you can enjoy various revenue streams including Royalties, Setup fee, Launching fee, and bundle fee.`,
     textOnLeft: true,
   },
-];
+]
 
 const NftMarketplaceDev = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-    ReactGA.pageview(window.location.pathname);
-  }, []);
+    window.scrollTo(0, 0)
+    ReactGA.pageview(window.location.pathname)
+  }, [])
 
-  const router = useRouter();
+  const router = useRouter()
 
   const handleClick = (element, e) => {
-    e.preventDefault();
-    if (element.heading === 'OpenSea Clone') {
-      router.push('/opensea-clone');
-    } else if (element.heading === 'Mintable Clone') {
-      router.push('/mintable-clone');
+    e.preventDefault()
+    if (element.heading === "OpenSea Clone") {
+      router.push("/opensea-clone")
+    } else if (element.heading === "Mintable Clone") {
+      router.push("/mintable-clone")
     }
-  };
+  }
   return (
     <>
       <Header />
@@ -94,11 +94,11 @@ const NftMarketplaceDev = () => {
         <div className="relative">
           <div className="flex flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto pt-32 md:pt-32">
             <div className="relative lg:w-5/12 text-center max-w-xs md:max-w-lg  mx-auto lg:max-w-none lg:text-left">
-              <h1 className="font-bold text-3xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight">
+              <h1 className="font-extrabold text-[22px] md:text-3xl 2xl:text-5xl leading-tight">
                 Nft Marketplace
                 <br /> Development Company
               </h1>
-              <p className="my-4 text-base xl:text-lg">
+              <p className="mt-4 text-sm md:text-base 2xl:text-lg lg:pr-[132px] font-medium leading-relaxed text-secondary-100">
                 Join Hands with the world’s Leading NFT Marketplace Developers.
                 We build authentic NFT Marketplaces and facilitate tokenization
                 for all kinds of digital assets.
@@ -126,16 +126,17 @@ const NftMarketplaceDev = () => {
 
             <div className="mt-16 md:mt-0 mx-auto order-first md:order-last">
               <div className="lg:py-8 text-center md:text-left">
-                <h2 className="mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl md:text-left leading-tight text-4xl sm:text-5xl tracking-wide text-center">
-                  Set your foot in a promising future of Blockchain
+                <h2 className="mt-4 font-black text-center lg:text-left leading-tight tracking-wide text-[22px] md:text-3xl 2xl:text-5xl">
+                  Set your foot in a promising <br />
+                  future of Blockchain
                 </h2>
-                <p className="mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100">
+                <p className="mt-4 text-center lg:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100">
                   Decentralization coupled with the heavy monetization method is
                   what is NFT. The industry has paved the path for many
                   entrepreneurs and artists to claim the value of their products
                   and services without a middleman.
                 </p>
-                <p className="mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100">
+                <p className="mt-4 text-center lg:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100">
                   At Whitelabel, we create robust NFT Marketplaces with top
                   security and features that are aimed at boosting user
                   interaction.
@@ -164,7 +165,7 @@ const NftMarketplaceDev = () => {
                   View Details
                 </a> */}
               </>
-            );
+            )
           })}
         </div>
 
@@ -356,7 +357,7 @@ const NftMarketplaceDev = () => {
       </div>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default NftMarketplaceDev;
+export default NftMarketplaceDev
