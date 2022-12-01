@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import ReactGA from 'react-ga';
 import EnterpriseBanner from '../assets/images/EnterpriseBanner.png';
-import Agile from '../assets/images/EcommerceDev/icons/AgileApproach.png';
-import Platform from '../assets/images/EcommerceDev/icons/platformIndep.png';
-import BestUi from '../assets/images/EcommerceDev/icons/bestUi.png';
-import FeatureRich from '../assets/images/EcommerceDev/icons/featureRich.png';
-import TechStack from '../assets/images/EcommerceDev/icons/besttechstack.png';
+import AgileFill from '../assets/images/AgileFill.png';
+import Platform from '../assets/images/Platform.png';
+import BestUi from '../assets/images/BestUi.png';
+import FeatureRich from '../assets/images/FeatureRich.png';
+import TechStack from '../assets/images/TechStack.png';
 import B2bEnterprise from '../assets/images/B2bEnterprise.png';
 import B2cEnterprise from '../assets/images/B2cEnterprise.png';
 import MultiVenderEnterprise from '../assets/images/MultiVenderEnterprise.png';
@@ -65,7 +65,7 @@ const EnterpriseServicePageItemToDisplay = [
 
 const EnterpriseCards = [
   {
-    imageSrc: Agile,
+    imageSrc: AgileFill,
     title: 'Agile Approach',
     description:
       ' Our Agile Development method brings the best in less time helping our clients launch their eCommerce platforms in no time.',
