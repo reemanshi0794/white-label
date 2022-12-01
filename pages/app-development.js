@@ -122,11 +122,11 @@ const AppDevelopment = ({
         <div className="relative mt-32 2xl:mt-40">
           <div className="grid grid-cols-1 lg:grid-cols-2 max-w-screen-xl mx-auto items-center">
             <div className="relative text-center lg:text-left">
-              <h1 className="font-bold text-lg md:text-3xl 2xl:text-5xl leading-tight">
+              <h1 className="font-extrabold text-[22px] md:text-3xl 2xl:text-5xl leading-tight">
                 Leading Mobile App
                 <br /> Development Company
               </h1>
-              <p className="my-4 text-sm md:text-base 2xl:text-lg lg:pr-[132px]">
+              <p className="my-4 text-sm md:text-base 2xl:text-lg lg:pr-[132px] font-medium leading-relaxed text-secondary-100">
                 The potential an app withhold is our key to developing stunning
                 mobile applications.
               </p>
@@ -146,11 +146,7 @@ const AppDevelopment = ({
 
         <Container>
           <ContentWithPaddingXl className=" !pt-8 !pb-16 !2xl:py-24">
-            {heading && (
-              <SectionHeading className="!text-3xl !2xl:text-5xl">
-                {heading}
-              </SectionHeading>
-            )}
+            {heading && <SectionHeading>{heading}</SectionHeading>}
             {description && (
               <SectionDescription className="text-center mx-auto">
                 {description}
@@ -178,12 +174,12 @@ const AppDevelopment = ({
         <div className="relative mb-12 2xl:mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center max-w-screen-xl mx-auto">
             <div className="relative text-center lg:text-left">
-              <h1 className="font-bold text-lg md:text-3xl 2xl:text-5xl leading-tight">
+              <h1 className="font-extrabold text-[22px] md:text-3xl 2xl:text-5xl leading-tight">
                 Custom Mobile apps
                 <br /> Not Just for businesses
                 {/* <span className="text-primary-500">for you.</span> */}
               </h1>
-              <p className="my-4 text-sm md:text-base 2xl:text-lg px-0 md:px-20 lg:pl-0 lg:pr-16">
+              <p className="my-4 text-sm md:text-base 2xl:text-lg px-0 md:px-20 lg:pl-0 lg:pr-16 font-medium leading-relaxed text-secondary-100">
                 People have the idea that apps are just for business. Let us
                 stop you there. Mobile apps are meant for all domains. We just
                 do not build apps for business, but for domains with a variety
@@ -215,7 +211,7 @@ const AppDevelopment = ({
         </div>
 
         <div className="relative ß mb-16">
-          <h1 className="font-bold text-lg md:text-3xl 2xl:text-5xl leading-tight pt-0 md:pt-4 text-center">
+          <h1 className="font-extrabold text-[22px] md:text-3xl 2xl:text-5xl leading-tight pt-0 md:pt-4 text-center">
             Industry-wise App development Solutions
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-8 md:mt-12 2xl:mt-16 px-4 2xl:px-[17rem] gap-8 xl:gap-16 ">
@@ -247,12 +243,12 @@ const AppDevelopment = ({
         <div className="relative mb-12 2xl:mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center max-w-screen-xl mx-auto">
             <div className="relative text-center lg:text-left">
-              <h1 className="font-bold text-lg md:text-3xl 2xl:text-5xl leading-tight">
+              <h1 className="font-extrabold text-[22px] md:text-3xl 2xl:text-5xl leading-tight">
                 Whiten App Solutions as your mobile
                 <br /> app development partners
                 {/* <span className="text-primary-500">for you.</span> */}
               </h1>
-              <p className="my-4 text-sm md:text-base 2xl:text-lg px-0 md:px-20 lg:pl-0 lg:pr-16">
+              <p className="my-4 text-sm md:text-base 2xl:text-lg px-0 md:px-20 lg:pl-0 lg:pr-16 font-medium leading-relaxed text-secondary-100">
                 As the Leading Highperformace app developer, Whiten App has
                 always been able to deliver the best app solutions for all our
                 client’s requirements. Our pricing has always been a highlight.

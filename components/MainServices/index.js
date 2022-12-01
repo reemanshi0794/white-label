@@ -17,22 +17,22 @@ function MainServices({ heading, imageSrc, description, textOnLeft }) {
         )}
         {textOnLeft === true ? (
           <div className="mt-0 order-first ">
-            <div className="lg:py-8 text-center md:text-left">
-              <h2 className="font-bold text-lg md:text-3xl 2xl:text-5xl leading-tight">
+            <div className="lg:py-8 text-center lg:text-left">
+              <h2 className="font-extrabold text-[22px] md:text-3xl 2xl:text-5xl leading-tight">
                 {heading}
               </h2>
-              <p className="my-4 text-sm md:text-base 2xl:text-lg  font-medium leading-relaxed text-secondary-100">
+              <p className="my-4 text-sm md:text-base 2xl:text-lg px-0 md:px-20 lg:pl-0 lg:pr-16 font-medium leading-relaxed text-secondary-100">
                 {description}
               </p>
             </div>
           </div>
         ) : (
           <div className=" order-first md:order-last">
-            <div className="lg:py-8 text-center md:text-left">
-              <h2 className="font-bold text-lg md:text-3xl 2xl:text-5xl leading-tight">
+            <div className="lg:py-8 text-center lg:text-left">
+              <h2 className="font-extrabold text-[22px] md:text-3xl 2xl:text-5xl leading-tight">
                 {heading}
               </h2>
-              <p className="my-4 text-sm md:text-base 2xl:text-lg font-medium leading-relaxed text-secondary-100">
+              <p className="my-4 text-sm md:text-base 2xl:text-lg px-0 md:px-20 lg:pl-0 lg:pr-16 font-medium leading-relaxed text-secondary-100">
                 {description}
               </p>
             </div>
