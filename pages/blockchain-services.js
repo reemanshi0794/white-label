@@ -100,7 +100,7 @@ const BlockChainDev = () => {
         <div className="relative mt-32 2xl:mt-40">
           <div className="grid grid-cols-1 lg:grid-cols-2 max-w-screen-xl mx-auto items-center">
             <div className="relative text-center lg:text-left">
-              <h1 className="font-bold text-lg md:text-3xl 2xl:text-5xl leading-tight">
+              <h1 className="font-extrabold text-[22px] md:text-3xl 2xl:text-5xl leading-tight">
                 Blockchain
                 <br /> Development Services
               </h1>
@@ -167,7 +167,7 @@ const BlockChainDev = () => {
                 01
               </span>
             </div>
-            <div className="hidden relative lg:flex items-center justify-center after:content-['']  after:absolute after:bg-[#018073] after:left-2/4 after:h-full after:w-[2px] after:top-[68%]">
+            <div className="hidden relative lg:flex items-center justify-center after:content-['']  after:absolute after:bg-[#018073] after:left-2/4 after:h-full after:w-[2px] after:top-[62%]">
               <img src={One.src} alt="one" className=" z-10" />
             </div>
             <div className="bg-white rounded-[30px] p-8 lg:p-16 text-center max-w-[500px] m-auto relative  lg:before:content-[''] lg:before:absolute lg:before:border-r-[50px] lg:before:border-r-white lg:before:border-y-[25px] lg:before:border-y-transparent lg:before:left-[-48px] lg:before:top-[50%] lg:before:translate-y-[-50%] lg:before:h-[50px] lg:before:w-[50px]">
@@ -191,7 +191,7 @@ const BlockChainDev = () => {
                 database interaction is depicted.
               </p>
             </div>
-            <div className=" hidden relative lg:flex items-center justify-center after:content-['']  after:absolute after:bg-[#018073] after:left-2/4 after:h-full after:w-[2px] after:top-[68%]">
+            <div className=" hidden relative lg:flex items-center justify-center after:content-['']  after:absolute after:bg-[#018073] after:left-2/4 after:h-full after:w-[2px] after:top-[59%]">
               <img src={Two.src} alt="two" className=" z-10" />
             </div>
             <div className="flex items-center justify-center order-first md:order-last">
@@ -206,7 +206,7 @@ const BlockChainDev = () => {
                 03
               </span>
             </div>
-            <div className=" hidden relative lg:flex items-center justify-center after:content-['']  after:absolute after:bg-[#018073] after:left-2/4 after:h-full after:w-[2px] after:top-[68%]">
+            <div className=" hidden relative lg:flex items-center justify-center after:content-['']  after:absolute after:bg-[#018073] after:left-2/4 after:h-full after:w-[2px] after:top-[59%]">
               <img src={Three.src} alt="three" className=" z-10" />
             </div>
             <div className="bg-white rounded-[30px] p-8 lg:p-16 text-center max-w-[500px] m-auto relative  lg:before:content-[''] lg:before:absolute lg:before:border-r-[50px] lg:before:border-r-white lg:before:border-y-[25px] lg:before:border-y-transparent lg:before:left-[-48px] lg:before:top-[50%] lg:before:translate-y-[-50%] lg:before:h-[50px] lg:before:w-[50px]">
@@ -228,7 +228,7 @@ const BlockChainDev = () => {
                 performing blockchain product that yields quality and security.
               </p>
             </div>
-            <div className=" hidden relative lg:flex items-center justify-center after:content-['']  after:absolute after:bg-[#018073] after:left-2/4 after:h-full after:w-[2px] after:top-[68%]">
+            <div className=" hidden relative lg:flex items-center justify-center after:content-['']  after:absolute after:bg-[#018073] after:left-2/4 after:h-full after:w-[2px] after:top-[59%]">
               <img src={Four.src} alt="Four" className=" z-10" />
             </div>
             <div className="flex items-center justify-center order-first md:order-last">
@@ -243,7 +243,7 @@ const BlockChainDev = () => {
                 05
               </span>
             </div>
-            <div className=" hidden relative lg:flex items-center justify-center after:content-['']  after:absolute after:bg-[#018073] after:left-2/4 after:h-full after:w-[2px] after:top-[68%]">
+            <div className=" hidden relative lg:flex items-center justify-center after:content-['']  after:absolute after:bg-[#018073] after:left-2/4 after:h-full after:w-[2px] after:top-[59%]">
               <img src={Five.src} alt="five" className=" z-10" />
             </div>
             <div className="bg-white rounded-[30px] p-8 lg:p-16 text-center max-w-[500px] m-auto relative  lg:before:content-[''] lg:before:absolute lg:before:border-r-[50px] lg:before:border-r-white lg:before:border-y-[25px] lg:before:border-y-transparent lg:before:left-[-48px] lg:before:top-[50%] lg:before:translate-y-[-50%] lg:before:h-[50px] lg:before:w-[50px]">
@@ -265,7 +265,7 @@ const BlockChainDev = () => {
                 customers easily
               </p>
             </div>
-            <div className=" hidden relative lg:flex items-center justify-center after:content-['']  after:absolute after:bg-[#018073] after:left-2/4 after:h-full after:w-[2px] after:top-[68%]">
+            <div className=" hidden relative lg:flex items-center justify-center after:content-['']  after:absolute after:bg-[#018073] after:left-2/4 after:h-full after:w-[2px] after:top-[59%]">
               <img src={Six.src} alt="Six" className=" z-10" />
             </div>
             <div className="flex items-center justify-center order-first md:order-last">
@@ -297,7 +297,7 @@ const BlockChainDev = () => {
         </div>
 
         {/* most trusted */}
-        <div className=" py-20">
+        <div className=" md:py-12">
           <Features1
             heading={
               <>
