@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import ReactGA from 'react-ga';
-import NftBannerImg from '../assets/images/NftBannerImg.png';
-import CryptoCurrency from '../assets/images/NftMarketPlaceDev/cryptocurrency.png';
+import NftBanner from '../assets/images/NftBanner.png';
+import CryptoCurrency from '../assets/images/CryptoCurrency.png';
 import Ethereum from '../assets/images/NftMarketPlaceDev/ethereum.png';
 import Binance from '../assets/images/NftMarketPlaceDev/binance.png';
 import Polygon from '../assets/images/NftMarketPlaceDev/polygon.png';
@@ -15,11 +15,11 @@ import Footer from '../components/footers/FiveColumnWithInputForm.js';
 import MainServices from '../components/MainServices';
 import Features from '../components/features/ThreeColSimple.js';
 import Features1 from '../components/features/ThreeColWithSideImage.js';
-import MintableImg from '../assets/images/NftMarketPlaceDev/mintable.png';
-import OpenseaImg from '../assets/images/NftMarketPlaceDev/opensea.png';
-import SuperRareImg from '../assets/images/NftMarketPlaceDev/superrare.png';
-import RaribleImg from '../assets/images/NftMarketPlaceDev/rariable.png';
-import NiftyImg from '../assets/images/NftMarketPlaceDev/nifty.png';
+import MintableImg from '../assets/images/MintableImg.png';
+import OpenseaImg from '../assets/images/OpenseaImg.png';
+import SuperRareImg from '../assets/images/SuperRareImg.png';
+import RaribleImg from '../assets/images/RaribleImg.png';
+import NiftyImg from '../assets/images/NiftyImg.png';
 
 const NftMarkteplaceDevItemToDisplay = [
   {
@@ -106,7 +106,7 @@ const NftMarketplaceDev = () => {
             </div>
             <div className="relative mt-12 lg:mt-0 flex-1 flex flex-col justify-center lg:self-end">
               <div className="flex justify-center lg:justify-end items-center">
-                <img src={NftBannerImg.src} alt="NftBannerImg" />
+                <img src={NftBanner.src} alt="NftBannerImg" />
               </div>
             </div>
           </div>
