@@ -40,12 +40,12 @@ export default () => {
               About Whiten App Solutions
             </span>
           }
-          heading="Ideas take the best form of Innovation here"
+          heading="Ideas take the best form of innovation here"
           buttonRounded={false}
           primaryButtonText="See Portfolio"
           imageSrc="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
           isModernDesignImage={false}
-          description="We are the Software development Studio where you get to witness great ideas churned into the best business solutions."
+          description="We are the software development studio where you get to witness great ideas churned into the best business solutions."
         />
         <MainFeature1
           subheading={
@@ -67,7 +67,7 @@ export default () => {
             </span>
           }
           heading="We follow these."
-          description="We are Studius developers and Tech Explorers. We create IT solutions of global stands for businesses and individuals."
+          description="We are studious developers and tech explorers. We create IT solutions of global stands for businesses and individuals."
           cards={[
             {
               imageSrc: <Support />,
@@ -77,7 +77,7 @@ export default () => {
             },
             {
               imageSrc: <StrongTeams />,
-              title: 'Dream Teams',
+              title: 'A Dream team',
               description:
                 'We achieve strong skillset development and growth for our team with flexible work hours and space that benefits both the work-life balance and productivity.',
             },
