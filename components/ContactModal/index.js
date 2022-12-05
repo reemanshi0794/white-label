@@ -144,7 +144,7 @@ function ContactModal({
                     name="name"
                     value={contactInfo.name || ""}
                     placeholder="Full Name"
-                    className="mt-6 first:mt-0 border-2 px-3 py-2 2xl:px-4 2xl:py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
+                    className="mt-6 first:mt-0 text-[#797979] border-2 px-3 py-2 2xl:px-4 2xl:py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
                     id="exampleInputEmail1"
                     required
                     aria-describedby="emailHelp"
@@ -159,7 +159,7 @@ function ContactModal({
                     required
                     value={contactInfo.email || ""}
                     placeholder="Email Address"
-                    className="mt-3 2xl:mt-6 first:mt-0 border-2 px-3 py-2 2xl:px-4 2xl:py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
+                    className="mt-3 2xl:mt-6 text-[#797979] first:mt-0 border-2 px-3 py-2 2xl:px-4 2xl:py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
                     onChange={(event) =>
@@ -173,7 +173,7 @@ function ContactModal({
                     required
                     value={contactInfo.phoneNumber || ""}
                     placeholder="Phone Number"
-                    className="mt-3 2xl:mt-6 first:mt-0 border-2 px-3 py-2 2xl:px-4 2xl:py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
+                    className="mt-3 2xl:mt-6 text-[#797979] first:mt-0 border-2 px-3 py-2 2xl:px-4 2xl:py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
                     onChange={(event) =>
@@ -185,7 +185,7 @@ function ContactModal({
                     autoComplete="off"
                   />
                   <textarea
-                    className="mt-3 2xl:mt-6 first:mt-0 border-2 px-3 py-2 2xl:px-4 2xl:py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
+                    className="mt-3 2xl:mt-6 text-[#797979] first:mt-0 border-2 px-3 py-2 2xl:px-4 2xl:py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
                     name="message"
                     required
                     value={contactInfo.message || ""}
