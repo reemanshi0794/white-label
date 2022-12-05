@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react"
 
 const Image = ({ content }) => {
-  return <img src={content.src} alt="post1" className="img-fluid" />;
-};
+  return <img src={content.src} alt="post1" className=" my-8" />
+}
 
-export default Image;
+export default Image
