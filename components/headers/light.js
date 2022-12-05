@@ -1,26 +1,26 @@
-import React, { useState, useEffect } from "react";
-import tw from "twin.macro";
-import LogoSVG from "../../assets/images/logo.svg";
-import useWindowDimensions from "../../helpers/getWindowDimensions";
-import Link from "next/link";
-import ChevronDown from "../../assets/images/down-arrow.png";
-import Appdev from "../../assets/images/Appdev.svg";
-import BlockChain from "../../assets/images/BlockChain.svg";
-import EnterpriceSoftwares from "../../assets/images/EnterpriceSoftwares.svg";
-import Ecommerce from "../../assets/images/Ecommerce.svg";
-import Webdevelopment from "../../assets/images/Webdevelopment.svg";
-import Design from "../../assets/images/Design.svg";
-import QA from "../../assets/images/QA.svg";
-import Nft from "../../assets/images/Nft.svg";
-import GreenApp from "../../assets/images/GreenApp.svg";
-import GreenBlockchain from "../../assets/images/GreenBlockchain.svg";
-import GreenDesign from "../../assets/images/GreenDesign.svg";
-import GreenEcommerce from "../../assets/images/GreenEcommerce.svg";
-import GreenEnterprise from "../../assets/images/GreenEnterprise.svg";
-import GreenNFT from "../../assets/images/GreenNFT.svg";
-import GreenQA from "../../assets/images/GreenQA.svg";
-import GreenWeb from "../../assets/images/GreenWeb.svg";
-import { useRouter } from "next/router";
+import React, { useState, useEffect } from "react"
+import tw from "twin.macro"
+import LogoSVG from "../../assets/images/logo.svg"
+import useWindowDimensions from "../../helpers/getWindowDimensions"
+import Link from "next/link"
+import ChevronDown from "../../assets/images/down-arrow.png"
+import Appdev from "../../assets/images/Appdev.svg"
+import BlockChain from "../../assets/images/BlockChain.svg"
+import EnterpriceSoftwares from "../../assets/images/EnterpriceSoftwares.svg"
+import Ecommerce from "../../assets/images/Ecommerce.svg"
+import Webdevelopment from "../../assets/images/Webdevelopment.svg"
+import Design from "../../assets/images/Design.svg"
+import QA from "../../assets/images/QA.svg"
+import Nft from "../../assets/images/Nft.svg"
+import GreenApp from "../../assets/images/GreenApp.svg"
+import GreenBlockchain from "../../assets/images/GreenBlockchain.svg"
+import GreenDesign from "../../assets/images/GreenDesign.svg"
+import GreenEcommerce from "../../assets/images/GreenEcommerce.svg"
+import GreenEnterprise from "../../assets/images/GreenEnterprise.svg"
+import GreenNFT from "../../assets/images/GreenNFT.svg"
+import GreenQA from "../../assets/images/GreenQA.svg"
+import GreenWeb from "../../assets/images/GreenWeb.svg"
+import { useRouter } from "next/router"
 
 const ServicesPages = [
   {
@@ -79,51 +79,51 @@ const ServicesPages = [
     link: "nft-marketplace-development",
     alt: "NFT Marketplace Development",
   },
-];
+]
 
 const Header = tw.header`
   flex justify-center items-center
   fixed bg-white top-0 w-full z-20 p-4 md:px-24 2xl:p-8 mx-auto w-full
-`;
+`
 
 export default ({ logoLink, className }) => {
-  const { width } = useWindowDimensions();
+  const { width } = useWindowDimensions()
   useEffect(() => {
-    width > 768 && setIsToggle(false);
-  }, [width]);
+    width > 768 && setIsToggle(false)
+  }, [width])
 
-  const router = useRouter();
+  const router = useRouter()
   const defaultLogoLink = (
     <div className="my-2 lg:text-sm lg:my-0 tracking-wide transition duration-300 pb-1 border-transparent hover:border-primary-500 hocus:text-primary-500 flex items-center font-black border-b-0 xl:text-2xl ml-0!">
       <LogoSVG alt="logo" className="mr-3" />
     </div>
-  );
+  )
 
-  logoLink = logoLink || defaultLogoLink;
+  logoLink = logoLink || defaultLogoLink
 
-  const [isToggle, setIsToggle] = useState(false);
-  const [openServices, setOpenServices] = useState(false);
-  const [selectedService, setSelectedService] = useState(null);
+  const [isToggle, setIsToggle] = useState(false)
+  const [openServices, setOpenServices] = useState(false)
+  const [selectedService, setSelectedService] = useState(null)
 
   const hideServiceDropdown = () => {
-    setOpenServices(false);
-  };
+    setOpenServices(false)
+  }
 
   const handleShowDropdown = () => {
-    setOpenServices(!openServices);
-  };
+    setOpenServices(!openServices)
+  }
 
   const showServiceDropdown = () => {
-    setOpenServices(true);
-  };
+    setOpenServices(true)
+  }
 
   const handleToggle = () => {
-    setIsToggle(!isToggle);
-  };
+    setIsToggle(!isToggle)
+  }
 
   const getServicesLink = () => {
-    return ServicesPages.map((service) => service.link);
-  };
+    return ServicesPages.map((service) => service.link)
+  }
 
   return (
     width !== 0 && (
@@ -176,8 +176,8 @@ export default ({ logoLink, className }) => {
                   href="/about-us"
                   className={
                     router.asPath === "/about-us"
-                      ? "text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent border-primary-500 focus:text-primary-500"
-                      : "text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent hover:border-primary-500 focus:text-primary-500"
+                      ? "text-lg my-2 text-black lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent border-primary-500 focus:text-primary-500"
+                      : "text-lg my-2 text-black  lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent hover:border-primary-500 focus:text-primary-500"
                   }
                   aria-current="page"
                   onMouseLeave={hideServiceDropdown}
@@ -210,8 +210,8 @@ export default ({ logoLink, className }) => {
                     >
                       {ServicesPages.map((serviceItems, index) => {
                         const { image, title, link, alt, greenImage } =
-                          serviceItems;
-                        console.log();
+                          serviceItems
+                        console.log()
                         return (
                           <div className="w-full">
                             <Link
@@ -241,7 +241,7 @@ export default ({ logoLink, className }) => {
                               </a>
                             </Link>
                           </div>
-                        );
+                        )
                       })}
                     </div>
                   }
@@ -251,8 +251,8 @@ export default ({ logoLink, className }) => {
                   onMouseLeave={hideServiceDropdown}
                   className={
                     router.asPath === "/blog-post"
-                      ? "text-lg my-2 lg:text-sm lg:mx-6 !mr-8 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent border-primary-500 focus:text-primary-500"
-                      : "text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent hover:border-primary-500 focus:text-primary-500"
+                      ? "text-lg my-2 text-black lg:text-sm lg:mx-6 !mr-8 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent border-primary-500 focus:text-primary-500"
+                      : "text-lg my-2 text-black lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent hover:border-primary-500 focus:text-primary-500"
                   }
                 >
                   Blog
@@ -287,8 +287,8 @@ export default ({ logoLink, className }) => {
                     href="/about-us"
                     className={
                       router.asPath === "/about-us"
-                        ? "text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent border-primary-500 Focus:text-primary-500"
-                        : "text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent hover:border-primary-500 Focus:text-primary-500"
+                        ? "text-lg my-2 text-black lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent border-primary-500 Focus:text-primary-500"
+                        : "text-lg my-2 text-black lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent hover:border-primary-500 Focus:text-primary-500"
                     }
                     aria-current="page"
                   >
@@ -323,7 +323,7 @@ export default ({ logoLink, className }) => {
                       }
                     >
                       {ServicesPages.map((serviceItems) => {
-                        const { image, title, link, alt } = serviceItems;
+                        const { image, title, link, alt } = serviceItems
                         return (
                           <div className="w-full">
                             <Link
@@ -342,7 +342,7 @@ export default ({ logoLink, className }) => {
                               </a>
                             </Link>
                           </div>
-                        );
+                        )
                       })}
                     </div>
                   </div>
@@ -382,5 +382,5 @@ export default ({ logoLink, className }) => {
         </Header>
       </>
     )
-  );
-};
+  )
+}
