@@ -109,12 +109,12 @@ export default ({
       <h2 className="font-extrabold text-[22px] md:text-3xl 2xl:text-5xl leading-tight pt-0 md:pt-4 text-center">
         {heading}
       </h2>
+      {description && (
+        <p className="w-full text-center mt-4 text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100">
+          {description}
+        </p>
+      )}
       <div className="items-stretch flex-row flex-wrap justify-center max-w-screen xl:max-w-5xl mx-auto pt-8 flex">
-        {description && (
-          <p className="w-full text-center mt-4 text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100 max-w-xl">
-            {description}
-          </p>
-        )}
         {!isEcommerse
           ? cards.map((card, i) => {
               console.log("card", card)
