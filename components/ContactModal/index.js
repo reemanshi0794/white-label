@@ -1,104 +1,105 @@
-import React, { useState } from "react"
-import ContactUsSrc from "../../assets/images/contact-us.png"
-import { PrimaryButton as PrimaryButtonBase } from "../../components/misc/Buttons.js"
-import Cross from "../../assets/images/Cross.png"
+import React, { useState } from 'react';
+import ContactUsSrc from '../../assets/images/contact-us.png';
+import { PrimaryButton as PrimaryButtonBase } from '../../components/misc/Buttons.js';
+import Cross from '../../assets/images/Cross.png';
+import Loader from '../../assets/images/loader.gif';
 
 function ContactModal({
-  subheading = "Contact Us Feel free to get in touch with us.",
+  subheading = 'Contact Us Feel free to get in touch with us.',
   heading = <></>,
   description = "Let's collaborate",
-  submitButtonText = "Send",
+  submitButtonText = 'Send',
   setShow,
 }) {
-  const handleClose = () => setShow(false)
-  const webDevelopment = "Web Development"
-  const [contactInfo, setContactInfo] = useState({ service: webDevelopment })
-  const [showLoader, setShowLoader] = useState(false)
+  const handleClose = () => setShow(false);
+  const webDevelopment = 'Web Development';
+  const [contactInfo, setContactInfo] = useState({ service: webDevelopment });
+  const [showLoader, setShowLoader] = useState(false);
   const [displayMessage, setDisplayMessage] = useState({
-    message: "",
-    type: "",
-  })
+    message: '',
+    type: '',
+  });
 
   const handleChange = (key, value) => {
-    setContactInfo({ ...contactInfo, [key]: value })
-  }
+    setContactInfo({ ...contactInfo, [key]: value });
+  };
 
   function sendMail() {
     return new Promise((resolve, reject) => {
       try {
-        if (!contactInfo) return
-        fetch("https://email-innow8.herokuapp.com/email", {
-          method: "POST",
+        if (!contactInfo) return;
+        fetch('https://email-innow8.herokuapp.com/email', {
+          method: 'POST',
           headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
           },
           body: JSON.stringify(
             {
-              projectName: "Whiten-App Solutions",
-              to: ["kapilbindal1@gmail.com"],
-              from: "contact@innow8apps.com",
-              subject: "contact form Whiten-App Solutions",
+              projectName: 'Whiten-App Solutions',
+              to: ['kapilbindal1@gmail.com'],
+              from: 'contact@innow8apps.com',
+              subject: 'contact form Whiten-App Solutions',
               text: JSON.stringify(contactInfo),
               htmlText: JSON.stringify(contactInfo),
-            } || ""
+            } || ''
           ),
         })
           .then((res) => {
-            console.log("result: ", res)
-            resolve()
+            console.log('result: ', res);
+            resolve();
           })
           .catch((error) => {
-            console.log("send mail api error", error)
-            reject()
-          })
+            console.log('send mail api error', error);
+            reject();
+          });
       } catch (error) {
-        console.log("send mail try catch error", error)
-        reject()
+        console.log('send mail try catch error', error);
+        reject();
       }
-    })
+    });
   }
 
   const addContactInfo = async () => {
-    return sendMail()
-  }
+    return sendMail();
+  };
 
   const emptyFieldValidationCheck =
     !contactInfo.name ||
     !contactInfo.email ||
     !contactInfo.phoneNumber ||
-    !contactInfo.service
+    !contactInfo.service;
   const handleSubmit = (event) => {
-    setShowLoader(true)
+    setShowLoader(true);
     var validRegex =
-      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (contactInfo.email.match(validRegex)) {
       addContactInfo()
         .then((res) => {
           setDisplayMessage({
-            message: "Submitted successfully",
-            type: "success",
-          })
-          setShowLoader(false)
-          setTimeout(() => setDisplayMessage({ message: "", type: "" }), 2000)
+            message: 'Submitted successfully',
+            type: 'success',
+          });
+          setShowLoader(false);
+          setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
         })
         .catch((err) => {
           setDisplayMessage({
-            message: "An error occurred",
-            type: "error",
-          })
-          setShowLoader(false)
-          setTimeout(() => setDisplayMessage({ message: "", type: "" }), 2000)
-        })
+            message: 'An error occurred',
+            type: 'error',
+          });
+          setShowLoader(false);
+          setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
+        });
     } else {
       setDisplayMessage({
-        message: " Invalid Email ",
-        type: "error",
-      })
-      setShowLoader(false)
+        message: ' Invalid Email ',
+        type: 'error',
+      });
+      setShowLoader(false);
     }
-    setContactInfo({ service: webDevelopment })
-    event.preventDefault()
-  }
+    setContactInfo({ service: webDevelopment });
+    event.preventDefault();
+  };
 
   return (
     <div className="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 bg-[#56565699] z-50 p-12 w-full md:inset-0 h-full justify-center items-center flex">
@@ -142,14 +143,14 @@ function ContactModal({
                   <input
                     type="text"
                     name="name"
-                    value={contactInfo.name || ""}
+                    value={contactInfo.name || ''}
                     placeholder="Full Name"
                     className="mt-6 first:mt-0 border-2 px-3 py-2 2xl:px-4 2xl:py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
                     id="exampleInputEmail1"
                     required
                     aria-describedby="emailHelp"
                     onChange={(event) =>
-                      handleChange("name", event.target.value)
+                      handleChange('name', event.target.value)
                     }
                     autoComplete="off"
                   />
@@ -157,13 +158,13 @@ function ContactModal({
                     type="email"
                     name="email"
                     required
-                    value={contactInfo.email || ""}
+                    value={contactInfo.email || ''}
                     placeholder="Email Address"
                     className="mt-3 2xl:mt-6 first:mt-0 border-2 px-3 py-2 2xl:px-4 2xl:py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
                     onChange={(event) =>
-                      handleChange("email", event.target.value)
+                      handleChange('email', event.target.value)
                     }
                     autoComplete="off"
                   />
@@ -171,14 +172,14 @@ function ContactModal({
                     type="tel"
                     name="phoneNumber"
                     required
-                    value={contactInfo.phoneNumber || ""}
+                    value={contactInfo.phoneNumber || ''}
                     placeholder="Phone Number"
                     className="mt-3 2xl:mt-6 first:mt-0 border-2 px-3 py-2 2xl:px-4 2xl:py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
                     onChange={(event) =>
                       handleChange(
-                        "phoneNumber",
+                        'phoneNumber',
                         event.target.value >= 0 ? event.target.value : 0
                       )
                     }
@@ -188,12 +189,12 @@ function ContactModal({
                     className="mt-3 2xl:mt-6 first:mt-0 border-2 px-3 py-2 2xl:px-4 2xl:py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
                     name="message"
                     required
-                    value={contactInfo.message || ""}
+                    value={contactInfo.message || ''}
                     placeholder="Message"
                     id="exampleFormControlTextarea1"
                     rows="2"
                     onChange={(event) =>
-                      handleChange("message", event.target.value)
+                      handleChange('message', event.target.value)
                     }
                   />
                   {showLoader ? (
@@ -214,9 +215,9 @@ function ContactModal({
                     <div className={`message-${displayMessage.type}`}>
                       <span
                         className={
-                          displayMessage.message === "Submitted successfully"
-                            ? "text-green-600"
-                            : "text-red-600"
+                          displayMessage.message === 'Submitted successfully'
+                            ? 'text-green-600'
+                            : 'text-red-600'
                         }
                       >
                         {displayMessage.message}
@@ -240,7 +241,7 @@ function ContactModal({
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default ContactModal
+export default ContactModal;

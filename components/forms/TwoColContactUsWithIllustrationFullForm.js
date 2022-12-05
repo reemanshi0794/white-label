@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { PrimaryButton as PrimaryButtonBase } from '../../components/misc/Buttons.js';
 import ContactUsSrc from '../../assets/images/contact-us.png';
+import Loader from '../../assets/images/loader.gif';
 
 export default ({
   subheading = 'Contact Us',
