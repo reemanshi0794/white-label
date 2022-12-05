@@ -19,22 +19,25 @@ export default () => {
     return new Promise((resolve, reject) => {
       try {
         if (!contactInfo) return;
-        fetch('https://email-innow8.herokuapp.com/email', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(
-            {
-              projectName: 'Whiten-App Solutions',
-              to: ['kapilbindal1@gmail.com'],
-              from: 'contact@innow8apps.com',
-              subject: 'contact form Whiten-App Solutions',
-              text: JSON.stringify(contactInfo),
-              htmlText: JSON.stringify(contactInfo),
-            } || ''
-          ),
-        })
+        fetch(
+          'https://cj89bgk106.execute-api.ap-southeast-1.amazonaws.com/dev/sendEmail',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(
+              {
+                projectName: 'Whiten-App Solutions',
+                to: ['kapilbindal1@gmail.com'],
+                from: 'contact@innow8apps.com',
+                subject: 'contact form Whiten-App Solutions',
+                text: JSON.stringify(contactInfo),
+                htmlText: JSON.stringify(contactInfo),
+              } || ''
+            ),
+          }
+        )
           .then((res) => {
             console.log('result: ', res);
             resolve();
