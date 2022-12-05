@@ -103,7 +103,7 @@ function ContactModal({
   return (
     <div className="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 bg-[#56565699] z-50 p-12 w-full md:inset-0 h-full justify-center items-center flex">
       <div className=" w-auto lg:max-w-[704px] 2xl:max-w-[1170px] my-auto mx-auto relative flex items-center h-full">
-        <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div className="relative bg-white rounded-lg shadow">
           <div className="flex justify-end p-1 2xl:p-[14px] ">
             <button onClick={handleClose} className="cursor-pointer">
               <img
