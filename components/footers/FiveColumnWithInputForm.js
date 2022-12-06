@@ -20,7 +20,7 @@ export default () => {
       try {
         if (!contactInfo) return;
         fetch(
-          'https://cj89bgk106.execute-api.ap-southeast-1.amazonaws.com/dev/sendEmail',
+          'https://ce05vhnu2c.execute-api.ap-south-1.amazonaws.com/dev/sendEmail',
           {
             method: 'POST',
             headers: {
