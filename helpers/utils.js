@@ -2,11 +2,11 @@ import Post1 from '../assets/images/post1.png';
 import Post2 from '../assets/images/post2.png';
 
 export const CrowdFundingAppData = [
-  {
-    type: 'Heading',
-    content: `A complete guide for developing 
-    Crowdfunding App in 2022`,
-  },
+  // {
+  //   type: 'Heading',
+  //   content: `A complete guide for developing
+  //   Crowdfunding App in 2022`,
+  // },
   {
     type: 'Subheading',
     content: `Introduction`,
