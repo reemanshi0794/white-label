@@ -13,6 +13,10 @@ import StrongTeams from '../assets/images/StrongTeams.svg';
 // const Subheading = tw.span`uppercase tracking-wider text-sm`;
 import Head from 'next/head';
 import Collaborate from '../assets/images/Collaborate.png';
+import Simwim from '../assets/images/Simwim.png';
+import Punpun from '../assets/images/Punpun.png';
+import GameApart from '../assets/images/GameApart.png';
+import Foodclub from '../assets/images/Foodclub.png';
 
 export default () => {
   return (
@@ -47,6 +51,17 @@ export default () => {
           isModernDesignImage={false}
           description="We are the software development studio where you get to witness great ideas churned into the best business solutions."
         />
+
+        <div>
+          <h1 className="text-black-100 text-xl md:text-[45px] 2xl:text-[60px] font-bold text-center">
+            Our Customers
+          </h1>
+          <img src={Simwim.src} />
+          <img src={Punpun.src} />
+          <img src={GameApart.src} />
+          <img src={Foodclub.src} />
+        </div>
+
         <MainFeature1
           subheading={
             <span className="uppercase tracking-wider text-sm">
