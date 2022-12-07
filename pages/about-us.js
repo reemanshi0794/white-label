@@ -1,22 +1,22 @@
-import Features from '../components/features/ThreeColSimple.js';
-import Footer from '../components/footers/FiveColumnWithInputForm.js';
-import Header from '../components/headers/light.js';
-import MainFeature1 from '../components/features/TwoColWithButton.js';
+import Features from "../components/features/ThreeColSimple.js"
+import Footer from "../components/footers/FiveColumnWithInputForm.js"
+import Header from "../components/headers/light.js"
+import MainFeature1 from "../components/features/TwoColWithButton.js"
 // import Features from "components/features/ThreeColWithSideImage.js";
 // import MainFeature2 from "components/features/TwoColSingleFeatureWithStats.js";
 // import MainFeature3 from "components/features/TwoColSingleFeatureWithStats2.js";
-import React from 'react';
-import TeamCardGrid from '../components/cards/ProfileThreeColGrid.js';
-import CustomerSatisfaction from '../assets/images/CustomerSatisfaction.svg';
-import Support from '../assets/images/Support.svg';
-import StrongTeams from '../assets/images/StrongTeams.svg';
+import React from "react"
+import TeamCardGrid from "../components/cards/ProfileThreeColGrid.js"
+import CustomerSatisfaction from "../assets/images/CustomerSatisfaction.svg"
+import Support from "../assets/images/Support.svg"
+import StrongTeams from "../assets/images/StrongTeams.svg"
 // const Subheading = tw.span`uppercase tracking-wider text-sm`;
-import Head from 'next/head';
-import Collaborate from '../assets/images/Collaborate.png';
-import Simwim from '../assets/images/Simwim.png';
-import Punpun from '../assets/images/Punpun.png';
-import GameApart from '../assets/images/GameApart.png';
-import Foodclub from '../assets/images/Foodclub.png';
+import Head from "next/head"
+import Collaborate from "../assets/images/Collaborate.png"
+import Simwim from "../assets/images/Simwim.png"
+import Punpun from "../assets/images/Punpun.png"
+import GameApart from "../assets/images/GameApart.png"
+import Foodclub from "../assets/images/Foodclub.png"
 
 export default () => {
   return (
@@ -52,14 +52,16 @@ export default () => {
           description="We are the software development studio where you get to witness great ideas churned into the best business solutions."
         />
 
-        <div>
+        <div className="max-w-screen-xl mx-auto lg:mt-16">
           <h1 className="text-black-100 text-xl md:text-[45px] 2xl:text-[60px] font-bold text-center">
             Our Customers
           </h1>
-          <img src={Simwim.src} />
-          <img src={Punpun.src} />
-          <img src={GameApart.src} />
-          <img src={Foodclub.src} />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-4 items-center place-items-center mt-12">
+            <img src={Simwim.src} className="w-[180px] mb-[26px] lg:mb-0" />
+            <img src={Punpun.src} className="w-[180px] mb-[26px] lg:mb-0" />
+            <img src={GameApart.src} className="w-[180px] mb-[26px] lg:mb-0" />
+            <img src={Foodclub.src} className="w-[180px] mb-[26px] lg:mb-0" />
+          </div>
         </div>
 
         <MainFeature1
@@ -86,21 +88,21 @@ export default () => {
           cards={[
             {
               imageSrc: <Support />,
-              title: 'Advancing technology',
+              title: "Advancing technology",
               description:
-                'We refresh our tech stack and services to ensure all solutions that leave our doors are built future-proof. ',
+                "We refresh our tech stack and services to ensure all solutions that leave our doors are built future-proof. ",
             },
             {
               imageSrc: <StrongTeams />,
-              title: 'A Dream team',
+              title: "A Dream team",
               description:
-                'We achieve strong skillset development and growth for our team with flexible work hours and space that benefits both the work-life balance and productivity.',
+                "We achieve strong skillset development and growth for our team with flexible work hours and space that benefits both the work-life balance and productivity.",
             },
             {
               imageSrc: <CustomerSatisfaction />,
-              title: 'Customer Success',
+              title: "Customer Success",
               description:
-                'By building impactful digital solutions we thrive to deliver a 100% success rate for our clients.',
+                "By building impactful digital solutions we thrive to deliver a 100% success rate for our clients.",
             },
           ]}
           linkText=""
@@ -110,7 +112,7 @@ export default () => {
             <div className="flex items-center justify-center">
               <img
                 src={Collaborate.src}
-                alt={'Collaboration Icon'}
+                alt={"Collaboration Icon"}
                 className="w-full md:w-[40%]"
               />
             </div>
@@ -137,5 +139,5 @@ export default () => {
       </div>
       <Footer />
     </>
-  );
-};
+  )
+}
