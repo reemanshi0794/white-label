@@ -244,7 +244,7 @@ const SaaSProductLandingPage = () => {
               Tools - Jira board, Azure DevOps, Visual Studio Code, Vercel, Heroku, Firebase, Github. `,
             },
             {
-              question: 'How Does your Pricing work?',
+              question: 'How does your pricing work?',
               answer: `All our solutions and services are 100% custom and are built according to the need of our clients. The pricing of each solution varies as its purely dependent on the demands and feature requirements. 
                 We do not have hidden fees and our Free QA and overtime help you cut development costs by up to 75%.
                 To get free evaluation and price estimation by contacting us. To do so, click on the contact us button in the top right corner of this page.
