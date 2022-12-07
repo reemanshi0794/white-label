@@ -1,23 +1,23 @@
-import React, { useEffect } from 'react';
-import ReactGA from 'react-ga';
-import Head from 'next/head';
-import Header from '../components/headers/light.js';
-import Heading from '../components/blog/Heading';
-import Description from '../components/blog/Description';
-import Image from '../components/blog/Image';
-import { MobileAppsData } from '../helpers/utils';
-import Footer from '../components/footers/FiveColumnWithInputForm.js';
-import SubsubHeading from '../components/blog/SubsubHeading';
-import Subheading from '../components/blog/Subheading';
-import List from '../components/blog/List';
-import BulletList from '../components/blog/BulletList';
-import SvgDecoratorBlob1 from '../assets/images/svg-decorator-blob-9.svg';
+import React, { useEffect } from "react"
+import ReactGA from "react-ga"
+import Head from "next/head"
+import Header from "../components/headers/light.js"
+import Heading from "../components/blog/Heading"
+import Description from "../components/blog/Description"
+import Image from "../components/blog/Image"
+import { MobileAppsData } from "../helpers/utils"
+import Footer from "../components/footers/FiveColumnWithInputForm.js"
+import SubsubHeading from "../components/blog/SubsubHeading"
+import Subheading from "../components/blog/Subheading"
+import List from "../components/blog/List"
+import BulletList from "../components/blog/BulletList"
+import SvgDecoratorBlob1 from "../assets/images/svg-decorator-blob-9.svg"
 
 const MobileApps = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-    ReactGA.pageview(window.location.pathname);
-  }, []);
+    window.scrollTo(0, 0)
+    ReactGA.pageview(window.location.pathname)
+  }, [])
 
   const Components = {
     List,
@@ -27,12 +27,12 @@ const MobileApps = () => {
     SubsubHeading,
     Subheading,
     BulletList,
-  };
+  }
 
   const getComponent = (type, content) => {
-    const Render = Components[type];
-    return <Render content={content} />;
-  };
+    const Render = Components[type]
+    return <Render content={content} />
+  }
   return (
     <div>
       <Head>
@@ -54,7 +54,7 @@ const MobileApps = () => {
         <div className="pt-40">
           <div className=" py-12 md:py-24 2xl:py-32 bg-primary-500 relative mb-8 lg:mb-16">
             <div className="px-8 max-w-screen-xl mx-auto flex justify-center relative">
-              <h1 className="text-gray-100 text-xl md:text-[45px] 2xl:text-[60px] font-bold text-center">
+              <h1 className="text-gray-100 uppercase text-xl md:text-[45px] 2xl:text-[60px] font-bold text-center">
                 mobile development
               </h1>
             </div>
@@ -72,7 +72,7 @@ const MobileApps = () => {
       </div>
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default MobileApps;
+export default MobileApps

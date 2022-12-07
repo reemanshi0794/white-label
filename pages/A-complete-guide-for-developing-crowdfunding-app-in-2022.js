@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react';
-import SvgDecoratorBlob1 from '../assets/images/svg-decorator-blob-9.svg';
-import ReactGA from 'react-ga';
-import { CrowdFundingAppData } from '../helpers/utils';
-import Header from '../components/headers/light.js';
-import Head from 'next/head';
-import Footer from '../components/footers/FiveColumnWithInputForm.js';
-import Post1 from '../assets/images/post1.png';
+import React, { useEffect } from "react"
+import SvgDecoratorBlob1 from "../assets/images/svg-decorator-blob-9.svg"
+import ReactGA from "react-ga"
+import { CrowdFundingAppData } from "../helpers/utils"
+import Header from "../components/headers/light.js"
+import Head from "next/head"
+import Footer from "../components/footers/FiveColumnWithInputForm.js"
+import Post1 from "../assets/images/post1.png"
 
 const Howmuchcosttodevelop = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-    ReactGA.pageview(window.location.pathname);
-  }, []);
+    window.scrollTo(0, 0)
+    ReactGA.pageview(window.location.pathname)
+  }, [])
 
   return (
     <div>
@@ -34,7 +34,7 @@ const Howmuchcosttodevelop = () => {
         <div className="pt-40">
           <div className=" py-12 md:py-24 2xl:py-32 bg-primary-500 relative mb-8 lg:mb-16">
             <div className="px-8 max-w-screen-xl mx-auto flex justify-center relative">
-              <h1 className="text-gray-100 text-xl md:text-[45px] 2xl:text-[60px] font-bold text-center">
+              <h1 className="text-gray-100 uppercase text-xl md:text-[45px] 2xl:text-[60px] font-bold text-center">
                 A complete guide for developing <br />
                 Crowdfunding App in 2022
               </h1>
@@ -84,7 +84,7 @@ const Howmuchcosttodevelop = () => {
                     <li className="text-[#6e6e6e] text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4 pl-2">
                       {content.Licontent}
                     </li>
-                  );
+                  )
                 })}
               </ol>
             </div>
@@ -128,7 +128,7 @@ const Howmuchcosttodevelop = () => {
                         {steps.content}
                       </p>
                     </li>
-                  );
+                  )
                 })}
               </ul>
             </div>
@@ -153,7 +153,7 @@ const Howmuchcosttodevelop = () => {
                     <li className="text-[#727272] text-base 2xl:text-lg pl-[5px] leading-[35px]">
                       {words.content}
                     </li>
-                  );
+                  )
                 })}
               </ul>
               <p className="text-[#6e6e6e] text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4">
@@ -168,7 +168,7 @@ const Howmuchcosttodevelop = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Howmuchcosttodevelop;
+export default Howmuchcosttodevelop

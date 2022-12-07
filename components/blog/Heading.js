@@ -1,12 +1,12 @@
-import React from 'react';
-import SvgDecoratorBlob1 from '../../assets/images/svg-decorator-blob-9.svg';
+import React from "react"
+import SvgDecoratorBlob1 from "../../assets/images/svg-decorator-blob-9.svg"
 
 const Heading = ({ content }) => {
   return (
     <>
       <div className=" py-12 md:py-24 2xl:py-32 bg-primary-500 relative mb-8 lg:mb-16">
         <div className="px-8 max-w-screen-xl mx-auto flex justify-center relative">
-          <h1 className="text-gray-100 text-xl md:text-[45px] 2xl:text-[60px] font-bold text-center">
+          <h1 className="text-gray-100 uppercase text-xl md:text-[45px] 2xl:text-[60px] font-bold text-center">
             {content}
           </h1>
         </div>
@@ -16,7 +16,7 @@ const Heading = ({ content }) => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Heading;
+export default Heading

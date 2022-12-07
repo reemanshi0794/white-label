@@ -1,23 +1,23 @@
-import React, { useEffect } from 'react';
-import ReactGA from 'react-ga';
-import Header from '../components/headers/light.js';
-import { NFTMarketplace } from '../helpers/utils';
-import Description from '../components/blog/Description';
-import Image from '../components/blog/Image';
-import Head from 'next/head';
-import Footer from '../components/footers/FiveColumnWithInputForm.js';
-import SubsubHeading from '../components/blog/SubsubHeading';
-import Subheading from '../components/blog/Subheading';
-import List from '../components/blog/List';
-import BulletList from '../components/blog/BulletList';
-import Heading from '../components/blog/Heading';
-import SvgDecoratorBlob1 from '../assets/images/svg-decorator-blob-9.svg';
+import React, { useEffect } from "react"
+import ReactGA from "react-ga"
+import Header from "../components/headers/light.js"
+import { NFTMarketplace } from "../helpers/utils"
+import Description from "../components/blog/Description"
+import Image from "../components/blog/Image"
+import Head from "next/head"
+import Footer from "../components/footers/FiveColumnWithInputForm.js"
+import SubsubHeading from "../components/blog/SubsubHeading"
+import Subheading from "../components/blog/Subheading"
+import List from "../components/blog/List"
+import BulletList from "../components/blog/BulletList"
+import Heading from "../components/blog/Heading"
+import SvgDecoratorBlob1 from "../assets/images/svg-decorator-blob-9.svg"
 
 const NftMarketplace = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-    ReactGA.pageview(window.location.pathname);
-  }, []);
+    window.scrollTo(0, 0)
+    ReactGA.pageview(window.location.pathname)
+  }, [])
 
   const Components = {
     List,
@@ -27,12 +27,12 @@ const NftMarketplace = () => {
     SubsubHeading,
     Subheading,
     BulletList,
-  };
+  }
 
   const getComponent = (type, content) => {
-    const Render = Components[type];
-    return <Render content={content} />;
-  };
+    const Render = Components[type]
+    return <Render content={content} />
+  }
 
   return (
     <div>
@@ -55,7 +55,7 @@ const NftMarketplace = () => {
         <div className="pt-40">
           <div className=" py-12 md:py-24 2xl:py-32 bg-primary-500 relative mb-8 lg:mb-16">
             <div className="px-8 max-w-screen-xl mx-auto flex justify-center relative">
-              <h1 className="text-gray-100 text-xl md:text-[45px] 2xl:text-[60px] font-bold text-center">
+              <h1 className="text-gray-100 uppercase text-xl md:text-[45px] 2xl:text-[60px] font-bold text-center">
                 nft marketplace
               </h1>
             </div>
@@ -73,7 +73,7 @@ const NftMarketplace = () => {
       </div>
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default NftMarketplace;
+export default NftMarketplace
