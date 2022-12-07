@@ -1,25 +1,25 @@
-import React, { useEffect } from 'react';
-import SvgDecoratorBlob1 from '../assets/images/svg-decorator-blob-9.svg';
-import ReactGA from 'react-ga';
-import Title from '../components/blog/SubsubHeading';
-import Description from '../components/blog/Description';
-import Heading from '../components/blog/Heading';
-import Image from '../components/blog/Image';
-import { CrowdFundingAppData } from '../helpers/utils';
-import Header from '../components/headers/light.js';
-import Head from 'next/head';
-import Footer from '../components/footers/FiveColumnWithInputForm.js';
-import SubsubHeading from '../components/blog/SubsubHeading';
-import Subheading from '../components/blog/Subheading';
-import List from '../components/blog/List';
-import BulletList from '../components/blog/BulletList';
-import Post1 from '../assets/images/post1.png';
+import React, { useEffect } from "react"
+import SvgDecoratorBlob1 from "../assets/images/svg-decorator-blob-9.svg"
+import ReactGA from "react-ga"
+import Title from "../components/blog/SubsubHeading"
+import Description from "../components/blog/Description"
+import Heading from "../components/blog/Heading"
+import Image from "../components/blog/Image"
+import { CrowdFundingAppData } from "../helpers/utils"
+import Header from "../components/headers/light.js"
+import Head from "next/head"
+import Footer from "../components/footers/FiveColumnWithInputForm.js"
+import SubsubHeading from "../components/blog/SubsubHeading"
+import Subheading from "../components/blog/Subheading"
+import List from "../components/blog/List"
+import BulletList from "../components/blog/BulletList"
+import Post1 from "../assets/images/post1.png"
 
 const Howmuchcosttodevelop = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-    ReactGA.pageview(window.location.pathname);
-  }, []);
+    window.scrollTo(0, 0)
+    ReactGA.pageview(window.location.pathname)
+  }, [])
 
   const Components = {
     List,
@@ -29,12 +29,12 @@ const Howmuchcosttodevelop = () => {
     SubsubHeading,
     Subheading,
     BulletList,
-  };
+  }
 
   const getComponent = (type, content) => {
-    const Render = Components[type];
-    return <Render content={content} />;
-  };
+    const Render = Components[type]
+    return <Render content={content} />
+  }
 
   return (
     <div>
@@ -67,15 +67,15 @@ const Howmuchcosttodevelop = () => {
             </div>
           </div>
           <div className="max-w-screen-xl mx-auto px-8 md:px-24 2xl:px-0">
-            {CrowdFundingAppData.map(({ type, content, className }) => (
-              <div className={className}>{getComponent(type, content)}</div>
+            {CrowdFundingAppData.map(({ type, content }) => (
+              <>{getComponent(type, content)}</>
             ))}
           </div>
         </div>
       </div>
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Howmuchcosttodevelop;
+export default Howmuchcosttodevelop
