@@ -2,11 +2,15 @@ import React, { useEffect } from 'react';
 import ReactGA from 'react-ga';
 import Header from '../components/headers/light.js';
 import { NFTMarketplace } from '../helpers/utils';
-import Title from '../components/blog/Title';
 import Description from '../components/blog/Description';
 import Image from '../components/blog/Image';
 import Head from 'next/head';
 import Footer from '../components/footers/FiveColumnWithInputForm.js';
+import SubsubHeading from '../components/blog/SubsubHeading';
+import Subheading from '../components/blog/Subheading';
+import List from '../components/blog/List';
+import BulletList from '../components/blog/BulletList';
+import Heading from '../components/blog/Heading';
 
 const NftMarketplace = () => {
   useEffect(() => {
@@ -15,9 +19,13 @@ const NftMarketplace = () => {
   }, []);
 
   const Components = {
-    Title,
+    List,
     Description,
     Image,
+    Heading,
+    SubsubHeading,
+    Subheading,
+    BulletList,
   };
 
   const getComponent = (type, content) => {
@@ -42,29 +50,9 @@ const NftMarketplace = () => {
         />
       </Head>
       <Header />
-      <br />
       <div className="relative">
-        <div className="max-w-screen-xl mx-auto pb-24 pt-[11rem]">
-          <div className="inner-sec">
-            <div
-              className="banner size"
-              style={{
-                // backgroundImage: `url(${CostDevelopBanner.src})`,
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center',
-              }}
-            >
-              <div className="container">
-                <div className="row m-0">
-                  <div className="col">
-                    {/* <h1 className="text-[#151514] text-[60px] font-bold mb-10">
-                  A complete guide for developing Crowdfunding App in 2022
-                </h1> */}
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div className="pt-40">
+          <div className="max-w-screen-xl mx-auto px-8 md:px-24 2xl:px-0">
             {NFTMarketplace.map(({ type, content, className }) => (
               <div className={className}>{getComponent(type, content)}</div>
             ))}

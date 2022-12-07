@@ -1,25 +1,25 @@
-import React, { useEffect } from "react"
-import ReactGA from "react-ga"
-import NftBanner from "../assets/images/NftBanner.png"
-import CryptoCurrency from "../assets/images/CryptoCurrency.png"
-import Ethereum from "../assets/images/NftMarketPlaceDev/ethereum.png"
-import Binance from "../assets/images/NftMarketPlaceDev/binance.png"
-import Polygon from "../assets/images/NftMarketPlaceDev/polygon.png"
-import Polkadot from "../assets/images/NftMarketPlaceDev/polkadot.png"
-import Cardano from "../assets/images/NftMarketPlaceDev/cardano.png"
-import Solana from "../assets/images/NftMarketPlaceDev/solana.png"
-import { useRouter } from "next/router"
-import Head from "next/head"
-import Header from "../components/headers/light.js"
-import Footer from "../components/footers/FiveColumnWithInputForm.js"
-import MainServices from "../components/MainServices"
-import Features from "../components/features/ThreeColSimple.js"
-import Features1 from "../components/features/ThreeColWithSideImage.js"
-import MintableImg from "../assets/images/MintableImg.png"
-import OpenseaImg from "../assets/images/OpenseaImg.png"
-import SuperRareImg from "../assets/images/SuperRareImg.png"
-import RaribleImg from "../assets/images/RaribleImg.png"
-import NiftyImg from "../assets/images/NiftyImg.png"
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
+import NftBanner from '../assets/images/NftBanner.png';
+import CryptoCurrency from '../assets/images/CryptoCurrency.png';
+import Ethereum from '../assets/images/NftMarketPlaceDev/ethereum.png';
+import Binance from '../assets/images/NftMarketPlaceDev/binance.png';
+import Polygon from '../assets/images/NftMarketPlaceDev/polygon.png';
+import Polkadot from '../assets/images/NftMarketPlaceDev/polkadot.png';
+import Cardano from '../assets/images/NftMarketPlaceDev/cardano.png';
+import Solana from '../assets/images/NftMarketPlaceDev/solana.png';
+import { useRouter } from 'next/router';
+import Head from 'next/head';
+import Header from '../components/headers/light.js';
+import Footer from '../components/footers/FiveColumnWithInputForm.js';
+import MainServices from '../components/MainServices';
+import Features from '../components/features/ThreeColSimple.js';
+import Features1 from '../components/features/ThreeColWithSideImage.js';
+import MintableImg from '../assets/images/MintableImg.png';
+import OpenseaImg from '../assets/images/OpenseaImg.png';
+import SuperRareImg from '../assets/images/SuperRareImg.png';
+import RaribleImg from '../assets/images/RaribleImg.png';
+import NiftyImg from '../assets/images/NiftyImg.png';
 
 const NftMarkteplaceDevItemToDisplay = [
   {
@@ -57,24 +57,24 @@ const NftMarkteplaceDevItemToDisplay = [
     desc: `Nifty Gateway is one of the top NFT Makerplaces that utilized Blockchain technology to trade/auction digital assets called Nifties. The Nifty platform lets its users sell and buy Nifties without a middleman. By creating a Nifty Gateway clone you can enjoy various revenue streams including Royalties, Setup fee, Launching fee, and bundle fee.`,
     textOnLeft: true,
   },
-]
+];
 
 const NftMarketplaceDev = () => {
   useEffect(() => {
-    window.scrollTo(0, 0)
-    ReactGA.pageview(window.location.pathname)
-  }, [])
+    window.scrollTo(0, 0);
+    ReactGA.pageview(window.location.pathname);
+  }, []);
 
-  const router = useRouter()
+  const router = useRouter();
 
   const handleClick = (element, e) => {
-    e.preventDefault()
-    if (element.heading === "OpenSea Clone") {
-      router.push("/opensea-clone")
-    } else if (element.heading === "Mintable Clone") {
-      router.push("/mintable-clone")
+    e.preventDefault();
+    if (element.heading === 'OpenSea Clone') {
+      router.push('/opensea-clone');
+    } else if (element.heading === 'Mintable Clone') {
+      router.push('/mintable-clone');
     }
-  }
+  };
   return (
     <>
       <Header />
@@ -165,7 +165,7 @@ const NftMarketplaceDev = () => {
                   View Details
                 </a> */}
               </>
-            )
+            );
           })}
         </div>
 
@@ -357,7 +357,7 @@ const NftMarketplaceDev = () => {
       </div>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default NftMarketplaceDev
+export default NftMarketplaceDev;
