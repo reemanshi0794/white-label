@@ -13,6 +13,10 @@ import StrongTeams from '../assets/images/StrongTeams.svg';
 // const Subheading = tw.span`uppercase tracking-wider text-sm`;
 import Head from 'next/head';
 import Collaborate from '../assets/images/Collaborate.png';
+import Simwim from '../assets/images/Simwim.png';
+import Punpun from '../assets/images/Punpun.png';
+import GameApart from '../assets/images/GameApart.png';
+import Foodclub from '../assets/images/Foodclub.png';
 
 export default () => {
   return (
@@ -47,6 +51,19 @@ export default () => {
           isModernDesignImage={false}
           description="We are the software development studio where you get to witness great ideas churned into the best business solutions."
         />
+
+        <div className="max-w-screen-xl mx-auto lg:mt-16">
+          <h1 className="text-black-100 text-xl md:text-[45px] 2xl:text-[60px] font-bold text-center">
+            Our Customers
+          </h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-4 items-center place-items-center mt-12">
+            <img src={Simwim.src} className="w-[180px] mb-[26px] lg:mb-0" />
+            <img src={Punpun.src} className="w-[180px] mb-[26px] lg:mb-0" />
+            <img src={GameApart.src} className="w-[180px] mb-[26px] lg:mb-0" />
+            <img src={Foodclub.src} className="w-[180px] mb-[26px] lg:mb-0" />
+          </div>
+        </div>
+
         <MainFeature1
           subheading={
             <span className="uppercase tracking-wider text-sm">
