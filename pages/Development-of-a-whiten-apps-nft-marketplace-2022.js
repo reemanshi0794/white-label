@@ -1,24 +1,24 @@
-import React, { useEffect } from 'react';
-import ReactGA from 'react-ga';
-import Header from '../components/headers/light.js';
-import { NFTMarketplace } from '../helpers/utils';
-import Description from '../components/blog/Description';
-import Image from '../components/blog/Image';
-import Head from 'next/head';
-import Footer from '../components/footers/FiveColumnWithInputForm.js';
-import SubsubHeading from '../components/blog/SubsubHeading';
-import Subheading from '../components/blog/Subheading';
-import List from '../components/blog/List';
-import BulletList from '../components/blog/BulletList';
-import Heading from '../components/blog/Heading';
-import Post1 from '../assets/images/post1.png';
-import SvgDecoratorBlob1 from '../assets/images/svg-decorator-blob-9.svg';
+import React, { useEffect } from "react"
+import ReactGA from "react-ga"
+import Header from "../components/headers/light.js"
+import { NFTMarketplace } from "../helpers/utils"
+import Description from "../components/blog/Description"
+import Image from "../components/blog/Image"
+import Head from "next/head"
+import Footer from "../components/footers/FiveColumnWithInputForm.js"
+import SubsubHeading from "../components/blog/SubsubHeading"
+import Subheading from "../components/blog/Subheading"
+import List from "../components/blog/List"
+import BulletList from "../components/blog/BulletList"
+import Heading from "../components/blog/Heading"
+import Post1 from "../assets/images/post1.png"
+import SvgDecoratorBlob1 from "../assets/images/svg-decorator-blob-9.svg"
 
 const NftMarketplace = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-    ReactGA.pageview(window.location.pathname);
-  }, []);
+    window.scrollTo(0, 0)
+    ReactGA.pageview(window.location.pathname)
+  }, [])
 
   return (
     <div>
@@ -132,7 +132,7 @@ const NftMarketplace = () => {
                         {content.content}
                       </p>
                     </li>
-                  );
+                  )
                 })}
               </ul>
             </div>
@@ -141,18 +141,18 @@ const NftMarketplace = () => {
               <h2 className="text-[#151514] text-xl md:text-2xl 2xl:text-[40px] font-bold mb-[14px]">
                 HOW TO CREATE AN NFT MARKETPLACE?
               </h2>
-              <ul className="list-decimal text-[#151514] px-8 text-lg md:text-[22px] capitalize xl:text-[30px] font-bold">
+              <ul className="list-decimal text-[#454545] px-8 text-lg md:text-[22px] capitalize xl:text-[30px] font-bold">
                 {NFTMarketplace.nftCreate.map((item) => {
                   return (
                     <li className="pl-[10px]">
-                      <h3 className="text-[#151514] text-lg md:text-[22px] capitalize xl:text-[30px] font-bold mb-[14px]">
+                      <h3 className="text-[#454545] text-lg md:text-[22px] capitalize xl:text-[30px] font-bold mb-[14px]">
                         {item.heading}
                       </h3>
                       <p className="text-[#6e6e6e] font-normal text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4">
                         {item.content}
                       </p>
                     </li>
-                  );
+                  )
                 })}
               </ul>
             </div>
@@ -176,18 +176,18 @@ const NftMarketplace = () => {
             </div>
 
             <div>
-              <ul className="list-decimal text-[#151514] px-8 text-base md:text-[18px] xl:text-[20px] capitalize ">
+              <ul className="list-decimal text-[#0f7568] px-8 text-base md:text-[18px] font-medium xl:text-[22px] capitalize ">
                 {NFTMarketplace.features1.map((item) => {
                   return (
                     <li className="pl-[10px]">
-                      <h3 className="text-[#151514] text-base md:text-[18px] xl:text-[20px] capitalize mb-[14px]">
+                      <h3 className="text-[#0f7568] text-base md:text-[18px] xl:text-[22px] font-medium capitalize mb-[14px]">
                         {item.heading}
                       </h3>
                       <p className="text-[#6e6e6e] font-normal text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4">
                         {item.content}
                       </p>
                     </li>
-                  );
+                  )
                 })}
               </ul>
             </div>
@@ -203,7 +203,7 @@ const NftMarketplace = () => {
                     <li className="text-[#727272] text-base 2xl:text-lg pl-[5px] leading-[35px]">
                       {item.content}
                     </li>
-                  );
+                  )
                 })}
               </ul>
               {NFTMarketplace.outro.map((item) => {
@@ -211,7 +211,7 @@ const NftMarketplace = () => {
                   <p className="text-[#6e6e6e] font-normal text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4">
                     {item.content}
                   </p>
-                );
+                )
               })}
             </div>
           </div>
@@ -219,7 +219,7 @@ const NftMarketplace = () => {
       </div>
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default NftMarketplace;
+export default NftMarketplace

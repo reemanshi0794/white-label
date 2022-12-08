@@ -1,17 +1,17 @@
 // import Post1 from '../assets/images/post1.png';
 // import Post2 from '../assets/images/post2.png';
-import Simwim from '../assets/images/Simwim.png';
-import Foodclub from '../assets/images/Foodclub.png';
-import SimWinImg from '../assets/images/SimWinImg.png';
-import Punpunlogo from '../assets/images/Punpun.png';
+import Simwim from "../assets/images/Simwim.png"
+import Foodclub from "../assets/images/Foodclub.png"
+import SimWinImg from "../assets/images/SimWinImg.png"
+import Punpunlogo from "../assets/images/Punpun.png"
 // import foodclub from '../assets/videos/foodclub.mp4';
 // import punpun from '../assets/videos/punpun.mp4';
 
 export const CrowdFundingAppData = {
   Introduction: {
-    heading: 'Introduction',
+    heading: "Introduction",
     content:
-      'In the digital economy, crowdfunding is gaining popularity and rising to the top. The size of the worldwide crowdfunding business was over $17 billion in 2021, and by 2028, it is expected to be worth over $43 billion. More than 50 percent of initiatives for crowd financing are successful. Additionally, 78% of initiatives receive more money than was originally planned for funding. Both investors considering launching their own websites and small firms looking to raise funds for expansion are interested in the idea of crowdfunding. With crowdfunding, there is an opportunity for debate, and companies are more empowered to pose the right issues, win over the right supporters, and attract the right customers. The goal of crowdsourcing is to streamline the app development process and make it simpler for companies and investors to interact and work toward the same goal.',
+      "In the digital economy, crowdfunding is gaining popularity and rising to the top. The size of the worldwide crowdfunding business was over $17 billion in 2021, and by 2028, it is expected to be worth over $43 billion. More than 50 percent of initiatives for crowd financing are successful. Additionally, 78% of initiatives receive more money than was originally planned for funding. Both investors considering launching their own websites and small firms looking to raise funds for expansion are interested in the idea of crowdfunding. With crowdfunding, there is an opportunity for debate, and companies are more empowered to pose the right issues, win over the right supporters, and attract the right customers. The goal of crowdsourcing is to streamline the app development process and make it simpler for companies and investors to interact and work toward the same goal.",
     content1: `This article will discuss the advantages of developing
       crowdfunding applications for business owners. The process of
       creating a crowdfunding platform in the form of an app for
@@ -191,11 +191,11 @@ export const CrowdFundingAppData = {
       content: ` Deciding on the main aspects of your upcoming platform`,
     },
   ],
-};
+}
 
 export const NFTMarketplace = {
   Introduction: {
-    heading: ' Introduction',
+    heading: " Introduction",
     content: ` There is nothing that can make you wonder, "Um... what's going
     on here?," like a flood of blockchain news. That's how I've felt
     while hearing about NFTs being sold or about Grimes receiving
@@ -215,7 +215,7 @@ export const NFTMarketplace = {
     reached significant development milestones for NFT marketplaces.`,
   },
   Subheading: {
-    heading: 'WHAT IS AN NFT MARKETPLACE?',
+    heading: "what is an nft marketplace?",
     content: `A virtual trading platform called an NFT marketplace now
     allows NFT aficionados to connect and exchange a wide variety
     of NFTs. These NFTs can include nearly anything of value,
@@ -232,7 +232,7 @@ export const NFTMarketplace = {
     exchanging NFTs.`,
   },
   Description: {
-    heading: 'NFT Marketplace Growth:',
+    heading: "NFT Marketplace Growth:",
     content: `NFT proponents assert that NFTs give the public a public
     certificate of authenticity or proof of ownership, however, the
     legal rights that an NFT conveys may not be clear. It is not
@@ -467,43 +467,43 @@ export const NFTMarketplace = {
       platform.`,
     },
   ],
-};
+}
 
 export const MobileAppsData = [
   {
-    type: 'Description',
+    type: "Description",
     content: `The market has significantly shifted in favour of on-demand app upgrade as a result of the technology's quick advancement and the entry of the smart mobile sector. Now, areas that largely make up people's daily lives are being devoured by the mobile sector. Customers today need not just high-quality items but also quick and convenient service. Mobile apps that are available on demand now constitute a brand-new, rapidly expanding area of smart mobile business. More ways than we can count the ways in which technology has changed our lives are due to cell phones. With only a few swipes of our fingertips, we can transfer money, shop online, order meals, and do a lot more things.`,
   },
   {
-    type: 'Subheading',
+    type: "Subheading",
     content: `AN OVERVIEW:
     `,
   },
   {
-    type: 'Description',
+    type: "Description",
     content: `The on-demand mobile apps are popular because customers want speed, convenience, and simplicity. Additionally, in order to stay at home as much as possible during the Coronavirus pandemic epidemic, many now prefer to have the majority of their purchases delivered right to their doorway. You might be shocked to learn that in 2013, on-demand mobile applications and websites generated $15 billion in sales income, with an expected increase to $335 billion by 2025.
 
     According to these figures, if you are considering developing an on-demand app in the USA, have a look at these 20 ideas for on-demand apps, which are in high demand and may help you find new business ventures. Be the first to take the lead.`,
   },
   {
-    type: 'Subheading',
+    type: "Subheading",
     content: `WHAT ARE ON-DEMAND MOBILE APPS?`,
   },
   {
-    type: 'Description',
+    type: "Description",
     content: `Typically, an on-demand mobile app is seen as a middleman between service providers and users. Its primary purpose is to make a negotiation between two parties simpler so that both sides may feel comfortable spending their time and money on it. Due to their sophisticated payment, monitoring, and feedback systems, these programmes are also highly commended by suppliers and consumers for their transparency.
     `,
   },
   {
-    type: 'Subheading',
+    type: "Subheading",
     content: `WHAT MAKES ON-DEMAND APPS STAND OUT?`,
   },
   {
-    type: 'SubsubHeading',
+    type: "SubsubHeading",
     content: `FOR SERVICE PROVIDERS:`,
   },
   {
-    type: 'Description',
+    type: "Description",
     content: `User profile: Simple registration for service providers using an email address, social network account, or even a phone number using an OTP.
     When a user uses a service provider's services or products, they are immediately notified through push notification.
     Accept & Reject Request: This function enables service providers to accept or reject requests in a predetermined amount of time.
@@ -515,15 +515,15 @@ export const MobileAppsData = [
     `,
   },
   {
-    type: 'Subheading',
+    type: "Subheading",
     content: `FOR CUSTOMERS:`,
   },
   {
-    type: 'SubsubHeading',
+    type: "SubsubHeading",
     content: `User profile:`,
   },
   {
-    type: 'Description',
+    type: "Description",
     content: `Users may create accounts and log in using their email addresses, phone numbers, or social media accounts.
 
     Requests may be found and scheduled using this feature's search functionality. This could even allow you to monitor the current availability of their staff members and the status of the service providers. The customer can arrange services at the time and day of their choosing.
@@ -531,131 +531,131 @@ export const MobileAppsData = [
     `,
   },
   {
-    type: 'SubsubHeading',
+    type: "SubsubHeading",
     content: `Payment Estimation:`,
   },
   {
-    type: 'Description',
+    type: "Description",
     content: `Calculates the cost based on a predetermined set of factors, including fixed costs, distance-based dynamic costs, potential taxes, and more.
     `,
   },
   {
-    type: 'SubsubHeading',
+    type: "SubsubHeading",
     content: `Real-time tracking:`,
   },
   {
-    type: 'Description',
+    type: "Description",
     content: `The capacity to search for services and use them are the two essential components of every on-demand software. By informing customers in real time of projected arrival and delivery, this service increases consumer confidence.
 
     Users have a variety of secure payment methods to choose from, including cash, credit and debit cards, wallets, and more.
     On-demand applications are all about trustworthiness, according to reviews and ratings. And what's more reliable for boosting sales and making adjustments than customer feedback. Customers are able to rate and offer detailed comments for a specific service or product using this feature.`,
   },
   {
-    type: 'SubsubHeading',
-    content: 'Order History: ',
+    type: "SubsubHeading",
+    content: "Order History: ",
   },
   {
-    type: 'Description',
+    type: "Description",
     content: `Customers may look at all of their prior orders and refund details at any time, anywhere.
     `,
   },
   {
-    type: 'SubsubHeading',
-    content: 'Support and Help: ',
+    type: "SubsubHeading",
+    content: "Support and Help: ",
   },
   {
-    type: 'Description',
+    type: "Description",
     content: `Users can access the support and assistance.`,
   },
   {
-    type: 'Description',
+    type: "Description",
     content: `The greatest on-demand startup ideas are listed below with detailed descriptions to assist you in launching your on-demand business.
     `,
   },
   {
-    type: 'Subheading',
-    content: 'THE PROCESS:',
+    type: "Subheading",
+    content: "THE PROCESS:",
   },
   {
-    type: 'SubsubHeading',
-    content: '1. Establish Business Needs and Audience Targets',
+    type: "SubsubHeading",
+    content: "1. Establish Business Needs and Audience Targets",
   },
   {
-    type: 'Description',
+    type: "Description",
     content: `Finding the purpose is the first step. A wide range of domains and services can use on-demand services, and each service may have its own set of guidelines and specifications.`,
   },
   {
-    type: 'SubsubHeading',
-    content: '2. Defending a Business Need',
+    type: "SubsubHeading",
+    content: "2. Defending a Business Need",
   },
   {
-    type: 'Description',
+    type: "Description",
     content: `It is necessary to make a list of the different user kinds and the platforms they will use once you have determined which industry and for what reason you are constructing the solution. Concentrate on determining the specifications depending on whether clients will use mobile apps, if vendors will utilise web panels, and whether employees will use mobile apps for location and service tracking.`,
   },
   {
-    type: 'SubsubHeading',
-    content: '3. Choose the Right Technology',
+    type: "SubsubHeading",
+    content: "3. Choose the Right Technology",
   },
   {
-    type: 'Description',
+    type: "Description",
     content: `Finding the tech stack required to construct the app is the next stage. Hire a team of experts that can design mobile apps on demand.`,
   },
   {
-    type: 'SubsubHeading',
-    content: '4. Planning and Execution',
+    type: "SubsubHeading",
+    content: "4. Planning and Execution",
   },
   {
-    type: 'Description',
+    type: "Description",
     content: `Once the technology and requirements are in place, an expert on-demand delivery app development business may create and apply a methodology that works for the project and the project's budget to assist provide the best results.`,
   },
   {
-    type: 'SubsubHeading',
-    content: '5. Launch and test the app',
+    type: "SubsubHeading",
+    content: "5. Launch and test the app",
   },
   {
-    type: 'Description',
+    type: "Description",
     content: `The mobile app development partner might do a pilot or beta run once the main set of features have been completed to evaluate the performance and solve bugs. The solution is well linked with the learning objectives in order to provide the greatest user experience.`,
   },
   {
-    type: 'Subheading',
+    type: "Subheading",
     content: `HERE’S A LIST OF ON-DEMAND APP IDEAS:
     `,
   },
   {
-    type: 'SubsubHeading',
+    type: "SubsubHeading",
     content: `1.On-demand Travel Apps Comparable to Uber`,
   },
   {
-    type: 'Description',
+    type: "Description",
     content: `The Uber app was used by 93 million users every month in the fourth quarter of 2020. Uber and Airbnb heralded the dawn of the on-demand app age. In this fast-paced, opportunity-driven world, nobody wants to fall behind, not even for a moment. The rapid growth of the Uber app and Uber equivalents like Lyft and Careem gave the transportation and logistics sector a new focus in a relatively short amount of time. We have created more than 40 on-demand solutions and Uber-like apps for our clients as the top mobile app development business.`,
   },
   {
-    type: 'SubsubHeading',
+    type: "SubsubHeading",
     content: `2. Apps for on-demand pharmacy delivery
     `,
   },
   {
-    type: 'Description',
+    type: "Description",
     content: `In 2022 alone, internet pharmacy sales are expected to reach $22.5 billion. China is where most of the money originates from. We are up against a completely undetectable opponent with COVID-19. Only by taking the necessary measures, such as using hand sanitizer and donning masks, can we defeat it. Additionally, a lot of folks these days don't feel like stepping outside due to the COVID issue.This explains why delivery applications for pharmacies or prescriptions are so popular right now.
     `,
   },
   {
-    type: 'SubsubHeading',
+    type: "SubsubHeading",
     content: `3. On-demand Apps for Fashion
 
     `,
   },
   {
-    type: 'Description',
+    type: "Description",
     content: `For all last-minute orders, fashion apps are a one-stop shop.
     The creation of an eCommerce app can provide you similar exposure to Amazon. There will always be new fashion trends. In addition, retail eCommerce revenues from sales of clothing and accessories in the United States increased from $144.8 billion in 2020 to $180.5 billion in 2021.`,
   },
   {
-    type: 'SubsubHeading',
+    type: "SubsubHeading",
     content: `4. Demand-based Health Apps`,
   },
   {
-    type: 'Description',
+    type: "Description",
     content: `In 2025, the global market for mobile health is expected to reach $189 billion. The market for on-demand health applications has a bright future.
     People are becoming more health-conscious on a daily basis. Not everyone can make it to the gym or a meditation class due to their hectic schedule. Your software will act as a convenient fitness kit for them in this situation.
     You may develop applications for meditation, health and fitness regimens, major illnesses information, and medical consultations.
@@ -663,29 +663,29 @@ export const MobileAppsData = [
     `,
   },
   {
-    type: 'SubsubHeading',
+    type: "SubsubHeading",
     content: `5. Apps for On-Demand Mechanics
     `,
   },
   {
-    type: 'Description',
+    type: "Description",
     content: `Between 2015 and 2021, the market for plumbing fixtures and fittings will grow at a CAGR of 5.45%, from $74.72 billion in 2015. Because it has consistently aided in bridging the gap between auto technicians and automobile owners.
     bridge the gap between automobile owners and mechanics. Applications for auto repair are in high demand right now. With their forms of transportation, people are moving across the world. Your software is a lifesaver for tourists in locations where there are neither garages nor mechanics available.`,
   },
-  { type: 'SubsubHeading', content: 'FINAL WORDS:' },
+  { type: "SubsubHeading", content: "FINAL WORDS:" },
   {
-    type: 'Description',
+    type: "Description",
     content: `Innovative on-demand app solutions, which are currently a significant area of the quickly emerging smart-world, have a broad open market in the modern day. Keep in mind that your software should be simple to use and ensure smooth performance, versatility, and scalability as you climb the corporate ladder. Our team at Whiten App Solutions is skilled in giving your customers' regular routines a fresh perspective. So, if you have good ideas for on-demand applications, you may succeed and be embraced by the market. Just send us a message!
     `,
   },
-];
+]
 
 export const PortfolioData = [
   {
     id: 1,
     logo: Simwim,
     url: SimWinImg,
-    type: 'img',
+    type: "img",
     message: `SimWin Sports is the worlds first digital sports
               league that provides daily fantasy players, esports fans,
               and sport bettors the ability to watch, play, predict and collect. 24/7-365. `,
@@ -693,8 +693,8 @@ export const PortfolioData = [
   {
     id: 2,
     logo: Foodclub,
-    url: '/assets/videos/foodclub.mp4',
-    type: 'video',
+    url: "/assets/videos/foodclub.mp4",
+    type: "video",
     message: ` FoodClub is a Food Delivery Application based in
         Chandigarh. They started with a unique concept of
         creating virtual food courts from where a user could
@@ -704,11 +704,11 @@ export const PortfolioData = [
   {
     id: 3,
     logo: Punpunlogo,
-    url: '/assets/videos/punpun.mp4',
-    type: 'video',
+    url: "/assets/videos/punpun.mp4",
+    type: "video",
     message: `PunPun is a digital store management application meant
     for small businesses who want to manage their daily
     flow of transactions. This is an animated explainer
     for the same`,
   },
-];
+]
