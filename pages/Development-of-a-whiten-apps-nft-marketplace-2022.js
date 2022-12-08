@@ -2,17 +2,12 @@ import React, { useEffect } from 'react';
 import ReactGA from 'react-ga';
 import Header from '../components/headers/light.js';
 import { NFTMarketplace } from '../helpers/utils';
-import Description from '../components/blog/Description';
-import Image from '../components/blog/Image';
 import Head from 'next/head';
 import Footer from '../components/footers/FiveColumnWithInputForm.js';
-import SubsubHeading from '../components/blog/SubsubHeading';
-import Subheading from '../components/blog/Subheading';
-import List from '../components/blog/List';
-import BulletList from '../components/blog/BulletList';
-import Heading from '../components/blog/Heading';
-import Post1 from '../assets/images/post1.png';
 import SvgDecoratorBlob1 from '../assets/images/svg-decorator-blob-9.svg';
+import NFT1 from '../assets/images/NFT1.png';
+import NFT2 from '../assets/images/NFT2.png';
+import NFT3 from '../assets/images/NFT3.png';
 
 const NftMarketplace = () => {
   useEffect(() => {
@@ -74,7 +69,7 @@ const NftMarketplace = () => {
               </div>
               <div>
                 <img
-                  src={Post1.src}
+                  src={NFT1.src}
                   alt="post1"
                   className="h-full object-cover"
                 />
@@ -109,6 +104,7 @@ const NftMarketplace = () => {
               <p className="text-[#6e6e6e] text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4">
                 {NFTMarketplace.marketplace.content}
               </p>
+              <img src={NFT2.src} alt="" />
             </div>
 
             <div className="mb-4 md:mb-8">
@@ -160,7 +156,7 @@ const NftMarketplace = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 my-4 md:my-8 lg:my-20">
               <div>
                 <img
-                  src={Post1.src}
+                  src={NFT3.src}
                   alt="post1"
                   className="h-full object-cover"
                 />

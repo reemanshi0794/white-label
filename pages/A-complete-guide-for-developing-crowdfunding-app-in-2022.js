@@ -1,17 +1,19 @@
-import React, { useEffect } from "react"
-import SvgDecoratorBlob1 from "../assets/images/svg-decorator-blob-9.svg"
-import ReactGA from "react-ga"
-import { CrowdFundingAppData } from "../helpers/utils"
-import Header from "../components/headers/light.js"
-import Head from "next/head"
-import Footer from "../components/footers/FiveColumnWithInputForm.js"
-import Post1 from "../assets/images/post1.png"
+import React, { useEffect } from 'react';
+import SvgDecoratorBlob1 from '../assets/images/svg-decorator-blob-9.svg';
+import ReactGA from 'react-ga';
+import { CrowdFundingAppData } from '../helpers/utils';
+import Header from '../components/headers/light.js';
+import Head from 'next/head';
+import Footer from '../components/footers/FiveColumnWithInputForm.js';
+import Crowdfunding2 from '../assets/images/Crowdfunding2.png';
+import Crowdfunding1 from '../assets/images/Crowdfunding1.png';
+import Crowdfunding3 from '../assets/images/Crowdfunding3.png';
 
 const Howmuchcosttodevelop = () => {
   useEffect(() => {
-    window.scrollTo(0, 0)
-    ReactGA.pageview(window.location.pathname)
-  }, [])
+    window.scrollTo(0, 0);
+    ReactGA.pageview(window.location.pathname);
+  }, []);
 
   return (
     <div>
@@ -68,7 +70,7 @@ const Howmuchcosttodevelop = () => {
               </div>
               <div>
                 <img
-                  src={Post1.src}
+                  src={Crowdfunding1.src}
                   alt="post1"
                   className="h-full object-cover"
                 />
@@ -84,14 +86,14 @@ const Howmuchcosttodevelop = () => {
                     <li className="text-[#6e6e6e] text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4 pl-2">
                       {content.Licontent}
                     </li>
-                  )
+                  );
                 })}
               </ol>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-4 md:mb-8 lg:mb-20">
               <div>
                 <img
-                  src={Post1.src}
+                  src={Crowdfunding3.src}
                   alt="post1"
                   className="h-full object-cover"
                 />
@@ -117,6 +119,10 @@ const Howmuchcosttodevelop = () => {
                 each of the next phases in the creation of your crowdsourcing
                 campaign individually. Check out what's below:
               </p>
+              <img
+                src={Crowdfunding2.src}
+                className="h-full object-cover my-5"
+              />
               <ul className=" list-none">
                 {CrowdFundingAppData.Steps.map((steps) => {
                   return (
@@ -128,7 +134,7 @@ const Howmuchcosttodevelop = () => {
                         {steps.content}
                       </p>
                     </li>
-                  )
+                  );
                 })}
               </ul>
             </div>
@@ -153,7 +159,7 @@ const Howmuchcosttodevelop = () => {
                     <li className="text-[#727272] text-base 2xl:text-lg pl-[5px] leading-[35px]">
                       {words.content}
                     </li>
-                  )
+                  );
                 })}
               </ul>
               <p className="text-[#6e6e6e] text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4">
@@ -168,7 +174,7 @@ const Howmuchcosttodevelop = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Howmuchcosttodevelop
+export default Howmuchcosttodevelop;
