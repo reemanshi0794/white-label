@@ -80,7 +80,7 @@ const Howmuchcosttodevelop = () => {
               <h2 className="text-[#151514] text-xl md:text-2xl 2xl:text-[40px] font-bold mb-[14px]">
                 What is crowdfunding and how does it work?
               </h2>
-              <ol className="list-decimal">
+              <ol className="list-decimal px-8">
                 {CrowdFundingAppData.Crowdfunding.map((content) => {
                   return (
                     <li className="text-[#6e6e6e] text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4 pl-2">
@@ -127,7 +127,7 @@ const Howmuchcosttodevelop = () => {
                 {CrowdFundingAppData.Steps.map((steps) => {
                   return (
                     <li>
-                      <h3 className="text-[#151514] text-lg md:text-[22px] xl:text-[30px] font-bold mb-[14px]">
+                      <h3 className="text-[#0f7568] text-lg md:text-[22px] xl:text-[30px] font-bold mb-[14px]">
                         {steps.heading}
                       </h3>
                       <p className="text-[#6e6e6e] text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4">
@@ -139,7 +139,7 @@ const Howmuchcosttodevelop = () => {
               </ul>
             </div>
             <div className="mb-4 md:mb-8 lg:mb-20">
-              <h2 className="text-[#151514] text-xl md:text-2xl 2xl:text-[40px] font-bold mb-[14px]">
+              <h2 className="text-[#151514] text-xl md:text-2xl 2xl:text-[30px] font-bold mb-[14px]">
                 Final Words
               </h2>
               <p className="text-[#6e6e6e] text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4 ">
@@ -153,7 +153,7 @@ const Howmuchcosttodevelop = () => {
                 In general, the following actions can facilitate the website
                 construction process:
               </p>
-              <ul className=" list-disc mb-4">
+              <ul className=" list-disc mb-4 px-4">
                 {CrowdFundingAppData.FinalWords.map((words) => {
                   return (
                     <li className="text-[#727272] text-base 2xl:text-lg pl-[5px] leading-[35px]">

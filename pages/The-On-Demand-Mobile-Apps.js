@@ -1,38 +1,21 @@
-import React, { useEffect } from "react"
-import ReactGA from "react-ga"
-import Head from "next/head"
-import Header from "../components/headers/light.js"
-import Heading from "../components/blog/Heading"
-import Description from "../components/blog/Description"
-import Image from "../components/blog/Image"
-import { MobileAppsData } from "../helpers/utils"
-import Footer from "../components/footers/FiveColumnWithInputForm.js"
-import SubsubHeading from "../components/blog/SubsubHeading"
-import Subheading from "../components/blog/Subheading"
-import List from "../components/blog/List"
-import BulletList from "../components/blog/BulletList"
-import SvgDecoratorBlob1 from "../assets/images/svg-decorator-blob-9.svg"
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
+import Head from 'next/head';
+import Header from '../components/headers/light.js';
+import Footer from '../components/footers/FiveColumnWithInputForm.js';
+import SvgDecoratorBlob1 from '../assets/images/svg-decorator-blob-9.svg';
+import Mobile1 from '../assets/images/Mobile1.png';
+import Mobile2 from '../assets/images/Mobile2.png';
+import Mobile3 from '../assets/images/Mobile3.png';
+import Mobile4 from '../assets/images/Mobile4.png';
+import { MobileAppsData } from '../helpers/utils.js';
 
 const MobileApps = () => {
   useEffect(() => {
-    window.scrollTo(0, 0)
-    ReactGA.pageview(window.location.pathname)
-  }, [])
+    window.scrollTo(0, 0);
+    ReactGA.pageview(window.location.pathname);
+  }, []);
 
-  const Components = {
-    List,
-    Description,
-    Image,
-    Heading,
-    SubsubHeading,
-    Subheading,
-    BulletList,
-  }
-
-  const getComponent = (type, content) => {
-    const Render = Components[type]
-    return <Render content={content} />
-  }
   return (
     <div>
       <Head>
@@ -64,15 +47,149 @@ const MobileApps = () => {
             </div>
           </div>
           <div className="max-w-screen-xl mx-auto px-8 md:px-24 2xl:px-0">
-            {MobileAppsData.map(({ type, content, className }) => (
-              <div className={className}>{getComponent(type, content)}</div>
-            ))}
+            <div className="mb-4 md:mb-8 lg:mb-20">
+              <h2 className="text-[#151514] text-xl md:text-2xl 2xl:text-[40px] font-bold mb-[14px]">
+                {MobileAppsData.Introduction.heading}
+              </h2>
+              <p className="text-[#6e6e6e] text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4">
+                {MobileAppsData.Introduction.content}
+              </p>
+              <p className="text-[#6e6e6e] text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4">
+                {MobileAppsData.Introduction.content1}
+              </p>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 md:gap-8 lg:gap-16 mb-4 md:mb-8 lg:mb-20">
+              <div>
+                <h2 className="text-[#151514] capitalize text-xl md:text-2xl 2xl:text-[40px] font-bold mb-[14px]">
+                  {MobileAppsData.Subheading.heading}
+                </h2>
+                <p className="text-[#6e6e6e] text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4 ">
+                  {MobileAppsData.Subheading.content}
+                </p>
+              </div>
+              <div>
+                <img
+                  src={Mobile1.src}
+                  alt="post1"
+                  className="h-full object-cover"
+                />
+              </div>
+            </div>
+            <div className="mb-4 md:mb-8">
+              <h2 className="text-[#151514] capitalize text-xl md:text-2xl 2xl:text-[40px] font-bold mb-[14px]">
+                {MobileAppsData.Question.heading}
+              </h2>
+              <p className="text-[#6e6e6e] text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4">
+                {MobileAppsData.Question.content}
+              </p>
+            </div>
+            <div className="mb-4 md:mb-8">
+              <h2 className="text-[#151514] capitalize text-xl md:text-2xl 2xl:text-[40px] font-bold mb-[14px]">
+                what makes on-demand apps stand out?
+              </h2>
+              <div>
+                <div className="my-8">
+                  <img
+                    src={Mobile2.src}
+                    alt="post1"
+                    className="h-full object-cover"
+                  />
+                </div>
+                <h4 className=" capitalize font-medium text-xl xl:text-[28px] mb-[14px] text-[#777]">
+                  {MobileAppsData.Services.heading}
+                </h4>
+                <p className="text-[#6e6e6e] text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4">
+                  {MobileAppsData.Services.Description}
+                </p>
+                <p className="text-[#6e6e6e] text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4">
+                  {MobileAppsData.Services.Description1}
+                </p>
+              </div>
+              <div className="my-8">
+                <img
+                  src={Mobile3.src}
+                  alt="post1"
+                  className="h-full object-cover"
+                />
+              </div>
+              <h4 className=" capitalize font-medium text-xl xl:text-[28px] mb-[14px] text-[#777]">
+                for customers:
+              </h4>
+              {MobileAppsData.Customers.map((data) => {
+                return (
+                  <div>
+                    <h5 className="font-medium text-lg md:text-[23px] mb-[14px] text-[#0f7568]">
+                      {data.heading}
+                    </h5>
+                    <p className="text-[#6e6e6e] text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4">
+                      {data.Description}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="mb-4 md:mb-8">
+              <h2 className="text-[#151514] capitalize text-xl md:text-2xl 2xl:text-[40px] font-bold mb-[14px]">
+                STEPS TO FOLLOW:
+              </h2>
+              <div className="my-8">
+                <img
+                  src={Mobile4.src}
+                  alt="post1"
+                  className="h-full object-cover"
+                />
+              </div>
+              <ul className="list-disc px-8 text-xl">
+                {MobileAppsData.Steps.map((data) => {
+                  return (
+                    <li className="pl-[10px]">
+                      <h3 className="text-[#151514] text-lg md:text-[22px] xl:text-[30px] font-bold mb-[14px]">
+                        {data.heading}
+                      </h3>
+                      <p className="text-[#6e6e6e] text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4">
+                        {data.Description}
+                      </p>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+
+            <div className="mb-4 md:mb-8">
+              <h2 className="text-[#151514] capitalize text-xl md:text-2xl 2xl:text-[40px] font-bold mb-[14px]">
+                here’s a list of on-demand app ideas:
+              </h2>
+              <ul className="list-decimal text-[#151514] px-8 text-lg md:text-[22px] capitalize xl:text-[30px] font-bold">
+                {MobileAppsData.Ideas.map((data) => {
+                  return (
+                    <li className="pl-[10px]">
+                      <h3 className="text-[#151514] text-lg md:text-[22px] capitalize xl:text-[30px] font-bold mb-[14px]">
+                        {data.heading}
+                      </h3>
+                      <p className="text-[#6e6e6e] font-normal text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4">
+                        {data.Description}
+                      </p>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+
+            <div className="mb-4 md:mb-8 lg:mb-20">
+              <h2 className="text-[#151514] text-xl md:text-2xl 2xl:text-[30px] font-bold mb-[14px]">
+                {MobileAppsData.Outro.heading}
+              </h2>
+              <p className="text-[#6e6e6e] text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4 ">
+                {MobileAppsData.Outro.Description}
+              </p>
+            </div>
           </div>
         </div>
       </div>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default MobileApps
+export default MobileApps;
