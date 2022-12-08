@@ -257,7 +257,7 @@ export default ({ logoLink, className }) => {
                 >
                   Blog
                 </a>
-                <a
+                {/* <a
                   href="/portfolio"
                   className={
                     router.asPath === '/portfolio'
@@ -266,7 +266,7 @@ export default ({ logoLink, className }) => {
                   }
                 >
                   Portfolio
-                </a>
+                </a> */}
                 <a
                   href="/career"
                   onMouseLeave={hideServiceDropdown}
