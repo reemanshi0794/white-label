@@ -86,7 +86,7 @@ const MobileApps = () => {
                 do a lot more things.
               </p>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-4 md:mb-8 lg:mb-20">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 md:gap-8 lg:gap-16 mb-4 md:mb-8 lg:mb-20">
               <div>
                 <h2 className="text-[#151514] capitalize text-xl md:text-2xl 2xl:text-[40px] font-bold mb-[14px]">
                   an overview:
@@ -133,7 +133,14 @@ const MobileApps = () => {
                 what makes on-demand apps stand out?
               </h2>
               <div>
-                <h4 className=" capitalize font-medium text-[28px] mb-[14px] text-[#777]">
+                <div className="my-8">
+                  <img
+                    src={Post1.src}
+                    alt="post1"
+                    className="h-full object-cover"
+                  />
+                </div>
+                <h4 className=" capitalize font-medium text-xl xl:text-[28px] mb-[14px] text-[#777]">
                   for service providers:
                 </h4>
                 <p className="text-[#6e6e6e] text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4">
@@ -160,11 +167,18 @@ const MobileApps = () => {
                   information.
                 </p>
               </div>
-              <h4 className=" capitalize font-medium text-[28px] mb-[14px] text-[#777]">
+              <div className="my-8">
+                <img
+                  src={Post1.src}
+                  alt="post1"
+                  className="h-full object-cover"
+                />
+              </div>
+              <h4 className=" capitalize font-medium text-xl xl:text-[28px] mb-[14px] text-[#777]">
                 for customers:
               </h4>
               <div>
-                <h5 className="font-medium text-[23px] mb-[14px] text-[#0f7568]">
+                <h5 className="font-medium text-lg md:text-[23px] mb-[14px] text-[#0f7568]">
                   User profile:
                 </h5>
                 <p className="text-[#6e6e6e] text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4">
@@ -182,7 +196,7 @@ const MobileApps = () => {
                 </p>
               </div>
               <div>
-                <h5 className="font-medium text-[23px] mb-[14px] text-[#0f7568]">
+                <h5 className="font-medium text-lg md:text-[23px] mb-[14px] text-[#0f7568]">
                   Payment Estimation:
                 </h5>
                 <p className="text-[#6e6e6e] text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4">
@@ -192,7 +206,7 @@ const MobileApps = () => {
                 </p>
               </div>
               <div>
-                <h5 className="font-medium text-[23px] mb-[14px] text-[#0f7568]">
+                <h5 className="font-medium text-lg md:text-[23px] mb-[14px] text-[#0f7568]">
                   Real-time tracking:
                 </h5>
                 <p className="text-[#6e6e6e] text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4">
@@ -210,7 +224,7 @@ const MobileApps = () => {
                 </p>
               </div>
               <div>
-                <h5 className="font-medium text-[23px] mb-[14px] text-[#0f7568]">
+                <h5 className="font-medium text-lg md:text-[23px] mb-[14px] text-[#0f7568]">
                   Order History:
                 </h5>
                 <p className="text-[#6e6e6e] text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4">
@@ -219,7 +233,7 @@ const MobileApps = () => {
                 </p>
               </div>
               <div>
-                <h5 className="font-medium text-[23px] mb-[14px] text-[#0f7568]">
+                <h5 className="font-medium text-lg md:text-[23px] mb-[14px] text-[#0f7568]">
                   Support and Help:
                 </h5>
                 <p className="text-[#6e6e6e] text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4">
@@ -237,6 +251,13 @@ const MobileApps = () => {
               <h2 className="text-[#151514] capitalize text-xl md:text-2xl 2xl:text-[40px] font-bold mb-[14px]">
                 STEPS TO FOLLOW:
               </h2>
+              <div className="my-8">
+                <img
+                  src={Post1.src}
+                  alt="post1"
+                  className="h-full object-cover"
+                />
+              </div>
               <ul className="list-disc px-8 text-xl">
                 <li className="pl-[10px]">
                   <h3 className="text-[#151514] text-lg md:text-[22px] xl:text-[30px] font-bold mb-[14px]">
