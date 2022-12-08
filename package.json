@@ -16,7 +16,9 @@
     "@emotion/server": "^11.10.0",
     "@emotion/styled": "^11.10.5",
     "@svgr/webpack": "^6.5.1",
+    "css-loader": "^6.7.2",
     "feather-icons": "^4.29.0",
+    "file-loader": "^6.2.0",
     "framer-motion": "^7.3.2",
     "next": "13.0.0",
     "react": "18.2.0",
@@ -26,7 +28,9 @@
     "react-intersection-observer": "^9.4.0",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^5.3.5"
+    "style-loader": "^3.3.1",
+    "styled-components": "^5.3.5",
+    "url-loader": "^4.1.1"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.10.5",

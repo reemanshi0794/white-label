@@ -1,8 +1,27 @@
 import React from 'react';
+import { PortfolioData } from '../helpers/utils';
+import Head from 'next/head';
+import Header from '../components/headers/light.js';
+import Footer from '../components/footers/FiveColumnWithInputForm.js';
 
 const portfolio = () => {
   return (
     <div id="portfolio">
+      <Head>
+        <title>
+          Software Development Company | Custom App Developer | White Label
+          Technologies
+        </title>
+        <meta
+          name="description"
+          content="Design your apps and website with top software development company at reasonable prices. Experienced custom app designers and developers. Contact us today!"
+        />
+        <meta
+          name="keyword"
+          content="custom mobile app development company, software development company,custom software development,software app developer"
+        />
+      </Head>
+      <Header />
       <div className="who-we-are-section">
         <div className="container-fluid">
           <div className="col-lg-10 col-md-11 mx-auto">
@@ -10,33 +29,34 @@ const portfolio = () => {
               <h4>Our Portfolio</h4>
             </div>
             <div className="row">
-              {/* {data.map((item, index) => {
+              {PortfolioData.map((item, index) => {
+                const { id, logo, url, type, message } = item;
                 return (
                   <>
                     {index % 2 === 0 ? (
                       <>
-                        <div className="col-md-6 col-12 mb-4">
+                        <div className="col-md-6 col-12 mb-4" key={id}>
                           <div className="img_section ">
-                            {item.type.toLowerCase().includes('img') ? (
+                            {type.toLowerCase().includes('img') ? (
                               <div className="img-wrapper">
-                                <Loader />
+                                {/* <Loader /> */}
                                 <img
                                   className="img-fluid"
-                                  src={item.url.src}
-                                  alt={item.url}
+                                  src={url.src}
+                                  alt={url}
                                 />
                               </div>
                             ) : (
                               <>
-                                <Loader />
+                                {/* <Loader /> */}
                                 <video
                                   id="video-id-name"
-                                  src={item.url}
+                                  src={url}
                                   // controls
                                   loop
                                   autoPlay
                                   muted
-                                ></video>
+                                />
                               </>
                             )}
                           </div>
@@ -44,9 +64,9 @@ const portfolio = () => {
                         <div className="col-md-6 col-12 mb-4">
                           <div className="content_section">
                             <div className="logo-wrapper">
-                              <img src={item.logo.src} alt={item.logo} />
+                              <img src={logo.src} alt={logo} />
                             </div>
-                            <p>{item.message}</p>
+                            <p>{message}</p>
                           </div>
                         </div>
                       </>
@@ -56,47 +76,33 @@ const portfolio = () => {
                           <div className="col-md-6 col-12">
                             <div className="content_section">
                               <div className="logo-wrapper">
-                                <img src={item.logo.src} alt={item.logo} />
+                                <img src={logo.src} alt={logo} />
                               </div>
-                              <p>{item.message}</p>
+                              <p>{message}</p>
                             </div>
                           </div>
                           <div className="col-md-6 col-12">
                             <div className="img_section ">
-                              {item.url.toLowerCase().includes('img') ? (
+                              {url.toLowerCase().includes('img') ? (
                                 <div className="img-wrapper">
-                                  <Loader
-                                  // customStyle={{
-                                  //   position: "absolute",
-                                  //   top: "47%",
-                                  //   left: "47%",
-                                  //   color: "transparent",
-                                  // }}
-                                  />
+                                  {/* <Loader /> */}
                                   <img
                                     className="img-fluid"
-                                    src={item.url}
-                                    alt={item.url}
+                                    src={url}
+                                    alt={url}
                                   />
                                 </div>
                               ) : (
                                 <>
-                                  <Loader
-                                  // customStyle={{
-                                  //   position: "absolute",
-                                  //   top: "47%",
-                                  //   left: "47%",
-                                  //   color: "transparent",
-                                  // }}
-                                  />
+                                  {/* <Loader /> */}
                                   <video
                                     id="video-id-name"
-                                    src={item.url}
+                                    src={url}
                                     // controls
                                     loop
                                     autoPlay
                                     muted
-                                  ></video>
+                                  />
                                 </>
                               )}
                             </div>
@@ -106,11 +112,12 @@ const portfolio = () => {
                     )}
                   </>
                 );
-              })} */}
+              })}
             </div>
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
