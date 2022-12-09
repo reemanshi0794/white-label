@@ -3,11 +3,8 @@ import { PortfolioData } from '../helpers/utils';
 import Head from 'next/head';
 import Header from '../components/headers/light.js';
 import Footer from '../components/footers/FiveColumnWithInputForm.js';
-// import VideoFile from '../public/videos/punpun.mp4';
-import ReactPlayer from 'react-player';
 
 const portfolio = () => {
-  console.log('PortfolioData', PortfolioData);
   return (
     <div id="portfolio">
       <Head>
