@@ -48,7 +48,7 @@ export default ({
 
   description = 'Know how it is to be developed by experts in the industry. We give a seamless experience for our clients with exceptional design, development and process that is best suited to their needs and requirements.',
   primaryButtonText = 'Learn More',
-  primaryButtonUrl = 'https://timerse.com',
+  primaryButtonUrl = '/contact-us',
   imageSrc = TeamIllustrationSrc,
   buttonRounded = true,
   imageRounded = true,
@@ -117,7 +117,7 @@ export default ({
               </p>
               <a
                 className="mt-8 md:mt-8 text-sm inline-block mx-auto md:mx-0 px-8 py-3 font-bold  bg-primary-500 text-gray-100 hocus:bg-primary-700 hocus:text-gray-200 focus:outline-none transition duration-300 rounded-full hover:bg-secondary-700"
-                href="/contact-us"
+                href={primaryButtonUrl}
               >
                 {primaryButtonText}
               </a>

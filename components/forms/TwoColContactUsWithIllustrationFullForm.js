@@ -114,12 +114,11 @@ export default ({
         });
     } else {
       setDisplayMessage({
-        message: ' Invalid Email ',
+        message: 'Plaese enter valid email ',
         type: 'error',
       });
       setShowLoader(false);
     }
-
     setContactInfo({ service: webDevelopment });
     event.preventDefault();
   };

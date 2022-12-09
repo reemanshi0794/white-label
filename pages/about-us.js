@@ -47,6 +47,7 @@ export default () => {
           heading="Ideas take the best form of innovation here"
           buttonRounded={false}
           primaryButtonText="See Portfolio"
+          primaryButtonUrl="/portfolio"
           imageSrc="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
           isModernDesignImage={false}
           description="We are the software development studio where you get to witness great ideas churned into the best business solutions."
