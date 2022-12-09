@@ -125,6 +125,13 @@ export default ({ logoLink, className }) => {
     return ServicesPages.map((service) => service.link);
   };
 
+  const blogPathArray = [
+    '/blog-post',
+    '/A-complete-guide-for-developing-crowdfunding-app-in-2022',
+    '/Development-of-a-whiten-apps-nft-marketplace-2022',
+    '/The-On-Demand-Mobile-Apps',
+  ];
+
   return (
     width !== 0 && (
       <>
@@ -250,7 +257,7 @@ export default ({ logoLink, className }) => {
                   href="/blog-post"
                   onMouseLeave={hideServiceDropdown}
                   className={
-                    router.asPath === '/blog-post'
+                    blogPathArray.includes(router.asPath)
                       ? 'text-lg my-2 text-black lg:text-sm lg:mx-6 !mr-8 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent border-primary-500 focus:text-primary-500'
                       : 'text-lg my-2 text-black lg:text-sm lg:mx-6 !mr-8  lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent hover:border-primary-500 focus:text-primary-500'
                   }
