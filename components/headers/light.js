@@ -252,12 +252,12 @@ export default ({ logoLink, className }) => {
                   className={
                     router.asPath === '/blog-post'
                       ? 'text-lg my-2 text-black lg:text-sm lg:mx-6 !mr-8 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent border-primary-500 focus:text-primary-500'
-                      : 'text-lg my-2 text-black lg:text-sm lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent hover:border-primary-500 focus:text-primary-500'
+                      : 'text-lg my-2 text-black lg:text-sm lg:mx-6 !mr-8  lg:my-0 font-semibold tracking-wide transition duration-300 pb-1 border-b-2 border-transparent hover:border-primary-500 focus:text-primary-500'
                   }
                 >
                   Blog
                 </a>
-                {/* <a
+                <a
                   href="/portfolio"
                   className={
                     router.asPath === '/portfolio'
@@ -266,7 +266,7 @@ export default ({ logoLink, className }) => {
                   }
                 >
                   Portfolio
-                </a> */}
+                </a>
                 <a
                   href="/career"
                   onMouseLeave={hideServiceDropdown}
@@ -365,6 +365,16 @@ export default ({ logoLink, className }) => {
                     }
                   >
                     Blog
+                  </a>
+                  <a
+                    href="/portfolio"
+                    className={
+                      router.asPath === '/portfolio'
+                        ? 'text-lg lg:text-sm my-2 lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 text-[#212529]pb-1 border-b-2 border-transparent border-primary-500 hocus:text-primary-500'
+                        : 'text-lg lg:text-sm my-2 lg:mx-6 lg:my-0 font-semibold tracking-wide transition duration-300 text-[#212529]pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500'
+                    }
+                  >
+                    Portfolio
                   </a>
 
                   <a
