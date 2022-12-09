@@ -186,6 +186,11 @@ function ContactModal({
                         event.target.value >= 0 ? event.target.value : 0
                       )
                     }
+                    onKeyPress={(event) => {
+                      if (!/[0-9]/.test(event.key)) {
+                        event.preventDefault();
+                      }
+                    }}
                     autoComplete="off"
                   />
                   <textarea

@@ -177,6 +177,11 @@ export default ({
                 type="tel"
                 name="phoneNumber"
                 required
+                onKeyPress={(event) => {
+                  if (!/[0-9]/.test(event.key)) {
+                    event.preventDefault();
+                  }
+                }}
                 value={contactInfo.phoneNumber || ''}
                 placeholder="Phone Number"
                 className="mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
