@@ -1,23 +1,23 @@
-import React, { useEffect } from "react"
-import ReactGA from "react-ga"
-import EnterpriseBanner from "../assets/images/EnterpriseBanner.png"
-import AgileFill from "../assets/images/AgileFill.png"
-import Platform from "../assets/images/Platform.png"
-import BestUi from "../assets/images/BestUi.png"
-import FeatureRich from "../assets/images/FeatureRich.png"
-import TechStack from "../assets/images/TechStack.png"
-import B2bEnterprise from "../assets/images/B2bEnterprise.png"
-import B2cEnterprise from "../assets/images/B2cEnterprise.png"
-import MultiVenderEnterprise from "../assets/images/MultiVenderEnterprise.png"
-import CMSEnterprise from "../assets/images/CMSEnterprise.png"
-import MigrationEnterprise from "../assets/images/MigrationEnterprise.png"
-import ApiIntegrationEnterprise from "../assets/images/ApiIntegrationEnterprise.png"
-import Head from "next/head"
-import Header from "../components/headers/light.js"
-import Footer from "../components/footers/FiveColumnWithInputForm.js"
-import MainServices from "../components/MainServices"
-import Features from "../components/features/ThreeColSimple.js"
-import Features1 from "../components/features/ThreeColWithSideImage.js"
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
+import EnterpriseBanner from '../assets/images/EnterpriseBanner.png';
+import AgileFill from '../assets/images/AgileFill.png';
+import Platform from '../assets/images/Platform.png';
+import BestUi from '../assets/images/BestUi.png';
+import FeatureRich from '../assets/images/FeatureRich.png';
+import TechStack from '../assets/images/TechStack.png';
+import B2bEnterprise from '../assets/images/B2bEnterprise.png';
+import B2cEnterprise from '../assets/images/B2cEnterprise.png';
+import MultiVenderEnterprise from '../assets/images/MultiVenderEnterprise.png';
+import CMSEnterprise from '../assets/images/CMSEnterprise.png';
+import MigrationEnterprise from '../assets/images/MigrationEnterprise.png';
+import ApiIntegrationEnterprise from '../assets/images/ApiIntegrationEnterprise.png';
+import Head from 'next/head';
+import Header from '../components/headers/light.js';
+import Footer from '../components/footers/FiveColumnWithInputForm.js';
+import MainServices from '../components/MainServices';
+import Features from '../components/features/ThreeColSimple.js';
+import Features1 from '../components/features/ThreeColWithSideImage.js';
 
 const EnterpriseServicePageItemToDisplay = [
   {
@@ -61,46 +61,46 @@ const EnterpriseServicePageItemToDisplay = [
     heading: `Modernizing Legacy Applications`,
     desc: `Without interrupting the business flow, we modernize existing technology with the latest software to create a powerful system. We assist in updating IT Stacks to achieve corporate goals. This includes platform migration,re-design and architecture and simplifying the business process with automation.`,
   },
-]
+];
 
 const EnterpriseCards = [
   {
     imageSrc: AgileFill,
-    title: "Agile Approach",
+    title: 'Agile Approach',
     description:
-      " Our Agile Development method brings the best in less time helping our clients launch their eCommerce platforms in no time.",
+      ' Our Agile Development method brings the best in less time helping our clients launch their eCommerce platforms in no time.',
   },
   {
     imageSrc: Platform,
-    title: "Platform Independent",
+    title: 'Platform Independent',
     description:
-      "All our eCommerce web solutions are made to adapt the  screen and features of all types of devices making them  usable on multiple platforms with consistency ",
+      'All our eCommerce web solutions are made to adapt the  screen and features of all types of devices making them  usable on multiple platforms with consistency. ',
   },
   {
     imageSrc: BestUi,
-    title: "Best User Interface",
+    title: 'Best User Interface',
     description:
-      "We deliver all our eCommerce solutions with top-notch UI/UX designs to assure the best user experience ",
+      'We deliver all our eCommerce solutions with top-notch UI/UX designs to assure the best user experience. ',
   },
   {
     imageSrc: FeatureRich,
-    title: "Feature-rich",
+    title: 'Feature-rich',
     description:
-      "We never stop upgrading our feature support as we believe one factor for the best-performing website is evaluated by the feature it supports.",
+      'We never stop upgrading our feature support as we believe one factor for the best-performing website is evaluated by the feature it supports.',
   },
   {
     imageSrc: TechStack,
-    title: "Best Technology Stacks",
+    title: 'Best Technology Stacks',
     description:
-      "As the tech stack is the foundation of any software, we make sure that we use only the best-suited technologystack for our eCommerce solutions. This helps us come up with the best architecture and layout for your eCommerce needs",
+      'As the tech stack is the foundation of any software, we make sure that we use only the best-suited technologystack for our eCommerce solutions. This helps us come up with the best architecture and layout for your eCommerce needs.',
   },
-]
+];
 
 const EnterpriseSoftwares = () => {
   useEffect(() => {
-    window.scrollTo(0, 0)
-    ReactGA.pageview(window.location.pathname)
-  }, [])
+    window.scrollTo(0, 0);
+    ReactGA.pageview(window.location.pathname);
+  }, []);
   return (
     <>
       <Header />
@@ -165,7 +165,7 @@ const EnterpriseSoftwares = () => {
               description={element.desc}
               textOnLeft={element.textOnLeft}
             />
-          )
+          );
         })}
 
         <Features1
@@ -185,7 +185,7 @@ const EnterpriseSoftwares = () => {
       </div>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default EnterpriseSoftwares
+export default EnterpriseSoftwares;

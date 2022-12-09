@@ -1,17 +1,17 @@
-import React, { useEffect } from "react"
-import ReactGA from "react-ga"
-import WebdevBanner from "../assets/images/WebdevBanner.png"
-import Head from "next/head"
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
+import WebdevBanner from '../assets/images/WebdevBanner.png';
+import Head from 'next/head';
 
-import WebDevImg from "../assets/images/WebDevImg.png"
-import ECommerceDevImg from "../assets/images/ECommerceDevImg.png"
-import ProgressiveWebImg from "../assets/images/ProgressiveWebImg.png"
-import EnterpriseWebImg from "../assets/images/EnterpriseWebImg.png"
-import Header from "../components/headers/light.js"
-import Footer from "../components/footers/FiveColumnWithInputForm.js"
-import MainServices from "../components/MainServices"
-import Features from "../components/features/ThreeColSimple.js"
-import Features1 from "../components/features/ThreeColWithSideImage.js"
+import WebDevImg from '../assets/images/WebDevImg.png';
+import ECommerceDevImg from '../assets/images/ECommerceDevImg.png';
+import ProgressiveWebImg from '../assets/images/ProgressiveWebImg.png';
+import EnterpriseWebImg from '../assets/images/EnterpriseWebImg.png';
+import Header from '../components/headers/light.js';
+import Footer from '../components/footers/FiveColumnWithInputForm.js';
+import MainServices from '../components/MainServices';
+import Features from '../components/features/ThreeColSimple.js';
+import Features1 from '../components/features/ThreeColWithSideImage.js';
 
 const WebAppPageItemToDisplay = [
   {
@@ -42,12 +42,12 @@ const WebAppPageItemToDisplay = [
     desc: `A non-compromised Stellar website is one of the many best features of top companies. Our team of designers and developers sit with you for a brainstorming session to build the best version of your site from scratch.`,
     textOnLeft: false,
   },
-]
+];
 const WebDevelopment = () => {
   useEffect(() => {
-    window.scrollTo(0, 0)
-    ReactGA.pageview(window.location.pathname)
-  }, [])
+    window.scrollTo(0, 0);
+    ReactGA.pageview(window.location.pathname);
+  }, []);
   return (
     <>
       <Header />
@@ -94,7 +94,7 @@ const WebDevelopment = () => {
           And business who value brand, wouldn’t want to mess it up. For
           driving in optimal results we create websites that work best for
           your users and Google, driving in more traffic that are our
-          customer’s potential business leads"
+          customer’s potential business leads."
             linkText=""
             cards={[]}
           />
@@ -108,12 +108,12 @@ const WebDevelopment = () => {
               description={element.desc}
               textOnLeft={element.textOnLeft}
             />
-          )
+          );
         })}
       </div>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default WebDevelopment
+export default WebDevelopment;

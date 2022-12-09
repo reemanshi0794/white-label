@@ -1,18 +1,18 @@
-import React, { useEffect } from "react"
-import ReactGA from "react-ga"
-import QualityBanner from "../assets/images/QualityBanner.png"
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
+import QualityBanner from '../assets/images/QualityBanner.png';
 // import { QualityAppPageItemToDisplay } from "../src/data/data";
-import Head from "next/head"
-import Header from "../components/headers/light.js"
+import Head from 'next/head';
+import Header from '../components/headers/light.js';
 // import Link from "next/link";
-import WebAppTestingImg from "../assets/images/WebAppTestingImg.png"
-import MobileAppTestingImg from "../assets/images/MobileAppTestingImg.png"
-import GameTestingImg from "../assets/images/GameTestingImg.png"
-import DesktopTestingImg from "../assets/images/DesktopTestingImg.png"
-import CloudTestingImg from "../assets/images/CloudTestingImg.png"
-import Features from "../components/features/ThreeColSimple.js"
-import MainServices from "../components/MainServices"
-import Footer from "../components/footers/FiveColumnWithInputForm.js"
+import WebAppTestingImg from '../assets/images/WebAppTestingImg.png';
+import MobileAppTestingImg from '../assets/images/MobileAppTestingImg.png';
+import GameTestingImg from '../assets/images/GameTestingImg.png';
+import DesktopTestingImg from '../assets/images/DesktopTestingImg.png';
+import CloudTestingImg from '../assets/images/CloudTestingImg.png';
+import Features from '../components/features/ThreeColSimple.js';
+import MainServices from '../components/MainServices';
+import Footer from '../components/footers/FiveColumnWithInputForm.js';
 
 const QualityAppPageItemToDisplay = [
   {
@@ -30,7 +30,7 @@ const QualityAppPageItemToDisplay = [
     id: `2`,
     Imgurl: MobileAppTestingImg,
     heading: `Mobile App Testing`,
-    desc: `Improve the user experience for your mobile application with our 7-step testing including interruption and memory leak testing. We have written over 400 test cases and have developed a test automation framework. Our highlighted mobile app testing services include`,
+    desc: `Improve the user experience for your mobile application with our 7-step testing including interruption and memory leak testing. We have written over 400 test cases and have developed a test automation framework. Our highlighted mobile app testing services include.`,
     textOnLeft: false,
 
     testingType1: `Regression Testing`,
@@ -41,7 +41,7 @@ const QualityAppPageItemToDisplay = [
     id: `3`,
     Imgurl: GameTestingImg,
     heading: `Game Testing Service`,
-    desc: `Arm your games with proper testing. An adequately functioning game is critical for its persistence. Our Experience in developing and testing numerous games has helped us gain relevant skillsets in game testing`,
+    desc: `Arm your games with proper testing. An adequately functioning game is critical for its persistence. Our Experience in developing and testing numerous games has helped us gain relevant skillsets in game testing.`,
     textOnLeft: true,
 
     testingType1: `Game Play Testing ( Online & Network Testing)`,
@@ -72,13 +72,13 @@ const QualityAppPageItemToDisplay = [
     testingType2: `User acceptance testing`,
     testingType3: `Interoperability testing`,
   },
-]
+];
 
 const QualityAssurance = () => {
   useEffect(() => {
-    window.scrollTo(0, 0)
-    ReactGA.pageview(window.location.pathname)
-  }, [])
+    window.scrollTo(0, 0);
+    ReactGA.pageview(window.location.pathname);
+  }, []);
   return (
     <>
       <Header />
@@ -136,7 +136,7 @@ const QualityAssurance = () => {
               description={element.desc}
               textOnLeft={element.textOnLeft}
             />
-          )
+          );
         })}
         <div>
           <Features
@@ -160,7 +160,7 @@ const QualityAssurance = () => {
       </div>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default QualityAssurance
+export default QualityAssurance;
