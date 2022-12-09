@@ -192,6 +192,7 @@ export default ({
                 autoComplete="off"
               />
               <textarea
+                style={{ resize: 'none' }}
                 className="mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
                 name="message"
                 required

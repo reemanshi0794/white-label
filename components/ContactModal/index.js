@@ -189,6 +189,7 @@ function ContactModal({
                     autoComplete="off"
                   />
                   <textarea
+                    style={{ resize: 'none', height: '50px' }}
                     className="mt-3 2xl:mt-6 text-[#797979] first:mt-0 border-2 px-3 py-2 2xl:px-4 2xl:py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
                     name="message"
                     required

@@ -705,7 +705,7 @@ export const PortfolioData = [
         Chandigarh. They started with a unique concept of
         creating virtual food courts from where a user could
         order from multiple places in a single order. They
-        wanted us to visually demonstrate this concept`,
+        wanted us to visually demonstrate this concept.`,
   },
   {
     id: 3,
@@ -715,6 +715,6 @@ export const PortfolioData = [
     message: `PunPun is a digital store management application meant
     for small businesses who want to manage their daily
     flow of transactions. This is an animated explainer
-    for the same`,
+    for the same.`,
   },
 ];
