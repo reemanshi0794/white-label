@@ -699,7 +699,7 @@ export const PortfolioData = [
   {
     id: 2,
     logo: Foodclub,
-    url: '/assets/videos/foodclub.mp4',
+    url: './foodclub.mp4',
     type: 'video',
     message: ` FoodClub is a Food Delivery Application based in
         Chandigarh. They started with a unique concept of
@@ -710,7 +710,7 @@ export const PortfolioData = [
   {
     id: 3,
     logo: Punpunlogo,
-    url: '/assets/videos/punpun.mp4',
+    url: '/public/videos/punpun.mp4',
     type: 'video',
     message: `PunPun is a digital store management application meant
     for small businesses who want to manage their daily

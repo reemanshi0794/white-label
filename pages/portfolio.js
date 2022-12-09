@@ -1,10 +1,13 @@
-import React from "react"
-import { PortfolioData } from "../helpers/utils"
-import Head from "next/head"
-import Header from "../components/headers/light.js"
-import Footer from "../components/footers/FiveColumnWithInputForm.js"
+import React from 'react';
+import { PortfolioData } from '../helpers/utils';
+import Head from 'next/head';
+import Header from '../components/headers/light.js';
+import Footer from '../components/footers/FiveColumnWithInputForm.js';
+// import VideoFile from '../public/videos/punpun.mp4';
+import ReactPlayer from 'react-player';
 
 const portfolio = () => {
+  console.log('PortfolioData', PortfolioData);
   return (
     <div id="portfolio">
       <Head>
@@ -28,7 +31,7 @@ const portfolio = () => {
             <h4 className=" text-2xl">Our Portfolio</h4>
           </div>
           {PortfolioData.map((item, index) => {
-            const { id, logo, url, type, message } = item
+            const { id, logo, url, type, message } = item;
             return (
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-4">
                 <>
@@ -38,7 +41,7 @@ const portfolio = () => {
                         className=" border-[#747474] border p-[10px] rounded-[20px]"
                         key={id}
                       >
-                        {type.toLowerCase().includes("img") ? (
+                        {type.toLowerCase().includes('img') ? (
                           <div>
                             {/* <Loader /> */}
                             <img
@@ -51,9 +54,8 @@ const portfolio = () => {
                           <>
                             {/* <Loader /> */}
                             <video
-                              id="video-id-name"
-                              src={url}
-                              // controls
+                              controls
+                              src={'/assets/videos/punpun.mp4'}
                               loop
                               autoPlay
                               muted
@@ -80,7 +82,7 @@ const portfolio = () => {
 
                       <div>
                         <div className=" border-[#747474] border p-[10px] rounded-[20px]">
-                          {url.toLowerCase().includes("img") ? (
+                          {url.toLowerCase().includes('img') ? (
                             <div>
                               {/* <Loader /> */}
                               <img
@@ -93,10 +95,7 @@ const portfolio = () => {
                             <>
                               {/* <Loader /> */}
                               <video
-                                id="https://www.w3schools.com/tags/movie.mp4"
-                                src={url}
-                                // controls
-
+                                src={'/assets/videos/foodclub.mp4'}
                                 loop
                                 autoPlay
                                 muted
@@ -109,13 +108,13 @@ const portfolio = () => {
                   )}
                 </>
               </div>
-            )
+            );
           })}
         </div>
       </div>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default portfolio
+export default portfolio;
