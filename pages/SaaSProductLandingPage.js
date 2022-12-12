@@ -117,12 +117,12 @@ const SaaSProductLandingPage = () => {
         <Pricing
           subheading={
             <span className="uppercase tracking-widest font-bold text-primary-500">
-              A developer would do?
+              Need only a Developer or two?
             </span>
           }
           heading={
             <>
-              Find the best Developers{' '}
+              Find the best developers{' '}
               <span className="text-primary-500">here.</span>
             </>
           }
