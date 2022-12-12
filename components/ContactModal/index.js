@@ -89,7 +89,7 @@ function ContactModal({
   useEffect(() => {
     const emailRegex = /\S+@\S+\.\S+/;
 
-    if (isValidation) {
+    if (isValidation && !showLoader) {
       let errors = { ...validations };
       if (!contactInfo.name?.trim()) errors.name = 'First name is required';
       else errors.name = '';
@@ -107,6 +107,7 @@ function ContactModal({
     contactInfo.name,
     contactInfo.phoneNumber,
     contactInfo.email,
+    showLoader
   ]);
 
   const addContactInfo = async () => {
@@ -125,9 +126,9 @@ function ContactModal({
     const emailRegex = /\S+@\S+\.\S+/;
 
     if (
-      contactInfo.name.trim() !== '' &&
-      contactInfo.phoneNumber.trim() !== '' &&
-      contactInfo.email.trim() !== '' &&
+      contactInfo.name?.trim() !== '' &&
+      contactInfo.phoneNumber?.trim() !== '' &&
+      contactInfo.email?.trim() !== '' &&
       emailRegex.test(contactInfo.email)
     ) {
       setShowLoader(true);

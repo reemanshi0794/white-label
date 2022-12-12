@@ -92,24 +92,26 @@ export default ({
   useEffect(() => {
     const emailRegex = /\S+@\S+\.\S+/;
 
-    if (isValidation) {
-      let errors = { ...validations };
-      if (!contactInfo.name?.trim()) errors.name = 'First name is required';
-      else errors.name = '';
-      if (!contactInfo.phoneNumber) errors.phoneNumber = 'Number is required';
-      else errors.phoneNumber = '';
-      if (!contactInfo.email?.trim()) errors.email = 'Email is required';
-      else if (!emailRegex.test(contactInfo.email))
-        errors.email = 'Invalid Email ID';
-      else errors.email = '';
-
-      setValidations(errors);
-    }
+      if (isValidation && !showLoader) {
+        let errors = { ...validations };
+        if (!contactInfo.name?.trim()) errors.name = 'First name is required';
+        else errors.name = '';
+        if (!contactInfo.phoneNumber) errors.phoneNumber = 'Number is required';
+        else errors.phoneNumber = '';
+        if (!contactInfo.email?.trim()) errors.email = 'Email is required';
+        else if (!emailRegex.test(contactInfo.email))
+          errors.email = 'Invalid Email ID';
+        else errors.email = '';
+  
+        setValidations(errors);
+      }
+    
   }, [
     isValidation,
     contactInfo.name,
     contactInfo.phoneNumber,
     contactInfo.email,
+    showLoader
   ]);
 
   //API to save enterred client data
@@ -129,9 +131,9 @@ export default ({
     const emailRegex = /\S+@\S+\.\S+/;
 
     if (
-      contactInfo.name.trim() !== '' &&
-      contactInfo.phoneNumber.trim() !== '' &&
-      contactInfo.email.trim() !== '' &&
+      contactInfo.name?.trim() !== '' &&
+      contactInfo.phoneNumber?.trim() !== '' &&
+      contactInfo.email?.trim() !== '' &&
       emailRegex.test(contactInfo.email)
     ) {
       setShowLoader(true);
