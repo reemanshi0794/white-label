@@ -122,7 +122,7 @@ const SaaSProductLandingPage = () => {
           }
           heading={
             <>
-              Find the best Developers here{' '}
+              Find the best Developers{' '}
               <span className="text-primary-500">here.</span>
             </>
           }
