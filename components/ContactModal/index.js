@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ContactUsSrc from '../../assets/images/contact-us.png';
 import { PrimaryButton as PrimaryButtonBase } from '../../components/misc/Buttons.js';
 import Cross from '../../assets/images/Cross.png';
 import Loader from '../../assets/images/loader.gif';
+import Validation from '../Validation';
 
 function ContactModal({
   subheading = 'Contact Us Feel free to get in touch with us.',
@@ -13,15 +14,38 @@ function ContactModal({
 }) {
   const handleClose = () => setShow(false);
   const webDevelopment = 'Web Development';
-  const [contactInfo, setContactInfo] = useState({ service: webDevelopment });
+  const [contactInfo, setContactInfo] = useState({
+    service: webDevelopment,
+    name: '',
+    phoneNumber: '',
+    email: '',
+  });
   const [showLoader, setShowLoader] = useState(false);
   const [displayMessage, setDisplayMessage] = useState({
     message: '',
     type: '',
   });
+  const [validations, setValidations] = useState({
+    name: '',
+    phoneNumber: '',
+    email: '',
+  });
+  const [isValidation, setIsValidation] = useState(false);
 
-  const handleChange = (key, value) => {
-    setContactInfo({ ...contactInfo, [key]: value });
+  const handleChange = (e) => {
+    if (e.target.name === 'phoneNumber') {
+      if (e.target.value >= 0 && e.target.value < 9999999999) {
+        setContactInfo((prev) => ({
+          ...prev,
+          [e.target.name]: e.target.value,
+        }));
+      }
+    } else {
+      setContactInfo((prev) => ({
+        ...prev,
+        [e.target.name]: e.target.value,
+      }));
+    }
   };
 
   function sendMail() {
@@ -62,6 +86,29 @@ function ContactModal({
     });
   }
 
+  useEffect(() => {
+    const emailRegex = /\S+@\S+\.\S+/;
+
+    if (isValidation) {
+      let errors = { ...validations };
+      if (!contactInfo.name?.trim()) errors.name = 'First name is required';
+      else errors.name = '';
+      if (!contactInfo.phoneNumber) errors.phoneNumber = 'Number is required';
+      else errors.phoneNumber = '';
+      if (!contactInfo.email?.trim()) errors.email = 'Email is required';
+      else if (!emailRegex.test(contactInfo.email))
+        errors.email = 'Invalid Email ID';
+      else errors.email = '';
+
+      setValidations(errors);
+    }
+  }, [
+    isValidation,
+    contactInfo.name,
+    contactInfo.phoneNumber,
+    contactInfo.email,
+  ]);
+
   const addContactInfo = async () => {
     return sendMail();
   };
@@ -71,11 +118,19 @@ function ContactModal({
     !contactInfo.email ||
     !contactInfo.phoneNumber ||
     !contactInfo.service;
+
   const handleSubmit = (event) => {
-    setShowLoader(true);
-    var validRegex =
-      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    if (contactInfo.email.match(validRegex)) {
+    event.preventDefault();
+    setIsValidation(true);
+    const emailRegex = /\S+@\S+\.\S+/;
+
+    if (
+      contactInfo.name.trim() !== '' &&
+      contactInfo.phoneNumber.trim() !== '' &&
+      contactInfo.email.trim() !== '' &&
+      emailRegex.test(contactInfo.email)
+    ) {
+      setShowLoader(true);
       addContactInfo()
         .then((res) => {
           setDisplayMessage({
@@ -83,6 +138,8 @@ function ContactModal({
             type: 'success',
           });
           setShowLoader(false);
+          setIsValidation(false);
+
           setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
         })
         .catch((err) => {
@@ -91,17 +148,24 @@ function ContactModal({
             type: 'error',
           });
           setShowLoader(false);
+          setIsValidation(false);
+
           setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
         });
     } else {
-      setDisplayMessage({
-        message: ' Invalid Email ',
-        type: 'error',
-      });
-      setShowLoader(false);
+      let errors = { ...validations };
+      if (!contactInfo.name?.trim()) errors.name = 'First name is required';
+      else errors.name = '';
+      if (!contactInfo.phoneNumber?.trim())
+        errors.phoneNumber = 'Number is required';
+      else errors.phoneNumber = '';
+      if (!contactInfo.email?.trim()) errors.email = 'Email is required';
+      else if (!emailRegex.test(contactInfo.email))
+        errors.email = 'Invalid Email ID';
+      else errors.email = '';
+      setValidations(errors);
     }
     setContactInfo({ service: webDevelopment });
-    event.preventDefault();
   };
 
   return (
@@ -152,11 +216,10 @@ function ContactModal({
                     id="exampleInputEmail1"
                     required
                     aria-describedby="emailHelp"
-                    onChange={(event) =>
-                      handleChange('name', event.target.value)
-                    }
+                    onChange={(event) => handleChange(event)}
                     autoComplete="off"
                   />
+                  <Validation validationText={validations.name} />
                   <input
                     type="email"
                     name="email"
@@ -166,11 +229,10 @@ function ContactModal({
                     className="mt-3 2xl:mt-6 text-[#797979] first:mt-0 border-2 px-3 py-2 2xl:px-4 2xl:py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
-                    onChange={(event) =>
-                      handleChange('email', event.target.value)
-                    }
+                    onChange={(event) => handleChange(event)}
                     autoComplete="off"
                   />
+                  <Validation validationText={validations.email} />
                   <input
                     type="tel"
                     name="phoneNumber"
@@ -180,12 +242,7 @@ function ContactModal({
                     className="mt-3 2xl:mt-6 text-[#797979] first:mt-0 border-2 px-3 py-2 2xl:px-4 2xl:py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
-                    onChange={(event) =>
-                      handleChange(
-                        'phoneNumber',
-                        event.target.value >= 0 ? event.target.value : 0
-                      )
-                    }
+                    onChange={(event) => handleChange(event)}
                     onKeyPress={(event) => {
                       if (!/[0-9]/.test(event.key)) {
                         event.preventDefault();
@@ -193,6 +250,7 @@ function ContactModal({
                     }}
                     autoComplete="off"
                   />
+                  <Validation validationText={validations.phoneNumber} />
                   <textarea
                     style={{ resize: 'none', height: '50px' }}
                     className="mt-3 2xl:mt-6 text-[#797979] first:mt-0 border-2 px-3 py-2 2xl:px-4 2xl:py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
@@ -202,9 +260,7 @@ function ContactModal({
                     placeholder="Message"
                     id="exampleFormControlTextarea1"
                     rows="2"
-                    onChange={(event) =>
-                      handleChange('message', event.target.value)
-                    }
+                    onChange={(event) => handleChange(event)}
                   />
                   {showLoader ? (
                     <div className="text-center loader py-2">
@@ -238,7 +294,6 @@ function ContactModal({
                       className="inline-block !px-[24px] py-[8px] 2xl:!px-8 !2xl:py-3 mt-4 2xl:mt-8 !rounded-full"
                       type="submit"
                       onClick={handleSubmit}
-                      disabled={emptyFieldValidationCheck}
                     >
                       Submit
                     </PrimaryButtonBase>

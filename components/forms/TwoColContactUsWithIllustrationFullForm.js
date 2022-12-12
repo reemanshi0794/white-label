@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { PrimaryButton as PrimaryButtonBase } from '../../components/misc/Buttons.js';
 import ContactUsSrc from '../../assets/images/contact-us.png';
 import Loader from '../../assets/images/loader.gif';
+import Validation from '../Validation';
 
 export default ({
   subheading = 'Contact Us',
@@ -15,19 +16,39 @@ export default ({
   submitButtonText = 'Send',
 }) => {
   const webDevelopment = 'Web Development';
-  const eCommerceDevelopment = 'eCommerce Development';
-  const appDevelopment = 'App Development';
-  const enterpriseSoftwares = 'Enterprise Softwares';
-  const [contactInfo, setContactInfo] = useState({ service: webDevelopment });
+  const [contactInfo, setContactInfo] = useState({
+    service: webDevelopment,
+    name: '',
+    phoneNumber: '',
+    email: '',
+  });
   const [showLoader, setShowLoader] = useState(false);
   // This message will be displayed if form is submitted successfully or if an error occurrs.
   const [displayMessage, setDisplayMessage] = useState({
     message: '',
     type: '',
   });
+  const [validations, setValidations] = useState({
+    name: '',
+    phoneNumber: '',
+    email: '',
+  });
+  const [isValidation, setIsValidation] = useState(false);
 
-  const handleChange = (key, value) => {
-    setContactInfo({ ...contactInfo, [key]: value });
+  const handleChange = (e) => {
+    if (e.target.name === 'phoneNumber') {
+      if (e.target.value >= 0 && e.target.value < 9999999999) {
+        setContactInfo((prev) => ({
+          ...prev,
+          [e.target.name]: e.target.value,
+        }));
+      }
+    } else {
+      setContactInfo((prev) => ({
+        ...prev,
+        [e.target.name]: e.target.value,
+      }));
+    }
   };
 
   const sendMail = () => {
@@ -68,20 +89,32 @@ export default ({
     });
   };
 
+  useEffect(() => {
+    const emailRegex = /\S+@\S+\.\S+/;
+
+    if (isValidation) {
+      let errors = { ...validations };
+      if (!contactInfo.name?.trim()) errors.name = 'First name is required';
+      else errors.name = '';
+      if (!contactInfo.phoneNumber) errors.phoneNumber = 'Number is required';
+      else errors.phoneNumber = '';
+      if (!contactInfo.email?.trim()) errors.email = 'Email is required';
+      else if (!emailRegex.test(contactInfo.email))
+        errors.email = 'Invalid Email ID';
+      else errors.email = '';
+
+      setValidations(errors);
+    }
+  }, [
+    isValidation,
+    contactInfo.name,
+    contactInfo.phoneNumber,
+    contactInfo.email,
+  ]);
+
   //API to save enterred client data
   const addContactInfo = async () => {
     return sendMail();
-    // const response = await fetch(
-    //   "https://afternoon-sierra-04103.herokuapp.com/email",
-    //   {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify(contactInfo),
-    //   }
-    // );
-    // return response.json();
   };
 
   const emptyFieldValidationCheck =
@@ -91,10 +124,17 @@ export default ({
     !contactInfo.service;
 
   const handleSubmit = (event) => {
-    setShowLoader(true);
-    var validRegex =
-      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    if (contactInfo.email.match(validRegex)) {
+    event.preventDefault();
+    setIsValidation(true);
+    const emailRegex = /\S+@\S+\.\S+/;
+
+    if (
+      contactInfo.name.trim() !== '' &&
+      contactInfo.phoneNumber.trim() !== '' &&
+      contactInfo.email.trim() !== '' &&
+      emailRegex.test(contactInfo.email)
+    ) {
+      setShowLoader(true);
       addContactInfo()
         .then((res) => {
           setDisplayMessage({
@@ -102,6 +142,8 @@ export default ({
             type: 'success',
           });
           setShowLoader(false);
+          setIsValidation(false);
+
           setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
         })
         .catch((err) => {
@@ -110,17 +152,24 @@ export default ({
             type: 'error',
           });
           setShowLoader(false);
+          setIsValidation(false);
+
           setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
         });
     } else {
-      setDisplayMessage({
-        message: 'Plaese enter valid email ',
-        type: 'error',
-      });
-      setShowLoader(false);
+      let errors = { ...validations };
+      if (!contactInfo.name?.trim()) errors.name = 'First name is required';
+      else errors.name = '';
+      if (!contactInfo.phoneNumber?.trim())
+        errors.phoneNumber = 'Number is required';
+      else errors.phoneNumber = '';
+      if (!contactInfo.email?.trim()) errors.email = 'Email is required';
+      else if (!emailRegex.test(contactInfo.email))
+        errors.email = 'Invalid Email ID';
+      else errors.email = '';
+      setValidations(errors);
     }
     setContactInfo({ service: webDevelopment });
-    event.preventDefault();
   };
 
   return (
@@ -158,9 +207,10 @@ export default ({
                 id="exampleInputEmail1"
                 required
                 aria-describedby="emailHelp"
-                onChange={(event) => handleChange('name', event.target.value)}
+                onChange={(event) => handleChange(event)}
                 autoComplete="off"
               />
+              <Validation validationText={validations.name} />
               <input
                 type="email"
                 name="email"
@@ -170,9 +220,10 @@ export default ({
                 className="mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
-                onChange={(event) => handleChange('email', event.target.value)}
+                onChange={(event) => handleChange(event)}
                 autoComplete="off"
               />
+              <Validation validationText={validations.email} />
               <input
                 type="tel"
                 name="phoneNumber"
@@ -187,14 +238,10 @@ export default ({
                 className="mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
-                onChange={(event) =>
-                  handleChange(
-                    'phoneNumber',
-                    event.target.value >= 0 ? event.target.value : 0
-                  )
-                }
+                onChange={(event) => handleChange(event)}
                 autoComplete="off"
               />
+              <Validation validationText={validations.phoneNumber} />
               <textarea
                 style={{ resize: 'none' }}
                 className="mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500"
@@ -204,9 +251,7 @@ export default ({
                 placeholder="Message"
                 id="exampleFormControlTextarea1"
                 rows="2"
-                onChange={(event) =>
-                  handleChange('message', event.target.value)
-                }
+                onChange={(event) => handleChange(event)}
               />
               {showLoader ? (
                 <div className="text-center loader py-2">
@@ -236,7 +281,6 @@ export default ({
                 className="inline-block mt-8"
                 type="submit"
                 onClick={handleSubmit}
-                disabled={emptyFieldValidationCheck}
               >
                 {submitButtonText}
               </PrimaryButtonBase>
