@@ -245,11 +245,16 @@ export default ({
                 Total Developers
               </h3>
               <ul>
-                {['40', '20', '15', '12', '12', '10', '07'].map((nmbr) => (
-                  <li className="text-2xl mb-6 opacity-50 text-black list-none font-bold">
-                    {nmbr}
-                  </li>
-                ))}
+                {['40', '20', '15', '12', '12', '10', '07'].map(
+                  (nmbr, index) => (
+                    <li
+                      className="text-2xl mb-6 opacity-50 text-black list-none font-bold"
+                      key={index}
+                    >
+                      {nmbr}
+                    </li>
+                  )
+                )}
               </ul>
             </div>
             <div className="py-10 px-5 border-r-[3px] text-center border-[#eaeaea]">
@@ -257,11 +262,16 @@ export default ({
                 To be allocated{' '}
               </h3>
               <ul>
-                {['16', '08', '06', '04', '04', '07', '03'].map((nmbr) => (
-                  <li className="text-2xl mb-6 opacity-50 text-black list-none font-bold">
-                    {nmbr}
-                  </li>
-                ))}
+                {['16', '08', '06', '04', '04', '07', '03'].map(
+                  (nmbr, index) => (
+                    <li
+                      className="text-2xl mb-6 opacity-50 text-black list-none font-bold"
+                      key={index}
+                    >
+                      {nmbr}
+                    </li>
+                  )
+                )}
               </ul>
             </div>
             <div className="py-10 px-5 text-center">
@@ -269,8 +279,8 @@ export default ({
                 Take Action
               </h3>
               <ul>
-                {[1, 2, 3, 4, 5, 6, 7].map((text) => (
-                  <li className="mb-8">
+                {[1, 2, 3, 4, 5, 6, 7].map((text, index) => (
+                  <li className="mb-8" key={index}>
                     <a
                       className="border border-primary-500 pt-[6px] pb-[7px] px-[42px] font-semibold text-lg text-primary-500 hover:bg-primary-500 rounded-full hover:text-white"
                       href="/contact-us"
@@ -286,9 +296,12 @@ export default ({
 
         <div className="block md:hidden mt-12">
           <div className=" bg-white items-center rounded-3xl shadow-[0_0_50px_-15px_rgba(0,0,0,21%)] py-10 flex justify-center flex-col">
-            {dummyData.map((data) => {
+            {dummyData.map((data, index) => {
               return (
-                <div className="flex flex-col justify-center items-center shadow-[0_0_50px_-15px_rgba(0,0,0,21%)] bg-white text-center rounded-[10px] w-[70%] p-[14px] mb-5">
+                <div
+                  className="flex flex-col justify-center items-center shadow-[0_0_50px_-15px_rgba(0,0,0,21%)] bg-white text-center rounded-[10px] w-[70%] p-[14px] mb-5"
+                  key={index}
+                >
                   <img
                     src={data.image.src}
                     className="w-[88px] mb-[10px] object-cover"

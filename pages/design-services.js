@@ -17,7 +17,6 @@ import Header from '../components/headers/light.js';
 import Footer from '../components/footers/FiveColumnWithInputForm.js';
 import MainServices from '../components/MainServices';
 import Features from '../components/features/ThreeColSimple.js';
-import Features1 from '../components/features/ThreeColWithSideImage.js';
 
 const DesignServicePageItemToDisplay = [
   {

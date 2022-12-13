@@ -1,104 +1,104 @@
-import React, { useEffect } from "react"
-import ReactGA from "react-ga"
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
 // import AppBanner from '../assets/images/AppDevelopment/Appbanner.svg';
-import MobileApp from "../assets/images/AppDevelopment/mobileapp1.png"
-import Android from "../assets/images/AppDevelopment/icon/android.png"
-import Apple from "../assets/images/AppDevelopment/icon/apple.png"
-import ReactNative from "../assets/images/AppDevelopment/icon/reactNative.png"
-import Flutter from "../assets/images/AppDevelopment/icon/Flutter.png"
-import Xamarin from "../assets/images/AppDevelopment/icon/Xamarin.png"
-import Ecommerce from "../assets/images/AppDevelopment/icon/ecommerce.svg"
-import Education from "../assets/images/AppDevelopment/icon/education.svg"
-import Travel from "../assets/images/AppDevelopment/icon/travel.svg"
-import Fintech from "../assets/images/AppDevelopment/icon/fintech.svg"
-import HealthCare from "../assets/images/AppDevelopment/icon/healthcare.svg"
-import Fitness from "../assets/images/AppDevelopment/icon/fitness.svg"
-import Business from "../assets/images/AppDevelopment/icon/business.png"
-import Social from "../assets/images/AppDevelopment/icon/social.png"
-import FoodBag from "../assets/images/AppDevelopment/icon/foodbag.png"
-import WhiteLablePartner from "../assets/images/AppDevelopment/whitelable-partner.png"
-import HireDevloper from "../assets/images/AppDevelopment/hireDev.png"
-import Head from "next/head"
-import Header from "../components/headers/light.js"
-import BannerImage from "../assets/images/BannerImage.png"
-import CustomersLogoStripImage from "../assets/images/Partnerslogo.svg"
-import SvgDecoratorBlob1 from "../assets/images/svg-decorator-blob-1.svg"
-import { Container, ContentWithPaddingXl } from "../components/misc/Layouts.js"
-import { SectionDescription } from "../components/misc/Typography.js"
+import MobileApp from '../assets/images/AppDevelopment/mobileapp1.png';
+import Android from '../assets/images/AppDevelopment/icon/android.png';
+import Apple from '../assets/images/AppDevelopment/icon/apple.png';
+import ReactNative from '../assets/images/AppDevelopment/icon/reactNative.png';
+import Flutter from '../assets/images/AppDevelopment/icon/Flutter.png';
+import Xamarin from '../assets/images/AppDevelopment/icon/Xamarin.png';
+import Ecommerce from '../assets/images/AppDevelopment/icon/ecommerce.svg';
+import Education from '../assets/images/AppDevelopment/icon/education.svg';
+import Travel from '../assets/images/AppDevelopment/icon/travel.svg';
+import Fintech from '../assets/images/AppDevelopment/icon/fintech.svg';
+import HealthCare from '../assets/images/AppDevelopment/icon/healthcare.svg';
+import Fitness from '../assets/images/AppDevelopment/icon/fitness.svg';
+import Business from '../assets/images/AppDevelopment/icon/business.png';
+import Social from '../assets/images/AppDevelopment/icon/social.png';
+import FoodBag from '../assets/images/AppDevelopment/icon/foodbag.png';
+import WhiteLablePartner from '../assets/images/AppDevelopment/whitelable-partner.png';
+import HireDevloper from '../assets/images/AppDevelopment/hireDev.png';
+import Head from 'next/head';
+import Header from '../components/headers/light.js';
+import BannerImage from '../assets/images/BannerImage.png';
+import CustomersLogoStripImage from '../assets/images/Partnerslogo.svg';
+import SvgDecoratorBlob1 from '../assets/images/svg-decorator-blob-1.svg';
+import { Container, ContentWithPaddingXl } from '../components/misc/Layouts.js';
+import { SectionDescription } from '../components/misc/Typography.js';
 import {
   SectionHeading,
   Subheading as SubheadingBase,
-} from "../components/misc/Headings.js"
-import CustomizeIconImage from "../assets/images/customize-icon.svg"
-import FastIconImage from "../assets/images/fast-icon.svg"
-import ReliableIconImage from "../assets/images/reliable-icon.svg"
-import ShieldIconImage from "../assets/images/shield-icon.svg"
-import SimpleIconImage from "../assets/images/simple-icon.svg"
-import SupportIconImage from "../assets/images/support-icon.svg"
-import SvgDecoratorBlob3 from "../assets/images/svg-decorator-blob-3.svg"
-import Footer from "../components/footers/FiveColumnWithBackground.js"
-import LeadingMobileApp from "../assets/images/LeadingMobileApp.png"
-import CustomMobileapps from "../assets/images/CustomMobileapps.png"
-import AppPartners from "../assets/images/AppPartners.png"
+} from '../components/misc/Headings.js';
+import CustomizeIconImage from '../assets/images/customize-icon.svg';
+import FastIconImage from '../assets/images/fast-icon.svg';
+import ReliableIconImage from '../assets/images/reliable-icon.svg';
+import ShieldIconImage from '../assets/images/shield-icon.svg';
+import SimpleIconImage from '../assets/images/simple-icon.svg';
+import SupportIconImage from '../assets/images/support-icon.svg';
+import SvgDecoratorBlob3 from '../assets/images/svg-decorator-blob-3.svg';
+import Footer from '../components/footers/FiveColumnWithBackground.js';
+import LeadingMobileApp from '../assets/images/LeadingMobileApp.png';
+import CustomMobileapps from '../assets/images/CustomMobileapps.png';
+import AppPartners from '../assets/images/AppPartners.png';
 
 // import Link from 'next/link';
 
 const AppDevelopment = ({
   cards = null,
-  heading = "Our Apps are what you need!",
-  description = "We have delivered 100+ mobile applications for Android and iOS Platforms. For the past 10+ years, White Label has been engaged in developing and delivering the most exquisite mobile apps that have over 100k+ end users.",
-  Subheading = "We are all ears for your brilliant app idea of yours.",
-  text = "Developers all over the world are happily using Whiten App Solutions.",
-  primaryLinkText = "Get Started",
-  primaryLinkUrl = "/contact-us",
-  secondaryLinkText = "Contact Us",
-  secondaryLinkUrl = "/contact-us",
+  heading = 'Our Apps are what you need!',
+  description = 'We have delivered 100+ mobile applications for Android and iOS Platforms. For the past 10+ years, White Label has been engaged in developing and delivering the most exquisite mobile apps that have over 100k+ end users.',
+  Subheading = 'We are all ears for your brilliant app idea of yours.',
+  text = 'Developers all over the world are happily using Whiten App Solutions.',
+  primaryLinkText = 'Get Started',
+  primaryLinkUrl = '/contact-us',
+  secondaryLinkText = 'Contact Us',
+  secondaryLinkUrl = '/contact-us',
   pushDownFooter = true,
 }) => {
   useEffect(() => {
-    window.scrollTo(0, 0)
-    ReactGA.pageview(window.location.pathname)
-  }, [])
+    window.scrollTo(0, 0);
+    ReactGA.pageview(window.location.pathname);
+  }, []);
 
   const defaultCards = [
     {
       imageSrc: ShieldIconImage,
-      title: "App Development",
+      title: 'App Development',
       description:
-        "An app for your Brand. We fix your business challenges by creating premium mobile apps for Android and iOS customers. ",
+        'An app for your Brand. We fix your business challenges by creating premium mobile apps for Android and iOS customers. ',
     },
     {
       imageSrc: SupportIconImage,
-      title: "Enterprise Softwares",
+      title: 'Enterprise Softwares',
       description:
-        "We develop solutions that solve real problems that are beyond the capabilities of traditional ERP systems. Build feature rich CMS, CRM, POS, ERP, CDP with us.",
+        'We develop solutions that solve real problems that are beyond the capabilities of traditional ERP systems. Build feature rich CMS, CRM, POS, ERP, CDP with us.',
     },
     {
       imageSrc: CustomizeIconImage,
-      title: "Blockchain Development",
+      title: 'Blockchain Development',
       description:
-        "World-class companies enjoy the benefits of blockchain technology with us through Cryptocurrency, Smart-Contracts, crypto wallets, DeFi and enterprise Blockchain app development and more with the most efficient internal process.",
+        'World-class companies enjoy the benefits of blockchain technology with us through Cryptocurrency, Smart-Contracts, crypto wallets, DeFi and enterprise Blockchain app development and more with the most efficient internal process.',
     },
     {
       imageSrc: ReliableIconImage,
-      title: "eCommerce Development",
+      title: 'eCommerce Development',
       description:
-        "We back startups and young entrepreneurs with exclusive stores by increasing their brand loyalty and authenticity with custom build eCommerce Stores.",
+        'We back startups and young entrepreneurs with exclusive stores by increasing their brand loyalty and authenticity with custom build eCommerce Stores.',
     },
     {
       imageSrc: FastIconImage,
-      title: "Web Development",
+      title: 'Web Development',
       description:
-        "We build and shape beautiful websites for individuals and businesses to meet all their online business demands.",
+        'We build and shape beautiful websites for individuals and businesses to meet all their online business demands.',
     },
     {
       imageSrc: SimpleIconImage,
-      title: "Metaverse Development",
+      title: 'Metaverse Development',
       description:
-        "The potential use cases of Metaverse are designed and developed at White Label to help our clients tap into endless opportunities of the new era internet with Blockchain, AI and AR/VR.",
+        'The potential use cases of Metaverse are designed and developed at White Label to help our clients tap into endless opportunities of the new era internet with Blockchain, AI and AR/VR.',
     },
-  ]
-  if (!cards) cards = defaultCards
+  ];
+  if (!cards) cards = defaultCards;
 
   return (
     <div>
@@ -178,7 +178,7 @@ const AppDevelopment = ({
                 Custom Mobile apps
                 <br /> Not Just for businesses
               </h1>
-              <p className="my-4 text-sm md:text-base 2xl:text-lg px-0 md:px-20 lg:pl-0 lg:pr-16 font-medium leading-relaxed text-secondary-100">
+              <div className="my-4 text-sm md:text-base 2xl:text-lg px-0 md:px-20 lg:pl-0 lg:pr-16 font-medium leading-relaxed text-secondary-100">
                 People have the idea that apps are just for business. Let us
                 stop you there. Mobile apps are meant for all domains. We just
                 do not build apps for business, but for domains with a variety
@@ -194,7 +194,7 @@ const AppDevelopment = ({
                   We ensure reliability, scalability and compactness in all the
                   apps that are developed at Whiten app Label.
                 </p>
-              </p>
+              </div>
             </div>
             <div className="relative mt-12 lg:mt-0 flex-1 flex flex-col justify-center lg:self-end">
               <div className="flex justify-center lg:justify-end items-center">
@@ -215,7 +215,7 @@ const AppDevelopment = ({
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-8 md:mt-12 2xl:mt-16 px-4 2xl:px-[17rem] gap-8 xl:gap-16 ">
             {cards.map((card, i) => {
-              const IconImage = card.imageSrc
+              const IconImage = card.imageSrc;
               return (
                 <div key={i}>
                   <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left ">
@@ -224,16 +224,16 @@ const AppDevelopment = ({
                     </span>
                     <span className="sm:ml-4 mt-4 sm:mt-2">
                       <span className="mt-4 tracking-wide font-bold text-base md:text-lg 2xl:text-2xl leading-none">
-                        {card.title || "Fully Secure"}
+                        {card.title || 'Fully Secure'}
                       </span>
                       <p className=" text-sm md:text-[15px] 2xl:text-lg mt-2 2xl:mt-4 font-medium text-secondary-100 leading-[26px] 2xl:leading-loose">
                         {card.description ||
-                          "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud."}
+                          'Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.'}
                       </p>
                     </span>
                   </div>
                 </div>
-              )
+              );
             })}
           </div>
           <SvgDecoratorBlob3 className="pointer-events-none absolute right-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-48" />
@@ -271,7 +271,7 @@ const AppDevelopment = ({
       </div>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default AppDevelopment
+export default AppDevelopment;
