@@ -82,6 +82,7 @@ export default () => {
           });
           setShowLoader(false);
           setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
+          setContactInfo({ email: '' });
         })
         .catch((err) => {
           setDisplayMessage({
@@ -98,7 +99,6 @@ export default () => {
       });
       setShowLoader(false);
     }
-    setContactInfo({ email: '' });
     event.preventDefault();
   };
 
