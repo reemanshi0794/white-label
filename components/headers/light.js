@@ -287,10 +287,7 @@ export default ({ logoLink, className }) => {
 
                 <a
                   href="/contact-us"
-                  className="lg:mx-0
-                px-8 py-3 bg-primary-500 text-gray-100
-                hover:bg-secondary-700 hover:text-gray-200 focus:shadow-outline
-                border-b-0 rounded-full"
+                  className="lg:mx-0 px-8 py-3 bg-primary-500 text-gray-100 hover:bg-secondary-700 hover:text-gray-200 focus:shadow-outline border-b-0 rounded-full"
                 >
                   Contact Us
                 </a>
@@ -396,9 +393,9 @@ export default ({ logoLink, className }) => {
                   <a
                     href="/contact-us"
                     className=" text-sm lg:text-[16px] mt-3 lg:mt-0 lg:mx-0
-                 px-[17px] xl:px-[22px] py-[10px] xl:py-[12px] bg-primary-500 text-gray-100
-                hover:bg-secondary-700 hover:text-gray-200 focus:shadow-outline
-                border-b-0 rounded-full"
+                    px-[17px] py-[10px] xl:py-[12px] bg-primary-500 text-gray-100
+                   hover:bg-secondary-700 hover:text-gray-200 focus:shadow-outline
+                   border-b-0 rounded-full"
                   >
                     Contact Us
                   </a>
