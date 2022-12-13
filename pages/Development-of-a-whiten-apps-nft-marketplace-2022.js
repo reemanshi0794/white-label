@@ -1,19 +1,19 @@
-import React, { useEffect } from "react"
-import ReactGA from "react-ga"
-import Header from "../components/headers/light.js"
-import { NFTMarketplace } from "../helpers/utils"
-import Head from "next/head"
-import Footer from "../components/footers/FiveColumnWithInputForm.js"
-import SvgDecoratorBlob1 from "../assets/images/svg-decorator-blob-9.svg"
-import NFT1 from "../assets/images/NFT1.png"
-import NFT2 from "../assets/images/NFT2.png"
-import NFT3 from "../assets/images/NFT3.png"
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
+import Header from '../components/headers/light.js';
+import { NFTMarketplace } from '../helpers/utils';
+import Head from 'next/head';
+import Footer from '../components/footers/FiveColumnWithInputForm.js';
+import SvgDecoratorBlob1 from '../assets/images/svg-decorator-blob-9.svg';
+import NFT1 from '../assets/images/NFT1.png';
+import NFT2 from '../assets/images/NFT2.png';
+import NFT3 from '../assets/images/NFT3.png';
 
 const NftMarketplace = () => {
   useEffect(() => {
-    window.scrollTo(0, 0)
-    ReactGA.pageview(window.location.pathname)
-  }, [])
+    window.scrollTo(0, 0);
+    ReactGA.pageview(window.location.pathname);
+  }, []);
 
   return (
     <div>
@@ -128,7 +128,7 @@ const NftMarketplace = () => {
                         {content.content}
                       </p>
                     </li>
-                  )
+                  );
                 })}
               </ul>
             </div>
@@ -148,7 +148,7 @@ const NftMarketplace = () => {
                         {item.content}
                       </p>
                     </li>
-                  )
+                  );
                 })}
               </ul>
             </div>
@@ -183,7 +183,7 @@ const NftMarketplace = () => {
                         {item.content}
                       </p>
                     </li>
-                  )
+                  );
                 })}
               </ul>
             </div>
@@ -199,7 +199,7 @@ const NftMarketplace = () => {
                     <li className="text-[#727272] text-base 2xl:text-lg pl-[5px] leading-[35px]">
                       {item.content}
                     </li>
-                  )
+                  );
                 })}
               </ul>
               {NFTMarketplace.outro.map((item) => {
@@ -207,7 +207,7 @@ const NftMarketplace = () => {
                   <p className="text-[#6e6e6e] font-normal text-base 2xl:text-lg leading-[26px] 2xl:leading-8 mb-4">
                     {item.content}
                   </p>
-                )
+                );
               })}
             </div>
           </div>
@@ -215,7 +215,7 @@ const NftMarketplace = () => {
       </div>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default NftMarketplace
+export default NftMarketplace;

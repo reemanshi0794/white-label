@@ -218,7 +218,6 @@ export default ({ logoLink, className }) => {
                       {ServicesPages.map((serviceItems, index) => {
                         const { image, title, link, alt, greenImage } =
                           serviceItems
-                        console.log()
                         return (
                           <div className="w-full" key={index}>
                             <Link
