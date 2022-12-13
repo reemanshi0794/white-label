@@ -98,6 +98,7 @@ export default () => {
       });
       setShowLoader(false);
     }
+    setContactInfo({ email: '' });
     event.preventDefault();
   };
 
