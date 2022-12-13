@@ -15,7 +15,6 @@ function ContactModal({
   const handleClose = () => setShow(false);
   const webDevelopment = 'Web Development';
   const [contactInfo, setContactInfo] = useState({
-    service: webDevelopment,
     name: '',
     phoneNumber: '',
     email: '',
@@ -87,16 +86,21 @@ function ContactModal({
   }
 
   useEffect(() => {
-    const emailRegex = /\S+@\S+\.\S+/;
+    const phoneRegex = '^\\d{10}$';
+    var validRegex =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
     if (isValidation && !showLoader) {
       let errors = { ...validations };
       if (!contactInfo.name?.trim()) errors.name = 'First name is required';
       else errors.name = '';
-      if (!contactInfo.phoneNumber) errors.phoneNumber = 'Number is required';
+      if (!contactInfo.phoneNumber?.trim())
+        errors.phoneNumber = 'Number is required';
+      else if (!contactInfo.phoneNumber.match(phoneRegex))
+        errors.phoneNumber = 'Enter 10 digit number';
       else errors.phoneNumber = '';
       if (!contactInfo.email?.trim()) errors.email = 'Email is required';
-      else if (!emailRegex.test(contactInfo.email))
+      else if (!contactInfo.email.match(validRegex))
         errors.email = 'Invalid Email ID';
       else errors.email = '';
 
@@ -107,7 +111,7 @@ function ContactModal({
     contactInfo.name,
     contactInfo.phoneNumber,
     contactInfo.email,
-    showLoader
+    showLoader,
   ]);
 
   const addContactInfo = async () => {
@@ -124,12 +128,16 @@ function ContactModal({
     event.preventDefault();
     setIsValidation(true);
     const emailRegex = /\S+@\S+\.\S+/;
+    const phoneRegex = '^\\d{10}$';
+    var validRegex =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
     if (
       contactInfo.name?.trim() !== '' &&
       contactInfo.phoneNumber?.trim() !== '' &&
       contactInfo.email?.trim() !== '' &&
-      emailRegex.test(contactInfo.email)
+      contactInfo.email.match(validRegex) &&
+      contactInfo.phoneNumber.match(phoneRegex)
     ) {
       setShowLoader(true);
       addContactInfo()
@@ -159,14 +167,21 @@ function ContactModal({
       else errors.name = '';
       if (!contactInfo.phoneNumber?.trim())
         errors.phoneNumber = 'Number is required';
+      else if (!contactInfo.phoneNumber.match(phoneRegex))
+        errors.phoneNumber = 'Enter 10 digit number';
       else errors.phoneNumber = '';
       if (!contactInfo.email?.trim()) errors.email = 'Email is required';
-      else if (!emailRegex.test(contactInfo.email))
+      else if (!contactInfo.email.match(validRegex))
         errors.email = 'Invalid Email ID';
       else errors.email = '';
       setValidations(errors);
     }
-    setContactInfo({ service: webDevelopment });
+    setContactInfo({
+      service: webDevelopment,
+      name: '',
+      phoneNumber: '',
+      email: '',
+    });
   };
 
   return (

@@ -153,7 +153,7 @@ export default () => {
           </div> */}
         </div>
         {/* <div className="my-16 border-b-2 border-gray-300 w-full" /> */}
-        <div className="flex flex-col md:flex-row items-center justify-between">
+        <div className="flex flex-col md:flex-row justify-between">
           {/* <div className="flex items-center justify-center md:justify-start">
             <img className="w-8" src={LogoImage.src} />
             <h5 className="ml-2 text-xl font-black tracking-wider text-gray-800">
@@ -189,7 +189,7 @@ export default () => {
                 />
 
                 <button
-                  className="flex items-center w-[260px] mt-4 sm:mt-0 w-full rounded sm:rounded-l-none px-8 py-3 font-bold bg-primary-500 text-gray-100 hocus:bg-primary-700 hocus:text-gray-200   focus:outline-none transition duration-300"
+                  className="flex items-center w-[260px] mt-4 sm:mt-0 rounded sm:rounded-l-none px-8 py-3 font-bold bg-primary-500 text-gray-100 hocus:bg-primary-700 hocus:text-gray-200   focus:outline-none transition duration-300 justify-center"
                   type="submit"
                   onClick={handleSubmit}
                 >
@@ -223,10 +223,10 @@ export default () => {
               )}
             </div>
           </div>
-          <p className="text-center text-sm sm:text-base mt-8 md:mt-0 font-medium text-gray-500">
+          <p className="text-center text-sm sm:text-base mt-8 md:mt-[7rem] font-medium text-gray-500">
             &copy; 2022 Whiten App Solutions Inc. All Rights Reserved.
           </p>
-          <div className="mt-8 md:mt-0 flex">
+          <div className="mt-8 md:mt-[7rem] flex items-baseline">
             <a
               className="cursor-pointer p-2 rounded-full bg-gray-900 text-gray-100 hover:bg-gray-700 transition duration-300 mr-4 last:mr-0"
               href="https://www.facebook.com/profile.php?id=100088241919758"
