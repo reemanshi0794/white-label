@@ -151,6 +151,12 @@ export default ({
           setIsValidation(false);
 
           setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
+          setContactInfo({
+            service: webDevelopment,
+            name: '',
+            phoneNumber: '',
+            email: '',
+          });
         })
         .catch((err) => {
           setDisplayMessage({
@@ -161,6 +167,12 @@ export default ({
           setIsValidation(false);
 
           setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
+          setContactInfo({
+            service: webDevelopment,
+            name: '',
+            phoneNumber: '',
+            email: '',
+          });
         });
     } else {
       let errors = { ...validations };
@@ -177,12 +189,6 @@ export default ({
       else errors.email = '';
       setValidations(errors);
     }
-    setContactInfo({
-      service: webDevelopment,
-      name: '',
-      phoneNumber: '',
-      email: '',
-    });
   };
 
   return (
