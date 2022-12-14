@@ -87,8 +87,7 @@ function ContactModal({
 
   useEffect(() => {
     const phoneRegex = '^\\d{10}$';
-    var validRegex =
-      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    var validRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
     if (isValidation && !showLoader) {
       let errors = { ...validations };
@@ -127,10 +126,9 @@ function ContactModal({
   const handleSubmit = (event) => {
     event.preventDefault();
     setIsValidation(true);
-    const emailRegex = /\S+@\S+\.\S+/;
+
     const phoneRegex = '^\\d{10}$';
-    var validRegex =
-      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    var validRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
     if (
       contactInfo.name?.trim() !== '' &&
