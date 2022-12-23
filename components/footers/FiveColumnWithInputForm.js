@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import FacebookIcon from '../../assets/images/facebook-icon.svg';
 import TwitterIcon from '../../assets/images/twitter-icon.svg';
 import YoutubeIcon from '../../assets/images/youtube-icon.svg';
 import LinkedinWhite from '../../assets/images/LinkedinWhite.svg';
 import InstagramWhite from '../../assets/images/InstagramWhite.svg';
 import Loader from '../../assets/images/loader.gif';
+import Validation from '../Validation';
 
 export default () => {
   const [showLoader, setShowLoader] = useState(false);
@@ -14,6 +15,30 @@ export default () => {
     type: '',
   });
   const [contactInfo, setContactInfo] = useState({ email: '' });
+  const [isValidation, setIsValidation] = useState(false);
+  const [validations, setValidations] = useState({
+    email: '',
+  });
+
+
+
+  useEffect(() => {
+    var validRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
+    if (isValidation && !showLoader) {
+      let errors = { ...validations };
+      if (!contactInfo.email?.trim()) errors.email = 'Email is required';
+      else if (!contactInfo.email.match(validRegex))
+        errors.email = 'Invalid Email ID';
+      else errors.email = '';
+
+      setValidations(errors);
+    }
+  }, [
+    isValidation,
+    contactInfo.email,
+    showLoader,
+  ]);
 
   const sendMail = () => {
     return new Promise((resolve, reject) => {
@@ -70,10 +95,15 @@ export default () => {
   };
 
   const handleSubmit = (event) => {
-    setShowLoader(true);
+    event.preventDefault();
+    setIsValidation(true);
     var validRegex =
-      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    if (contactInfo.email.match(validRegex)) {
+    /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
+    if (contactInfo.email?.trim() !== '' &&
+    contactInfo.email.match(validRegex) ) {
+    setShowLoader(true);
+
       addContactInfo()
         .then((res) => {
           setDisplayMessage({
@@ -81,6 +111,7 @@ export default () => {
             type: 'success',
           });
           setShowLoader(false);
+          setIsValidation(false);
           setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
           setContactInfo({ email: '' });
         })
@@ -90,16 +121,20 @@ export default () => {
             type: 'error',
           });
           setShowLoader(false);
+          setIsValidation(false);
           setTimeout(() => setDisplayMessage({ message: '', type: '' }), 2000);
+          setContactInfo({
+            email: '',
+          });
         });
     } else {
-      setDisplayMessage({
-        message: 'Invalid Email',
-        type: 'error',
-      });
-      setShowLoader(false);
+      let errors = { ...validations };
+      if (!contactInfo.email?.trim()) errors.email = 'Email is required';
+      else if (!contactInfo.email.match(validRegex))
+        errors.email = 'Invalid Email ID';
+      else errors.email = '';
+      setValidations(errors);
     }
-    event.preventDefault();
   };
 
   return (
@@ -222,6 +257,7 @@ export default () => {
                 </div>
               )}
             </div>
+            <Validation validationText={validations.email} />
           </div>
           <p className="text-center text-sm sm:text-base mt-8 md:mt-[7rem] font-medium text-gray-500">
             &copy; 2022 Whiten App Solutions Inc. All Rights Reserved.

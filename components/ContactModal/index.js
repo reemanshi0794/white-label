@@ -19,16 +19,19 @@ function ContactModal({
     phoneNumber: '',
     email: '',
   });
+  
   const [showLoader, setShowLoader] = useState(false);
   const [displayMessage, setDisplayMessage] = useState({
     message: '',
     type: '',
   });
+
   const [validations, setValidations] = useState({
     name: '',
     phoneNumber: '',
     email: '',
   });
+
   const [isValidation, setIsValidation] = useState(false);
 
   const handleChange = (e) => {
@@ -102,7 +105,6 @@ function ContactModal({
       else if (!contactInfo.email.match(validRegex))
         errors.email = 'Invalid Email ID';
       else errors.email = '';
-
       setValidations(errors);
     }
   }, [
