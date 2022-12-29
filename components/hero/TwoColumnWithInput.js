@@ -45,12 +45,11 @@ export default () => {
         <div className="flex flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto pb-20 pt-32 md:pb-24 md:pt-32">
           <div className="relative lg:w-5/12 text-center max-w-xs md:max-w-lg  mx-auto lg:max-w-none lg:text-left">
             <h1 className="font-bold text-3xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight">
-              Bridging Business Into
-              <br /> Digital Sphere
+            Custom Web and 
+              <br />Mobile App Development Studio
             </h1>
             <p className="my-4 text-base xl:text-lg">
-              A one-stop development studio to gear up your business demands for
-              today and tomorrow.
+            A one-stop software development studio to gear up your business for today and tomorrow.
             </p>
             <div className="max-w-md text-center mx-auto lg:mx-0 flex justify-center lg:justify-start">
               <a

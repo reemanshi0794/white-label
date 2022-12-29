@@ -30,7 +30,7 @@ export default () => {
       if (!contactInfo.email?.trim()) errors.email = 'Email is required';
       else if (!contactInfo.email.match(validRegex))
         errors.email = 'Invalid Email ID';
-      else errors.email = '';
+      // else errors.email = '';
 
       setValidations(errors);
     }
