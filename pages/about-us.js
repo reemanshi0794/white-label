@@ -53,7 +53,7 @@ export default () => {
         />
 
         <div className="max-w-screen-xl mx-auto lg:mt-16">
-          <h1 className="text-black-100 text-xl md:text-[45px] 2xl:text-[60px] font-bold text-center">
+          <h1 className="text-black-100 text-xl md:text-[45px] 2xl:text-[60px] mt-10 lg:mt-0 font-bold text-center">
             Our Customers
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-4 items-center place-items-center mt-12">
@@ -68,15 +68,15 @@ export default () => {
           <div className="grid justify-items-center  grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-12 items-center place-items-center mt-12 ">
             <img
               src={Advertisement1.src}
-              className="w-full mb-[26px] lg:mb-0"
+              className="w-full"
             />
             <img
               src={Advertisement2.src}
-              className="w-full mb-[26px] lg:mb-0"
+              className="w-full"
             />
             <img
               src={Advertisement3.src}
-              className="w-full mb-[26px] lg:mb-0"
+              className="w-full"
             />
           </div>
         </div>
